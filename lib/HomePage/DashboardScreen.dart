@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:staple_food_fortification/Commons/SffColor.dart';
-import 'package:staple_food_fortification/Commons/Strings.dart';
+import 'package:staple_food_fortification/Constants/Strings.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);

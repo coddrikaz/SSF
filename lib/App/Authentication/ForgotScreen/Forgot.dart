@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:staple_food_fortification/Commons/SffColor.dart';
-import 'package:staple_food_fortification/Commons/Strings.dart';
+import 'package:staple_food_fortification/Constants/Strings.dart';
 
 class Forgot extends StatefulWidget {
   const Forgot({Key? key}) : super(key: key);

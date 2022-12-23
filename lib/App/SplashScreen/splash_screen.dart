@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/SplashScreen/Controllers/splash_controller.dart';
 import 'package:staple_food_fortification/Commons/SffColor.dart';
-import 'package:staple_food_fortification/SplashScreen/splash_controller.dart';
-
 
 
 final _splashScreenController = Get.find<SplashController>();
@@ -25,16 +24,16 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: SffColor.sffMainColor,
       body: SafeArea(
-          child: Container(
-            alignment: Alignment.center,
-            height: Get.height,
-            width: Get.width,
-            child: Image.asset(
-              'assets/spalshicon.png',
-              height: 300,
-              width: 300,
-            ),
+        child: Container(
+          alignment: Alignment.center,
+          height: Get.height,
+          width: Get.width,
+          child: Image.asset(
+            'assets/spalshicon.png',
+            height: 300,
+            width: 300,
           ),
+        ),
       ),
 
 

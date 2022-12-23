@@ -1,3 +1,9 @@
+
+
+const kAppName = 'Our Green Planet';
+const kGMapAPiKey = "AIzaSyBBGDykuELSi8g1GQkyqlUblltEahmERiE";
+const kDefaultHiveBox = "HB2554366";
+
 class Strings {
   static const String sInstructions1 =
       "1. gggggjggliegeg jhekgfhc rtubvrtgiuvnrt twiurtgnirugui tcnertbiru teriuniu tvye"

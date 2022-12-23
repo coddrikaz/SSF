@@ -2,13 +2,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqsScreen.dart';
+import 'package:staple_food_fortification/App/Authentication/ForgotScreen/Forgot.dart';
+import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_controller.dart';
+import 'package:staple_food_fortification/App/Authentication/OtpScreen/Otp.dart';
 import 'package:staple_food_fortification/Commons/SffColor.dart';
-import 'package:staple_food_fortification/Commons/Strings.dart';
-import 'package:staple_food_fortification/FaqsScreen/faqsScreen.dart';
-import 'package:staple_food_fortification/ForgotScreen/Forgot.dart';
+import 'package:staple_food_fortification/Constants/Strings.dart';
 import 'package:staple_food_fortification/HomeScreen/HomeScreen.dart';
-import 'package:staple_food_fortification/LoginScreen/login_controller.dart';
-import 'package:staple_food_fortification/OtpScreen/Otp.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 import 'package:staple_food_fortification/Settings/Settings.dart';
 

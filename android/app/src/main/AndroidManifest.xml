@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.staple_food_fortification">
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="staple_food_fortification"
         android:name="${applicationName}"

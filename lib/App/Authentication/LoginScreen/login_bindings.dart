@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:staple_food_fortification/LoginScreen/login_controller.dart';
+import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_controller.dart';
 
 class LoginBindings extends Bindings {
   @override
