@@ -1,14 +1,13 @@
 import 'package:get/get.dart';
-import 'package:staple_food_fortification/FaqsScreen/faqsScreen.dart';
-import 'package:staple_food_fortification/FaqsScreen/faqs_bindings.dart';
-import 'package:staple_food_fortification/LoginScreen/login_bindings.dart';
-import 'package:staple_food_fortification/LoginScreen/login_screen.dart';
-import 'package:staple_food_fortification/Registration/registration_bindings.dart';
-import 'package:staple_food_fortification/Registration/registration_screen.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
-import 'package:staple_food_fortification/SplashScreen/splash_bindings.dart';
-import 'package:staple_food_fortification/SplashScreen/splash_screen.dart';
-
+import 'package:staple_food_fortification/App/SplashScreen/splash_screen.dart';
+import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqsScreen.dart';
+import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqs_bindings.dart';
+import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_bindings.dart';
+import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_screen.dart';
+import 'package:staple_food_fortification/App/Authentication/Registration/registration_bindings.dart';
+import 'package:staple_food_fortification/App/Authentication/Registration/registration_screen.dart';
+import 'package:staple_food_fortification/App/SplashScreen/Bindings/splash_bindings.dart';
 
 class AppRoutes {
   static List<GetPage> getRoutes() {
@@ -23,12 +22,6 @@ class AppRoutes {
         name: RoutesName.login,
         page: () => const LoginScreen(),
         binding: LoginBindings(),
-      ),
-
-      GetPage(
-        name: RoutesName.registration,
-        page: () => const RegistrationScreen(),
-        binding: RegistrationBindings(),
       ),
 
       GetPage(

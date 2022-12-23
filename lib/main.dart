@@ -1,18 +1,24 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:staple_food_fortification/Commons/SffColor.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:staple_food_fortification/Constants/SffColor.dart';
+import 'package:staple_food_fortification/Constants/Strings.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 import 'package:staple_food_fortification/Routes/route_pages.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox(kDefaultHiveBox);
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -21,13 +27,10 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           smartManagement: SmartManagement.keepFactory, // Bindings factory reinitialized
           debugShowCheckedModeBanner: false,
-          // navigatorObservers: <NavigatorObserver>[observer,FlutterSmartDialog.observer],
-          // builder: FlutterSmartDialog.init(),
           title: 'SSF',
           theme: ThemeData(
             useMaterial3: true,
             colorSchemeSeed: SffColor.sffMainColor,
-            // fontFamily: 'futura',
           ),
           getPages: AppRoutes.getRoutes(),
           initialRoute: RoutesName.splash,
