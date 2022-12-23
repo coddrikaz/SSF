@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:staple_food_fortification/Commons/SffColor.dart';
 import 'package:staple_food_fortification/HomePage/CalenderScreen.dart';
@@ -6,6 +8,7 @@ import 'package:staple_food_fortification/HomePage/GradesScreen.dart';
 import 'package:staple_food_fortification/HomePage/MenuScreen.dart';
 import 'package:staple_food_fortification/HomePage/MessagesScreen.dart';
 import 'package:staple_food_fortification/HomePage/NotificationsScreen.dart';
+import 'package:staple_food_fortification/HomeScreen/homeWidget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -27,17 +30,92 @@ class _HomeScreenState extends State<HomeScreen> {
     const MenuScreen(),
   ];
 
+  @override
+  void initState() {
+    super.initState();
+    // SmartDialog.showLoading(backDismiss: false, clickMaskDismiss: false);
+
+    Timer.run(() {
+      Duration(seconds: 5);
+      showExitPopup();
+    });
+  }
+
+
+  void showExitPopup() {
+    showDialog(
+      context: context,
+      builder: (context) =>
+          AlertDialog(
+
+            title: Container(
+              height: 500,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 15),
+
+                      color: SffColor.sffBlueColor,
+                      child: Text(
+                          "kjoig rieoh uhukyuyyuuyfytfu hjfjhvkgugaukaghjfkyfulf",
+                          style: TextStyle(
+                              fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold)),
+                    ),
+
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                      width: double.maxFinite,
+                      child: Text("Mandatory",
+                          style: TextStyle(
+                              fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
+                    ),
+
+
+                    Container(
+                      padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+                      width: double.maxFinite,
+                      child: Text(
+                          "Are you sure want to logouts  hjfjhvkgng b  hdgjhghdfd bafhdgkfdkuf  hdgkfdlifgleig hfjhdhfgyusdkdufyufu uyf uyfyudtfyudtsfuysdgfkgdsluhds liuhfi dgfuysgd stftd tysvcghftcyfc f sftsdfksfsgfksjf fyugsyfgysagftsagh ffsgyfgtysfyf fweagfuykcfbugeavigcauyegcaeygua eyufbgeygfcbayuegavuybegyuaegbayegyau yaebcuyagbeugyey vfygbauegacabwegbabugbuvygweugvwecabeyvcayuevwygeyvbuyeguy egbuxwyxagfeuygcbfuyage fuygbfeubfua uyegubbefgnkawfnixluhebiwnfxe fwegbxufgueybwfxuwegbfnxibfnxniafng fuyaewxgfyeawbuyfgugaukaghjfkyfulf",
+                          style: TextStyle(
+                              fontSize: 16)),
+                    ),
+
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                      width: double.maxFinite,
+                      child: Text("Mandatory",
+                          style: TextStyle(
+                              fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
+                    ),
+
+
+                    Container(
+                      padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+                      width: double.maxFinite,
+                      child: Text(
+                          "Are you sure want to logouts  hjfjhvkgng b  hdgjhghdfd bafhdgkfdkuf  hdgkfdlifgleig hfjhdhfgyusdkdufyufu uyf uyfyudtfyudtsfuysdgfkgdsluhds liuhfi dgfuysgd stftd tysvcghftcyfc f sftsdfksfsgfksjf fyugsyfgysagftsagh ffsgyfgtysfyf fweagfuykcfbugeavigcauyegcaeygua eyufbgeygfcbayuegavuybegyuaegbayegyau yaebcuyagbeugyey vfygbauegacabwegbabugbuvygweugvwecabeyvcayuevwygeyvbuyeguy egbuxwyxagfeuygcbfuyage fuygbfeubfua uyegubbefgnkawfnixluhebiwnfxe fwegbxufgueybwfxuwegbfnxibfnxniafng fuyaewxgfyeawbuyfgugaukaghjfkyfulf",
+                          style: TextStyle(
+                              fontSize: 16)),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+          ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: SffColor.sffMainColor,
-
       body: pages[pageIndex],
       bottomNavigationBar: Container(
         height: 50,
         decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
+          color: Colors.black,
           // borderRadius: const BorderRadius.only(
           //   topLeft: Radius.circular(20),
           //   topRight: Radius.circular(20),
@@ -47,64 +125,36 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              enableFeedback: false,
-              onPressed: () {
-                setState(() {
-                  pageIndex = 0;
-                });
-              },
-              icon: pageIndex == 0
-                  ? const Icon(
-                Icons.dashboard,
-                color: Colors.white,
-                size: 25,
-              )
-                  : const Icon(
-                Icons.dashboard_outlined,
-                color: Colors.white,
-                size: 25,
-              ),
-            ),
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 0;
+                  });
+                },
+                icon: pageIndex == 0
+                    ? HomeWidget().meterClick
+                    : HomeWidget().meter),
+            IconButton(
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 1;
+                  });
+                },
+                icon: pageIndex == 1
+                    ? HomeWidget().calenderClick
+                    : HomeWidget().calender),
 
             IconButton(
-              enableFeedback: false,
-              onPressed: () {
-                setState(() {
-                  pageIndex = 1;
-                });
-              },
-              icon: pageIndex == 1
-                  ? const Icon(
-                Icons.calendar_month_rounded,
-                color: Colors.white,
-                size: 25,
-              )
-                  : const Icon(
-                Icons.edit_calendar,
-                color: Colors.white,
-                size: 25,
-              ),
-            ),
-
-            IconButton(
-              enableFeedback: false,
-              onPressed: () {
-                setState(() {
-                  pageIndex = 2;
-                });
-              },
-              icon: pageIndex == 2
-                  ? const Icon(
-                Icons.messenger,
-                color: Colors.white,
-                size: 25,
-              )
-                  : const Icon(
-                Icons.messenger_outline_outlined,
-                color: Colors.white,
-                size: 25,
-              ),
-            ),
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 2;
+                  });
+                },
+                icon: pageIndex == 2
+                    ? HomeWidget().chatClick
+                    : HomeWidget().chat),
 
             IconButton(
               enableFeedback: false,
@@ -114,37 +164,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 });
               },
               icon: pageIndex == 3
-                  ? const Icon(
-                Icons.notifications,
-                color: Colors.white,
-                size: 25,
-              )
-                  : const Icon(
-                Icons.notifications_none_outlined,
-                color: Colors.white,
-                size: 25,
-              ),
+                  ? HomeWidget().bellClick
+                  :  HomeWidget().bell
             ),
-
             IconButton(
-              enableFeedback: false,
-              onPressed: () {
-                setState(() {
-                  pageIndex = 4;
-                });
-              },
-              icon: pageIndex == 4
-                  ? const Icon(
-                Icons.grade,
-                color: Colors.white,
-                size: 25,
-              )
-                  : const Icon(
-                Icons.grade_outlined,
-                color: Colors.white,
-                size: 25,
-              ),
-            ),
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 4;
+                  });
+                },
+                icon: pageIndex == 4
+                    ? HomeWidget().chartClick
+                    : HomeWidget().chart),
 
             IconButton(
               enableFeedback: false,
@@ -154,131 +186,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 });
               },
               icon: pageIndex == 5
-                  ? const Icon(
-                Icons.menu_open,
-                color: Colors.white,
-                size: 25,
-              )
-                  : const Icon(
-                Icons.menu,
-                color: Colors.white,
-                size: 25,
-              ),
+                  ? HomeWidget().barsClick
+                  : HomeWidget().bars
             ),
 
 
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class Page1 extends StatelessWidget {
-  const Page1({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: SffColor.sffMainColor,
-        title: Text("Staple Food Fortification", style: TextStyle(color: Colors.white),),
-      ),
-      body: Container(
-        color: const Color(0xffcb7c6a),
-        child: Center(
-          child: Text(
-            "Dashboard",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 45,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xff69cc84),
-      child: Center(
-        child: Text(
-          "Choose Date",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Page3 extends StatelessWidget {
-  const Page3({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffbd5f83),
-      child: Center(
-        child: Text(
-          "Chat",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Page4 extends StatelessWidget {
-  const Page4({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xff7da3fc),
-      child: Center(
-        child: Text(
-          "Notifications",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Page5 extends StatelessWidget {
-  const Page5({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffcc8484),
-      child: Center(
-        child: Text(
-          "Menu Options",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
         ),
       ),
     );

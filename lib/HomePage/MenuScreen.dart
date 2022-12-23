@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/Commons/SffColor.dart';
+import 'package:staple_food_fortification/Routes/route_names.dart';
+import 'package:staple_food_fortification/Settings/Settings.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({Key? key}) : super(key: key);
@@ -14,11 +17,11 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
 
     final String generalSvg = 'assets/svg/wrench.svg';
-
-    final String SpaceSvg = 'assets/svg/tasks.svg';
-    final String SyncSvg = 'assets/svg/sync-alt.svg';
-    final String sharedSvg = 'assets/svg/folder.svg';
-    final String aboutSvg = 'assets/svg/id-card.svg';
+    final String qrSvg = 'assets/svg/qrcode.svg';
+    final String globeSvg = 'assets/svg/globe.svg';
+    final String helpSvg = 'assets/svg/question-circle.svg';
+    final String logoutSvg = 'assets/svg/sign-out-alt.svg';
+    final String settingSvg = 'assets/svg/cogs.svg';
 
     final Widget general = SvgPicture.asset(
       generalSvg,
@@ -28,29 +31,37 @@ class _MenuScreenState extends State<MenuScreen> {
       color: Colors.black,
     );
 
-    final Widget space = SvgPicture.asset(
-      SpaceSvg,
+    final Widget qrCode = SvgPicture.asset(
+      qrSvg,
       semanticsLabel: 'Acme Logo',
       width: 25,
       height: 25,
       color: Colors.black,
     );
-    final Widget sync = SvgPicture.asset(
-      SyncSvg,
+    final Widget globe = SvgPicture.asset(
+      globeSvg,
       semanticsLabel: 'Acme Logo',
       width: 25,
       height: 25,
       color: Colors.black,
     );
-    final Widget shared = SvgPicture.asset(
-      sharedSvg,
+    final Widget help = SvgPicture.asset(
+      helpSvg,
       semanticsLabel: 'Acme Logo',
       width: 25,
       height: 25,
       color: Colors.black,
     );
-    final Widget about = SvgPicture.asset(
-      aboutSvg,
+    final Widget logout = SvgPicture.asset(
+      logoutSvg,
+      semanticsLabel: 'Acme Logo',
+      width: 25,
+      height: 25,
+      color: Colors.black,
+    );
+
+    final Widget setting = SvgPicture.asset(
+      settingSvg,
       semanticsLabel: 'Acme Logo',
       width: 25,
       height: 25,
@@ -72,7 +83,7 @@ class _MenuScreenState extends State<MenuScreen> {
             MaterialButton(
               height: 70,
               color: Colors.white,
-              // elevation: 0,
+              elevation: 1,
               onPressed: () {
                 // Navigator.of(context).push(MaterialPageRoute(
                 //     builder: (context) => HomeScreen()));
@@ -108,7 +119,6 @@ class _MenuScreenState extends State<MenuScreen> {
               //   borderRadius: BorderRadius.circular(10.0),
               // ),
             ),
-
             SizedBox(height: 20),
 
             MaterialButton(
@@ -126,7 +136,48 @@ class _MenuScreenState extends State<MenuScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      general,
+                      qrCode,
+                      SizedBox(width: 15),
+                      Text("Sacn QR Code",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold, fontSize: 20)),
+                    ],
+                  ),
+                  Spacer(),
+
+                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
+
+
+                ],
+              ),
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(10.0),
+              // ),
+            ),
+
+            Container(
+              margin: EdgeInsets.only(left: 54),
+              color: SffColor.sffLineColor,
+              height: 1,
+            ),
+
+            MaterialButton(
+              height: 45,
+              color: Colors.white,
+              elevation: 0,
+              onPressed: (){
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => HomeScreen()));
+              },
+              child: Row(
+
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      globe,
                       SizedBox(width: 15),
                       Text("Website",
                           style: TextStyle(
@@ -145,7 +196,11 @@ class _MenuScreenState extends State<MenuScreen> {
               // ),
             ),
 
-            Divider(),
+            Container(
+              margin: EdgeInsets.only(left: 54),
+              color: SffColor.sffLineColor,
+              height: 1,
+            ),
 
             MaterialButton(
               height: 45,
@@ -162,7 +217,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      general,
+                      globe,
                       SizedBox(width: 15),
                       Text("Resources",
                           style: TextStyle(
@@ -181,14 +236,18 @@ class _MenuScreenState extends State<MenuScreen> {
               // ),
             ),
 
-            Divider(),
+            Container(
+              margin: EdgeInsets.only(left: 54),
+              color: SffColor.sffLineColor,
+              height: 1,
+            ),
             MaterialButton(
               height: 45,
               color: Colors.white,
+
               elevation: 0,
               onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
+                Get.toNamed(RoutesName.faqs);
               },
               child: Row(
 
@@ -207,7 +266,8 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                   Spacer(),
 
-                  Icon(Icons.arrow_right),
+                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
+
 
                 ],
               ),
@@ -216,7 +276,11 @@ class _MenuScreenState extends State<MenuScreen> {
               // ),
             ),
 
-            Divider(),
+            Container(
+              margin: EdgeInsets.only(left: 54),
+              color: SffColor.sffLineColor,
+              height: 1,
+            ),
 
             MaterialButton(
               height: 45,
@@ -233,7 +297,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      sync,
+                      help,
                       SizedBox(width: 15),
                       Text("Help",
                           style: TextStyle(
@@ -251,9 +315,11 @@ class _MenuScreenState extends State<MenuScreen> {
               //   borderRadius: BorderRadius.circular(10.0),
               // ),
             ),
-            Divider(),
-
-
+            Container(
+              margin: EdgeInsets.only(left: 54),
+              color: SffColor.sffLineColor,
+              height: 1,
+            ),
             MaterialButton(
               height: 45,
               color: Colors.white,
@@ -279,7 +345,8 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                   Spacer(),
 
-                  Icon(Icons.arrow_right),
+                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
+
 
                 ],
               ),
@@ -288,7 +355,11 @@ class _MenuScreenState extends State<MenuScreen> {
               // ),
             ),
 
-            Divider(),
+            Container(
+              margin: EdgeInsets.only(left: 54),
+              color: SffColor.sffLineColor,
+              height: 1,
+            ),
 
 
             MaterialButton(
@@ -306,7 +377,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      general,
+                      logout,
                       SizedBox(width: 15),
                       Text("Delete Account",
                           style: TextStyle(
@@ -316,7 +387,8 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                   Spacer(),
 
-                  Icon(Icons.arrow_right),
+                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
+
 
                 ],
               ),
@@ -324,13 +396,16 @@ class _MenuScreenState extends State<MenuScreen> {
               //   borderRadius: BorderRadius.circular(10.0),
               // ),
             ),
-            Divider(),
-
+            Container(
+              margin: EdgeInsets.only(left: 54),
+              color: SffColor.sffLineColor,
+              height: 1,
+            ),
 
             MaterialButton(
               height: 45,
               color: Colors.white,
-              elevation: 0,
+              elevation: 0.4,
               onPressed: () {
                 // Navigator.of(context).push(MaterialPageRoute(
                 //     builder: (context) => HomeScreen()));
@@ -342,7 +417,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      general,
+                      logout,
                       SizedBox(width: 15),
                       Text("Log out",
                           style: TextStyle(
@@ -352,7 +427,8 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                   Spacer(),
 
-                  Icon(Icons.arrow_right),
+                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
+
 
                 ],
               ),
@@ -361,16 +437,22 @@ class _MenuScreenState extends State<MenuScreen> {
               // ),
             ),
 
-            Divider(),
+            // Container(
+            //   margin: EdgeInsets.only(left: 54),
+            //   color: SffColor.sffLineColor,
+            //   height: 1,
+            // ),
+
+            SizedBox(height: 30),
 
 
             MaterialButton(
               height: 45,
               color: Colors.white,
-              elevation: 0,
+              elevation: 0.4,
               onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Settings()));
               },
               child: Row(
 
@@ -379,7 +461,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      general,
+                      setting,
                       SizedBox(width: 15),
                       Text("App settings",
                           style: TextStyle(
@@ -389,7 +471,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                   Spacer(),
 
-                  Icon(Icons.arrow_right),
+                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
 
                 ],
               ),

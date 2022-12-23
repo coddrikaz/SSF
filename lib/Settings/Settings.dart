@@ -93,7 +93,7 @@ class _SettingsState extends State<Settings> {
                 ),
                 Spacer(),
 
-                Icon(Icons.arrow_right),
+                Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
 
               ],
             ),
@@ -102,7 +102,11 @@ class _SettingsState extends State<Settings> {
             // ),
           ),
 
-          Divider(),
+          Container(
+            margin: EdgeInsets.only(left: 54),
+            color: SffColor.sffLineColor,
+            height: 1,
+          ),
 
           MaterialButton(
             height: 45,
@@ -129,7 +133,7 @@ class _SettingsState extends State<Settings> {
                 ),
                 Spacer(),
 
-                Icon(Icons.arrow_right),
+                Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
 
               ],
             ),
@@ -138,12 +142,16 @@ class _SettingsState extends State<Settings> {
             // ),
           ),
 
-          Divider(),
+          Container(
+            margin: EdgeInsets.only(left: 54),
+            color: SffColor.sffLineColor,
+            height: 1,
+          ),
 
           MaterialButton(
             height: 45,
             color: Colors.white,
-            elevation: 0,
+            elevation: 0.4,
             onPressed: () {
               // Navigator.of(context).push(MaterialPageRoute(
               //     builder: (context) => HomeScreen()));
@@ -165,7 +173,7 @@ class _SettingsState extends State<Settings> {
                 ),
                 Spacer(),
 
-                Icon(Icons.arrow_right),
+                Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
 
               ],
             ),

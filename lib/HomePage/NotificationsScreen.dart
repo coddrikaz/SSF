@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:staple_food_fortification/Commons/SffColor.dart';
 
 class NotificationsScreen extends StatefulWidget {
@@ -11,6 +12,14 @@ class NotificationsScreen extends StatefulWidget {
 class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
+    final String bellSvg = 'assets/svg/bell.svg';
+    final Widget bell = SvgPicture.asset(
+      bellSvg,
+      semanticsLabel: 'Acme Logo',
+      width: 100,
+      height: 100,
+      color: Colors.black,
+    );
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -20,14 +29,21 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
 
       body: Container(
         child: Center(
-          // child: Text(
-          //   "Dashboard",
-          //   style: TextStyle(
-          //     color: Colors.black,
-          //     fontSize: 45,
-          //     fontWeight: FontWeight.w500,
-          //   ),
-          // ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              bell,
+              SizedBox(height: 20),
+              Text(
+                "There are no notifications.",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

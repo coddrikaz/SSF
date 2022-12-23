@@ -10,6 +10,7 @@ class FaqsScreen extends StatefulWidget {
 }
 
 class _FaqsScreenState extends State<FaqsScreen> {
+  bool visible = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,32 +27,59 @@ class _FaqsScreenState extends State<FaqsScreen> {
                 fontWeight: FontWeight.bold)),
 
       ),
-      body: ListView.builder(
-        itemCount: 12,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            // color: Colors.red,
-            margin: EdgeInsets.only(top: 10, left: 10, right: 10),
-            decoration: BoxDecoration(
-              border: Border.all(
-                  color: SffColor.sffMainColor,
-                  width: 2.0,
-                  style: BorderStyle.solid),
-            ),
-            child: ListTile(
-                leading:  Container(
-                  height: double.maxFinite,
-                  width: 50,
-                  color: Colors.red,
-                  child: Text("$index",
-                    style: TextStyle(color: Colors.green, fontSize: 15),
+      body: GestureDetector(
+        onTap: (){
+          print("click");
+          setState(() {
+            visible = !visible;
+          });
+        },
+        child: ListView.builder(
+          itemCount: 25,
+          itemBuilder: (BuildContext context, int index) {
+            return Column(
+              children: [
+                Container(
+                  // color: Colors.red,
+                  margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: SffColor.sffMainColor,
+                        width: 1.0,
+                        style: BorderStyle.solid),
                   ),
+                  child: ListTile(
+                      contentPadding: EdgeInsets.only(left: 0.0, right: 0.0),
+                      leading:  Container(
+                        alignment: Alignment.center,
+                        height: double.maxFinite,
+                        width: 30,
+                        color: SffColor.sffMainColor,
+                        child: Text("$index",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                      trailing: Container(
+                          padding: EdgeInsets.only(right: 10),
+                          child: const Icon(Icons.arrow_drop_down)),
+                      title: Text("FAQs Item")),
                 ),
-                trailing: const Icon(Icons.arrow_drop_down
-                ),
-                title: Text("FAQs Item")),
-          );
-        }),
+                Visibility(
+                    visible: visible,
+                    child: Container(
+                      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
+                      height: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: SffColor.sffMainColor,
+                            width: 1.0,
+                            style: BorderStyle.solid),
+                      ),
+                    ))
+              ],
+            );
+          }),
+      ),
     );
   }
 }
