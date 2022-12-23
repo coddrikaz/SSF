@@ -13,7 +13,7 @@ class SplashController extends GetxController {
     // await Future.delayed(Duration(seconds: 3));
     // Get.offAllNamed(RoutesName.login);
     await datadownload();
-    //"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"
+
   }
 
   datadownload() async {
