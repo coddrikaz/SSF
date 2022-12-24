@@ -50,4 +50,6 @@ Competitive job opportunities with potentials for higher remuneration""";
 Officials from State Food and Drug Administration (FDA)/Food Safety and Standards Authority of India​ (FSSAI)
 Students and faculty from various food technology & food and nutrition institutes​
 Any other interested personnel""";
+
+  static const String courseAppBar = "Training Course on Edible Oil Fortification by Global Alliance for Improved Nutrition (GAIN)";
 }

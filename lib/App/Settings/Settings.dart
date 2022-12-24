@@ -72,6 +72,7 @@ class _SettingsState extends State<Settings> {
             height: 45,
             color: Colors.white,
             elevation: 0,
+            highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
             onPressed: () {
               // Navigator.of(context).push(MaterialPageRoute(
               //     builder: (context) => HomeScreen()));
@@ -104,13 +105,14 @@ class _SettingsState extends State<Settings> {
 
           Container(
             margin: EdgeInsets.only(left: 54),
-            color: SffColor.sffLineColor,
+            color: Colors.grey.withOpacity(0.4),
             height: 1,
           ),
 
           MaterialButton(
             height: 45,
             color: Colors.white,
+            highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
             elevation: 0,
             onPressed: () {
               // Navigator.of(context).push(MaterialPageRoute(
@@ -144,7 +146,7 @@ class _SettingsState extends State<Settings> {
 
           Container(
             margin: EdgeInsets.only(left: 54),
-            color: SffColor.sffLineColor,
+            color: Colors.grey.withOpacity(0.4),
             height: 1,
           ),
 
@@ -152,6 +154,7 @@ class _SettingsState extends State<Settings> {
             height: 45,
             color: Colors.white,
             elevation: 0.4,
+            highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
             onPressed: () {
               // Navigator.of(context).push(MaterialPageRoute(
               //     builder: (context) => HomeScreen()));

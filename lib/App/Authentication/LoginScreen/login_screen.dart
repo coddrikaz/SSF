@@ -90,15 +90,17 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: TabBar(
                                 // overlayColor: MaterialStateColor.resolveWith((states) => Color(0xFF09B20C)),
                                 indicatorColor: SffColor.sffBlueColor,
+                                unselectedLabelColor: Colors.white,
                                 tabs: [
                                   Tab(
                                     icon: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        Icon(
-                                          Icons.short_text,
-                                          color: Colors.white,
+                                        Image.asset(
+                                          'assets/steps.png',
+                                          height: 20,
+                                          width: double.maxFinite,
                                         ),
                                         SizedBox(width: 5),
                                         Text("STEPS",
@@ -113,7 +115,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        info,
+                                        Image.asset(
+                                          'assets/info-icon.png',
+                                          height: 20,
+                                          width: double.maxFinite,
+                                        ),
                                         SizedBox(width: 5),
                                         Text("INSTRUCTIONS",
                                             style: TextStyle(
@@ -136,12 +142,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                         enableInfiniteScroll: true,
                                         autoPlay: true,
                                         autoPlayInterval:
-                                            Duration(milliseconds: 7000),
+                                            Duration(milliseconds: 1000),
                                         autoPlayAnimationDuration: Duration(milliseconds: 500),
                                         // autoPlayCurve: Curves.fastOutSlowIn,
                                         // enlargeCenterPage: true,
-                                        enlargeFactor: 0.3,
-                                        scrollDirection: Axis.horizontal,
+                                        viewportFraction: 1,
                                       ),
                                       items: [1, 2, 3, 4, 5].map((i) {
                                         return Builder(
@@ -149,8 +154,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                             return Container(
                                                 width: double.infinity,
                                                 alignment: Alignment.center,
-                                                margin: EdgeInsets.symmetric(
-                                                    horizontal: 2.0),
+                                                // margin: EdgeInsets.symmetric(
+                                                //     horizontal: 2.0),
                                                 decoration: BoxDecoration(
                                                   image: DecorationImage(
                                                       image: AssetImage(
@@ -158,12 +163,18 @@ class _LoginScreenState extends State<LoginScreen> {
                                                       fit: BoxFit.fill),
                                                 ),
                                                 child: Center(
-                                                    child: Text(
-                                                  '$i Take the Quize Assesmnt ',
-                                                  style: TextStyle(
-                                                      fontSize: 16.0,
-                                                      color: Colors.black),
-                                                )));
+                                                  child: Container(
+                                                    padding: EdgeInsets.symmetric(horizontal: 30),
+
+                                                        child: Text(
+                                                      ' Enter the correct detail at the time of registration. This is important to track your progress. ',
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle(
+                                                          fontSize: 16.0,
+                                                          color: Colors.black, fontWeight: FontWeight.bold),
+                                                    ),
+                                                  ),
+                                                ));
                                           },
                                         );
                                       }).toList(),
@@ -232,66 +243,27 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 5),
                     Container(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
 
-                          SizedBox(height: 5),
+
 
                           Container(
                             margin: EdgeInsets.all(15),
                             child: TextFormField(
-
-                              // style: TextStyle(
-                              //   fontSize: 24,
-                              //   color: Colors.blue,
-                              //   fontWeight: FontWeight.w600,
-                              // ),
-
                               decoration: InputDecoration(
                                 focusColor: Colors.blue,
-                                //add prefix icon
-                                // prefixIcon: Icon(
-                                //   Icons.person_outline_rounded,
-                                //   color: Colors.grey,
-                                // ),
-
-                                // errorText: "Error",
-
-                                // border: OutlineInputBorder(
-                                //   borderRadius: BorderRadius.circular(10.0),
-                                // ),
-
-                                // focusedBorder: OutlineInputBorder(
-                                //   // borderSide:
-                                //   // const BorderSide(color: Colors.blue, width: 1.0),
-                                //   // borderRadius: BorderRadius.circular(10.0),
-                                // ),
-
                                 fillColor: Colors.grey,
-
                                 hintText: "Username",
-
-                                //make hint text
                                 hintStyle: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 16,
-
                                   fontWeight: FontWeight.w400,
                                 ),
-
-                                //create lable
-                                // labelText: 'Email/Mobile',
-                                // //lable style
-                                // labelStyle: TextStyle(
-                                //   color: Colors.grey,
-                                //   fontSize: 16,
-                                //   fontFamily: "verdana_regular",
-                                //   fontWeight: FontWeight.w400,
-                                // ),
                               ),
                             ),
                           ),
@@ -300,35 +272,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             margin: EdgeInsets.all(15),
                             child: TextFormField(
 
-                              // style: TextStyle(
-                              //   fontSize: 24,
-                              //   color: Colors.blue,
-                              //   fontWeight: FontWeight.w600,
-                              // ),
-
                               decoration: InputDecoration(
                                 focusColor: Colors.blue,
-                                //add prefix icon
-                                // prefixIcon: Icon(
-                                //   Icons.person_outline_rounded,
-                                //   color: Colors.grey,
-                                // ),
-
-                                // errorText: "Error",
-
-                                // border: OutlineInputBorder(
-                                //   borderRadius: BorderRadius.circular(10.0),
-                                // ),
-
-                                // focusedBorder: OutlineInputBorder(
-                                //   // borderSide:
-                                //   // const BorderSide(color: Colors.blue, width: 1.0),
-                                //   // borderRadius: BorderRadius.circular(10.0),
-                                // ),
-
                                 fillColor: Colors.grey,
 
-                                hintText: "Username",
+                                hintText: "Password",
 
                                 //make hint text
                                 hintStyle: TextStyle(
@@ -401,7 +349,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 12,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w700),
                             ),
                           ),
 

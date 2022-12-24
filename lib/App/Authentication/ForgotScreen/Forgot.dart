@@ -92,7 +92,7 @@ class _ForgotState extends State<Forgot> {
                             Radio(
                               fillColor:
                               MaterialStateColor.resolveWith((states) => SffColor.sffBlueColor,),
-                              value: 2,
+                              value: 1,
                               groupValue: 1,
                               onChanged: (value) {
                                 // setState(() {
@@ -109,13 +109,13 @@ class _ForgotState extends State<Forgot> {
                           Divider(),
 
                           Row(children: [
-                            const Text("Username"),
+                            const Text("Password"),
                             Spacer(),
                             Radio(
                               fillColor:
                               MaterialStateColor.resolveWith((states) => SffColor.sffBlueColor,),
                               value: 2,
-                              groupValue: 1,
+                              groupValue: 0,
                               onChanged: (value) {
                                 // setState(() {
                                 //   _addadhccontroller.gender_id =

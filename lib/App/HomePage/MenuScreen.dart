@@ -78,411 +78,401 @@ class _MenuScreenState extends State<MenuScreen> {
       ),
 
       body: Container(
-        child: Column(
-          children: [
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              MaterialButton(
+                height: 70,
+                color: Colors.white,
+                elevation: 1,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
+                child: Container(
+                  child: Row(
+                    children: [
+                      Container(
+                          // color: Colors.red,
+                          // padding:EdgeInsets.all(10),
+                          child: Icon(Icons.person_pin, size: 50)),
+                      SizedBox(width: 10),
+                      Container(
+                        // color: Colors.green,
 
-            MaterialButton(
-              height: 70,
-              color: Colors.white,
-              elevation: 1,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Zakir Husain",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text("Staple Food Fortificaion"),
+                            Text("https://staplefoodfortification.org"),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
+              ),
+              SizedBox(height: 20),
+
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
                 child: Row(
                   children: [
-                    Container(
-                      // color: Colors.red,
-                        // padding:EdgeInsets.all(10),
-                        child: Icon(Icons.person_pin, size: 50)
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        qrCode,
+                        SizedBox(width: 15),
+                        Text("Sacn QR Code",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
                     ),
-                    SizedBox(width: 10),
-                    Container(
-                      // color: Colors.green,
-
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Zakir Husain", style: TextStyle(
-                              fontWeight: FontWeight.bold
-                          ),),
-                          Text("Staple Food Fortificaion"),
-                          Text("https://staplefoodfortification.org"),
-                        ],
-                      ),
-                    )
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios_outlined,
+                        size: 16, color: Colors.grey),
                   ],
                 ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
-            SizedBox(height: 20),
 
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      qrCode,
-                      SizedBox(width: 15),
-                      Text("Sacn QR Code",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
-
-
-                ],
+              Container(
+                margin: EdgeInsets.only(left: 54),
+                color: SffColor.sffLineColor,
+                height: 1,
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
 
-            Container(
-              margin: EdgeInsets.only(left: 54),
-              color: SffColor.sffLineColor,
-              height: 1,
-            ),
-
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0,
-              onPressed: (){
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      globe,
-                      SizedBox(width: 15),
-                      Text("Website",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_right),
-
-                ],
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        globe,
+                        SizedBox(width: 15),
+                        Text("Website",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_right),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
 
-            Container(
-              margin: EdgeInsets.only(left: 54),
-              color: SffColor.sffLineColor,
-              height: 1,
-            ),
-
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      globe,
-                      SizedBox(width: 15),
-                      Text("Resources",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_right),
-
-                ],
+              Container(
+                margin: EdgeInsets.only(left: 54),
+                color: SffColor.sffLineColor,
+                height: 1,
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
 
-            Container(
-              margin: EdgeInsets.only(left: 54),
-              color: SffColor.sffLineColor,
-              height: 1,
-            ),
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-
-              elevation: 0,
-              onPressed: () {
-                Get.toNamed(RoutesName.faqs);
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      general,
-                      SizedBox(width: 15),
-                      Text("FAQs",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
-
-
-                ],
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        globe,
+                        SizedBox(width: 15),
+                        Text("Resources",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_right),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
 
-            Container(
-              margin: EdgeInsets.only(left: 54),
-              color: SffColor.sffLineColor,
-              height: 1,
-            ),
-
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      help,
-                      SizedBox(width: 15),
-                      Text("Help",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_right),
-
-                ],
+              Container(
+                margin: EdgeInsets.only(left: 54),
+                color: SffColor.sffLineColor,
+                height: 1,
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 54),
-              color: SffColor.sffLineColor,
-              height: 1,
-            ),
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      general,
-                      SizedBox(width: 15),
-                      Text("Prefrences",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
-
-
-                ],
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                elevation: 0,
+                onPressed: () {
+                  Get.toNamed(RoutesName.faqs);
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        general,
+                        SizedBox(width: 15),
+                        Text("FAQs",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios_outlined,
+                        size: 16, color: Colors.grey),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
 
-            Container(
-              margin: EdgeInsets.only(left: 54),
-              color: SffColor.sffLineColor,
-              height: 1,
-            ),
-
-
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      logout,
-                      SizedBox(width: 15),
-                      Text("Delete Account",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
-
-
-                ],
+              Container(
+                margin: EdgeInsets.only(left: 54),
+                color: SffColor.sffLineColor,
+                height: 1,
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 54),
-              color: SffColor.sffLineColor,
-              height: 1,
-            ),
 
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0.4,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      logout,
-                      SizedBox(width: 15),
-                      Text("Log out",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
-
-
-                ],
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        help,
+                        SizedBox(width: 15),
+                        Text("Help",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_right),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
-              // ),
-            ),
-
-            // Container(
-            //   margin: EdgeInsets.only(left: 54),
-            //   color: SffColor.sffLineColor,
-            //   height: 1,
-            // ),
-
-            SizedBox(height: 30),
-
-
-            MaterialButton(
-              height: 45,
-              color: Colors.white,
-              elevation: 0.4,
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => Settings()));
-              },
-              child: Row(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      setting,
-                      SizedBox(width: 15),
-                      Text("App settings",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold, fontSize: 20)),
-                    ],
-                  ),
-                  Spacer(),
-
-                  Icon(Icons.arrow_forward_ios_outlined, size: 16, color: Colors.grey),
-
-                ],
+              Container(
+                margin: EdgeInsets.only(left: 54),
+                color: SffColor.sffLineColor,
+                height: 1,
               ),
-              // shape: RoundedRectangleBorder(
-              //   borderRadius: BorderRadius.circular(10.0),
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        general,
+                        SizedBox(width: 15),
+                        Text("Prefrences",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios_outlined,
+                        size: 16, color: Colors.grey),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
+              ),
+
+              Container(
+                margin: EdgeInsets.only(left: 54),
+                color: SffColor.sffLineColor,
+                height: 1,
+              ),
+
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        logout,
+                        SizedBox(width: 15),
+                        Text("Delete Account",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios_outlined,
+                        size: 16, color: Colors.grey),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 54),
+                color: SffColor.sffLineColor,
+                height: 1,
+              ),
+
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0.4,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => HomeScreen()));
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        logout,
+                        SizedBox(width: 15),
+                        Text("Log out",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios_outlined,
+                        size: 16, color: Colors.grey),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
+              ),
+
+              // Container(
+              //   margin: EdgeInsets.only(left: 54),
+              //   color: SffColor.sffLineColor,
+              //   height: 1,
               // ),
-            ),
 
+              SizedBox(height: 30),
 
-          ],
+              MaterialButton(
+                height: 45,
+                color: Colors.white,
+                elevation: 0.4,
+                highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Settings()));
+                },
+                child: Row(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        setting,
+                        SizedBox(width: 15),
+                        Text("App settings",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios_outlined,
+                        size: 16, color: Colors.grey),
+                  ],
+                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(10.0),
+                // ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -56,7 +56,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 15),
-
                       color: SffColor.sffBlueColor,
                       child: Text(
                           "kjoig rieoh uhukyuyyuuyfytfu hjfjhvkgugaukaghjfkyfulf",
@@ -71,7 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: TextStyle(
                               fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
                     ),
-
 
                     Container(
                       padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),

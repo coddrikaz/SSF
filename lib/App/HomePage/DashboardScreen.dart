@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
+import 'package:staple_food_fortification/Routes/route_names.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -25,7 +27,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+       leading : Icon(Icons.arrow_back, color: SffColor.sffMainColor),
         backgroundColor: SffColor.sffMainColor,
         title: Center(child: Text("Staple Food Fortification", style: TextStyle(color: Colors.white),)),
         actions: [
@@ -34,7 +36,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 // Navigator.of(context).push(MaterialPageRoute(
                 //     builder: (context) => Settings()));
               },
-              icon: Icon(Icons.menu),
+              icon: Icon(Icons.more_vert),
               color: Colors.white),
         ],
       ),
@@ -95,7 +97,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                           SizedBox(height: 30),
 
-                          ElevatedButton(onPressed: (){},
+                          ElevatedButton(onPressed: (){
+                            Get.toNamed(RoutesName.course);
+                          },
                               style: ButtonStyle(
                                   foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                                   backgroundColor: MaterialStateProperty.all<Color>( SffColor.sffMainColor),

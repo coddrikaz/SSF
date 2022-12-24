@@ -10,8 +10,8 @@ final _hiveBox = Hive.box(kDefaultHiveBox);
 class SplashController extends GetxController {
 
   Future<void> check() async {
-    // await Future.delayed(Duration(seconds: 3));
-    // Get.offAllNamed(RoutesName.login);
+    await Future.delayed(Duration(seconds: 3));
+    Get.offAllNamed(RoutesName.login);
     await datadownload();
 
   }

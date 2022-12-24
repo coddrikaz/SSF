@@ -13,7 +13,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        leading : Icon(Icons.arrow_back, color: SffColor.sffMainColor),
         backgroundColor: SffColor.sffMainColor,
         title: Center(child: Text("Messages", style: TextStyle(color: Colors.white),)),
         actions: [
@@ -32,6 +32,14 @@ class _MessagesScreenState extends State<MessagesScreen> {
                 //     builder: (context) => Settings()));
               },
               icon: Icon(Icons.settings),
+              color: Colors.white),
+
+          IconButton(
+              onPressed: () {
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => Settings()));
+              },
+              icon: Icon(Icons.more_vert),
               color: Colors.white),
         ],
       ),

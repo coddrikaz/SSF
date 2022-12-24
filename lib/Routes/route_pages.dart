@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/CourseScreen/CourseScreen.dart';
+import 'package:staple_food_fortification/App/CourseScreen/courseBindings.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 import 'package:staple_food_fortification/App/SplashScreen/splash_screen.dart';
 import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqsScreen.dart';
@@ -35,6 +37,14 @@ class AppRoutes {
         page: () => const FaqsScreen(),
         binding: FaqsBindings(),
       ),
+
+
+      GetPage(
+        name: RoutesName.course,
+        page: () => const CourseScreen(),
+        binding: CourseBindings(),
+      ),
+
 
     ];
   }
