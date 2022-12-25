@@ -10,10 +10,9 @@ final _hiveBox = Hive.box(kDefaultHiveBox);
 class SplashController extends GetxController {
 
   Future<void> check() async {
+    //await datadownload();
     await Future.delayed(Duration(seconds: 3));
     Get.offAllNamed(RoutesName.login);
-    await datadownload();
-
   }
 
   datadownload() async {
@@ -23,15 +22,26 @@ class SplashController extends GetxController {
       "moodlewsrestformat": "json",
     };
     try {
-      Response response = await Dio().post(
-          "https://staplefoodfortification.org/webservice/rest/server.php",
-          data: formMap,
-          options: Options(
-            headers: {"Content-Type": "application/x-www-form-urlencoded"},
-          ));
+      Response response = await Dio().post("https://staplefoodfortification.org/webservice/rest/server.php", data: formMap, options: Options(
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      ));
 
       if (response.statusCode == 200) {
+          for(var map in response.data){
+            List<String> mlist_Steps=[];
+            List<String> mlist_Instructions=[];
 
+            for(Map<String,dynamic> j in map['Steps']){
+              mlist_Steps.add(j['content']);
+            }
+            for(var j in map['Instructions']){
+              mlist_Instructions.add(j['title']);
+            }
+
+            _hiveBox.put("Steps", mlist_Steps);
+            _hiveBox.put("Instructions", mlist_Instructions);
+            print(_hiveBox.get("Steps"));
+          }
       }
     } catch (e) {}
   }
@@ -53,7 +63,8 @@ class SplashController extends GetxController {
   //   var mResponse = jsonDecode(response.body);
   //   for(var i in mResponse){
   //     Map<String,dynamic> map = i;
-  //     var step_list = map['Steps'];
+  //     var step_list = map['Steps'];// await Future.delayed(Duration(seconds: 3));
+    // Get.offAllNamed(RoutesName.login);b
   //     for(var j in  step_list){
   //       Map<String,dynamic> slist = j;
   //       var mlist = map['content'];
