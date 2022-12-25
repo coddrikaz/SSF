@@ -211,7 +211,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               children: [
                                                 for(int i =0;i<_loginController.mListInstruction.length;i++) ...[
                                                   Text(
-                                                    _loginController.mListInstruction.elementAt(i),
+                                                    _loginController.mListInstruction.elementAt(i).trim(),
                                                     textAlign: TextAlign.left,
                                                     style: TextStyle(
                                                       fontSize: 16.0,

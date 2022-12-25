@@ -10,7 +10,10 @@ final _hiveBox = Hive.box(kDefaultHiveBox);
 class SplashController extends GetxController {
 
   Future<void> check() async {
-    //await datadownload();
+    print("sdfadsfs");
+    if(_hiveBox.get("init_download")!=1){
+      await datadownload();
+    }
     await Future.delayed(Duration(seconds: 3));
     Get.offAllNamed(RoutesName.login);
   }
@@ -40,7 +43,8 @@ class SplashController extends GetxController {
 
             _hiveBox.put("Steps", mlist_Steps);
             _hiveBox.put("Instructions", mlist_Instructions);
-            print(_hiveBox.get("Steps"));
+            _hiveBox.put("init_download", 1);
+            print(_hiveBox.get("init_download"));
           }
       }
     } catch (e) {}
