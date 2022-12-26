@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqs_controller.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html/html_parser.dart';
+import 'package:flutter_html/style.dart';
 
 final _faqsController = Get.find<FaqsController>();
 
@@ -108,9 +111,15 @@ class _FaqsScreenState extends State<FaqsScreen> {
                   width: 1.0,
                   style: BorderStyle.solid),
             ),
-            child: Text(
-              ans,
-              style: TextStyle(color: Colors.black, fontSize: 15),
+            child: Html(
+              data: ans,
+              style: {
+                '#': Style(
+                  fontSize: FontSize(14),
+                  maxLines: 20,
+                  textOverflow: TextOverflow.ellipsis,
+                ),
+              },
             ),
           ),
         )

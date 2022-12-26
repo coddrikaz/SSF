@@ -10,14 +10,17 @@ dependencies:
   flutter:
     sdk: flutter
 
-  get:
+  get: ^4.6.5
+  flutter_html: ^2.2.1
   dio:
   hive:
   hive_flutter:
   cupertino_icons: ^1.0.2
   flutter_screenutil: any
   carousel_slider: ^4.2.1
-  flutter_svg: ^1.1.6
+  flutter_svg: 
+
+
 
 dev_dependencies:
   flutter_test:
