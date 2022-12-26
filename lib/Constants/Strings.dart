@@ -1,5 +1,4 @@
 
-
 const kAppName = 'Our Green Planet';
 const kGMapAPiKey = "AIzaSyBBGDykuELSi8g1GQkyqlUblltEahmERiE";
 const kDefaultHiveBox = "HB2554366";

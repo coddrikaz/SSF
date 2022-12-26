@@ -429,8 +429,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: SffColor.sffgeyColor,
                               elevation: 0,
                               onPressed: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => FaqsScreen()));
+                                Get.toNamed(RoutesName.faqs);
                               },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,

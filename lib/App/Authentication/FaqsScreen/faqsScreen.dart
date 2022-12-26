@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqs_controller.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
+
+final _faqsController = Get.find<FaqsController>();
 
 class FaqsScreen extends StatefulWidget {
   const FaqsScreen({Key? key}) : super(key: key);
@@ -10,7 +13,13 @@ class FaqsScreen extends StatefulWidget {
 }
 
 class _FaqsScreenState extends State<FaqsScreen> {
+  @override
+  void initState() {
+    _faqsController.getData();
+  }
+
   bool visible = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,68 +27,94 @@ class _FaqsScreenState extends State<FaqsScreen> {
         backgroundColor: SffColor.sffMainColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () => Get.back(),
         ),
         title: Text("Gain India - Stapble Food Fortification",
             style: TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold)),
+      ),
+      body: Obx(() {
+        return ListView.builder(
+            itemCount: _faqsController.mQuestion.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Containlist(_faqsController.mQuestion[index], index,
+                  _faqsController.mAnswer[index], _faqsController.mShow[index]);
+            });
+      }),
+    );
+  }
 
-      ),
-      body: GestureDetector(
-        onTap: (){
-          print("click");
-          setState(() {
-            visible = !visible;
-          });
-        },
-        child: ListView.builder(
-          itemCount: 25,
-          itemBuilder: (BuildContext context, int index) {
-            return Column(
-              children: [
-                Container(
-                  // color: Colors.red,
-                  margin: EdgeInsets.only(top: 10, left: 10, right: 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: SffColor.sffMainColor,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                  ),
-                  child: ListTile(
-                      contentPadding: EdgeInsets.only(left: 0.0, right: 0.0),
-                      leading:  Container(
-                        alignment: Alignment.center,
-                        height: double.maxFinite,
-                        width: 30,
-                        color: SffColor.sffMainColor,
-                        child: Text("$index",
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ),
-                      trailing: Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: const Icon(Icons.arrow_drop_down)),
-                      title: Text("FAQs Item")),
+  Widget Containlist(String item, int index, String ans, bool show) {
+    return Column(
+      children: [
+        Container(
+          // color: Colors.red,
+          margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+          decoration: BoxDecoration(
+            border: Border.all(
+                color: SffColor.sffMainColor,
+                width: 1.0,
+                style: BorderStyle.solid),
+          ),
+          child: ListTile(
+              contentPadding: EdgeInsets.only(left: 0.0, right: 0.0),
+              leading: Container(
+                alignment: Alignment.center,
+                height: double.maxFinite,
+                width: 30,
+                color: SffColor.sffMainColor,
+                child: Text(
+                  "$index",
+                  style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
-                Visibility(
-                    visible: visible,
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
-                      height: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                            color: SffColor.sffMainColor,
-                            width: 1.0,
-                            style: BorderStyle.solid),
-                      ),
-                    ))
-              ],
-            );
-          }),
-      ),
+              ),
+              trailing: GestureDetector(
+                onTap: (){
+                  if(show){
+                    _faqsController.mShow[index]=false;
+                  }
+                  else{
+                    _faqsController.mShow[index]=true;
+                  }
+                  setState(() {});
+                },
+                child: Column(
+                  children: [
+                    Visibility(
+                        visible: show == false,
+                        child: Container(
+                            padding: EdgeInsets.only(right: 10),
+                            child: const Icon(Icons.arrow_drop_down))),
+                    Visibility(
+                        visible: show == true,
+                        child: Container(
+                            padding: EdgeInsets.only(right: 10),
+                            child: const Icon(Icons.arrow_drop_up))),
+                  ],
+                ),
+              ),
+              title: Text(item)),
+        ),
+        Visibility(
+          visible: show == true,
+          child: Container(
+            margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
+            width: double.infinity,
+            decoration: BoxDecoration(
+              border: Border.all(
+                  color: SffColor.sffMainColor,
+                  width: 1.0,
+                  style: BorderStyle.solid),
+            ),
+            child: Text(
+              ans,
+              style: TextStyle(color: Colors.black, fontSize: 15),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

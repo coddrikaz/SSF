@@ -1,8 +1,8 @@
-import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart' hide Response;
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
+import 'package:staple_food_fortification/Constants/rest_api.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 
 final _hiveBox = Hive.box(kDefaultHiveBox);
@@ -10,22 +10,22 @@ final _hiveBox = Hive.box(kDefaultHiveBox);
 class SplashController extends GetxController {
 
   Future<void> check() async {
-    print("sdfadsfs");
     if(_hiveBox.get("init_download")!=1){
-      await datadownload();
+      await dataDownloadFaq();
+      await dataDownloadStep();
     }
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 2));
     Get.offAllNamed(RoutesName.login);
   }
 
-  datadownload() async {
+  Future<void> dataDownloadStep() async {
     Map<String, dynamic> formMap = {
       "wstoken": "e37bd0294a0e6a7496f9355f33fc4bb6",
       "wsfunction": "local_custom_api_get_course_slider",
       "moodlewsrestformat": "json",
     };
     try {
-      Response response = await Dio().post("https://staplefoodfortification.org/webservice/rest/server.php", data: formMap, options: Options(
+      Response response = await Dio().post(RestUrl.baseUrl, data: formMap, options: Options(
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
       ));
 
@@ -46,6 +46,34 @@ class SplashController extends GetxController {
             _hiveBox.put("init_download", 1);
             print(_hiveBox.get("init_download"));
           }
+      }
+    } catch (e) {}
+  }
+
+  Future<void> dataDownloadFaq() async {
+    Map<String, dynamic> formMap = {
+      "wstoken": "03166992c477ddcae1c235015ba7d14b",
+      "wsfunction": "local_faq_get_faq",
+      "moodlewsrestformat": "json",
+      "lang": "en",
+    };
+    try {
+      Response response = await Dio().post(RestUrl.baseUrl, data: formMap, options: Options(
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      ));
+
+     // print("obj $response");
+      if (response.statusCode == 200) {
+        List<String> QNA_question =[];
+        List<String> QNA_answer =[];
+        for(var list in response.data){
+          QNA_question.add(list["question"]);
+          QNA_answer.add(list["answer"]);
+        }
+        if(QNA_question.length!=0){
+          _hiveBox.put("FAQ_question", QNA_question);
+          _hiveBox.put("FAQ_answer", QNA_answer);
+        }
       }
     } catch (e) {}
   }
