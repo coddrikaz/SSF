@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/CourseScreen/CourseScreen.dart';
 import 'package:staple_food_fortification/App/CourseScreen/courseBindings.dart';
+import 'package:staple_food_fortification/App/HomeScreen/HomeScreen.dart';
+import 'package:staple_food_fortification/App/HomeScreen/homeScreen_Bindings.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 import 'package:staple_food_fortification/App/SplashScreen/splash_screen.dart';
 import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqsScreen.dart';
@@ -14,6 +16,13 @@ import 'package:staple_food_fortification/App/SplashScreen/Bindings/splash_bindi
 class AppRoutes {
   static List<GetPage> getRoutes() {
     return [
+
+      GetPage(
+        name: RoutesName.homeScreen,
+        page: () => const HomeScreen(),
+        binding: HomeScreeenBindings(),
+      ),
+
       GetPage(
         name: RoutesName.splash,
         page: () => const SplashScreen(),

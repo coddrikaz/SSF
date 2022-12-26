@@ -14,7 +14,6 @@ class FaqsController extends GetxController{
     mQuestion.assignAll(await _hiveBox.get("FAQ_question"));
     mAnswer.assignAll(await _hiveBox.get("FAQ_answer"));
     mShow.assignAll(List.filled(mAnswer.length, false));
-    debugPrint('sdf ${mShow.length}');
   }
 
 }

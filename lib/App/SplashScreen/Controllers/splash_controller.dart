@@ -25,7 +25,7 @@ class SplashController extends GetxController {
       "moodlewsrestformat": "json",
     };
     try {
-      Response response = await Dio().post(RestUrl.baseUrl, data: formMap, options: Options(
+      Response response = await Dio().post(RestUrl.mUrl, data: formMap, options: Options(
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
       ));
 
@@ -58,7 +58,7 @@ class SplashController extends GetxController {
       "lang": "en",
     };
     try {
-      Response response = await Dio().post(RestUrl.baseUrl, data: formMap, options: Options(
+      Response response = await Dio().post(RestUrl.mUrl, data: formMap, options: Options(
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
       ));
 

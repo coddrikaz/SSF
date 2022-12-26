@@ -22,14 +22,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
-
   @override
   void initState() {
     _loginController.getData();
   }
 
-  bool _obscureText = true;
 
   // var ic = Icons.remove_red_eye_rounded;
   @override
@@ -55,8 +52,8 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: SffColor.sffMainColor,
-        leading: Text(" "),
-        title: Center(
+        leading: const Text(" "),
+        title: const Center(
           child: Text(
             "Log in",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -65,26 +62,26 @@ class _LoginScreenState extends State<LoginScreen> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => Settings()));
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const Settings()));
               },
-              icon: Icon(Icons.settings),
+              icon: const Icon(Icons.settings),
               color: Colors.white),
         ],
       ),
       body: Obx(() {
         return Container(
-          margin: EdgeInsets.only(bottom: 25),
+          margin: const EdgeInsets.only(bottom: 25),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 10, bottom: 10),
+                  margin: const EdgeInsets.only(top: 10, bottom: 10),
                   child: homeLogo,
                   height: 60,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
                     children: [
                       DefaultTabController(
@@ -103,15 +100,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                     Tab(
                                       icon: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         children: [
                                           Image.asset(
                                             'assets/steps.png',
                                             height: 20,
                                             width: double.maxFinite,
                                           ),
-                                          SizedBox(width: 5),
-                                          Text("STEPS",
+                                          const SizedBox(width: 5),
+                                          const Text("STEPS",
                                               style: TextStyle(
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold))
@@ -121,15 +118,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                     Tab(
                                       icon: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         children: [
                                           Image.asset(
                                             'assets/info-icon.png',
                                             height: 20,
                                             width: double.maxFinite,
                                           ),
-                                          SizedBox(width: 5),
-                                          Text("INSTRUCTIONS",
+                                          const SizedBox(width: 5),
+                                          const Text("INSTRUCTIONS",
                                               style: TextStyle(
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold))
@@ -150,14 +147,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                           enableInfiniteScroll: true,
                                           autoPlay: true,
                                           autoPlayInterval:
-                                          Duration(milliseconds: 1000),
-                                          autoPlayAnimationDuration: Duration(
-                                              milliseconds: 500),
+                                              const Duration(milliseconds: 1000),
+                                          autoPlayAnimationDuration:
+                                              const Duration(milliseconds: 500),
                                           // autoPlayCurve: Curves.fastOutSlowIn,
                                           // enlargeCenterPage: true,
                                           viewportFraction: 1,
                                         ),
-                                        items: _loginController.mListStep.map((i) {
+                                        items:
+                                            _loginController.mListStep.map((i) {
                                           return Builder(
                                             builder: (BuildContext context) {
                                               return Container(
@@ -165,7 +163,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   alignment: Alignment.center,
                                                   // margin: EdgeInsets.symmetric(
                                                   //     horizontal: 2.0),
-                                                  decoration: BoxDecoration(
+                                                  decoration: const BoxDecoration(
                                                     image: DecorationImage(
                                                         image: AssetImage(
                                                             "assets/slider.jpeg"),
@@ -173,19 +171,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   ),
                                                   child: Center(
                                                     child: Container(
-                                                      padding: EdgeInsets
-                                                          .symmetric(
-                                                          horizontal: 30),
-
+                                                      padding:
+                                                          const EdgeInsets.symmetric(
+                                                              horizontal: 30),
                                                       child: Text(
                                                         i,
-                                                        textAlign: TextAlign
-                                                            .center,
-                                                        style: TextStyle(
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: const TextStyle(
                                                             fontSize: 16.0,
                                                             color: Colors.black,
-                                                            fontWeight: FontWeight
-                                                                .bold),
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold),
                                                       ),
                                                     ),
                                                   ));
@@ -205,24 +203,41 @@ class _LoginScreenState extends State<LoginScreen> {
                                         // color: SffColor.sffMainColor,
                                       ),
                                       child: Container(
-                                          padding: EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
+                                          padding: const EdgeInsets.only(
+                                              left: 5,
+                                              right: 5,
+                                              top: 5,
+                                              bottom: 5),
                                           child: SingleChildScrollView(
                                             child: Column(
                                               children: [
-                                                for(int i =0;i<_loginController.mListInstruction.length;i++) ...[
+                                                for (int i = 0;
+                                                    i <
+                                                        _loginController
+                                                            .mListInstruction
+                                                            .length;
+                                                    i++) ...[
                                                   Text(
-                                                    _loginController.mListInstruction.elementAt(i).trim(),
+                                                    _loginController
+                                                        .mListInstruction
+                                                        .elementAt(i)
+                                                        .trim(),
                                                     textAlign: TextAlign.left,
-                                                    style: TextStyle(
+                                                    style: const TextStyle(
                                                       fontSize: 16.0,
                                                       color: Colors.black,
-                                                      fontWeight: FontWeight
-                                                          .bold,),
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
                                                   ),
-                                                  Visibility(visible:i<_loginController.mListInstruction.length-1,child:Divider())
+                                                  Visibility(
+                                                      visible: i <
+                                                          _loginController
+                                                                  .mListInstruction
+                                                                  .length -
+                                                              1,
+                                                      child: const Divider())
                                                 ]
-                     
-
                                               ],
                                             ),
                                           )),
@@ -234,18 +249,17 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Container(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-
-
                             Container(
-                              margin: EdgeInsets.all(15),
+                              margin: const EdgeInsets.all(15),
                               child: TextFormField(
-                                decoration: InputDecoration(
+                                controller: _loginController.usernameController,
+                                decoration: const InputDecoration(
                                   focusColor: Colors.blue,
                                   fillColor: Colors.grey,
                                   hintText: "Username",
@@ -257,12 +271,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-
                             Container(
-                              margin: EdgeInsets.all(15),
+                              margin: const EdgeInsets.all(15),
                               child: TextFormField(
-
-                                decoration: InputDecoration(
+                                controller: _loginController.passwordController,
+                                decoration: const InputDecoration(
                                   focusColor: Colors.blue,
                                   fillColor: Colors.grey,
 
@@ -272,7 +285,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                   hintStyle: TextStyle(
                                     color: Colors.grey,
                                     fontSize: 16,
-
                                     fontWeight: FontWeight.w400,
                                   ),
 
@@ -288,17 +300,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 5),
+                            const SizedBox(height: 5),
                             Row(
                               children: [
-                                Text(
+                                const Text(
                                   "* ",
                                   style: TextStyle(
                                       color: Colors.red,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500),
                                 ),
-                                Text(
+                                const Text(
                                   "The Password must have 5 character",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -307,35 +319,33 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 20),
-
+                            const SizedBox(height: 20),
                             MaterialButton(
                               height: 45,
                               color: SffColor.sffBlueColor,
-                              onPressed: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => HomeScreen()));
+                              onPressed: () async {
+                                await _loginController.getLogin();
                               },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text("Log in",
+                                  const Text("Log in",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18)),
-                                  SizedBox(width: 5),
-                                  Icon(Icons.arrow_forward, color: Colors.white,
-                                      size: 20),
+                                  const SizedBox(width: 5),
+                                  const Icon(Icons.arrow_forward,
+                                      color: Colors.white, size: 20),
                                 ],
                               ),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
-                            SizedBox(height: 20),
-                            Center(
+                            const SizedBox(height: 20),
+                            const Center(
                               child: Text(
                                 "OR",
                                 style: TextStyle(
@@ -344,22 +354,20 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontWeight: FontWeight.w700),
                               ),
                             ),
-
-                            SizedBox(height: 20),
-
+                            const SizedBox(height: 20),
                             MaterialButton(
                               height: 45,
                               color: SffColor.sffgeyColor,
                               elevation: 0,
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => Otp()));
+                                    builder: (context) => const Otp()));
                               },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text("Login with OTP",
+                                  const Text("Login with OTP",
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold)),
@@ -369,16 +377,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
-
-                            SizedBox(height: 15),
-
+                            const SizedBox(height: 15),
                             Center(
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => Forgot()));
+                                      builder: (context) => const Forgot()));
                                 },
-                                child: Text(
+                                child: const Text(
                                   "Forget Username or password?",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -389,8 +395,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 15),
-                            Center(
+                            const SizedBox(height: 15),
+                            const Center(
                               child: Text(
                                 "Dont have an account?",
                                 style: TextStyle(
@@ -399,8 +405,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontWeight: FontWeight.w500),
                               ),
                             ),
-                            SizedBox(height: 15),
-
+                            const SizedBox(height: 15),
                             MaterialButton(
                               height: 45,
                               color: SffColor.sffgeyColor,
@@ -412,7 +417,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text("Create new account",
+                                  const Text("Create new account",
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold)),
@@ -422,8 +427,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
-
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             MaterialButton(
                               height: 45,
                               color: SffColor.sffgeyColor,
@@ -435,7 +439,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text("FAQs",
+                                  const Text("FAQs",
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold)),
@@ -458,5 +462,4 @@ class _LoginScreenState extends State<LoginScreen> {
       }),
     );
   }
-
 }

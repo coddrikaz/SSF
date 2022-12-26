@@ -1,3 +1,4 @@
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,6 +33,8 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             colorSchemeSeed: SffColor.sffMainColor,
           ),
+          navigatorObservers: [FlutterSmartDialog.observer],
+          builder: FlutterSmartDialog.init(),
           getPages: AppRoutes.getRoutes(),
           initialRoute: RoutesName.splash,
         );
