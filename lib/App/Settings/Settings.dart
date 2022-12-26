@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:staple_food_fortification/App/Settings/general.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
 class Settings extends StatefulWidget {
@@ -64,18 +65,23 @@ class _SettingsState extends State<Settings> {
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        title: Text(
+          "App Settings",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Container(
       child: Column(
         children: [
+
           MaterialButton(
             height: 45,
             color: Colors.white,
             elevation: 0,
             highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
             onPressed: () {
-              // Navigator.of(context).push(MaterialPageRoute(
-              //     builder: (context) => HomeScreen()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => GeneralSettings()));
             },
             child: Row(
 
