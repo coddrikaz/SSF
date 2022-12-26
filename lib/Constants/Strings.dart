@@ -1,5 +1,13 @@
 
-const kAppName = 'Our Green Planet';
+const kAppName ={
+  'title': 'Easy Language Translations',
+  'subtitle': 'This text will automatically be translated into the appropriate language',
+  'button1': "Switch language",
+  'button2': "Go to Test",
+  'appbar1': 'Cheetah Coding',
+  'appbar2': 'Just Testing',
+  'test_text': "This is just a useless screen for testing"
+};
 const kGMapAPiKey = "AIzaSyBBGDykuELSi8g1GQkyqlUblltEahmERiE";
 const kDefaultHiveBox = "HB2554366";
 

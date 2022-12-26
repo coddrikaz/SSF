@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Response;
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
@@ -14,6 +15,7 @@ class SplashController extends GetxController {
       await dataDownloadFaq();
       await dataDownloadStep();
     }
+    Get.updateLocale(Locale('en', 'us'));
     await Future.delayed(Duration(seconds: 2));
     Get.offAllNamed(RoutesName.login);
   }
@@ -67,7 +69,7 @@ class SplashController extends GetxController {
         List<String> QNA_question =[];
         List<String> QNA_answer =[];
         for(var list in response.data){
-          QNA_question.add(list["question"]);
+          QNA_question.add(list["qStringuestion"]);
           QNA_answer.add(list["answer"]);
         }
         if(QNA_question.length!=0){

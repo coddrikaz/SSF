@@ -53,9 +53,9 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         backgroundColor: SffColor.sffMainColor,
         leading: const Text(" "),
-        title: const Center(
+        title: Center(
           child: Text(
-            "Log in",
+              'title',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
@@ -75,6 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Text('addon.calendar.confirmeventdelete'.tr.replaceAll('"{{\$a}}"', "Ok")),
                 Container(
                   margin: const EdgeInsets.only(top: 10, bottom: 10),
                   child: homeLogo,

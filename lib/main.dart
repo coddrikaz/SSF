@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:staple_food_fortification/Commons/language.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
+import 'package:staple_food_fortification/Constants/english.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 import 'package:staple_food_fortification/Routes/route_pages.dart';
 
@@ -28,6 +30,9 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           smartManagement: SmartManagement.keepFactory, // Bindings factory reinitialized
           debugShowCheckedModeBanner: false,
+          locale: Get.deviceLocale,
+          translations: LanguageTranslations(),
+
           title: 'SSF',
           theme: ThemeData(
             useMaterial3: true,
