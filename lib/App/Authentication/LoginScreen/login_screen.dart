@@ -20,6 +20,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+
+  var colosd = SffColor.sffBlueDimColor;
+
   @override
   void initState() {
     _loginController.getData();
@@ -167,6 +171,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         margin: const EdgeInsets.all(15),
                         child: TextFormField(
                           controller: _loginController.usernameController,
+                          onChanged: (value){
+                            if(_loginController.usernameController.text.isNotEmpty&&_loginController.passwordController.text.isNotEmpty){
+                              colosd = SffColor.sffBlueColor;
+                            } else{
+                              colosd = SffColor.sffBlueDimColor;
+                            }
+                            setState(() {});
+                          },
                           decoration: const InputDecoration(
                             focusColor: Colors.blue,
                             fillColor: Colors.grey,
@@ -182,10 +194,18 @@ class _LoginScreenState extends State<LoginScreen> {
                       Container(
                         margin: const EdgeInsets.all(15),
                         child: TextFormField(
+                          onChanged: (value){
+                            if(_loginController.usernameController.text.isNotEmpty&&_loginController.passwordController.text.isNotEmpty){
+                              colosd = SffColor.sffBlueColor;
+                            } else{
+                              colosd = SffColor.sffBlueDimColor;
+                            }
+                            setState(() {});
+                          },
                           controller: _loginController.passwordController,
                           decoration: const InputDecoration(
-                            focusColor: Colors.blue,
-                            fillColor: Colors.grey,
+                            // focusColor: Colors.blue,
+                            // fillColor: Colors.grey,
 
                             hintText: "Password",
 
@@ -212,7 +232,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       MaterialButton(
                         minWidth: double.infinity,
                         height: 45,
-                        color: SffColor.sffBlueColor,
+                        color: colosd,
                         onPressed: () async => await _loginController.getLogin(),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
