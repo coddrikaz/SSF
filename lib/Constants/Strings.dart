@@ -1,4 +1,6 @@
 
+import 'package:get/get.dart';
+
 const kAppName ={
   'title': 'Easy Language Translations',
   'subtitle': 'This text will automatically be translated into the appropriate language',
@@ -63,8 +65,8 @@ Students and faculty from various food technology & food and nutrition institute
 Any other interested personnel""";
 
   static const String courseAppBar = "Training Course on Edible Oil Fortification by Global Alliance for Improved Nutrition (GAIN)";
-  static const String crossWebsiteTracking = "Embedded content from the site might require cross-site cookies to work. To enable it, please go to the app's ios settings and enable 'Allow Cross-Website Tracking'.";
-  static const String EnableTextEditor = "If enabled, a text editor will be available when entering content";
-  static const String DisplaydebugMessage = "If enabled, error modals will display more data about the error if possible.";
+  static String crossWebsiteTracking = "core.settings.ioscookiesdescription".tr;
+  static String EnableTextEditor = "core.settings.enablerichtexteditordescription".tr;
+  static String DisplaydebugMessage = "core.settings.debugdisplaydescription".tr;
 
 }

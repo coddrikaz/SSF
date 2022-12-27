@@ -174,10 +174,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             }
                             setState(() {});
                           },
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             focusColor: Colors.blue,
                             fillColor: Colors.grey,
-                            hintText: "Username",
+                            hintText: "core.login.username".tr,
                             hintStyle: TextStyle(
                               color: Colors.grey,
                               fontSize: 16,
@@ -198,11 +198,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             setState(() {});
                           },
                           controller: _loginController.passwordController,
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             // focusColor: Colors.blue,
                             // fillColor: Colors.grey,
 
-                            hintText: "Password",
+                            hintText: "core.login.password".tr,
 
                             //make hint text
                             hintStyle: TextStyle(
@@ -317,7 +317,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const Text("FAQs",
+                             Text("core.mainmenu.faq".tr,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold)),

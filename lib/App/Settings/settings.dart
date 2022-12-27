@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Settings/Widget/general.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
@@ -58,7 +59,7 @@ class _SettingScreenState extends State<SettingScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "App Settings",
+          "core.settings.appsettings".tr,
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -83,7 +84,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   children: [
                     SvgView("assets/svg/wrench.svg", 25.0, 25.0, Colors.black),
                     SizedBox(width: 15),
-                    TextView("General", 20.0, Colors.black, FontWeight.w700),
+                    TextView("core.settings.general".tr, 20.0, Colors.black, FontWeight.w700),
                   ],
                 ),
                 Spacer(),
@@ -121,7 +122,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   children: [
                     space,
                     SizedBox(width: 15),
-                    Text("Space usage",
+                    Text("core.settings.spaceusage".tr,
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold, fontSize: 20)),
@@ -162,7 +163,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   children: [
                    sync,
                     SizedBox(width: 15),
-                    Text("Synchronisaion",
+                    Text("core.settings.synchronization".tr,
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold, fontSize: 20)),

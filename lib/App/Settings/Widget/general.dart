@@ -78,7 +78,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Text Size",
+                      "core.settings.fontsize".tr,
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -140,7 +140,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Color Scheme",
+                      "core.settings.colorscheme".tr,
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -150,7 +150,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                 ),
                 Spacer(),
                 Text(
-                  "Light",
+                  "core.settings.colorscheme-light".tr,
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w600,
@@ -181,7 +181,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Container(
                         margin: EdgeInsets.only(top: 10),
                         child: Text(
-                          "Enable Text Editor",
+                            "core.settings.enablerichtexteditor".tr,
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 17),
                         ),
@@ -235,7 +235,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   alignment: Alignment.topLeft,
                   margin: EdgeInsets.only(top: 10),
                   child: Text(
-                    "Cross-Website Tracking",
+                    "core.settings.ioscookies".tr,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
@@ -261,7 +261,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Open Settings",
+                        Text("core.opensettings".tr,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -294,7 +294,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                     children: [
                       Container(
                         child: Text(
-                          "Display Debug Message",
+                          "core.settings.debugdisplay".tr,
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 17),
                         ),
@@ -521,7 +521,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         width: double.maxFinite,
                         alignment: Alignment.center,
                         child: Text(
-                          "Color Scheme",
+                          "core.settings.colorscheme".tr,
                           style: TextStyle(
                               fontWeight: FontWeight.w900, fontSize: 18),
                         ),
@@ -546,7 +546,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             });
                           },
                           child: TextView(
-                              "Light", 18.0, Colors.black, FontWeight.w500)),
+                              "core.settings.colorscheme-light".tr, 18.0, Colors.black, FontWeight.w500)),
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
@@ -562,7 +562,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           setState(() {});
                         },
                         child: TextView(
-                            "Dark", 18.0, Colors.black, FontWeight.w500),
+                            "core.settings.colorscheme-dark".tr, 18.0, Colors.black, FontWeight.w500),
                       ),
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
