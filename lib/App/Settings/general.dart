@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:staple_food_fortification/Commons/Widget/textwidget.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
-
 
 final _hiveBox = Hive.box(kDefaultHiveBox);
 
@@ -17,15 +16,11 @@ class GeneralSettings extends StatefulWidget {
 }
 
 class _GeneralSettingsState extends State<GeneralSettings> {
-
-
-  String lang='English';
+  String lang = 'English';
+  bool isSwitchOn = false;
 
   @override
-  void initState() {
-
-  }
-
+  void initState() {}
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +31,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Get.back(),
         ),
-        title: TextView("A", 22.0,Colors.white, FontWeight.w400),
+        title: TextView("A", 22.0, Colors.white, FontWeight.w400),
       ),
       body: Column(
         children: [
@@ -48,11 +43,11 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             onPressed: () => showBottomSheetLanguage(),
             child: Row(
               children: [
-                TextView("Language", 20.0,Colors.black, FontWeight.w700),
+                TextView("Language", 20.0, Colors.black, FontWeight.w700),
                 Spacer(),
                 Row(
                   children: [
-                    TextView(lang, 16.0,Colors.black, FontWeight.w600),
+                    TextView(lang, 16.0, Colors.black, FontWeight.w600),
                     Icon(Icons.arrow_drop_down),
                   ],
                 ),
@@ -146,26 +141,26 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             height: 1,
           ),
           Container(
-            margin: EdgeInsets.only(left: 15),
+          margin: EdgeInsets.only(left:11 ),
             child: Row(
               children: [
                 Container(
+                  //color: Colors.grey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        alignment: Alignment.topLeft,
-                        margin: EdgeInsets.only(top: 10),
                         child: Text(
                           "Enable Text Editor",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
+                              fontWeight: FontWeight.bold, fontSize: 17),
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.only(bottom: 5),
+                        width:Get.width*0.8,
+                        margin: EdgeInsets.only(bottom: 12),
+                        //  padding: EdgeInsets.only(right: 20),
                         child: Text(
                           Strings.EnableTextEditor,
                           style: TextStyle(
@@ -174,14 +169,25 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                               fontWeight: FontWeight.w500),
                         ),
                       ),
+
                     ],
                   ),
                 ),
+                SizedBox(width: 5,),
                 Container(
-                  color: Colors.red,
-                  width: 50,
-                  height: 50,
-                )
+                  width:Get.height*0.07,
+
+                  height: Get.height*0.07,
+                  child:FlutterSwitch(
+                    value: isSwitchOn,
+                    onToggle: (value) {
+                      setState(() {
+                        isSwitchOn = value;
+                      });
+                    },
+                  ),
+
+                ),
               ],
             ),
           ),
@@ -199,8 +205,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   margin: EdgeInsets.only(top: 10),
                   child: Text(
                     "Cross-Website Tracking",
-                    style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
                 Container(
@@ -312,8 +317,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                 ),
               ],
             ),
-            margin: EdgeInsets.only(
-                top: 0, bottom: 0, right: 20, left: 20),
+            margin: EdgeInsets.only(top: 0, bottom: 0, right: 20, left: 20),
             height: 100,
             width: 100,
             child: Column(
@@ -327,7 +331,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: const Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
@@ -363,9 +368,10 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             Get.back();
                             setState(() {});
                           },
-                          child: TextView("English", 18.0,Colors.black, FontWeight.w700)
-                      ),
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                          child: TextView(
+                              "English", 18.0, Colors.black, FontWeight.w700)),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                         height: 45,
                         // color: SffColor.sffBlueColor,
@@ -378,9 +384,11 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           Get.back();
                           setState(() {});
                         },
-                        child: TextView("हिंदी", 18.0,Colors.black, FontWeight.w700),
+                        child: TextView(
+                            "हिंदी", 18.0, Colors.black, FontWeight.w700),
                       ),
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                         height: 45,
                         // color: SffColor.sffBlueColor,
@@ -399,15 +407,16 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18)),
                             SizedBox(width: 5),
-                            Icon(Icons.arrow_forward, color: Colors.white,
-                                size: 20),
+                            Icon(Icons.arrow_forward,
+                                color: Colors.white, size: 20),
                           ],
                         ),
                         // shape: RoundedRectangleBorder(
                         //   borderRadius: BorderRadius.circular(10.0),
                         // ),
                       ),
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                         height: 45,
                         // color: SffColor.sffBlueColor,
@@ -426,8 +435,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18)),
                             SizedBox(width: 5),
-                            Icon(Icons.arrow_forward, color: Colors.white,
-                                size: 20),
+                            Icon(Icons.arrow_forward,
+                                color: Colors.white, size: 20),
                           ],
                         ),
                         // shape: RoundedRectangleBorder(
@@ -435,7 +444,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         // ),
                       ),
 
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                           height: 45,
                           // color: SffColor.sffBlueColor,
@@ -444,8 +454,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             // Navigator.of(context).push(MaterialPageRoute(
                             //     builder: (context) => HomeScreen()));
                           },
-                          child: TextView("తెలుగు", 18.0,Colors.black, FontWeight.w700)
-                      ),
+                          child: TextView(
+                              "తెలుగు", 18.0, Colors.black, FontWeight.w700)),
 
                       // Container(
                       //   height: 10,
@@ -455,39 +465,34 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   ),
                 ),
                 SizedBox(height: 10),
-
                 MaterialButton(
                   minWidth: double.infinity,
                   height: 45,
                   color: Colors.white,
                   elevation: 0,
-                  onPressed: () =>Get.back(),
+                  onPressed: () => Get.back(),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  child: TextView("Cancel", 20.0,Colors.red, FontWeight.w800),
+                  child: TextView("Cancel", 20.0, Colors.red, FontWeight.w800),
                 ),
                 SizedBox(height: 10),
               ],
             ),
           ),
-
         );
       },
     );
   }
 
   void setLang() {
-
-    String def_lang=_hiveBox.get("lang");
-    if(def_lang=='en'){
-      lang="English";
-    }
-    else if(def_lang=='hi'){
-      lang="हिंदी";
-    }else{
-      lang="English";
+    String def_lang = _hiveBox.get("lang");
+    if (def_lang == 'en') {
+      lang = "English";
+    } else if (def_lang == 'hi') {
+      lang = "हिंदी";
+    } else {
+      lang = "English";
     }
   }
-
 }
