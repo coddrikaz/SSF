@@ -292,7 +292,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const Text("Create new account",
+                             Text("core.login.startsignup".tr,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold)),

@@ -65,5 +65,6 @@ Any other interested personnel""";
   static const String courseAppBar = "Training Course on Edible Oil Fortification by Global Alliance for Improved Nutrition (GAIN)";
   static const String crossWebsiteTracking = "Embedded content from the site might require cross-site cookies to work. To enable it, please go to the app's ios settings and enable 'Allow Cross-Website Tracking'.";
   static const String EnableTextEditor = "If enabled, a text editor will be available when entering content";
+  static const String DisplaydebugMessage = "If enabled, error modals will display more data about the error if possible.";
 
 }

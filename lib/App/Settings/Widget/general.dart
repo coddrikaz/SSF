@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
@@ -6,7 +7,6 @@ import 'package:staple_food_fortification/Commons/theme.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
-
 
 final _hiveBox = Hive.box(kDefaultHiveBox);
 
@@ -20,6 +20,7 @@ class GeneralSettings extends StatefulWidget {
 class _GeneralSettingsState extends State<GeneralSettings> {
   bool isSwitchOn = false;
   bool isSwitchTextOn = false;
+  int? selectedValue = 0;
 
   ThemeMode _themeMode = ThemeMode.dark;
   void changeTheme(ThemeMode themeMode) {
@@ -37,9 +38,9 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Get.back(),
         ),
-        title: TextView("core.settings.appsettings".tr, 22.0, Colors.white, FontWeight.w400),
+        title: TextView("core.settings.appsettings".tr, 22.0, Colors.white,
+            FontWeight.w400),
       ),
-
       body: Column(
         children: [
           MaterialButton(
@@ -50,7 +51,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             onPressed: () => showBottomSheetLanguage(),
             child: Row(
               children: [
-                TextView("addon.badges.language".tr, 20.0, Colors.black, FontWeight.w700),
+                TextView("addon.badges.language".tr, 20.0, Colors.black,
+                    FontWeight.w700),
                 Spacer(),
                 Row(
                   children: [
@@ -68,7 +70,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           ),
           Container(
             padding: EdgeInsets.only(left: 15),
-            height: 45,
+            height: 90,
             child: Row(
               children: [
                 Row(
@@ -85,16 +87,38 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   ],
                 ),
                 Spacer(),
-                Card(
-                  child: Container(
-                    height: 30,
-                    width: 30,
-                    color: Colors.blue,
-                    child: Row(
-                      children: [],
-                    ),
-                  ),
-                )
+                CupertinoPageScaffold(
+                    child: Container(
+                        alignment: Alignment.center,
+                        //  padding: EdgeInsets.all(8),
+                        child: CupertinoSegmentedControl(
+                            padding: EdgeInsets.all(3),
+                            borderColor: Colors.grey,
+                            selectedColor: Colors.grey,
+                            pressedColor: Colors.grey.withOpacity(0.2),
+                            groupValue: selectedValue!,
+                            children: {
+                              0: Container(
+                                alignment: Alignment.center,
+                                width: 80,
+                                child: Text('A'),
+                              ),
+                              1: Container(
+                                alignment: Alignment.center,
+                                width: 80,
+                                child: Text('A'),
+                              ),
+                              3: Container(
+                                alignment: Alignment.center,
+                                width: 80,
+                                child: Text('A'),
+                              ),
+                            },
+                            onValueChanged: (val) {
+                              selectedValue = val;
+                              print(selectedValue);
+                              setState(() {});
+                            })))
               ],
             ),
           ),
@@ -146,7 +170,6 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           ),
           Container(
             margin: EdgeInsets.only(left: 15),
-
             child: Row(
               children: [
                 Container(
@@ -156,6 +179,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
+                        margin: EdgeInsets.only(top: 10),
                         child: Text(
                           "Enable Text Editor",
                           style: TextStyle(
@@ -212,8 +236,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   margin: EdgeInsets.only(top: 10),
                   child: Text(
                     "Cross-Website Tracking",
-                    style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
                 Container(
@@ -261,7 +284,6 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           ),
           Container(
             margin: EdgeInsets.only(left: 15),
-
             child: Row(
               children: [
                 Container(
@@ -272,7 +294,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                     children: [
                       Container(
                         child: Text(
-                          "Enable Text Editor",
+                          "Display Debug Message",
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 17),
                         ),
@@ -282,7 +304,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         margin: EdgeInsets.only(bottom: 12),
                         //  padding: EdgeInsets.only(right: 20),
                         child: Text(
-                          Strings.EnableTextEditor,
+                          Strings.DisplaydebugMessage,
                           style: TextStyle(
                               fontSize: 16,
                               color: SffColor.sffblackLigtColor,
@@ -348,7 +370,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: const Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
@@ -359,7 +382,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         // color: Colors.blueAccent,
                         width: double.maxFinite,
                         alignment: Alignment.center,
-                        child: TextView("Language", 18.0, Colors.black, FontWeight.w800),
+                        child: TextView(
+                            "Language", 18.0, Colors.black, FontWeight.w800),
                       ),
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
@@ -373,9 +397,10 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             Get.back();
                             setState(() {});
                           },
-                          child: TextView("English", 18.0,Colors.black, FontWeight.w700)
-                      ),
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                          child: TextView(
+                              "English", 18.0, Colors.black, FontWeight.w500)),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                         height: 45,
                         // color: SffColor.sffBlueColor,
@@ -386,9 +411,11 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           Get.back();
                           setState(() {});
                         },
-                        child: TextView("हिंदी", 18.0,Colors.black, FontWeight.w700),
+                        child: TextView(
+                            "हिंदी", 18.0, Colors.black, FontWeight.w500),
                       ),
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                         height: 45,
                         // color: SffColor.sffBlueColor,
@@ -400,9 +427,10 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           setState(() {});
                         },
                         child: TextView(
-                            "தமிழ்", 18.0, Colors.black, FontWeight.w700),
+                            "தமிழ்", 18.0, Colors.black, FontWeight.w500),
                       ),
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                         height: 45,
                         // color: SffColor.sffBlueColor,
@@ -414,7 +442,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           setState(() {});
                         },
                         child: TextView(
-                            "ಕನ್ನಡ", 18.0, Colors.black, FontWeight.w700),
+                            "ಕನ್ನಡ", 18.0, Colors.black, FontWeight.w500),
                       ),
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
@@ -428,29 +456,27 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             Get.back();
                             setState(() {});
                           },
-                          child: TextView("తెలుగు", 18.0,Colors.black, FontWeight.w700)
-                      ),
+                          child: TextView(
+                              "తెలుగు", 18.0, Colors.black, FontWeight.w500)),
                     ],
                   ),
                 ),
                 SizedBox(height: 10),
-
                 MaterialButton(
                   minWidth: double.infinity,
                   height: 45,
                   color: Colors.white,
                   elevation: 0,
-                  onPressed: () =>Get.back(),
+                  onPressed: () => Get.back(),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  child: TextView("Cancel", 20.0,Colors.red, FontWeight.w800),
+                  child: TextView("Cancel", 20.0, Colors.red, FontWeight.w800),
                 ),
                 SizedBox(height: 10),
               ],
             ),
           ),
-
         );
       },
     );
@@ -515,7 +541,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             ThemeClass.darkTheme;
                             // ThemeData.dark();
                             setState(() {
-                              ThemeClass.darkTheme;
+                              Get.changeTheme(ThemeClass.lightTheme);
+                              //setState(() {});
                             });
                           },
                           child: TextView(
@@ -531,7 +558,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           // _hiveBox.put("lang", "hi");
                           // lang="हिंदी";
                           // context.setLocale(const Locale('hi', 'IN'));
-                          Get.back();
+                          Get.changeTheme(ThemeClass.darkTheme);
                           setState(() {});
                         },
                         child: TextView(
@@ -599,5 +626,4 @@ class _GeneralSettingsState extends State<GeneralSettings> {
       },
     );
   }
-
 }
