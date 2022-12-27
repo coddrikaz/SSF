@@ -34,10 +34,8 @@ class MyApp extends StatelessWidget {
           translations: LanguageTranslations(),
 
           title: 'SSF',
-          theme: ThemeData(
-            useMaterial3: true,
-            colorSchemeSeed: SffColor.sffMainColor,
-          ),
+          theme: ThemeData.light(),
+          darkTheme: ThemeData.dark(),
           navigatorObservers: [FlutterSmartDialog.observer],
           builder: FlutterSmartDialog.init(),
           getPages: AppRoutes.getRoutes(),

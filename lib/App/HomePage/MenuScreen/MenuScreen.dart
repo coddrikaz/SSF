@@ -425,7 +425,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 elevation: 0.4,
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
                 onPressed: () {
-                  Get.toNamed(RoutesName.login);
+                  logoutConfirm();
                 },
                 child: Row(
                   children: [
@@ -500,7 +500,7 @@ class _MenuScreenState extends State<MenuScreen> {
     );
   }
 
-  Future<void> LogoutConfirm() async {
+  Future<void> logoutConfirm() async {
     showModalBottomSheet<void>(
       // backgroundColor: Colors.teal,
       context: context,
@@ -526,8 +526,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       Colors.blue,
                     ),
                     onPressed: () {
-                      // _home.logout();
-
+                      Get.toNamed(RoutesName.login);
                     },
                     child: Text("Yes",
                         style: TextStyle(
