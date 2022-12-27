@@ -84,7 +84,7 @@ class SplashController extends GetxController {
         List<String> QNA_question =[];
         List<String> QNA_answer =[];
         for(var list in response.data){
-          QNA_question.add(list["qStringuestion"]);
+          QNA_question.add(list["question"]);
           QNA_answer.add(list["answer"]);
         }
         if(QNA_question.length!=0){
@@ -94,37 +94,4 @@ class SplashController extends GetxController {
       }
     } catch (e) {}
   }
-
-  // Future<void> postData() async {
-  //   final Uri uri = Uri.parse("https://staplefoodfortification.org/webservice/rest/server.php");
-  //   final response = await httpClient.post(
-  //     uri,
-  //     body: {
-  //       "wstoken": "e37bd0294a0e6a7496f9355f33fc4bb6",
-  //       "wsfunction": "local_custom_api_get_course_slider",
-  //       "moodlewsrestformat": "json",
-  //     },
-  //     headers: {
-  //       "Content-Type": "application/x-www-form-urlencoded",
-  //     },
-  //     encoding: Encoding.getByName('utf-8'),
-  //   );
-  //   var mResponse = jsonDecode(response.body);
-  //   for(var i in mResponse){
-  //     Map<String,dynamic> map = i;
-  //     var step_list = map['Steps'];// await Future.delayed(Duration(seconds: 3));
-    // Get.offAllNamed(RoutesName.login);b
-  //     for(var j in  step_list){
-  //       Map<String,dynamic> slist = j;
-  //       var mlist = map['content'];
-  //     }
-  //
-  //     var sInstructions = map['Instructions'];
-  //     for(var j in  sInstructions){
-  //       Map<String,dynamic> sInst = j;
-  //     }
-  //   }
-  // //  print(mResponse);
-  // }
-
 }

@@ -11,23 +11,22 @@ dependencies:
     sdk: flutter
 
   get: ^4.6.5
-  flutter_html: ^2.2.1
   dio: ^4.0.6
   hive:
   hive_flutter:
   cupertino_icons: ^1.0.5
   flutter_screenutil: any
   carousel_slider: ^4.2.1
-  flutter_svg: any
+  flutter_svg: ^1.1.6
   flutter_smart_dialog: ^4.7.3
   flutter_switch: ^0.3.2
-  internet_connection_checker: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  flutter_html: ^3.0.0-alpha.6
 
 
 flutter:
@@ -37,6 +36,7 @@ flutter:
   assets:
     - assets/
     - assets/svg/
+    - assets/images/
 
 
   fonts:
