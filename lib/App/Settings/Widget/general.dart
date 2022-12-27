@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
+import 'package:staple_food_fortification/Commons/theme.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
@@ -19,6 +20,13 @@ class GeneralSettings extends StatefulWidget {
 class _GeneralSettingsState extends State<GeneralSettings> {
   bool isSwitchOn = false;
   bool isSwitchTextOn = false;
+
+  ThemeMode _themeMode = ThemeMode.dark;
+  void changeTheme(ThemeMode themeMode) {
+    setState(() {
+      _themeMode = themeMode;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -503,9 +511,12 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           height: 45,
                           elevation: 0,
                           onPressed: () async {
-
                             Get.back();
-                            setState(() {});
+                            ThemeClass.darkTheme;
+                            // ThemeData.dark();
+                            setState(() {
+                              ThemeClass.darkTheme;
+                            });
                           },
                           child: TextView(
                               "Light", 18.0, Colors.black, FontWeight.w500)),

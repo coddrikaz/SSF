@@ -19,6 +19,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  bool _obscureText = true;
+  var ic = Icons.remove_red_eye_rounded;
+
+  var colosd = SffColor.sffBlueDimColor.withOpacity(0.4);
+
+
   @override
   void initState() {
     _loginController.getData();
@@ -122,8 +128,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                         options: CarouselOptions(
                                           enableInfiniteScroll: true,
                                           autoPlay: true,
-                                          autoPlayInterval:
-                                              const Duration(milliseconds: 1000),
+                                          autoPlayInterval: const Duration(
+                                              milliseconds: 2000),
                                           autoPlayAnimationDuration:
                                               const Duration(milliseconds: 500),
                                           // autoPlayCurve: Curves.fastOutSlowIn,
@@ -235,7 +241,15 @@ class _LoginScreenState extends State<LoginScreen> {
                               margin: const EdgeInsets.all(15),
                               child: TextFormField(
                                 controller: _loginController.usernameController,
-                                decoration: const InputDecoration(
+                                onChanged: (value){
+                                  if(_loginController.usernameController.text.isNotEmpty&&_loginController.passwordController.text.isNotEmpty){
+                                    colosd = SffColor.sffBlueColor;
+                                  } else{
+                                    colosd = SffColor.sffBlueColor.withOpacity(0.4);
+                                  }
+                                  setState(() {});
+                                },
+                                decoration: InputDecoration(
                                   focusColor: Colors.blue,
                                   fillColor: Colors.grey,
                                   hintText: "Username",
@@ -250,13 +264,25 @@ class _LoginScreenState extends State<LoginScreen> {
                             Container(
                               margin: const EdgeInsets.all(15),
                               child: TextFormField(
+                                obscureText: _obscureText,
                                 controller: _loginController.passwordController,
-                                decoration: const InputDecoration(
+                                onChanged: (value){
+                                  if(_loginController.usernameController.text.isNotEmpty&&_loginController.passwordController.text.isNotEmpty){
+                                    colosd = SffColor.sffBlueColor;
+                                  } else{
+                                    colosd = SffColor.sffBlueDimColor.withOpacity(0.9);
+                                  }
+                                  setState(() {});
+                                },
+                                decoration: InputDecoration(
                                   focusColor: Colors.blue,
                                   fillColor: Colors.grey,
 
                                   hintText: "Password",
-
+                                  suffixIcon: IconButton(
+                                    onPressed: _toggle,
+                                    icon: Icon(ic),
+                                  ),
                                   //make hint text
                                   hintStyle: TextStyle(
                                     color: Colors.grey,
@@ -264,41 +290,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontWeight: FontWeight.w400,
                                   ),
 
-                                  //create lable
-                                  // labelText: 'Email/Mobile',
-                                  // //lable style
-                                  // labelStyle: TextStyle(
-                                  //   color: Colors.grey,
-                                  //   fontSize: 16,
-                                  //   fontFamily: "verdana_regular",
-                                  //   fontWeight: FontWeight.w400,
-                                  // ),
                                 ),
                               ),
                             ),
-                            // const SizedBox(height: 5),
-                            // Row(
-                            //   children: [
-                            //     const Text(
-                            //       "* ",
-                            //       style: TextStyle(
-                            //           color: Colors.red,
-                            //           fontSize: 14,
-                            //           fontWeight: FontWeight.w500),
-                            //     ),
-                            //     const Text(
-                            //       "The Password must have 5 character",
-                            //       style: TextStyle(
-                            //           color: Colors.black,
-                            //           fontSize: 12,
-                            //           fontWeight: FontWeight.w500),
-                            //     ),
-                            //   ],
-                            // ),
+
                             const SizedBox(height: 20),
                             MaterialButton(
                               height: 45,
-                              color: SffColor.sffBlueColor,
+                              color: colosd,
+                              elevation: 0,
                               onPressed: () async {
                                 await _loginController.getLogin();
                               },
@@ -437,5 +437,16 @@ class _LoginScreenState extends State<LoginScreen> {
         );
       }),
     );
+  }
+
+  void _toggle() {
+    if (_obscureText == true) {
+      ic = Icons.visibility_off;
+    } else {
+      ic = Icons.remove_red_eye_rounded;
+    }
+    setState(() {
+      _obscureText = !_obscureText;
+    });
   }
 }

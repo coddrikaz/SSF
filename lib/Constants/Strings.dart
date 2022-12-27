@@ -24,12 +24,16 @@ class Strings {
 
   static const String sInstructions4 =
       "4. gggggjggliegeg jhekgfhc rtubvrtgiuv vcb hhrtrhrt try rh h nrt twiu";
+
   static const String forgotInfo =
       "To reset your password, submit your username or your email address below. If we can find you in the database, an email will be sent to your email address, with instructions how to get access again";
+
   static const String aboutCourse =
       "Multiple micronutrient deficiencies are widespread in India, and continue to be significant public health problems, which adversely impact the health and productivity of all the population groups. Vitamin A deficiency (VAD) is one of the major public health problems in many low-and-middle-income countries (LMICs), including India. As per the National Nutrition Monitoring Bureau (NNMB) 2006 survey, 62% of under five children in India have low serum retinol levels. Prevalence of vitamin D deficiency is also quite high in the country. COVID-19 has further aggravated the situation of micronutrient malnutrition in the country. Considering edible oil is consumed across population (irrespective of age, geography and Socio-economic status), fortification of edible oils with vitamin A and D is a cost effective strategy to address micronutrient malnutrition. Food Safety and Standards Authority of India (FSSAI) gazetted Food Safety and Standards (Fortification of Foods) Regulations, 2018 for five staples, including edible oil in 2018. However, at present, ensuring availability of fortified edible oil compliant to national standards is a challenge in the country. Therefore, it is critical for both- businesses and FDA officials to have comprehensive knowledge about the fortification to supply quality assured fortified edible oil and to facilitate businesses to help fortify their products, respectively. This course will also be a value addition to technical professionals from other sectors directly or indirectly engaged with edible oil fortification.";
+
   static const String duration =
       "The duration of this course will depend upon the category chosen by the learner. It will vary from 7 minutes to 26 minutes.";
+
   static const String learn =
       """ 1. Need and importance of staple food fortification
 2. Myths and frequently asked questions

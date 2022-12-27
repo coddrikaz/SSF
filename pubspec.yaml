@@ -18,9 +18,10 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter_screenutil: any
   carousel_slider: ^4.2.1
-  flutter_svg:
+  flutter_svg: any
   flutter_smart_dialog: ^4.7.3
   flutter_switch: ^0.3.2
+  internet_connection_checker: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:
