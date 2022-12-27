@@ -141,7 +141,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             height: 1,
           ),
           Container(
-          margin: EdgeInsets.only(left:11 ),
+            margin: EdgeInsets.only(left: 15),
+
             child: Row(
               children: [
                 Container(
@@ -158,7 +159,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         ),
                       ),
                       Container(
-                        width:Get.width*0.8,
+                        width: Get.width * 0.8,
                         margin: EdgeInsets.only(bottom: 12),
                         //  padding: EdgeInsets.only(right: 20),
                         child: Text(
@@ -169,16 +170,13 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                               fontWeight: FontWeight.w500),
                         ),
                       ),
-
                     ],
                   ),
                 ),
-                SizedBox(width: 5,),
                 Container(
-                  width:Get.height*0.07,
-
-                  height: Get.height*0.07,
-                  child:FlutterSwitch(
+                  width: Get.height * 0.07,
+                  height: Get.height * 0.07,
+                  child: FlutterSwitch(
                     value: isSwitchOn,
                     onToggle: (value) {
                       setState(() {
@@ -186,7 +184,6 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       });
                     },
                   ),
-
                 ),
               ],
             ),
@@ -253,25 +250,26 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           ),
           Container(
             margin: EdgeInsets.only(left: 15),
+
             child: Row(
               children: [
                 Container(
+                  //color: Colors.grey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        alignment: Alignment.topLeft,
-                        margin: EdgeInsets.only(top: 10),
                         child: Text(
                           "Enable Text Editor",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
+                              fontWeight: FontWeight.bold, fontSize: 17),
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.only(bottom: 5),
+                        width: Get.width * 0.8,
+                        margin: EdgeInsets.only(bottom: 12),
+                        //  padding: EdgeInsets.only(right: 20),
                         child: Text(
                           Strings.EnableTextEditor,
                           style: TextStyle(
@@ -284,10 +282,17 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   ),
                 ),
                 Container(
-                  color: Colors.red,
-                  width: 50,
-                  height: 50,
-                )
+                  width: Get.height * 0.07,
+                  height: Get.height * 0.07,
+                  child: FlutterSwitch(
+                    value: isSwitchOn,
+                    onToggle: (value) {
+                      setState(() {
+                        isSwitchOn = value;
+                      });
+                    },
+                  ),
+                ),
               ],
             ),
           ),
