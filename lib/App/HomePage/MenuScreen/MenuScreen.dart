@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_web_browser/flutter_web_browser.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/HomePage/MenuScreen/Prefrences/prefrencesScreen.dart';
 import 'package:staple_food_fortification/App/Settings/settings.dart';
@@ -163,11 +164,16 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         qrCode,
                         SizedBox(width: 15),
-                        Text("Sacn QR Code",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20)),
+                        GestureDetector(
+                          onTap: (){
+                            openBrowserTab();
+                          },
+                          child: Text("Sacn QR Code",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20)),
+                        ),
                       ],
                     ),
                     Spacer(),
@@ -498,6 +504,9 @@ class _MenuScreenState extends State<MenuScreen> {
         ),
       ),
     );
+  }
+  openBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(url: "https://www.google.com/search?q=indev+consultancy&oq=inde&aqs=chrome.0.35i39i355j46i39i175i199j69i57j69i60l5.22359j0j9&sourceid=chrome&ie=UTF-8");
   }
 
   Future<void> logoutConfirm() async {
