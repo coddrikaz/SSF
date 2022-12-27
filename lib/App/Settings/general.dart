@@ -18,6 +18,7 @@ class GeneralSettings extends StatefulWidget {
 class _GeneralSettingsState extends State<GeneralSettings> {
   String lang = 'English';
   bool isSwitchOn = false;
+  bool isSwitchTextOn = false;
 
   @override
   void initState() {}
@@ -166,7 +167,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           Strings.EnableTextEditor,
                           style: TextStyle(
                               fontSize: 16,
-                              color: SffColor.sffblackLightColor,
+                              color: SffColor.sffblackLigtColor,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -177,10 +178,11 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   width: Get.height * 0.07,
                   height: Get.height * 0.07,
                   child: FlutterSwitch(
-                    value: isSwitchOn,
+                    inactiveColor: SffColor.sffgeyCoor,
+                    value: isSwitchTextOn,
                     onToggle: (value) {
                       setState(() {
-                        isSwitchOn = value;
+                        isSwitchTextOn = value;
                       });
                     },
                   ),
@@ -274,7 +276,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           Strings.EnableTextEditor,
                           style: TextStyle(
                               fontSize: 16,
-                              color: SffColor.sffblackLightColor,
+                              color:  SffColor.sffblackLigtColor,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -285,6 +287,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   width: Get.height * 0.07,
                   height: Get.height * 0.07,
                   child: FlutterSwitch(
+                    inactiveColor: SffColor.sffgeyCoor,
                     value: isSwitchOn,
                     onToggle: (value) {
                       setState(() {
