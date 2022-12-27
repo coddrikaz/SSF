@@ -261,7 +261,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                           child: Text(
                             "core.login.forgotten".tr,
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: Colors.black,
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
