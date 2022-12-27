@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:staple_food_fortification/Commons/language.dart';
+import 'package:staple_food_fortification/Commons/theme.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
 import 'package:staple_food_fortification/Constants/translations/english.dart';
@@ -32,10 +33,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           locale: Get.deviceLocale,
           translations: LanguageTranslations(),
-
           title: 'SSF',
-          theme: ThemeData.light(),
-          darkTheme: ThemeData.dark(),
+          theme: ThemeClass.lightTheme,
+          darkTheme: ThemeClass.darkTheme,
           navigatorObservers: [FlutterSmartDialog.observer],
           builder: FlutterSmartDialog.init(),
           getPages: AppRoutes.getRoutes(),

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqs_controller.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/html_parser.dart';
 import 'package:flutter_html/style.dart';
 
 final _faqsController = Get.find<FaqsController>();
