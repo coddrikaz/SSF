@@ -79,13 +79,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Image.asset(
                                     'assets/images/steps.png',
                                     height: 20,
-                                    width: double.maxFinite,
+                                    width: 20,
                                   ),
                                   const SizedBox(width: 5),
-                                  const Text("STEPS",
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold))
+                                  TextView("core.auth.steps".tr, 14.0, Colors.white, FontWeight.w700)
                                 ],
                               ),
                             ),
@@ -100,10 +97,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     width: double.maxFinite,
                                   ),
                                   const SizedBox(width: 5),
-                                  const Text("INSTRUCTIONS",
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold))
+
+                                  TextView("core.auth.instructions".tr, 14.0, Colors.white, FontWeight.w700)
                                 ],
                               ),
                             ),
@@ -240,37 +235,22 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: TextView("core.login.login".tr, 18.0, Colors.white, FontWeight.w700),
                       ),
                       const SizedBox(height: 20),
-                      const Center(
-                        child: Text(
-                          "OR",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700),
-                        ),
-                      ),
+                      Center(child: TextView("core.login.or".tr, 18.0,Colors.black, FontWeight.w700)),
+
                       const SizedBox(height: 20),
                       MaterialButton(
                         height: 45,
+                        minWidth: double.infinity,
                         color: SffColor.sffgeyColor,
                         elevation: 0,
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => const Otp()));
                         },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text("Login with OTP",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold)),
-                          ],
-                        ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
+                        child:  TextView("core.login.loginwithotp".tr, 18.0,Colors.black, FontWeight.w700),
                       ),
                       const SizedBox(height: 15),
                       Center(
@@ -279,9 +259,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => const Forgot()));
                           },
-                          child: const Text(
-                            "Forget Username or password?",
-                            style: TextStyle(
+                          child: Text(
+                            "core.login.forgotten".tr,
+                            style: const TextStyle(
                               color: Colors.black,
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
