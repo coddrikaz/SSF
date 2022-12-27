@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
           title: 'SSF',
           theme: ThemeClass.lightTheme,
           darkTheme: ThemeClass.darkTheme,
+          themeMode: ThemeMode.system,
           navigatorObservers: [FlutterSmartDialog.observer],
           builder: FlutterSmartDialog.init(),
           getPages: AppRoutes.getRoutes(),

@@ -1,4 +1,5 @@
 Map<String, String> mEnglish = {
+  "type": "English",
 "addon.badges.alignment": "Alignment",
 "addon.badges.badgedetails": "Badge details",
 "addon.badges.badges": "Badges",

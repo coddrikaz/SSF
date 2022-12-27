@@ -104,8 +104,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                                 decoration: InputDecoration(
                                                   // labelText: "Enter Email",
                                                   fillColor: Colors.white,
-                                                  contentPadding: EdgeInsets.only(
-                                                      left: 10, right: 5),
+                                                  contentPadding:
+                                                      EdgeInsets.only(
+                                                          left: 10, right: 5),
                                                   focusedBorder:
                                                       OutlineInputBorder(
                                                     borderRadius:
@@ -188,8 +189,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                                 decoration: InputDecoration(
                                                   // labelText: "Enter Email",
                                                   fillColor: Colors.white,
-                                                  contentPadding: EdgeInsets.only(
-                                                      left: 10, right: 5),
+                                                  contentPadding:
+                                                      EdgeInsets.only(
+                                                          left: 10, right: 5),
                                                   focusedBorder:
                                                       OutlineInputBorder(
                                                     borderRadius:
@@ -291,8 +293,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                                 decoration: InputDecoration(
                                                   // labelText: "Enter Email",
                                                   fillColor: Colors.white,
-                                                  contentPadding: EdgeInsets.only(
-                                                      left: 10, right: 5),
+                                                  contentPadding:
+                                                      EdgeInsets.only(
+                                                          left: 10, right: 5),
                                                   focusedBorder:
                                                       OutlineInputBorder(
                                                     borderRadius:
@@ -375,8 +378,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                                 decoration: InputDecoration(
                                                   // labelText: "Enter Email",
                                                   fillColor: Colors.white,
-                                                  contentPadding: EdgeInsets.only(
-                                                      left: 10, right: 5),
+                                                  contentPadding:
+                                                      EdgeInsets.only(
+                                                          left: 10, right: 5),
                                                   focusedBorder:
                                                       OutlineInputBorder(
                                                     borderRadius:
@@ -459,8 +463,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                                 decoration: InputDecoration(
                                                   // labelText: "Enter Email",
                                                   fillColor: Colors.white,
-                                                  contentPadding: EdgeInsets.only(
-                                                      left: 10, right: 5),
+                                                  contentPadding:
+                                                      EdgeInsets.only(
+                                                          left: 10, right: 5),
                                                   focusedBorder:
                                                       OutlineInputBorder(
                                                     borderRadius:

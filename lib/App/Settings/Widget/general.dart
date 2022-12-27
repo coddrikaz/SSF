@@ -456,8 +456,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             Get.back();
                             setState(() {});
                           },
-                          child: TextView(
-                              "తెలుగు", 18.0, Colors.black, FontWeight.w500)),
+                          child: TextView("తెలుగు", 18.0, Colors.black, FontWeight.w500)),
                     ],
                   ),
                 ),
@@ -468,9 +467,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   color: Colors.white,
                   elevation: 0,
                   onPressed: () => Get.back(),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                   child: TextView("Cancel", 20.0, Colors.red, FontWeight.w800),
                 ),
                 SizedBox(height: 10),
