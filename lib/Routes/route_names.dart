@@ -7,4 +7,5 @@ class RoutesName {
   static const String course = '/course';
 
   static const String settingScreen = '/setting';
+  static const String clientRegScreen = '/clientRegScreen';
 }

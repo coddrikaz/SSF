@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/Authentication/ClientRegistration/clientRegScreen.dart';
 import 'package:staple_food_fortification/App/CourseScreen/CourseScreen.dart';
 import 'package:staple_food_fortification/App/CourseScreen/courseBindings.dart';
 import 'package:staple_food_fortification/App/HomeScreen/HomeScreen.dart';
@@ -50,6 +51,11 @@ class AppRoutes {
       GetPage(
         name: RoutesName.settingScreen,
         page: () => const SettingScreen(),
+      ),
+
+      GetPage(
+        name: RoutesName.clientRegScreen,
+        page: () => const ClientRegScreen(),
       ),
     ];
   }
