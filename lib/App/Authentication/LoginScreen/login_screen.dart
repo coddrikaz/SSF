@@ -1,11 +1,10 @@
-import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/ForgotScreen/Forgot.dart';
 import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/OtpScreen/Otp.dart';
-import 'package:staple_food_fortification/App/Settings/settings.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
@@ -25,6 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
     _loginController.getData();
   }
 
+  // var ic = Icons.remove_red_eye_rounded;
   @override
   Widget build(BuildContext context) {
 
@@ -276,25 +276,25 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-                            const SizedBox(height: 5),
-                            Row(
-                              children: [
-                                const Text(
-                                  "* ",
-                                  style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                const Text(
-                                  "The Password must have 5 character",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
+                            // const SizedBox(height: 5),
+                            // Row(
+                            //   children: [
+                            //     const Text(
+                            //       "* ",
+                            //       style: TextStyle(
+                            //           color: Colors.red,
+                            //           fontSize: 14,
+                            //           fontWeight: FontWeight.w500),
+                            //     ),
+                            //     const Text(
+                            //       "The Password must have 5 character",
+                            //       style: TextStyle(
+                            //           color: Colors.black,
+                            //           fontSize: 12,
+                            //           fontWeight: FontWeight.w500),
+                            //     ),
+                            //   ],
+                            // ),
                             const SizedBox(height: 20),
                             MaterialButton(
                               height: 45,
