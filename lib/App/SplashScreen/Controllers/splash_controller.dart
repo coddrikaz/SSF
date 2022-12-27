@@ -15,7 +15,22 @@ class SplashController extends GetxController {
       await dataDownloadFaq();
       await dataDownloadStep();
     }
-    Get.updateLocale(Locale('en', 'us'));
+
+    String? def_lang=_hiveBox.get("lang");
+    if(def_lang=='en'){
+      Get.updateLocale(Locale('en', 'US'));
+    } else if(def_lang=='hi'){
+      Get.updateLocale(Locale('hi', 'IN'));
+    } else if(def_lang=='kn'){
+      Get.updateLocale(Locale('kn', 'IN'));
+    } else if(def_lang=='ta'){
+      Get.updateLocale(Locale('ta', 'IN'));
+    } else if(def_lang=='te'){
+      Get.updateLocale(Locale('te', 'IN'));
+    }else{
+      Get.updateLocale(Locale('en', 'US'));
+    }
+
     await Future.delayed(Duration(seconds: 2));
     Get.offAllNamed(RoutesName.login);
   }

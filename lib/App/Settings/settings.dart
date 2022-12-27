@@ -1,32 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:staple_food_fortification/App/Settings/general.dart';
+import 'package:staple_food_fortification/App/Settings/Widget/general.dart';
+import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
-class Settings extends StatefulWidget {
-  const Settings({Key? key}) : super(key: key);
+class SettingScreen extends StatefulWidget {
+  const SettingScreen({Key? key}) : super(key: key);
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<SettingScreen> createState() => _SettingScreenState();
 }
 
-class _SettingsState extends State<Settings> {
+class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
 
-    final String generalSvg = 'assets/svg/wrench.svg';
     final String SpaceSvg = 'assets/svg/tasks.svg';
     final String SyncSvg = 'assets/svg/sync-alt.svg';
     final String sharedSvg = 'assets/svg/folder.svg';
     final String aboutSvg = 'assets/svg/id-card.svg';
-
-    final Widget general = SvgPicture.asset(
-      generalSvg,
-      semanticsLabel: 'Acme Logo',
-      width: 25,
-      height: 25,
-      color: Colors.black,
-    );
 
     final Widget space = SvgPicture.asset(
       SpaceSvg,
@@ -89,12 +81,9 @@ class _SettingsState extends State<Settings> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    general,
+                    SvgView("assets/svg/wrench.svg", 25.0, 25.0, Colors.black),
                     SizedBox(width: 15),
-                    Text("General",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold, fontSize: 20)),
+                    TextView("General", 20.0, Colors.black, FontWeight.w700),
                   ],
                 ),
                 Spacer(),

@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:staple_food_fortification/Commons/Widget/textwidget.dart';
+import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
 
@@ -18,15 +17,6 @@ class GeneralSettings extends StatefulWidget {
 
 class _GeneralSettingsState extends State<GeneralSettings> {
 
-
-  String lang='English';
-
-  @override
-  void initState() {
-
-  }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,8 +26,9 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Get.back(),
         ),
-        title: TextView("A", 22.0,Colors.white, FontWeight.w400),
+        title: TextView("core.settings.appsettings".tr, 22.0, Colors.white, FontWeight.w400),
       ),
+
       body: Column(
         children: [
           MaterialButton(
@@ -48,11 +39,11 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             onPressed: () => showBottomSheetLanguage(),
             child: Row(
               children: [
-                TextView("Language", 20.0,Colors.black, FontWeight.w700),
+                TextView("addon.badges.language".tr, 20.0, Colors.black, FontWeight.w700),
                 Spacer(),
                 Row(
                   children: [
-                    TextView(lang, 16.0,Colors.black, FontWeight.w600),
+                    TextView("type".tr, 16.0, Colors.black, FontWeight.w600),
                     Icon(Icons.arrow_drop_down),
                   ],
                 ),
@@ -312,8 +303,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                 ),
               ],
             ),
-            margin: EdgeInsets.only(
-                top: 0, bottom: 0, right: 20, left: 20),
+            margin: EdgeInsets.only(left: 20, right: 20),
             height: 100,
             width: 100,
             child: Column(
@@ -338,28 +328,17 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         // color: Colors.blueAccent,
                         width: double.maxFinite,
                         alignment: Alignment.center,
-                        child: Text(
-                          "Language",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w900, fontSize: 18),
-                        ),
+                        child: TextView("Language", 18.0, Colors.black, FontWeight.w800),
                       ),
-
-                      Container(
-                        height: 2,
-                        color: SffColor.sffBlueColor,
-                        width: double.maxFinite,
-                      ),
-
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                           height: 45,
                           // color: SffColor.sffBlueColor,
                           elevation: 0,
                           onPressed: () async {
-                            // Get.updateLocale(Locale('en', 'US'));
-                            // _hiveBox.put("lang", "en");
-                            // lang="English";
-                            //context.setLocale(const Locale('en', 'US'));
+                            Get.updateLocale(Locale('en', 'US'));
+                            _hiveBox.put("lang", "en");
                             Get.back();
                             setState(() {});
                           },
@@ -371,10 +350,8 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         // color: SffColor.sffBlueColor,
                         elevation: 0,
                         onPressed: () async {
-                          // Get.updateLocale(Locale('hi', 'IN'));
-                          // _hiveBox.put("lang", "hi");
-                          // lang="हिंदी";
-                          // context.setLocale(const Locale('hi', 'IN'));
+                          Get.updateLocale(Locale('hi', 'IN'));
+                          _hiveBox.put("lang", "hi");
                           Get.back();
                           setState(() {});
                         },
@@ -386,26 +363,13 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         // color: SffColor.sffBlueColor,
                         elevation: 0,
                         onPressed: () {
-                          // Navigator.of(context).push(MaterialPageRoute(
-                          //     builder: (context) => HomeScreen()));
+                          Get.updateLocale(Locale('ta', 'IN'));
+                          _hiveBox.put("lang", "ta");
+                          Get.back();
+                          setState(() {});
                         },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text("தமிழ்",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18)),
-                            SizedBox(width: 5),
-                            Icon(Icons.arrow_forward, color: Colors.white,
-                                size: 20),
-                          ],
-                        ),
-                        // shape: RoundedRectangleBorder(
-                        //   borderRadius: BorderRadius.circular(10.0),
-                        // ),
+                        child: TextView(
+                            "தமிழ்", 18.0, Colors.black, FontWeight.w700),
                       ),
                       Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
                       MaterialButton(
@@ -413,44 +377,28 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         // color: SffColor.sffBlueColor,
                         elevation: 0,
                         onPressed: () {
-                          // Navigator.of(context).push(MaterialPageRoute(
-                          //     builder: (context) => HomeScreen()));
+                          Get.updateLocale(Locale('kn', 'IN'));
+                          _hiveBox.put("lang", "kn");
+                          Get.back();
+                          setState(() {});
                         },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text("ಕನ್ನಡ",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18)),
-                            SizedBox(width: 5),
-                            Icon(Icons.arrow_forward, color: Colors.white,
-                                size: 20),
-                          ],
-                        ),
-                        // shape: RoundedRectangleBorder(
-                        //   borderRadius: BorderRadius.circular(10.0),
-                        // ),
+                        child: TextView(
+                            "ಕನ್ನಡ", 18.0, Colors.black, FontWeight.w700),
                       ),
-
-                      Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
                           height: 45,
                           // color: SffColor.sffBlueColor,
                           elevation: 0,
                           onPressed: () {
-                            // Navigator.of(context).push(MaterialPageRoute(
-                            //     builder: (context) => HomeScreen()));
+                            Get.updateLocale(Locale('te', 'IN'));
+                            _hiveBox.put("lang", "te");
+                            Get.back();
+                            setState(() {});
                           },
                           child: TextView("తెలుగు", 18.0,Colors.black, FontWeight.w700)
                       ),
-
-                      // Container(
-                      //   height: 10,
-                      //   color: Colors.transparent,
-                      // ),
                     ],
                   ),
                 ),
@@ -475,19 +423,6 @@ class _GeneralSettingsState extends State<GeneralSettings> {
         );
       },
     );
-  }
-
-  void setLang() {
-
-    String def_lang=_hiveBox.get("lang");
-    if(def_lang=='en'){
-      lang="English";
-    }
-    else if(def_lang=='hi'){
-      lang="हिंदी";
-    }else{
-      lang="English";
-    }
   }
 
 }

@@ -7,7 +7,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:staple_food_fortification/Commons/language.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
-import 'package:staple_food_fortification/Constants/english.dart';
+import 'package:staple_food_fortification/Constants/translations/english.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 import 'package:staple_food_fortification/Routes/route_pages.dart';
 

@@ -1,4 +1,5 @@
-{
+Map<String, String> mEnglish = {
+  "type": "English",
   "addon.badges.alignment": "Alignment",
   "addon.badges.badgedetails": "Badge details",
   "addon.badges.badges": "Badges",
@@ -19,7 +20,8 @@
   "addon.badges.issuername": "Issuer name",
   "addon.badges.issuerurl": "Issuer URL",
   "addon.badges.language": "Language",
-  "addon.badges.noalignment": "This badge does not have any external skills or standards specified.",
+  "addon.badges.noalignment":
+      "This badge does not have any external skills or standards specified.",
   "addon.badges.nobadges": "There are no badges available.",
   "addon.badges.norelated": "This badge does not have any related badges.",
   "addon.badges.recipientdetails": "Recipient details",
@@ -91,8 +93,10 @@
   "addon.calendar.calendarevents": "Calendar events",
   "addon.calendar.calendarreminders": "Calendar reminders",
   "addon.calendar.categoryevents": "Category events",
-  "addon.calendar.confirmeventdelete": "Are you sure you want to delete the \"{{$a}}\" event?",
-  "addon.calendar.confirmeventseriesdelete": "The \"{{$a.name}}\" event is part of a series. Do you want to delete just this event, or all {{$a.count}} events in the series?",
+  "addon.calendar.confirmeventdelete":
+      "Are you sure you want to delete the \"{{\$a}}\" event?",
+  "addon.calendar.confirmeventseriesdelete":
+      "The \"{{\$a.name}}\" event is part of a series. Do you want to delete just this event, or all {{\$a.count}} events in the series?",
   "addon.calendar.courseevents": "Course events",
   "addon.calendar.currentmonth": "Current Month",
   "addon.calendar.daynext": "Next day",
@@ -118,17 +122,21 @@
   "addon.calendar.friday": "Friday",
   "addon.calendar.gotoactivity": "Go to activity",
   "addon.calendar.groupevents": "Group events",
-  "addon.calendar.invalidtimedurationminutes": "The duration in minutes you have entered is invalid. Please enter the duration in minutes greater than 0 or select no duration.",
-  "addon.calendar.invalidtimedurationuntil": "The date and time you selected for duration until is before the start time of the event. Please correct this before proceeding.",
+  "addon.calendar.invalidtimedurationminutes":
+      "The duration in minutes you have entered is invalid. Please enter the duration in minutes greater than 0 or select no duration.",
+  "addon.calendar.invalidtimedurationuntil":
+      "The date and time you selected for duration until is before the start time of the event. Please correct this before proceeding.",
   "addon.calendar.mon": "Mon",
   "addon.calendar.monday": "Monday",
   "addon.calendar.monthlyview": "Monthly view",
   "addon.calendar.newevent": "New event",
   "addon.calendar.noevents": "There are no events",
-  "addon.calendar.nopermissiontoupdatecalendar": "Sorry, but you do not have permission to update the calendar event.",
+  "addon.calendar.nopermissiontoupdatecalendar":
+      "Sorry, but you do not have permission to update the calendar event.",
   "addon.calendar.reminders": "Reminders",
   "addon.calendar.repeatedevents": "Repeated events",
-  "addon.calendar.repeateditall": "Also apply changes to the other {{$a}} events in this repeat series",
+  "addon.calendar.repeateditall":
+      "Also apply changes to the other {{\$a}} events in this repeat series",
   "addon.calendar.repeateditthis": "Apply changes to this event only",
   "addon.calendar.repeatevent": "Repeat this event",
   "addon.calendar.repeatweeksl": "Repeat weekly, creating altogether",
@@ -161,33 +169,49 @@
   "addon.calendar.yesterday": "Yesterday",
   "addon.competency.activities": "Activities",
   "addon.competency.competencies": "Competencies",
-  "addon.competency.competenciesmostoftennotproficientincourse": "Competencies most often not proficient in this course",
+  "addon.competency.competenciesmostoftennotproficientincourse":
+      "Competencies most often not proficient in this course",
   "addon.competency.coursecompetencies": "Course competencies",
-  "addon.competency.coursecompetencyratingsarenotpushedtouserplans": "Competency ratings in this course do not affect learning plans.",
-  "addon.competency.coursecompetencyratingsarepushedtouserplans": "Competency ratings in this course are updated immediately in learning plans.",
-  "addon.competency.crossreferencedcompetencies": "Cross-referenced competencies",
+  "addon.competency.coursecompetencyratingsarenotpushedtouserplans":
+      "Competency ratings in this course do not affect learning plans.",
+  "addon.competency.coursecompetencyratingsarepushedtouserplans":
+      "Competency ratings in this course are updated immediately in learning plans.",
+  "addon.competency.crossreferencedcompetencies":
+      "Cross-referenced competencies",
   "addon.competency.duedate": "Due date",
   "addon.competency.errornocompetenciesfound": "No competencies found",
   "addon.competency.evidence": "Evidence",
-  "addon.competency.evidence_competencyrule": "The rule of the competency was met.",
-  "addon.competency.evidence_coursecompleted": "The course '{{$a}}' was completed.",
-  "addon.competency.evidence_coursemodulecompleted": "The activity '{{$a}}' was completed.",
-  "addon.competency.evidence_courserestored": "The rating was restored along with the course '{{$a}}'.",
-  "addon.competency.evidence_evidenceofpriorlearninglinked": "The evidence of prior learning '{{$a}}' was linked.",
-  "addon.competency.evidence_evidenceofpriorlearningunlinked": "The evidence of prior learning '{{$a}}' was unlinked.",
-  "addon.competency.evidence_manualoverride": "The competency rating was manually set.",
-  "addon.competency.evidence_manualoverrideincourse": "The competency rating was manually set in the course '{{$a}}'.",
-  "addon.competency.evidence_manualoverrideinplan": "The competency rating was manually set in the learning plan '{{$a}}'.",
+  "addon.competency.evidence_competencyrule":
+      "The rule of the competency was met.",
+  "addon.competency.evidence_coursecompleted":
+      "The course '{{\$a}}' was completed.",
+  "addon.competency.evidence_coursemodulecompleted":
+      "The activity '{{\$a}}' was completed.",
+  "addon.competency.evidence_courserestored":
+      "The rating was restored along with the course '{{\$a}}'.",
+  "addon.competency.evidence_evidenceofpriorlearninglinked":
+      "The evidence of prior learning '{{\$a}}' was linked.",
+  "addon.competency.evidence_evidenceofpriorlearningunlinked":
+      "The evidence of prior learning '{{\$a}}' was unlinked.",
+  "addon.competency.evidence_manualoverride":
+      "The competency rating was manually set.",
+  "addon.competency.evidence_manualoverrideincourse":
+      "The competency rating was manually set in the course '{{\$a}}'.",
+  "addon.competency.evidence_manualoverrideinplan":
+      "The competency rating was manually set in the learning plan '{{\$a}}'.",
   "addon.competency.learningplancompetencies": "Learning plan competencies",
   "addon.competency.learningplans": "Learning plans",
   "addon.competency.myplans": "My learning plans",
   "addon.competency.noactivities": "No activities",
   "addon.competency.nocompetencies": "No competencies",
-  "addon.competency.nocompetenciesincourse": "No competencies have been linked to this course.",
-  "addon.competency.nocrossreferencedcompetencies": "No other competencies have been cross-referenced to this competency.",
+  "addon.competency.nocompetenciesincourse":
+      "No competencies have been linked to this course.",
+  "addon.competency.nocrossreferencedcompetencies":
+      "No other competencies have been cross-referenced to this competency.",
   "addon.competency.noevidence": "No evidence",
   "addon.competency.noplanswerecreated": "No learning plans were created.",
-  "addon.competency.nouserplanswithcompetency": "No learning plans contain this competency.",
+  "addon.competency.nouserplanswithcompetency":
+      "No learning plans contain this competency.",
   "addon.competency.path": "Path:",
   "addon.competency.planstatusactive": "Active",
   "addon.competency.planstatuscomplete": "Complete",
@@ -203,24 +227,31 @@
   "addon.competency.uponcoursecompletion": "Upon course completion:",
   "addon.competency.usercompetencystatus_idle": "Idle",
   "addon.competency.usercompetencystatus_inreview": "In review",
-  "addon.competency.usercompetencystatus_waitingforreview": "Waiting for review",
+  "addon.competency.usercompetencystatus_waitingforreview":
+      "Waiting for review",
   "addon.competency.userplans": "Learning plans",
-  "addon.competency.xcompetenciesproficientoutofy": "{{$a.x}} out of {{$a.y}} competencies are proficient",
-  "addon.competency.xcompetenciesproficientoutofyincourse": "You are proficient in {{$a.x}} out of {{$a.y}} competencies in this course.",
+  "addon.competency.xcompetenciesproficientoutofy":
+      "{{\$a.x}} out of {{\$a.y}} competencies are proficient",
+  "addon.competency.xcompetenciesproficientoutofyincourse":
+      "You are proficient in {{\$a.x}} out of {{\$a.y}} competencies in this course.",
   "addon.coursecompletion.complete": "Complete",
   "addon.coursecompletion.completecourse": "Complete course",
   "addon.coursecompletion.completed": "Completed",
   "addon.coursecompletion.completiondate": "Completion date",
   "addon.coursecompletion.completionmenuitem": "Completion",
-  "addon.coursecompletion.couldnotloadreport": "Could not load the course completion report. Please try again later.",
+  "addon.coursecompletion.couldnotloadreport":
+      "Could not load the course completion report. Please try again later.",
   "addon.coursecompletion.coursecompletion": "Course completion",
   "addon.coursecompletion.criteria": "Criteria",
   "addon.coursecompletion.criteriagroup": "Criteria group",
-  "addon.coursecompletion.criteriarequiredall": "All criteria below are required",
-  "addon.coursecompletion.criteriarequiredany": "Any criteria below are required",
+  "addon.coursecompletion.criteriarequiredall":
+      "All criteria below are required",
+  "addon.coursecompletion.criteriarequiredany":
+      "Any criteria below are required",
   "addon.coursecompletion.inprogress": "In progress",
   "addon.coursecompletion.manualselfcompletion": "Manual self completion",
-  "addon.coursecompletion.nottracked": "You are currently not being tracked by completion in this course",
+  "addon.coursecompletion.nottracked":
+      "You are currently not being tracked by completion in this course",
   "addon.coursecompletion.notyetstarted": "Not yet started",
   "addon.coursecompletion.pending": "Pending",
   "addon.coursecompletion.required": "Required",
@@ -231,15 +262,18 @@
   "addon.messageoutput_airnotifier.processorsettingsdesc": "Configure devices",
   "addon.messages.acceptandaddcontact": "Accept and add to contacts",
   "addon.messages.addcontact": "Add contact",
-  "addon.messages.addcontactconfirm": "Are you sure you want to add {{$a}} to your contacts?",
+  "addon.messages.addcontactconfirm":
+      "Are you sure you want to add {{\$a}} to your contacts?",
   "addon.messages.addtofavourites": "Star conversation",
   "addon.messages.addtoyourcontacts": "Add to contacts",
   "addon.messages.blocknoncontacts": "Prevent non-contacts from messaging me",
   "addon.messages.blockuser": "Block user",
-  "addon.messages.blockuserconfirm": "Are you sure you want to block {{$a}}?",
-  "addon.messages.cantblockuser": "You can't block {{$a}} because they have a role with permission to message all users.",
+  "addon.messages.blockuserconfirm": "Are you sure you want to block {{\$a}}?",
+  "addon.messages.cantblockuser":
+      "You can't block {{\$a}} because they have a role with permission to message all users.",
   "addon.messages.contactableprivacy": "Accept messages from:",
-  "addon.messages.contactableprivacy_coursemember": "My contacts and anyone in my courses",
+  "addon.messages.contactableprivacy_coursemember":
+      "My contacts and anyone in my courses",
   "addon.messages.contactableprivacy_onlycontacts": "My contacts only",
   "addon.messages.contactableprivacy_site": "Anyone on the site",
   "addon.messages.contactblocked": "Contact blocked",
@@ -249,24 +283,32 @@
   "addon.messages.contacts": "Contacts",
   "addon.messages.conversationactions": "Conversation actions menu",
   "addon.messages.decline": "Decline",
-  "addon.messages.deleteallconfirm": "Are you sure you would like to delete this entire conversation? This will not delete it for other conversation participants.",
-  "addon.messages.deleteallselfconfirm": "Are you sure you would like to delete this entire personal conversation?",
+  "addon.messages.deleteallconfirm":
+      "Are you sure you would like to delete this entire conversation? This will not delete it for other conversation participants.",
+  "addon.messages.deleteallselfconfirm":
+      "Are you sure you would like to delete this entire personal conversation?",
   "addon.messages.deleteconversation": "Delete conversation",
   "addon.messages.deleteforeveryone": "Delete for me and for everyone else",
   "addon.messages.deletemessage": "Delete message",
-  "addon.messages.deletemessageconfirmation": "Are you sure you want to delete this message? It will only be deleted from your messaging history and will still be viewable by the user who sent or received the message.",
+  "addon.messages.deletemessageconfirmation":
+      "Are you sure you want to delete this message? It will only be deleted from your messaging history and will still be viewable by the user who sent or received the message.",
   "addon.messages.errordeletemessage": "Error while deleting the message.",
-  "addon.messages.errorwhileretrievingcontacts": "Error while retrieving contacts from the server.",
-  "addon.messages.errorwhileretrievingdiscussions": "Error while retrieving discussions from the server.",
-  "addon.messages.errorwhileretrievingmessages": "Error while retrieving messages from the server.",
-  "addon.messages.errorwhileretrievingusers": "Error while retrieving users from the server.",
+  "addon.messages.errorwhileretrievingcontacts":
+      "Error while retrieving contacts from the server.",
+  "addon.messages.errorwhileretrievingdiscussions":
+      "Error while retrieving discussions from the server.",
+  "addon.messages.errorwhileretrievingmessages":
+      "Error while retrieving messages from the server.",
+  "addon.messages.errorwhileretrievingusers":
+      "Error while retrieving users from the server.",
   "addon.messages.groupconversations": "Group",
   "addon.messages.groupinfo": "Group info",
   "addon.messages.individualconversations": "Private",
   "addon.messages.info": "User info",
-  "addon.messages.isnotinyourcontacts": "{{$a}} is not in your contacts",
+  "addon.messages.isnotinyourcontacts": "{{\$a}} is not in your contacts",
   "addon.messages.message": "Message",
-  "addon.messages.messagenotsent": "The message was not sent. Please try again later.",
+  "addon.messages.messagenotsent":
+      "The message was not sent. Please try again later.",
   "addon.messages.messagepreferences": "Message preferences",
   "addon.messages.messages": "Messages",
   "addon.messages.muteconversation": "Mute",
@@ -281,17 +323,21 @@
   "addon.messages.nomessagesfound": "No messages were found",
   "addon.messages.noncontacts": "Non-contacts",
   "addon.messages.nousersfound": "No users found",
-  "addon.messages.numparticipants": "{{$a}} participants",
-  "addon.messages.pendingcontactrequests": "There are {{$a}} pending contact requests",
+  "addon.messages.numparticipants": "{{\$a}} participants",
+  "addon.messages.pendingcontactrequests":
+      "There are {{\$a}} pending contact requests",
   "addon.messages.removecontact": "Remove contact",
-  "addon.messages.removecontactconfirm": "Are you sure you want to remove {{$a}} from your contacts?",
+  "addon.messages.removecontactconfirm":
+      "Are you sure you want to remove {{\$a}} from your contacts?",
   "addon.messages.removefromfavourites": "Unstar conversation",
   "addon.messages.removefromyourcontacts": "Remove from contacts",
   "addon.messages.requests": "Requests",
-  "addon.messages.requirecontacttomessage": "You need to request {{$a}} to add you as a contact to be able to message them.",
+  "addon.messages.requirecontacttomessage":
+      "You need to request {{\$a}} to add you as a contact to be able to message them.",
   "addon.messages.searchcombined": "Search people and messages",
   "addon.messages.selfconversation": "Personal space",
-  "addon.messages.selfconversationdefaultmessage": "Save draft messages, links, notes etc. to access later.",
+  "addon.messages.selfconversationdefaultmessage":
+      "Save draft messages, links, notes etc. to access later.",
   "addon.messages.sendcontactrequest": "Send contact request",
   "addon.messages.showdeletemessages": "Show delete messages",
   "addon.messages.type_blocked": "Blocked",
@@ -301,28 +347,40 @@
   "addon.messages.type_strangers": "Others",
   "addon.messages.unabletomessage": "You are unable to message this user",
   "addon.messages.unblockuser": "Unblock user",
-  "addon.messages.unblockuserconfirm": "Are you sure you want to unblock {{$a}}?",
+  "addon.messages.unblockuserconfirm":
+      "Are you sure you want to unblock {{\$a}}?",
   "addon.messages.unmuteconversation": "Unmute",
-  "addon.messages.unreadconversations": "There are {{$a}} unread conversations",
-  "addon.messages.unreadmessages": "There are {{$a}} unread messages",
+  "addon.messages.unreadconversations":
+      "There are {{\$a}} unread conversations",
+  "addon.messages.unreadmessages": "There are {{\$a}} unread messages",
   "addon.messages.useentertosend": "Use enter to send",
-  "addon.messages.useentertosenddescdesktop": "If disabled, you can use Ctrl+Enter to send the message.",
-  "addon.messages.useentertosenddescmac": "If disabled, you can use Cmd+Enter to send the message.",
-  "addon.messages.userwouldliketocontactyou": "{{$a}} would like to contact you",
-  "addon.messages.warningconversationmessagenotsent": "Couldn't send message(s) to conversation {{conversation}}. {{error}}",
-  "addon.messages.warningmessagenotsent": "Couldn't send message(s) to user {{user}}. {{error}}",
+  "addon.messages.useentertosenddescdesktop":
+      "If disabled, you can use Ctrl+Enter to send the message.",
+  "addon.messages.useentertosenddescmac":
+      "If disabled, you can use Cmd+Enter to send the message.",
+  "addon.messages.userwouldliketocontactyou":
+      "{{\$a}} would like to contact you",
+  "addon.messages.warningconversationmessagenotsent":
+      "Couldn't send message(s) to conversation {{conversation}}. {{error}}",
+  "addon.messages.warningmessagenotsent":
+      "Couldn't send message(s) to user {{user}}. {{error}}",
   "addon.messages.wouldliketocontactyou": "Would like to contact you",
   "addon.messages.you": "You:",
   "addon.messages.youhaveblockeduser": "You have blocked this user.",
-  "addon.messages.yourcontactrequestpending": "Your contact request is pending with {{$a}}",
-  "addon.mod_assign.acceptsubmissionstatement": "Please accept the submission statement.",
+  "addon.messages.yourcontactrequestpending":
+      "Your contact request is pending with {{\$a}}",
+  "addon.mod_assign.acceptsubmissionstatement":
+      "Please accept the submission statement.",
   "addon.mod_assign.addattempt": "Allow another attempt",
   "addon.mod_assign.addnewattempt": "Add a new attempt",
-  "addon.mod_assign.addnewattemptfromprevious": "Add a new attempt based on previous submission",
+  "addon.mod_assign.addnewattemptfromprevious":
+      "Add a new attempt based on previous submission",
   "addon.mod_assign.addsubmission": "Add submission",
-  "addon.mod_assign.allowsubmissionsanddescriptionfromdatesummary": "The assignment details and submission form will be available from <strong>{{$a}}</strong>",
+  "addon.mod_assign.allowsubmissionsanddescriptionfromdatesummary":
+      "The assignment details and submission form will be available from <strong>{{\$a}}</strong>",
   "addon.mod_assign.allowsubmissionsfromdate": "Allow submissions from",
-  "addon.mod_assign.allowsubmissionsfromdatesummary": "This assignment will accept submissions from <strong>{{$a}}</strong>",
+  "addon.mod_assign.allowsubmissionsfromdatesummary":
+      "This assignment will accept submissions from <strong>{{\$a}}</strong>",
   "addon.mod_assign.applytoteam": "Apply grades and feedback to entire group",
   "addon.mod_assign.assignmentisdue": "Assignment is due",
   "addon.mod_assign.attemptnumber": "Attempt number",
@@ -330,37 +388,48 @@
   "addon.mod_assign.attemptreopenmethod_manual": "Manually",
   "addon.mod_assign.attemptreopenmethod_untilpass": "Automatically until pass",
   "addon.mod_assign.attemptsettings": "Attempt settings",
-  "addon.mod_assign.cannoteditduetostatementsubmission": "You can't add or edit a submission in the app because the submission statement could not be retrieved from the site.",
-  "addon.mod_assign.cannotgradefromapp": "Certain grading methods are not yet supported by the app and cannot be modified.",
-  "addon.mod_assign.cannotsubmitduetostatementsubmission": "You can't make a submission in the app because the submission statement could not be retrieved from the site.",
-  "addon.mod_assign.confirmsubmission": "Are you sure you want to submit your work for grading? You will not be able to make any more changes.",
-  "addon.mod_assign.currentattempt": "This is attempt {{$a}}.",
-  "addon.mod_assign.currentattemptof": "This is attempt {{$a.attemptnumber}} ( {{$a.maxattempts}} attempts allowed ).",
+  "addon.mod_assign.cannoteditduetostatementsubmission":
+      "You can't add or edit a submission in the app because the submission statement could not be retrieved from the site.",
+  "addon.mod_assign.cannotgradefromapp":
+      "Certain grading methods are not yet supported by the app and cannot be modified.",
+  "addon.mod_assign.cannotsubmitduetostatementsubmission":
+      "You can't make a submission in the app because the submission statement could not be retrieved from the site.",
+  "addon.mod_assign.confirmsubmission":
+      "Are you sure you want to submit your work for grading? You will not be able to make any more changes.",
+  "addon.mod_assign.currentattempt": "This is attempt {{\$a}}.",
+  "addon.mod_assign.currentattemptof":
+      "This is attempt {{\$a.attemptnumber}} ( {{\$a.maxattempts}} attempts allowed ).",
   "addon.mod_assign.currentgrade": "Current grade in gradebook",
   "addon.mod_assign.cutoffdate": "Cut-off date",
   "addon.mod_assign.defaultteam": "Default group",
   "addon.mod_assign.duedate": "Due date",
   "addon.mod_assign.duedateno": "No due date",
-  "addon.mod_assign.duedatereached": "The due date for this assignment has now passed",
+  "addon.mod_assign.duedatereached":
+      "The due date for this assignment has now passed",
   "addon.mod_assign.editingstatus": "Editing status",
   "addon.mod_assign.editsubmission": "Edit submission",
-  "addon.mod_assign.erroreditpluginsnotsupported": "You can't add or edit a submission in the app because certain plugins are not yet supported for editing.",
-  "addon.mod_assign.errorshowinginformation": "Submission information cannot be displayed.",
+  "addon.mod_assign.erroreditpluginsnotsupported":
+      "You can't add or edit a submission in the app because certain plugins are not yet supported for editing.",
+  "addon.mod_assign.errorshowinginformation":
+      "Submission information cannot be displayed.",
   "addon.mod_assign.extensionduedate": "Extension due date",
-  "addon.mod_assign.feedbacknotsupported": "This feedback is not supported by the app and may not contain all the information.",
+  "addon.mod_assign.feedbacknotsupported":
+      "This feedback is not supported by the app and may not contain all the information.",
   "addon.mod_assign.grade": "Grade",
   "addon.mod_assign.graded": "Graded",
   "addon.mod_assign.gradedby": "Graded by",
-  "addon.mod_assign.gradedfollowupsubmit": "Graded - follow-up submission received",
+  "addon.mod_assign.gradedfollowupsubmit":
+      "Graded - follow-up submission received",
   "addon.mod_assign.gradedon": "Graded on",
-  "addon.mod_assign.gradelocked": "This grade is locked or overridden in the gradebook.",
+  "addon.mod_assign.gradelocked":
+      "This grade is locked or overridden in the gradebook.",
   "addon.mod_assign.gradenotsynced": "Grade not synced",
-  "addon.mod_assign.gradeoutof": "Grade out of {{$a}}",
+  "addon.mod_assign.gradeoutof": "Grade out of {{\$a}}",
   "addon.mod_assign.gradingstatus": "Grading status",
   "addon.mod_assign.groupsubmissionsettings": "Group submission settings",
   "addon.mod_assign.hiddenuser": "Participant",
   "addon.mod_assign.latesubmissions": "Late submissions",
-  "addon.mod_assign.latesubmissionsaccepted": "Allowed until {{$a}}",
+  "addon.mod_assign.latesubmissionsaccepted": "Allowed until {{\$a}}",
   "addon.mod_assign.markingworkflowstate": "Marking workflow state",
   "addon.mod_assign.markingworkflowstateinmarking": "In marking",
   "addon.mod_assign.markingworkflowstateinreview": "In review",
@@ -370,33 +439,48 @@
   "addon.mod_assign.markingworkflowstatereleased": "Released",
   "addon.mod_assign.modulenameplural": "Assignments",
   "addon.mod_assign.multipleteams": "Member of more than one group",
-  "addon.mod_assign.multipleteams_desc": "The assignment requires submission in groups. You are a member of more than one group. To be able to submit you must be a member of only one group. Please contact your teacher to change your group membership.",
+  "addon.mod_assign.multipleteams_desc":
+      "The assignment requires submission in groups. You are a member of more than one group. To be able to submit you must be a member of only one group. Please contact your teacher to change your group membership.",
   "addon.mod_assign.noattempt": "No attempt",
-  "addon.mod_assign.nomoresubmissionsaccepted": "Only allowed for participants who have been granted an extension",
-  "addon.mod_assign.noonlinesubmissions": "This assignment does not require you to submit anything online",
-  "addon.mod_assign.nosubmission": "Nothing has been submitted for this assignment",
-  "addon.mod_assign.notallparticipantsareshown": "Participants who have not made a submission are not shown.",
+  "addon.mod_assign.nomoresubmissionsaccepted":
+      "Only allowed for participants who have been granted an extension",
+  "addon.mod_assign.noonlinesubmissions":
+      "This assignment does not require you to submit anything online",
+  "addon.mod_assign.nosubmission":
+      "Nothing has been submitted for this assignment",
+  "addon.mod_assign.notallparticipantsareshown":
+      "Participants who have not made a submission are not shown.",
   "addon.mod_assign.noteam": "Not a member of any group",
-  "addon.mod_assign.noteam_desc": "This assignment requires submission in groups. You are not a member of any group, so you cannot create a submission. Please contact your teacher to be added to a group.",
+  "addon.mod_assign.noteam_desc":
+      "This assignment requires submission in groups. You are not a member of any group, so you cannot create a submission. Please contact your teacher to be added to a group.",
   "addon.mod_assign.notgraded": "Not graded",
   "addon.mod_assign.numberofdraftsubmissions": "Drafts",
-  "addon.mod_assign.numberofdraftsubmissionscountdescription": "There are {{count}} drafts.",
+  "addon.mod_assign.numberofdraftsubmissionscountdescription":
+      "There are {{count}} drafts.",
   "addon.mod_assign.numberofparticipants": "Participants",
-  "addon.mod_assign.numberofparticipantscountdescription": "There are {{count}} participants.",
+  "addon.mod_assign.numberofparticipantscountdescription":
+      "There are {{count}} participants.",
   "addon.mod_assign.numberofsubmissionsneedgrading": "Needs grading",
-  "addon.mod_assign.numberofsubmissionsneedgradingcountdescription": "There are {{count}} submissions that need grading.",
+  "addon.mod_assign.numberofsubmissionsneedgradingcountdescription":
+      "There are {{count}} submissions that need grading.",
   "addon.mod_assign.numberofsubmittedassignments": "Submitted",
-  "addon.mod_assign.numberofsubmittedassignmentscountdescription": "There are {{count}} submitted assignments.",
+  "addon.mod_assign.numberofsubmittedassignmentscountdescription":
+      "There are {{count}} submitted assignments.",
   "addon.mod_assign.numberofteams": "Groups",
-  "addon.mod_assign.numberofteamscountdescription": "There are {{count}} teams.",
-  "addon.mod_assign.numwords": "{{$a}} words",
-  "addon.mod_assign.outof": "{{$a.current}} out of {{$a.total}}",
-  "addon.mod_assign.overdue": "<font color=\"red\">Assignment is overdue by: {{$a}}</font>",
+  "addon.mod_assign.numberofteamscountdescription":
+      "There are {{count}} teams.",
+  "addon.mod_assign.numwords": "{{\$a}} words",
+  "addon.mod_assign.outof": "{{\$a.current}} out of {{\$a.total}}",
+  "addon.mod_assign.overdue":
+      "<font color=\"red\">Assignment is overdue by: {{\$a}}</font>",
   "addon.mod_assign.submission": "Submission",
   "addon.mod_assign.submissioneditable": "Student can edit this submission",
-  "addon.mod_assign.submissionnoteditable": "Student cannot edit this submission",
-  "addon.mod_assign.submissionnotsupported": "This submission is not supported by the app and may not contain all the information.",
-  "addon.mod_assign.submissionslocked": "This assignment is not accepting submissions",
+  "addon.mod_assign.submissionnoteditable":
+      "Student cannot edit this submission",
+  "addon.mod_assign.submissionnotsupported":
+      "This submission is not supported by the app and may not contain all the information.",
+  "addon.mod_assign.submissionslocked":
+      "This assignment is not accepting submissions",
   "addon.mod_assign.submissionstatus": "Submission status",
   "addon.mod_assign.submissionstatus_": "No submission",
   "addon.mod_assign.submissionstatus_draft": "Draft (not submitted)",
@@ -407,31 +491,38 @@
   "addon.mod_assign.submissionstatusheading": "Submission status",
   "addon.mod_assign.submissionteam": "Group",
   "addon.mod_assign.submitassignment": "Submit assignment",
-  "addon.mod_assign.submitassignment_help": "Once this assignment is submitted you will not be able to make any more changes.",
-  "addon.mod_assign.submittedearly": "Assignment was submitted {{$a}} early",
-  "addon.mod_assign.submittedlate": "Assignment was submitted {{$a}} late",
+  "addon.mod_assign.submitassignment_help":
+      "Once this assignment is submitted you will not be able to make any more changes.",
+  "addon.mod_assign.submittedearly": "Assignment was submitted {{\$a}} early",
+  "addon.mod_assign.submittedlate": "Assignment was submitted {{\$a}} late",
   "addon.mod_assign.syncblockedusercomponent": "user grade",
   "addon.mod_assign.timemodified": "Last modified",
   "addon.mod_assign.timeremaining": "Time remaining",
-  "addon.mod_assign.ungroupedusers": "The setting 'Require group to make submission' is enabled and some users are either not a member of any group, or are a member of more than one group, so are unable to make submissions.",
-  "addon.mod_assign.ungroupedusersoptional": "The setting 'Students submit in groups' is enabled and some users are either not a member of any group, or are a member of more than one group. Please be aware that these students will submit as members of the 'Default group'.",
+  "addon.mod_assign.ungroupedusers":
+      "The setting 'Require group to make submission' is enabled and some users are either not a member of any group, or are a member of more than one group, so are unable to make submissions.",
+  "addon.mod_assign.ungroupedusersoptional":
+      "The setting 'Students submit in groups' is enabled and some users are either not a member of any group, or are a member of more than one group. Please be aware that these students will submit as members of the 'Default group'.",
   "addon.mod_assign.unlimitedattempts": "Unlimited",
-  "addon.mod_assign.userswhoneedtosubmit": "Users who need to submit: {{$a}}",
+  "addon.mod_assign.userswhoneedtosubmit": "Users who need to submit: {{\$a}}",
   "addon.mod_assign.viewsubmission": "View submission",
-  "addon.mod_assign.warningsubmissiongrademodified": "The submission grade was modified on the site.",
-  "addon.mod_assign.warningsubmissionmodified": "The user submission was modified on the site.",
+  "addon.mod_assign.warningsubmissiongrademodified":
+      "The submission grade was modified on the site.",
+  "addon.mod_assign.warningsubmissionmodified":
+      "The user submission was modified on the site.",
   "addon.mod_assign.wordlimit": "Word limit",
   "addon.mod_assign_feedback_comments.pluginname": "Feedback comments",
   "addon.mod_assign_feedback_editpdf.pluginname": "Annotate PDF",
   "addon.mod_assign_feedback_file.pluginname": "File feedback",
   "addon.mod_assign_submission_comments.pluginname": "Submission comments",
   "addon.mod_assign_submission_file.pluginname": "File submissions",
-  "addon.mod_assign_submission_onlinetext.pluginname": "Online text submissions",
-  "addon.mod_assign_submission_onlinetext.wordlimitexceeded": "The word limit for this assignment is {{$a.limit}} words and you are attempting to submit {{$a.count}} words. Please review your submission and try again.",
+  "addon.mod_assign_submission_onlinetext.pluginname":
+      "Online text submissions",
+  "addon.mod_assign_submission_onlinetext.wordlimitexceeded":
+      "The word limit for this assignment is {{\$a.limit}} words and you are attempting to submit {{\$a.count}} words. Please review your submission and try again.",
   "addon.mod_book.errorchapter": "Error reading chapter of book.",
   "addon.mod_book.modulenameplural": "Books",
-  "addon.mod_book.navnexttitle": "Next: {{$a}}",
-  "addon.mod_book.navprevtitle": "Previous: {{$a}}",
+  "addon.mod_book.navnexttitle": "Next: {{\$a}}",
+  "addon.mod_book.navprevtitle": "Previous: {{\$a}}",
   "addon.mod_book.tagarea_book_chapters": "Book chapters",
   "addon.mod_book.toc": "Table of contents",
   "addon.mod_chat.beep": "Beep",
@@ -442,48 +533,63 @@
   "addon.mod_chat.entermessage": "Enter your message",
   "addon.mod_chat.errorwhileconnecting": "Error while connecting to the chat.",
   "addon.mod_chat.errorwhilegettingchatdata": "Error while getting chat data.",
-  "addon.mod_chat.errorwhilegettingchatusers": "Error while getting chat users.",
-  "addon.mod_chat.errorwhileretrievingmessages": "Error while retrieving messages from the server.",
+  "addon.mod_chat.errorwhilegettingchatusers":
+      "Error while getting chat users.",
+  "addon.mod_chat.errorwhileretrievingmessages":
+      "Error while retrieving messages from the server.",
   "addon.mod_chat.errorwhilesendingmessage": "Error while sending the message.",
-  "addon.mod_chat.messagebeepseveryone": "{{$a}} beeps everyone!",
-  "addon.mod_chat.messagebeepsyou": "{{$a}} has just beeped you!",
-  "addon.mod_chat.messageenter": "{{$a}} has just entered this chat",
-  "addon.mod_chat.messageexit": "{{$a}} has left this chat",
+  "addon.mod_chat.messagebeepseveryone": "{{\$a}} beeps everyone!",
+  "addon.mod_chat.messagebeepsyou": "{{\$a}} has just beeped you!",
+  "addon.mod_chat.messageenter": "{{\$a}} has just entered this chat",
+  "addon.mod_chat.messageexit": "{{\$a}} has left this chat",
   "addon.mod_chat.messages": "Messages",
-  "addon.mod_chat.messageyoubeep": "You beeped {{$a}}",
+  "addon.mod_chat.messageyoubeep": "You beeped {{\$a}}",
   "addon.mod_chat.modulenameplural": "Chats",
-  "addon.mod_chat.mustbeonlinetosendmessages": "You must be online to send messages.",
+  "addon.mod_chat.mustbeonlinetosendmessages":
+      "You must be online to send messages.",
   "addon.mod_chat.nomessages": "No messages yet",
   "addon.mod_chat.nosessionsfound": "No sessions found",
   "addon.mod_chat.saidto": "said to",
   "addon.mod_chat.send": "Send",
-  "addon.mod_chat.sessionstart": "The next chat session will start on {{$a.date}}, ({{$a.fromnow}} from now)",
+  "addon.mod_chat.sessionstart":
+      "The next chat session will start on {{\$a.date}}, ({{\$a.fromnow}} from now)",
   "addon.mod_chat.showincompletesessions": "Show incomplete sessions",
   "addon.mod_chat.talk": "Talk",
   "addon.mod_chat.viewreport": "View past chat sessions",
-  "addon.mod_choice.cannotsubmit": "Sorry, there was a problem submitting your choice. Please try again.",
+  "addon.mod_choice.cannotsubmit":
+      "Sorry, there was a problem submitting your choice. Please try again.",
   "addon.mod_choice.choiceoptions": "Choice options",
   "addon.mod_choice.errorgetchoice": "Error getting choice data.",
-  "addon.mod_choice.expired": "This activity closed on {{$a}}.",
+  "addon.mod_choice.expired": "This activity closed on {{\$a}}.",
   "addon.mod_choice.full": "(Full)",
-  "addon.mod_choice.limita": "Limit: {{$a}}",
+  "addon.mod_choice.limita": "Limit: {{\$a}}",
   "addon.mod_choice.modulenameplural": "Choices",
-  "addon.mod_choice.noresultsviewable": "The results are not currently viewable.",
-  "addon.mod_choice.notopenyet": "This activity is not available until {{$a}}.",
+  "addon.mod_choice.noresultsviewable":
+      "The results are not currently viewable.",
+  "addon.mod_choice.notopenyet":
+      "This activity is not available until {{\$a}}.",
   "addon.mod_choice.numberofuser": "Number of responses",
   "addon.mod_choice.numberofuserinpercentage": "Percentage of responses",
-  "addon.mod_choice.previewonly": "This is just a preview of the available options for this activity. You will not be able to submit your choice until {{$a}}.",
-  "addon.mod_choice.publishinfoanonafter": "Anonymous results will be published after you answer.",
-  "addon.mod_choice.publishinfoanonclose": "Anonymous results will be published after the activity is closed.",
-  "addon.mod_choice.publishinfofullafter": "Full results, showing everyone's choices, will be published after you answer.",
-  "addon.mod_choice.publishinfofullclose": "Full results, showing everyone's choices, will be published after the activity is closed.",
-  "addon.mod_choice.publishinfonever": "The results of this activity will not be published after you answer.",
+  "addon.mod_choice.previewonly":
+      "This is just a preview of the available options for this activity. You will not be able to submit your choice until {{\$a}}.",
+  "addon.mod_choice.publishinfoanonafter":
+      "Anonymous results will be published after you answer.",
+  "addon.mod_choice.publishinfoanonclose":
+      "Anonymous results will be published after the activity is closed.",
+  "addon.mod_choice.publishinfofullafter":
+      "Full results, showing everyone's choices, will be published after you answer.",
+  "addon.mod_choice.publishinfofullclose":
+      "Full results, showing everyone's choices, will be published after the activity is closed.",
+  "addon.mod_choice.publishinfonever":
+      "The results of this activity will not be published after you answer.",
   "addon.mod_choice.removemychoice": "Remove my choice",
   "addon.mod_choice.responses": "Responses",
-  "addon.mod_choice.responsesa": "Responses: {{$a}}",
-  "addon.mod_choice.responsesresultgraphdescription": "{{number}}% of the users chose the option: {{text}}.",
+  "addon.mod_choice.responsesa": "Responses: {{\$a}}",
+  "addon.mod_choice.responsesresultgraphdescription":
+      "{{number}}% of the users chose the option: {{text}}.",
   "addon.mod_choice.responsesresultgraphheader": "Graph display",
-  "addon.mod_choice.resultsnotsynced": "Your last response must be synchronised before it is included in the results.",
+  "addon.mod_choice.resultsnotsynced":
+      "Your last response must be synchronised before it is included in the results.",
   "addon.mod_choice.savemychoice": "Save my choice",
   "addon.mod_choice.userchoosethisoption": "Users who chose this option",
   "addon.mod_choice.yourselection": "Your selection",
@@ -495,23 +601,30 @@
   "addon.mod_data.ascending": "Ascending",
   "addon.mod_data.authorfirstname": "Author first name",
   "addon.mod_data.authorlastname": "Author surname",
-  "addon.mod_data.confirmdeleterecord": "Are you sure you want to delete this entry?",
+  "addon.mod_data.confirmdeleterecord":
+      "Are you sure you want to delete this entry?",
   "addon.mod_data.descending": "Descending",
   "addon.mod_data.disapprove": "Undo approval",
-  "addon.mod_data.edittagsnotsupported": "Sorry, editing tags is not supported by the app.",
+  "addon.mod_data.edittagsnotsupported":
+      "Sorry, editing tags is not supported by the app.",
   "addon.mod_data.emptyaddform": "You did not fill out any fields!",
-  "addon.mod_data.entrieslefttoadd": "You must add {{$a.entriesleft}} more entry/entries in order to complete this activity",
-  "addon.mod_data.entrieslefttoaddtoview": "You must add {{$a.entrieslefttoview}} more entry/entries before you can view other participants' entries.",
+  "addon.mod_data.entrieslefttoadd":
+      "You must add {{\$a.entriesleft}} more entry/entries in order to complete this activity",
+  "addon.mod_data.entrieslefttoaddtoview":
+      "You must add {{\$a.entrieslefttoview}} more entry/entries before you can view other participants' entries.",
   "addon.mod_data.errorapproving": "Error approving or unapproving entry.",
   "addon.mod_data.errordeleting": "Error deleting entry.",
   "addon.mod_data.errormustsupplyvalue": "You must supply a value here.",
-  "addon.mod_data.expired": "Sorry, this activity closed on {{$a}} and is no longer available",
+  "addon.mod_data.expired":
+      "Sorry, this activity closed on {{\$a}} and is no longer available",
   "addon.mod_data.fields": "Fields",
-  "addon.mod_data.foundrecords": "Found records: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Reset filters</a>)",
+  "addon.mod_data.foundrecords":
+      "Found records: {{\$a.num}}/{{\$a.max}} (<a href=\"{{\$a.reseturl}}\">Reset filters</a>)",
   "addon.mod_data.gettinglocation": "Getting location",
   "addon.mod_data.latlongboth": "Both latitude and longitude are required.",
   "addon.mod_data.locationnotenabled": "Location is not enabled",
-  "addon.mod_data.locationpermissiondenied": "Permission to access your location has been denied.",
+  "addon.mod_data.locationpermissiondenied":
+      "Permission to access your location has been denied.",
   "addon.mod_data.menuchoose": "Choose...",
   "addon.mod_data.modulenameplural": "Databases",
   "addon.mod_data.more": "More",
@@ -520,15 +633,17 @@
   "addon.mod_data.nomatch": "No matching entries found!",
   "addon.mod_data.norecords": "No entries in database",
   "addon.mod_data.notapproved": "Entry is not approved yet.",
-  "addon.mod_data.notopenyet": "Sorry, this activity is not available until {{$a}}",
-  "addon.mod_data.numrecords": "{{$a}} entries",
+  "addon.mod_data.notopenyet":
+      "Sorry, this activity is not available until {{\$a}}",
+  "addon.mod_data.numrecords": "{{\$a}} entries",
   "addon.mod_data.other": "Other",
   "addon.mod_data.recordapproved": "Entry approved",
   "addon.mod_data.recorddeleted": "Entry deleted",
   "addon.mod_data.recorddisapproved": "Entry unapproved",
   "addon.mod_data.resetsettings": "Reset filters",
   "addon.mod_data.search": "Search",
-  "addon.mod_data.searchbytagsnotsupported": "Sorry, searching by tags is not supported by the app.",
+  "addon.mod_data.searchbytagsnotsupported":
+      "Sorry, searching by tags is not supported by the app.",
   "addon.mod_data.selectedrequired": "All selected required",
   "addon.mod_data.single": "View single",
   "addon.mod_data.tagarea_data_records": "Data records",
@@ -537,15 +652,18 @@
   "addon.mod_data.usedate": "Include in search.",
   "addon.mod_feedback.analysis": "Analysis",
   "addon.mod_feedback.anonymous": "Anonymous",
-  "addon.mod_feedback.anonymous_entries": "Anonymous entries ({{$a}})",
+  "addon.mod_feedback.anonymous_entries": "Anonymous entries ({{\$a}})",
   "addon.mod_feedback.average": "Average",
-  "addon.mod_feedback.captchaofflinewarning": "Feedback with CAPTCHA cannot be completed offline, or if not configured, or if the server is down.",
+  "addon.mod_feedback.captchaofflinewarning":
+      "Feedback with CAPTCHA cannot be completed offline, or if not configured, or if the server is down.",
   "addon.mod_feedback.complete_the_form": "Answer the questions",
   "addon.mod_feedback.completed_feedbacks": "Submitted answers",
-  "addon.mod_feedback.completedfeedbackscountdescription": "There are {{count}} submitted answers.",
+  "addon.mod_feedback.completedfeedbackscountdescription":
+      "There are {{count}} submitted answers.",
   "addon.mod_feedback.continue_the_form": "Continue answering the questions",
   "addon.mod_feedback.feedback_is_not_open": "The feedback is not open",
-  "addon.mod_feedback.feedback_submitted_offline": "This feedback has been saved to be submitted later.",
+  "addon.mod_feedback.feedback_submitted_offline":
+      "This feedback has been saved to be submitted later.",
   "addon.mod_feedback.feedbackclose": "Allow answers to",
   "addon.mod_feedback.feedbackopen": "Allow answers from",
   "addon.mod_feedback.mapcourses": "Map feedback to courses",
@@ -554,9 +672,11 @@
   "addon.mod_feedback.mode": "Mode",
   "addon.mod_feedback.modulenameplural": "Feedback",
   "addon.mod_feedback.next_page": "Next page",
-  "addon.mod_feedback.non_anonymous": "User's name will be logged and shown with answers",
-  "addon.mod_feedback.non_anonymous_entries": "Non anonymous entries ({{$a}})",
-  "addon.mod_feedback.non_respondents_students": "Non-respondent students ({{$a}})",
+  "addon.mod_feedback.non_anonymous":
+      "User's name will be logged and shown with answers",
+  "addon.mod_feedback.non_anonymous_entries": "Non anonymous entries ({{\$a}})",
+  "addon.mod_feedback.non_respondents_students":
+      "Non-respondent students ({{\$a}})",
   "addon.mod_feedback.not_selected": "Not selected",
   "addon.mod_feedback.not_started": "Not started",
   "addon.mod_feedback.numberoutofrange": "Number out of range",
@@ -565,14 +685,16 @@
   "addon.mod_feedback.preview": "Preview",
   "addon.mod_feedback.previous_page": "Previous page",
   "addon.mod_feedback.questions": "Questions",
-  "addon.mod_feedback.questionscountdescription": "There are {{count}} questions.",
+  "addon.mod_feedback.questionscountdescription":
+      "There are {{count}} questions.",
   "addon.mod_feedback.response_nr": "Response number",
   "addon.mod_feedback.responses": "Responses",
   "addon.mod_feedback.save_entries": "Submit your answers",
   "addon.mod_feedback.show_entries": "Show responses",
   "addon.mod_feedback.show_nonrespondents": "Show non-respondents",
   "addon.mod_feedback.started": "Started",
-  "addon.mod_feedback.this_feedback_is_already_submitted": "You've already completed this activity.",
+  "addon.mod_feedback.this_feedback_is_already_submitted":
+      "You've already completed this activity.",
   "addon.mod_folder.emptyfilelist": "There are no files to show.",
   "addon.mod_folder.modulenameplural": "Folders",
   "addon.mod_forum.addanewdiscussion": "Add a new discussion topic",
@@ -580,23 +702,35 @@
   "addon.mod_forum.addanewtopic": "Add a new topic",
   "addon.mod_forum.addtofavourites": "Star this discussion",
   "addon.mod_forum.advanced": "Advanced",
-  "addon.mod_forum.cannotadddiscussion": "Adding discussions to this forum requires group membership.",
-  "addon.mod_forum.cannotadddiscussionall": "You do not have permission to add a new discussion topic for all participants.",
+  "addon.mod_forum.cannotadddiscussion":
+      "Adding discussions to this forum requires group membership.",
+  "addon.mod_forum.cannotadddiscussionall":
+      "You do not have permission to add a new discussion topic for all participants.",
   "addon.mod_forum.cannotcreatediscussion": "Could not create new discussion",
-  "addon.mod_forum.couldnotadd": "Could not add your post due to an unknown error",
-  "addon.mod_forum.couldnotupdate": "Could not update your post due to an unknown error",
-  "addon.mod_forum.cutoffdatereached": "The cut-off date for posting to this forum is reached so you can no longer post to it.",
+  "addon.mod_forum.couldnotadd":
+      "Could not add your post due to an unknown error",
+  "addon.mod_forum.couldnotupdate":
+      "Could not update your post due to an unknown error",
+  "addon.mod_forum.cutoffdatereached":
+      "The cut-off date for posting to this forum is reached so you can no longer post to it.",
   "addon.mod_forum.delete": "Delete",
   "addon.mod_forum.deletedpost": "The post has been deleted",
   "addon.mod_forum.deletesure": "Are you sure you want to delete this post?",
   "addon.mod_forum.discussion": "Discussion",
-  "addon.mod_forum.discussionlistsortbycreatedasc": "Sort by creation date in ascending order",
-  "addon.mod_forum.discussionlistsortbycreateddesc": "Sort by creation date in descending order",
-  "addon.mod_forum.discussionlistsortbylastpostasc": "Sort by last post creation date in ascending order",
-  "addon.mod_forum.discussionlistsortbylastpostdesc": "Sort by last post creation date in descending order",
-  "addon.mod_forum.discussionlistsortbyrepliesasc": "Sort by number of replies in ascending order",
-  "addon.mod_forum.discussionlistsortbyrepliesdesc": "Sort by number of replies in descending order",
-  "addon.mod_forum.discussionlocked": "This discussion has been locked so you can no longer reply to it.",
+  "addon.mod_forum.discussionlistsortbycreatedasc":
+      "Sort by creation date in ascending order",
+  "addon.mod_forum.discussionlistsortbycreateddesc":
+      "Sort by creation date in descending order",
+  "addon.mod_forum.discussionlistsortbylastpostasc":
+      "Sort by last post creation date in ascending order",
+  "addon.mod_forum.discussionlistsortbylastpostdesc":
+      "Sort by last post creation date in descending order",
+  "addon.mod_forum.discussionlistsortbyrepliesasc":
+      "Sort by number of replies in ascending order",
+  "addon.mod_forum.discussionlistsortbyrepliesdesc":
+      "Sort by number of replies in descending order",
+  "addon.mod_forum.discussionlocked":
+      "This discussion has been locked so you can no longer reply to it.",
   "addon.mod_forum.discussionpinned": "Pinned",
   "addon.mod_forum.discussionsubscription": "Discussion subscription",
   "addon.mod_forum.edit": "Edit",
@@ -604,24 +738,29 @@
   "addon.mod_forum.erroremptysubject": "Post subject cannot be empty.",
   "addon.mod_forum.errorgetforum": "Error getting forum data.",
   "addon.mod_forum.errorgetgroups": "Error getting group settings.",
-  "addon.mod_forum.errorposttoallgroups": "Could not create new discussion in all groups.",
+  "addon.mod_forum.errorposttoallgroups":
+      "Could not create new discussion in all groups.",
   "addon.mod_forum.favourites": "Starred",
   "addon.mod_forum.favouriteupdated": "Your star option has been updated.",
-  "addon.mod_forum.forumnodiscussionsyet": "There are no discussions yet in this forum.",
+  "addon.mod_forum.forumnodiscussionsyet":
+      "There are no discussions yet in this forum.",
   "addon.mod_forum.group": "Group",
   "addon.mod_forum.lastpost": "Last post",
   "addon.mod_forum.lockdiscussion": "Lock this discussion",
   "addon.mod_forum.lockupdated": "The lock option has been updated.",
   "addon.mod_forum.message": "Message",
-  "addon.mod_forum.modeflatnewestfirst": "Display replies flat, with newest first",
-  "addon.mod_forum.modeflatoldestfirst": "Display replies flat, with oldest first",
+  "addon.mod_forum.modeflatnewestfirst":
+      "Display replies flat, with newest first",
+  "addon.mod_forum.modeflatoldestfirst":
+      "Display replies flat, with oldest first",
   "addon.mod_forum.modenested": "Display replies in nested form",
   "addon.mod_forum.modulenameplural": "Forums",
   "addon.mod_forum.numdiscussions": "{{numdiscussions}} discussions",
   "addon.mod_forum.numreplies": "{{numreplies}} replies",
   "addon.mod_forum.pindiscussion": "Pin this discussion",
   "addon.mod_forum.pinupdated": "The pin option has been updated.",
-  "addon.mod_forum.postisprivatereply": "This is a private reply. It is not visible to other participants.",
+  "addon.mod_forum.postisprivatereply":
+      "This is a private reply. It is not visible to other participants.",
   "addon.mod_forum.posttoforum": "Post to forum",
   "addon.mod_forum.posttomygroups": "Post a copy to all groups",
   "addon.mod_forum.privatereply": "Reply privately",
@@ -633,12 +772,14 @@
   "addon.mod_forum.replyplaceholder": "Write your reply...",
   "addon.mod_forum.subject": "Subject",
   "addon.mod_forum.tagarea_forum_posts": "Forum posts",
-  "addon.mod_forum.thisforumhasduedate": "The due date for posting to this forum is {{$a}}.",
-  "addon.mod_forum.thisforumisdue": "The due date for posting to this forum was {{$a}}.",
+  "addon.mod_forum.thisforumhasduedate":
+      "The due date for posting to this forum is {{\$a}}.",
+  "addon.mod_forum.thisforumisdue":
+      "The due date for posting to this forum was {{\$a}}.",
   "addon.mod_forum.unlockdiscussion": "Unlock this discussion",
   "addon.mod_forum.unpindiscussion": "Unpin this discussion",
   "addon.mod_forum.unread": "Unread",
-  "addon.mod_forum.unreadpostsnumber": "{{$a}} unread posts",
+  "addon.mod_forum.unreadpostsnumber": "{{\$a}} unread posts",
   "addon.mod_forum.yourreply": "Your reply",
   "addon.mod_glossary.addentry": "Add a new entry",
   "addon.mod_glossary.aliases": "Keyword(s)",
@@ -657,12 +798,18 @@
   "addon.mod_glossary.definition": "Definition",
   "addon.mod_glossary.entriestobesynced": "Entries to be synced",
   "addon.mod_glossary.entrypendingapproval": "This entry is pending approval.",
-  "addon.mod_glossary.entryusedynalink": "This entry should be automatically linked",
-  "addon.mod_glossary.errconceptalreadyexists": "This concept already exists. No duplicates allowed in this glossary.",
-  "addon.mod_glossary.errorloadingentries": "An error occurred while loading entries.",
-  "addon.mod_glossary.errorloadingentry": "An error occurred while loading the entry.",
-  "addon.mod_glossary.errorloadingglossary": "An error occurred while loading the glossary.",
-  "addon.mod_glossary.fillfields": "Concept and definition are mandatory fields.",
+  "addon.mod_glossary.entryusedynalink":
+      "This entry should be automatically linked",
+  "addon.mod_glossary.errconceptalreadyexists":
+      "This concept already exists. No duplicates allowed in this glossary.",
+  "addon.mod_glossary.errorloadingentries":
+      "An error occurred while loading entries.",
+  "addon.mod_glossary.errorloadingentry":
+      "An error occurred while loading the entry.",
+  "addon.mod_glossary.errorloadingglossary":
+      "An error occurred while loading the glossary.",
+  "addon.mod_glossary.fillfields":
+      "Concept and definition are mandatory fields.",
   "addon.mod_glossary.fullmatch": "Match whole words only",
   "addon.mod_glossary.linking": "Auto-linking",
   "addon.mod_glossary.modulenameplural": "Glossaries",
@@ -676,41 +823,49 @@
   "addon.mod_h5pactivity.answer_incorrect": "Your answer is incorrect",
   "addon.mod_h5pactivity.answer_pass": "Correct answer",
   "addon.mod_h5pactivity.attempt": "Attempt",
-  "addon.mod_h5pactivity.attempt_completion_no": "This attempt is not marked as completed",
+  "addon.mod_h5pactivity.attempt_completion_no":
+      "This attempt is not marked as completed",
   "addon.mod_h5pactivity.attempt_completion_yes": "This attempt is completed",
   "addon.mod_h5pactivity.attempt_success_fail": "Fail",
   "addon.mod_h5pactivity.attempt_success_pass": "Pass",
   "addon.mod_h5pactivity.attempt_success_unknown": "Not reported",
-  "addon.mod_h5pactivity.attempts_none": "This user has no attempts to display.",
+  "addon.mod_h5pactivity.attempts_none":
+      "This user has no attempts to display.",
   "addon.mod_h5pactivity.completion": "Completion",
   "addon.mod_h5pactivity.downloadh5pfile": "Download H5P file",
   "addon.mod_h5pactivity.duration": "Duration",
   "addon.mod_h5pactivity.errorgetactivity": "Error getting H5P activity data.",
-  "addon.mod_h5pactivity.filestatenotdownloaded": "The H5P package is not downloaded. You need to download it to be able to use it.",
-  "addon.mod_h5pactivity.filestateoutdated": "The H5P package has been modified since the last download. You need to download it again to be able to use it.",
+  "addon.mod_h5pactivity.filestatenotdownloaded":
+      "The H5P package is not downloaded. You need to download it to be able to use it.",
+  "addon.mod_h5pactivity.filestateoutdated":
+      "The H5P package has been modified since the last download. You need to download it again to be able to use it.",
   "addon.mod_h5pactivity.maxscore": "Max score",
   "addon.mod_h5pactivity.modulenameplural": "H5P",
   "addon.mod_h5pactivity.myattempts": "My attempts",
-  "addon.mod_h5pactivity.no_compatible_track": "This interaction ({{$a}}) does not provide tracking information or the tracking\n        provided is not compatible with the current activity version.",
-  "addon.mod_h5pactivity.offlinedisabledwarning": "You need to be online to view the H5P package.",
+  "addon.mod_h5pactivity.no_compatible_track":
+      "This interaction ({{\$a}}) does not provide tracking information or the tracking\n        provided is not compatible with the current activity version.",
+  "addon.mod_h5pactivity.offlinedisabledwarning":
+      "You need to be online to view the H5P package.",
   "addon.mod_h5pactivity.outcome": "Outcome",
-  "addon.mod_h5pactivity.previewmode": "This content is displayed in preview mode. No attempt tracking will be stored.",
+  "addon.mod_h5pactivity.previewmode":
+      "This content is displayed in preview mode. No attempt tracking will be stored.",
   "addon.mod_h5pactivity.result_fill-in": "Fill-in text",
   "addon.mod_h5pactivity.result_other": "Unknown interaction type",
   "addon.mod_h5pactivity.review_my_attempts": "View my attempts",
   "addon.mod_h5pactivity.score": "Score",
-  "addon.mod_h5pactivity.score_out_of": "{{$a.rawscore}} out of {{$a.maxscore}}",
+  "addon.mod_h5pactivity.score_out_of":
+      "{{\$a.rawscore}} out of {{\$a.maxscore}}",
   "addon.mod_h5pactivity.startdate": "Start date",
   "addon.mod_h5pactivity.totalscore": "Total score",
-  "addon.mod_h5pactivity.viewattempt": "View attempt {{$a}}",
+  "addon.mod_h5pactivity.viewattempt": "View attempt {{\$a}}",
   "addon.mod_imscp.deploymenterror": "Content package error!",
   "addon.mod_imscp.modulenameplural": "IMS content packages",
   "addon.mod_imscp.showmoduledescription": "Show description",
   "addon.mod_imscp.toc": "TOC",
   "addon.mod_lesson.answer": "Answer",
-  "addon.mod_lesson.attempt": "Attempt: {{$a}}",
+  "addon.mod_lesson.attempt": "Attempt: {{\$a}}",
   "addon.mod_lesson.attemptheader": "Attempt",
-  "addon.mod_lesson.attemptsremaining": "You have {{$a}} attempt(s) remaining",
+  "addon.mod_lesson.attemptsremaining": "You have {{\$a}} attempt(s) remaining",
   "addon.mod_lesson.averagescore": "Average score",
   "addon.mod_lesson.averagetime": "Average time",
   "addon.mod_lesson.branchtable": "Content",
@@ -721,81 +876,114 @@
   "addon.mod_lesson.congratulations": "Congratulations - end of lesson reached",
   "addon.mod_lesson.continue": "Continue",
   "addon.mod_lesson.continuetonextpage": "Continue to next page.",
-  "addon.mod_lesson.defaultessayresponse": "Your essay will be graded by your teacher.",
+  "addon.mod_lesson.defaultessayresponse":
+      "Your essay will be graded by your teacher.",
   "addon.mod_lesson.detailedstats": "Detailed statistics",
   "addon.mod_lesson.didnotanswerquestion": "Did not answer this question.",
   "addon.mod_lesson.displayofgrade": "Display of grade (for students only)",
-  "addon.mod_lesson.displayscorewithessays": "<p>You earned {{$a.score}} out of {{$a.tempmaxgrade}} for the automatically graded questions.</p>\n<p>Your {{$a.essayquestions}} essay question(s) will be graded and added into your final score at a later date.</p>\n<p>Your current grade without the essay question(s) is {{$a.score}} out of {{$a.grade}}.</p>",
-  "addon.mod_lesson.displayscorewithoutessays": "Your score is {{$a.score}} (out of {{$a.grade}}).",
+  "addon.mod_lesson.displayscorewithessays":
+      "<p>You earned {{\$a.score}} out of {{\$a.tempmaxgrade}} for the automatically graded questions.</p>\n<p>Your {{\$a.essayquestions}} essay question(s) will be graded and added into your final score at a later date.</p>\n<p>Your current grade without the essay question(s) is {{\$a.score}} out of {{\$a.grade}}.</p>",
+  "addon.mod_lesson.displayscorewithoutessays":
+      "Your score is {{\$a.score}} (out of {{\$a.grade}}).",
   "addon.mod_lesson.emptypassword": "Password cannot be empty",
   "addon.mod_lesson.enterpassword": "Please enter the password:",
-  "addon.mod_lesson.eolstudentoutoftimenoanswers": "You did not answer any questions.  You have received a 0 for this lesson.",
-  "addon.mod_lesson.errorprefetchrandombranch": "This lesson contains a jump to a random content page. It can't be attempted in the app until it has been started in a web browser.",
-  "addon.mod_lesson.errorreviewretakenotlast": "This attempt can no longer be reviewed because another attempt has been finished.",
+  "addon.mod_lesson.eolstudentoutoftimenoanswers":
+      "You did not answer any questions.  You have received a 0 for this lesson.",
+  "addon.mod_lesson.errorprefetchrandombranch":
+      "This lesson contains a jump to a random content page. It can't be attempted in the app until it has been started in a web browser.",
+  "addon.mod_lesson.errorreviewretakenotlast":
+      "This attempt can no longer be reviewed because another attempt has been finished.",
   "addon.mod_lesson.finish": "Finish",
   "addon.mod_lesson.finishretakeoffline": "This attempt was finished offline.",
-  "addon.mod_lesson.firstwrong": "You have answered incorrectly. Would you like to attempt the question again? (If you now answer the question correctly, it will not count towards your final score.)",
+  "addon.mod_lesson.firstwrong":
+      "You have answered incorrectly. Would you like to attempt the question again? (If you now answer the question correctly, it will not count towards your final score.)",
   "addon.mod_lesson.gotoendoflesson": "Go to the end of the lesson",
   "addon.mod_lesson.grade": "Grade",
   "addon.mod_lesson.highscore": "High score",
   "addon.mod_lesson.hightime": "High time",
-  "addon.mod_lesson.leftduringtimed": "You have left during a timed lesson.<br />Please click on Continue to restart the lesson.",
-  "addon.mod_lesson.leftduringtimednoretake": "You have left during a timed lesson and you are<br />not allowed to retake or continue the lesson.",
+  "addon.mod_lesson.leftduringtimed":
+      "You have left during a timed lesson.<br />Please click on Continue to restart the lesson.",
+  "addon.mod_lesson.leftduringtimednoretake":
+      "You have left during a timed lesson and you are<br />not allowed to retake or continue the lesson.",
   "addon.mod_lesson.lessonmenu": "Lesson menu",
   "addon.mod_lesson.lessonstats": "Lesson statistics",
   "addon.mod_lesson.linkedmedia": "Linked media",
   "addon.mod_lesson.loginfail": "Login failed, please try again...",
   "addon.mod_lesson.lowscore": "Low score",
   "addon.mod_lesson.lowtime": "Low time",
-  "addon.mod_lesson.maximumnumberofattemptsreached": "Maximum number of attempts reached - Moving to next page",
-  "addon.mod_lesson.modattemptsnoteacher": "Student review only works for students.",
+  "addon.mod_lesson.maximumnumberofattemptsreached":
+      "Maximum number of attempts reached - Moving to next page",
+  "addon.mod_lesson.modattemptsnoteacher":
+      "Student review only works for students.",
   "addon.mod_lesson.modulenameplural": "Lessons",
-  "addon.mod_lesson.noanswer": "One or more questions have no answer given.  Please go back and submit an answer.",
-  "addon.mod_lesson.nolessonattempts": "No attempts have been made on this lesson.",
-  "addon.mod_lesson.nolessonattemptsgroup": "No attempts have been made by {{$a}} group members on this lesson.",
+  "addon.mod_lesson.noanswer":
+      "One or more questions have no answer given.  Please go back and submit an answer.",
+  "addon.mod_lesson.nolessonattempts":
+      "No attempts have been made on this lesson.",
+  "addon.mod_lesson.nolessonattemptsgroup":
+      "No attempts have been made by {{\$a}} group members on this lesson.",
   "addon.mod_lesson.notcompleted": "Not completed",
-  "addon.mod_lesson.numberofcorrectanswers": "Number of correct answers: {{$a}}",
-  "addon.mod_lesson.numberofpagesviewed": "Number of questions answered: {{$a}}",
-  "addon.mod_lesson.numberofpagesviewednotice": "Number of questions answered: {{$a.nquestions}} (You should answer at least {{$a.minquestions}})",
-  "addon.mod_lesson.ongoingcustom": "You have earned {{$a.score}} point(s) out of {{$a.currenthigh}} point(s) thus far.",
-  "addon.mod_lesson.ongoingnormal": "You have answered {{$a.correct}} correctly out of {{$a.viewed}} attempts.",
+  "addon.mod_lesson.numberofcorrectanswers":
+      "Number of correct answers: {{\$a}}",
+  "addon.mod_lesson.numberofpagesviewed":
+      "Number of questions answered: {{\$a}}",
+  "addon.mod_lesson.numberofpagesviewednotice":
+      "Number of questions answered: {{\$a.nquestions}} (You should answer at least {{\$a.minquestions}})",
+  "addon.mod_lesson.ongoingcustom":
+      "You have earned {{\$a.score}} point(s) out of {{\$a.currenthigh}} point(s) thus far.",
+  "addon.mod_lesson.ongoingnormal":
+      "You have answered {{\$a.correct}} correctly out of {{\$a.viewed}} attempts.",
   "addon.mod_lesson.or": "OR",
   "addon.mod_lesson.overview": "Overview",
   "addon.mod_lesson.preview": "Preview",
-  "addon.mod_lesson.progressbarteacherwarning2": "You will not see the progress bar because you can edit this lesson",
-  "addon.mod_lesson.progresscompleted": "You have completed {{$a}}% of the lesson",
+  "addon.mod_lesson.progressbarteacherwarning2":
+      "You will not see the progress bar because you can edit this lesson",
+  "addon.mod_lesson.progresscompleted":
+      "You have completed {{\$a}}% of the lesson",
   "addon.mod_lesson.question": "Question",
   "addon.mod_lesson.rawgrade": "Raw grade",
   "addon.mod_lesson.reports": "Reports",
   "addon.mod_lesson.response": "Response",
-  "addon.mod_lesson.retakefinishedinsync": "An offline attempt was synchronised. Do you want to review it?",
-  "addon.mod_lesson.retakelabelfull": "{{retake}}: {{grade}} {{timestart}} ({{duration}})",
+  "addon.mod_lesson.retakefinishedinsync":
+      "An offline attempt was synchronised. Do you want to review it?",
+  "addon.mod_lesson.retakelabelfull":
+      "{{retake}}: {{grade}} {{timestart}} ({{duration}})",
   "addon.mod_lesson.retakelabelshort": "{{retake}}: {{grade}} {{timestart}}",
   "addon.mod_lesson.review": "Review",
   "addon.mod_lesson.reviewlesson": "Review lesson",
   "addon.mod_lesson.reviewquestionback": "Yes, I'd like to try again",
-  "addon.mod_lesson.reviewquestioncontinue": "No, I just want to go on to the next question",
-  "addon.mod_lesson.secondpluswrong": "Not quite.  Would you like to try again?",
+  "addon.mod_lesson.reviewquestioncontinue":
+      "No, I just want to go on to the next question",
+  "addon.mod_lesson.secondpluswrong":
+      "Not quite.  Would you like to try again?",
   "addon.mod_lesson.submit": "Submit",
-  "addon.mod_lesson.teacherjumpwarning": "A {{$a.cluster}} jump or an {{$a.unseen}} jump is being used in this lesson.  The next page jump will be used instead. Log in as a student to test these jumps.",
-  "addon.mod_lesson.teacherongoingwarning": "The ongoing score is only displayed for the student. Log in as a student to test the ongoing score.",
-  "addon.mod_lesson.teachertimerwarning": "Timer only works for students.  Test the timer by logging in as a student.",
+  "addon.mod_lesson.teacherjumpwarning":
+      "A {{\$a.cluster}} jump or an {{\$a.unseen}} jump is being used in this lesson.  The next page jump will be used instead. Log in as a student to test these jumps.",
+  "addon.mod_lesson.teacherongoingwarning":
+      "The ongoing score is only displayed for the student. Log in as a student to test the ongoing score.",
+  "addon.mod_lesson.teachertimerwarning":
+      "Timer only works for students.  Test the timer by logging in as a student.",
   "addon.mod_lesson.thatsthecorrectanswer": "That's the correct answer",
   "addon.mod_lesson.thatsthewronganswer": "That's the wrong answer",
   "addon.mod_lesson.timeremaining": "Time remaining",
   "addon.mod_lesson.timetaken": "Time taken",
-  "addon.mod_lesson.unseenpageinbranch": "Unseen question within a content page",
-  "addon.mod_lesson.warningretakefinished": "The attempt was finished on the site.",
+  "addon.mod_lesson.unseenpageinbranch":
+      "Unseen question within a content page",
+  "addon.mod_lesson.warningretakefinished":
+      "The attempt was finished on the site.",
   "addon.mod_lesson.welldone": "Well done!",
-  "addon.mod_lesson.youhaveseen": "You have seen more than one page of this lesson already.<br />Do you want to start at the last page you saw?",
+  "addon.mod_lesson.youhaveseen":
+      "You have seen more than one page of this lesson already.<br />Do you want to start at the last page you saw?",
   "addon.mod_lesson.youranswer": "Your answer",
-  "addon.mod_lesson.yourcurrentgradeisoutof": "Your current grade is {{$a.grade}} out of {{$a.total}}",
-  "addon.mod_lesson.youshouldview": "You should answer at least: {{$a}}",
+  "addon.mod_lesson.yourcurrentgradeisoutof":
+      "Your current grade is {{\$a.grade}} out of {{\$a.total}}",
+  "addon.mod_lesson.youshouldview": "You should answer at least: {{\$a}}",
   "addon.mod_lti.errorgetlti": "Error getting module data.",
   "addon.mod_lti.errorinvalidlaunchurl": "The launch URL is not valid.",
   "addon.mod_lti.launchactivity": "Launch the activity",
   "addon.mod_lti.modulenameplural": "External tools",
-  "addon.mod_page.errorwhileloadingthepage": "Error while loading the page content.",
+  "addon.mod_page.errorwhileloadingthepage":
+      "Error while loading the page content.",
   "addon.mod_page.modulenameplural": "Pages",
   "addon.mod_quiz.answercolon": "Answer:",
   "addon.mod_quiz.attemptfirst": "First attempt",
@@ -803,28 +991,40 @@
   "addon.mod_quiz.attemptnumber": "Attempt",
   "addon.mod_quiz.attemptquiznow": "Attempt quiz now",
   "addon.mod_quiz.attemptstate": "State",
-  "addon.mod_quiz.canattemptbutnotsubmit": "You can attempt this quiz in the app, but you will need to submit the attempt in browser for the following reasons:",
-  "addon.mod_quiz.cannotsubmitquizdueto": "This quiz attempt cannot be submitted for the following reasons:",
+  "addon.mod_quiz.canattemptbutnotsubmit":
+      "You can attempt this quiz in the app, but you will need to submit the attempt in browser for the following reasons:",
+  "addon.mod_quiz.cannotsubmitquizdueto":
+      "This quiz attempt cannot be submitted for the following reasons:",
   "addon.mod_quiz.clearchoice": "Clear my choice",
   "addon.mod_quiz.comment": "Comment",
   "addon.mod_quiz.completedon": "Completed on",
-  "addon.mod_quiz.confirmclose": "Once you submit, you will no longer be able to change your answers for this attempt.",
-  "addon.mod_quiz.confirmcontinueoffline": "This attempt has not been synchronised since {{$a}}. If you have continued this attempt in another device since then, you may lose data.",
-  "addon.mod_quiz.confirmleavequizonerror": "An error occurred while saving the answers. Are you sure you want to leave the quiz?",
-  "addon.mod_quiz.confirmstart": "Your attempt will have a time limit of {{$a}}. When you start, the timer will begin to count down and cannot be paused. You must finish your attempt before it expires. Are you sure you wish to start now?",
+  "addon.mod_quiz.confirmclose":
+      "Once you submit, you will no longer be able to change your answers for this attempt.",
+  "addon.mod_quiz.confirmcontinueoffline":
+      "This attempt has not been synchronised since {{\$a}}. If you have continued this attempt in another device since then, you may lose data.",
+  "addon.mod_quiz.confirmleavequizonerror":
+      "An error occurred while saving the answers. Are you sure you want to leave the quiz?",
+  "addon.mod_quiz.confirmstart":
+      "Your attempt will have a time limit of {{\$a}}. When you start, the timer will begin to count down and cannot be paused. You must finish your attempt before it expires. Are you sure you wish to start now?",
   "addon.mod_quiz.confirmstartheader": "Time limit",
-  "addon.mod_quiz.connectionerror": "Network connection lost. (Autosave failed).\n\nMake a note of any responses entered on this page in the last few minutes, then try to re-connect.\n\nOnce connection has been re-established, your responses should be saved and this message will disappear.",
+  "addon.mod_quiz.connectionerror":
+      "Network connection lost. (Autosave failed).\n\nMake a note of any responses entered on this page in the last few minutes, then try to re-connect.\n\nOnce connection has been re-established, your responses should be saved and this message will disappear.",
   "addon.mod_quiz.continueattemptquiz": "Continue the last attempt",
   "addon.mod_quiz.continuepreview": "Continue the last preview",
-  "addon.mod_quiz.errorbehaviournotsupported": "This quiz can't be attempted in the app because the question behaviour is not supported by the app:",
+  "addon.mod_quiz.errorbehaviournotsupported":
+      "This quiz can't be attempted in the app because the question behaviour is not supported by the app:",
   "addon.mod_quiz.errordownloading": "Error downloading required data.",
   "addon.mod_quiz.errorgetattempt": "Error getting attempt data.",
   "addon.mod_quiz.errorgetquestions": "Error getting questions.",
   "addon.mod_quiz.errorgetquiz": "Error getting quiz data.",
-  "addon.mod_quiz.errorparsequestions": "An error occurred while reading the questions. Please attempt this quiz in a web browser.",
-  "addon.mod_quiz.errorquestionsnotsupported": "This quiz can't be attempted in the app because it only contains questions not supported by the app:",
-  "addon.mod_quiz.errorrulesnotsupported": "This quiz can't be attempted in the app because it has access rules not supported by the app:",
-  "addon.mod_quiz.errorsaveattempt": "An error occurred while saving the attempt data.",
+  "addon.mod_quiz.errorparsequestions":
+      "An error occurred while reading the questions. Please attempt this quiz in a web browser.",
+  "addon.mod_quiz.errorquestionsnotsupported":
+      "This quiz can't be attempted in the app because it only contains questions not supported by the app:",
+  "addon.mod_quiz.errorrulesnotsupported":
+      "This quiz can't be attempted in the app because it has access rules not supported by the app:",
+  "addon.mod_quiz.errorsaveattempt":
+      "An error occurred while saving the attempt data.",
   "addon.mod_quiz.feedback": "Feedback",
   "addon.mod_quiz.finishattemptdots": "Finish attempt...",
   "addon.mod_quiz.finishnotsynced": "Finished but not synchronised",
@@ -832,30 +1032,36 @@
   "addon.mod_quiz.gradeaverage": "Average grade",
   "addon.mod_quiz.gradehighest": "Highest grade",
   "addon.mod_quiz.grademethod": "Grading method",
-  "addon.mod_quiz.gradesofar": "{{$a.method}}: {{$a.mygrade}} / {{$a.quizgrade}}.",
+  "addon.mod_quiz.gradesofar":
+      "{{\$a.method}}: {{\$a.mygrade}} / {{\$a.quizgrade}}.",
   "addon.mod_quiz.marks": "Marks",
   "addon.mod_quiz.modulenameplural": "Quizzes",
-  "addon.mod_quiz.mustbesubmittedby": "This attempt must be submitted by {{$a}}.",
+  "addon.mod_quiz.mustbesubmittedby":
+      "This attempt must be submitted by {{\$a}}.",
   "addon.mod_quiz.noquestions": "No questions have been added yet",
-  "addon.mod_quiz.noreviewattempt": "You are not allowed to review this attempt.",
+  "addon.mod_quiz.noreviewattempt":
+      "You are not allowed to review this attempt.",
   "addon.mod_quiz.notyetgraded": "Not yet graded",
   "addon.mod_quiz.opentoc": "Open navigation popover",
-  "addon.mod_quiz.outof": "{{$a.grade}} out of {{$a.maxgrade}}",
-  "addon.mod_quiz.outofpercent": "{{$a.grade}} out of {{$a.maxgrade}} ({{$a.percent}}%)",
-  "addon.mod_quiz.outofshort": "{{$a.grade}}/{{$a.maxgrade}}",
+  "addon.mod_quiz.outof": "{{\$a.grade}} out of {{\$a.maxgrade}}",
+  "addon.mod_quiz.outofpercent":
+      "{{\$a.grade}} out of {{\$a.maxgrade}} ({{\$a.percent}}%)",
+  "addon.mod_quiz.outofshort": "{{\$a.grade}}/{{\$a.maxgrade}}",
   "addon.mod_quiz.overallfeedback": "Overall feedback",
   "addon.mod_quiz.overdue": "Overdue",
-  "addon.mod_quiz.overduemustbesubmittedby": "This attempt is now overdue. It should already have been submitted. If you would like this quiz to be graded, you must submit it by {{$a}}. If you do not submit it by then, no marks from this attempt will be counted.",
+  "addon.mod_quiz.overduemustbesubmittedby":
+      "This attempt is now overdue. It should already have been submitted. If you would like this quiz to be graded, you must submit it by {{\$a}}. If you do not submit it by then, no marks from this attempt will be counted.",
   "addon.mod_quiz.preview": "Preview",
   "addon.mod_quiz.previewquiznow": "Preview quiz now",
   "addon.mod_quiz.question": "Question",
   "addon.mod_quiz.quiznavigation": "Quiz navigation",
   "addon.mod_quiz.quizpassword": "Quiz password",
   "addon.mod_quiz.reattemptquiz": "Re-attempt quiz",
-  "addon.mod_quiz.requirepasswordmessage": "To attempt this quiz you need to know the quiz password",
+  "addon.mod_quiz.requirepasswordmessage":
+      "To attempt this quiz you need to know the quiz password",
   "addon.mod_quiz.returnattempt": "Return to attempt",
   "addon.mod_quiz.review": "Review",
-  "addon.mod_quiz.reviewofattempt": "Review of attempt {{$a}}",
+  "addon.mod_quiz.reviewofattempt": "Review of attempt {{\$a}}",
   "addon.mod_quiz.reviewofpreview": "Review of preview",
   "addon.mod_quiz.showall": "Show all questions on one page",
   "addon.mod_quiz.showeachpage": "Show one page at a time",
@@ -863,10 +1069,10 @@
   "addon.mod_quiz.startedon": "Started on",
   "addon.mod_quiz.stateabandoned": "Never submitted",
   "addon.mod_quiz.statefinished": "Finished",
-  "addon.mod_quiz.statefinisheddetails": "Submitted {{$a}}",
+  "addon.mod_quiz.statefinisheddetails": "Submitted {{\$a}}",
   "addon.mod_quiz.stateinprogress": "In progress",
   "addon.mod_quiz.stateoverdue": "Overdue",
-  "addon.mod_quiz.stateoverduedetails": "Must be submitted by {{$a}}",
+  "addon.mod_quiz.stateoverduedetails": "Must be submitted by {{\$a}}",
   "addon.mod_quiz.status": "Status",
   "addon.mod_quiz.submitallandfinish": "Submit all and finish",
   "addon.mod_quiz.summaryofattempt": "Summary of attempt",
@@ -874,16 +1080,22 @@
   "addon.mod_quiz.timeleft": "Time left",
   "addon.mod_quiz.timetaken": "Time taken",
   "addon.mod_quiz.unit": "Unit",
-  "addon.mod_quiz.warningattemptfinished": "Offline attempt discarded as it was finished on the site or not found.",
-  "addon.mod_quiz.warningdatadiscarded": "Some offline answers were discarded because the questions were modified online.",
-  "addon.mod_quiz.warningdatadiscardedfromfinished": "Attempt unfinished because some offline answers were discarded. Please review your answers then resubmit the attempt.",
-  "addon.mod_quiz.warningquestionsnotsupported": "This quiz contains questions not supported by the app:",
-  "addon.mod_quiz.yourfinalgradeis": "Your final grade for this quiz is {{$a}}.",
-  "addon.mod_resource.errorwhileloadingthecontent": "Error while loading the content.",
-  "addon.mod_resource.modifieddate": "Modified {{$a}}",
+  "addon.mod_quiz.warningattemptfinished":
+      "Offline attempt discarded as it was finished on the site or not found.",
+  "addon.mod_quiz.warningdatadiscarded":
+      "Some offline answers were discarded because the questions were modified online.",
+  "addon.mod_quiz.warningdatadiscardedfromfinished":
+      "Attempt unfinished because some offline answers were discarded. Please review your answers then resubmit the attempt.",
+  "addon.mod_quiz.warningquestionsnotsupported":
+      "This quiz contains questions not supported by the app:",
+  "addon.mod_quiz.yourfinalgradeis":
+      "Your final grade for this quiz is {{\$a}}.",
+  "addon.mod_resource.errorwhileloadingthecontent":
+      "Error while loading the content.",
+  "addon.mod_resource.modifieddate": "Modified {{\$a}}",
   "addon.mod_resource.modulenameplural": "Files",
   "addon.mod_resource.openthefile": "Open",
-  "addon.mod_resource.uploadeddate": "Uploaded {{$a}}",
+  "addon.mod_resource.uploadeddate": "Uploaded {{\$a}}",
   "addon.mod_scorm.asset": "Asset",
   "addon.mod_scorm.assetlaunched": "Asset - Viewed",
   "addon.mod_scorm.attempts": "Attempts",
@@ -894,17 +1106,26 @@
   "addon.mod_scorm.cannotcalculategrade": "Grade couldn't be calculated.",
   "addon.mod_scorm.completed": "Completed",
   "addon.mod_scorm.contents": "Contents",
-  "addon.mod_scorm.dataattemptshown": "This data belongs to the attempt number {{number}}.",
+  "addon.mod_scorm.dataattemptshown":
+      "This data belongs to the attempt number {{number}}.",
   "addon.mod_scorm.enter": "Enter",
-  "addon.mod_scorm.errorcreateofflineattempt": "An error occurred while creating a new offline attempt. Please try again.",
-  "addon.mod_scorm.errordownloadscorm": "Error downloading SCORM: \"{{name}}\".",
+  "addon.mod_scorm.errorcreateofflineattempt":
+      "An error occurred while creating a new offline attempt. Please try again.",
+  "addon.mod_scorm.errordownloadscorm":
+      "Error downloading SCORM: \"{{name}}\".",
   "addon.mod_scorm.errorgetscorm": "Error getting SCORM data.",
-  "addon.mod_scorm.errorinvalidversion": "Sorry, the application only supports SCORM 1.2.",
-  "addon.mod_scorm.errornotdownloadable": "The download of SCORM packages is disabled. Please contact your site administrator.",
-  "addon.mod_scorm.errornovalidsco": "This SCORM package doesn't have a visible SCO to load.",
-  "addon.mod_scorm.errorpackagefile": "Sorry, the application only supports ZIP packages.",
-  "addon.mod_scorm.errorsyncscorm": "An error occurred while synchronising. Please try again.",
-  "addon.mod_scorm.exceededmaxattempts": "You have reached the maximum number of attempts.",
+  "addon.mod_scorm.errorinvalidversion":
+      "Sorry, the application only supports SCORM 1.2.",
+  "addon.mod_scorm.errornotdownloadable":
+      "The download of SCORM packages is disabled. Please contact your site administrator.",
+  "addon.mod_scorm.errornovalidsco":
+      "This SCORM package doesn't have a visible SCO to load.",
+  "addon.mod_scorm.errorpackagefile":
+      "Sorry, the application only supports ZIP packages.",
+  "addon.mod_scorm.errorsyncscorm":
+      "An error occurred while synchronising. Please try again.",
+  "addon.mod_scorm.exceededmaxattempts":
+      "You have reached the maximum number of attempts.",
   "addon.mod_scorm.failed": "Failed",
   "addon.mod_scorm.firstattempt": "First attempt",
   "addon.mod_scorm.gradeaverage": "Average grade",
@@ -922,19 +1143,26 @@
   "addon.mod_scorm.noattemptsallowed": "Number of attempts allowed",
   "addon.mod_scorm.noattemptsmade": "Number of attempts you have made",
   "addon.mod_scorm.notattempted": "Not attempted",
-  "addon.mod_scorm.offlineattemptnote": "This attempt has data that hasn't been synchronised.",
-  "addon.mod_scorm.offlineattemptovermax": "This attempt cannot be sent because you exceeded the maximum number of attempts.",
+  "addon.mod_scorm.offlineattemptnote":
+      "This attempt has data that hasn't been synchronised.",
+  "addon.mod_scorm.offlineattemptovermax":
+      "This attempt cannot be sent because you exceeded the maximum number of attempts.",
   "addon.mod_scorm.organizations": "Organisations",
   "addon.mod_scorm.passed": "Passed",
   "addon.mod_scorm.reviewmode": "Review mode",
   "addon.mod_scorm.score": "Score",
-  "addon.mod_scorm.scormstatusnotdownloaded": "This SCORM package is not downloaded. It will be automatically downloaded when you open it.",
-  "addon.mod_scorm.scormstatusoutdated": "This SCORM package has been modified since the last download. It will be automatically downloaded when you open it.",
+  "addon.mod_scorm.scormstatusnotdownloaded":
+      "This SCORM package is not downloaded. It will be automatically downloaded when you open it.",
+  "addon.mod_scorm.scormstatusoutdated":
+      "This SCORM package has been modified since the last download. It will be automatically downloaded when you open it.",
   "addon.mod_scorm.suspended": "Suspended",
   "addon.mod_scorm.toc": "TOC",
-  "addon.mod_scorm.warningofflinedatadeleted": "Some offline data from attempt {{number}} has been discarded because it couldn't be counted as a new attempt.",
-  "addon.mod_scorm.warningsynconlineincomplete": "Some attempts couldn't be synchronised with the site because the last online attempt is not yet finished. Please finish the online attempt first.",
-  "addon.mod_survey.cannotsubmitsurvey": "Sorry, there was a problem submitting your survey. Please try again.",
+  "addon.mod_scorm.warningofflinedatadeleted":
+      "Some offline data from attempt {{number}} has been discarded because it couldn't be counted as a new attempt.",
+  "addon.mod_scorm.warningsynconlineincomplete":
+      "Some attempts couldn't be synchronised with the site because the last online attempt is not yet finished. Please finish the online attempt first.",
+  "addon.mod_survey.cannotsubmitsurvey":
+      "Sorry, there was a problem submitting your survey. Please try again.",
   "addon.mod_survey.errorgetsurvey": "Error getting survey data.",
   "addon.mod_survey.ifoundthat": "I found that",
   "addon.mod_survey.ipreferthat": "I prefer that",
@@ -947,9 +1175,11 @@
   "addon.mod_url.pointingtourl": "URL that the resource points to.",
   "addon.mod_wiki.cannoteditpage": "You can not edit this page.",
   "addon.mod_wiki.createpage": "Create page",
-  "addon.mod_wiki.editingpage": "Editing this page '{{$a}}'",
-  "addon.mod_wiki.errorloadingpage": "An error occurred while loading the page.",
-  "addon.mod_wiki.errornowikiavailable": "This wiki does not have any content yet.",
+  "addon.mod_wiki.editingpage": "Editing this page '{{\$a}}'",
+  "addon.mod_wiki.errorloadingpage":
+      "An error occurred while loading the page.",
+  "addon.mod_wiki.errornowikiavailable":
+      "This wiki does not have any content yet.",
   "addon.mod_wiki.gowikihome": "Go to the wiki first page",
   "addon.mod_wiki.map": "Map",
   "addon.mod_wiki.modulenameplural": "Wikis",
@@ -964,7 +1194,8 @@
   "addon.mod_wiki.titleshouldnotbeempty": "The title should not be empty",
   "addon.mod_wiki.viewpage": "View page",
   "addon.mod_wiki.wikipage": "Wiki page",
-  "addon.mod_wiki.wrongversionlock": "Another user has edited this page while you were editing and your content is obsolete.",
+  "addon.mod_wiki.wrongversionlock":
+      "Another user has edited this page while you were editing and your content is obsolete.",
   "addon.mod_workshop.alreadygraded": "Already graded",
   "addon.mod_workshop.areainstructauthors": "Instructions for submission",
   "addon.mod_workshop.areainstructreviewers": "Instructions for assessment",
@@ -972,25 +1203,28 @@
   "addon.mod_workshop.assessedsubmission": "Assessed submission",
   "addon.mod_workshop.assessmentform": "Assessment form",
   "addon.mod_workshop.assessmentsettings": "Assessment settings",
-  "addon.mod_workshop.assessmentstrategynotsupported": "Assessment strategy {{$a}} not supported",
+  "addon.mod_workshop.assessmentstrategynotsupported":
+      "Assessment strategy {{\$a}} not supported",
   "addon.mod_workshop.assessmentweight": "Assessment weight",
   "addon.mod_workshop.assignedassessments": "Assigned submissions to assess",
-  "addon.mod_workshop.assignedassessmentsnone": "You have no assigned submission to assess",
+  "addon.mod_workshop.assignedassessmentsnone":
+      "You have no assigned submission to assess",
   "addon.mod_workshop.conclusion": "Conclusion",
   "addon.mod_workshop.createsubmission": "Add submission",
   "addon.mod_workshop.deletesubmission": "Delete submission",
   "addon.mod_workshop.editsubmission": "Edit submission",
   "addon.mod_workshop.feedbackauthor": "Feedback for the author",
-  "addon.mod_workshop.feedbackby": "Feedback by {{$a}}",
+  "addon.mod_workshop.feedbackby": "Feedback by {{\$a}}",
   "addon.mod_workshop.feedbackreviewer": "Feedback for the reviewer",
   "addon.mod_workshop.givengrades": "Grades given",
   "addon.mod_workshop.gradecalculated": "Calculated grade for submission",
-  "addon.mod_workshop.gradeinfo": "Grade: {{$a.received}} of {{$a.max}}",
+  "addon.mod_workshop.gradeinfo": "Grade: {{\$a.received}} of {{\$a.max}}",
   "addon.mod_workshop.gradeover": "Override grade for submission",
   "addon.mod_workshop.gradesreport": "Workshop grades report",
   "addon.mod_workshop.gradinggrade": "Grade for assessment",
-  "addon.mod_workshop.gradinggradecalculated": "Calculated grade for assessment",
-  "addon.mod_workshop.gradinggradeof": "Grade for assessment (of {{$a}})",
+  "addon.mod_workshop.gradinggradecalculated":
+      "Calculated grade for assessment",
+  "addon.mod_workshop.gradinggradeof": "Grade for assessment (of {{\$a}})",
   "addon.mod_workshop.gradinggradeover": "Override grade for assessment",
   "addon.mod_workshop.modulenameplural": "Workshops",
   "addon.mod_workshop.nogradeyet": "No grade yet",
@@ -1000,15 +1234,18 @@
   "addon.mod_workshop.overallfeedback": "Overall feedback",
   "addon.mod_workshop.publishedsubmissions": "Published submissions",
   "addon.mod_workshop.publishsubmission": "Publish submission",
-  "addon.mod_workshop.publishsubmission_help": "Published submissions are available to the others when the workshop is closed.",
+  "addon.mod_workshop.publishsubmission_help":
+      "Published submissions are available to the others when the workshop is closed.",
   "addon.mod_workshop.reassess": "Re-assess",
   "addon.mod_workshop.receivedgrades": "Grades received",
   "addon.mod_workshop.submissionattachment": "Attachment",
   "addon.mod_workshop.submissioncontent": "Submission content",
-  "addon.mod_workshop.submissiondeleteconfirm": "Are you sure you want to delete the following submission?",
+  "addon.mod_workshop.submissiondeleteconfirm":
+      "Are you sure you want to delete the following submission?",
   "addon.mod_workshop.submissiongrade": "Grade for submission",
-  "addon.mod_workshop.submissiongradeof": "Grade for submission (of {{$a}})",
-  "addon.mod_workshop.submissionrequiredcontent": "You need to enter some text or add a file.",
+  "addon.mod_workshop.submissiongradeof": "Grade for submission (of {{\$a}})",
+  "addon.mod_workshop.submissionrequiredcontent":
+      "You need to enter some text or add a file.",
   "addon.mod_workshop.submissionrequiredtitle": "You need to enter a title.",
   "addon.mod_workshop.submissionsreport": "Workshop submissions report",
   "addon.mod_workshop.submissiontitle": "Title",
@@ -1023,25 +1260,37 @@
   "addon.mod_workshop.tasktodo": "Task to do",
   "addon.mod_workshop.userplan": "Workshop planner",
   "addon.mod_workshop.userplancurrentphase": "Current phase",
-  "addon.mod_workshop.warningassessmentmodified": "The submission was modified on the site.",
-  "addon.mod_workshop.warningsubmissionmodified": "The assessment was modified on the site.",
-  "addon.mod_workshop.weightinfo": "Weight: {{$a}}",
+  "addon.mod_workshop.warningassessmentmodified":
+      "The submission was modified on the site.",
+  "addon.mod_workshop.warningsubmissionmodified":
+      "The assessment was modified on the site.",
+  "addon.mod_workshop.weightinfo": "Weight: {{\$a}}",
   "addon.mod_workshop.yourassessment": "Your assessment",
-  "addon.mod_workshop.yourassessmentfor": "Your assessment for {{$a}}",
+  "addon.mod_workshop.yourassessmentfor": "Your assessment for {{\$a}}",
   "addon.mod_workshop.yourgrades": "Your grades",
   "addon.mod_workshop.yoursubmission": "Your submission",
-  "addon.mod_workshop.yoursubmissionwithassessments": "Your submission with assessments",
-  "addon.mod_workshop_assessment_accumulative.dimensioncommentfor": "Comment for {{$a}}",
-  "addon.mod_workshop_assessment_accumulative.dimensiongradefor": "Grade for {{$a}}",
-  "addon.mod_workshop_assessment_accumulative.dimensionnumber": "Aspect {{$a}}",
-  "addon.mod_workshop_assessment_accumulative.mustchoosegrade": "You have to select a grade for this aspect",
-  "addon.mod_workshop_assessment_comments.dimensioncommentfor": "Comment for {{$a}}",
-  "addon.mod_workshop_assessment_comments.dimensionnumber": "Aspect {{$a}}",
-  "addon.mod_workshop_assessment_numerrors.dimensioncommentfor": "Comment for {{$a}}",
-  "addon.mod_workshop_assessment_numerrors.dimensiongradefor": "Grade for {{$a}}",
-  "addon.mod_workshop_assessment_numerrors.dimensionnumber": "Assertion {{$a}}",
-  "addon.mod_workshop_assessment_rubric.dimensionnumber": "Criterion {{$a}}",
-  "addon.mod_workshop_assessment_rubric.mustchooseone": "You have to select one of these items",
+  "addon.mod_workshop.yoursubmissionwithassessments":
+      "Your submission with assessments",
+  "addon.mod_workshop_assessment_accumulative.dimensioncommentfor":
+      "Comment for {{\$a}}",
+  "addon.mod_workshop_assessment_accumulative.dimensiongradefor":
+      "Grade for {{\$a}}",
+  "addon.mod_workshop_assessment_accumulative.dimensionnumber":
+      "Aspect {{\$a}}",
+  "addon.mod_workshop_assessment_accumulative.mustchoosegrade":
+      "You have to select a grade for this aspect",
+  "addon.mod_workshop_assessment_comments.dimensioncommentfor":
+      "Comment for {{\$a}}",
+  "addon.mod_workshop_assessment_comments.dimensionnumber": "Aspect {{\$a}}",
+  "addon.mod_workshop_assessment_numerrors.dimensioncommentfor":
+      "Comment for {{\$a}}",
+  "addon.mod_workshop_assessment_numerrors.dimensiongradefor":
+      "Grade for {{\$a}}",
+  "addon.mod_workshop_assessment_numerrors.dimensionnumber":
+      "Assertion {{\$a}}",
+  "addon.mod_workshop_assessment_rubric.dimensionnumber": "Criterion {{\$a}}",
+  "addon.mod_workshop_assessment_rubric.mustchooseone":
+      "You have to select one of these items",
   "addon.notes.addnewnote": "Add a new note",
   "addon.notes.coursenotes": "Course notes",
   "addon.notes.deleteconfirm": "Delete this note?",
@@ -1053,26 +1302,33 @@
   "addon.notes.personalnotes": "Personal notes",
   "addon.notes.publishstate": "Context",
   "addon.notes.sitenotes": "Site notes",
-  "addon.notes.warningnotenotsent": "Couldn't add note(s) to course {{course}}. {{error}}",
+  "addon.notes.warningnotenotsent":
+      "Couldn't add note(s) to course {{course}}. {{error}}",
   "addon.notifications.errorgetnotifications": "Error getting notifications.",
   "addon.notifications.markallread": "Mark all as read",
   "addon.notifications.notificationpreferences": "Notification preferences",
   "addon.notifications.notifications": "Notifications",
   "addon.notifications.playsound": "Play sound",
-  "addon.notifications.therearentnotificationsyet": "There are no notifications.",
-  "addon.notifications.unreadnotification": "Unread notification: {{$a}}",
-  "addon.privatefiles.couldnotloadfiles": "The list of files could not be loaded.",
+  "addon.notifications.therearentnotificationsyet":
+      "There are no notifications.",
+  "addon.notifications.unreadnotification": "Unread notification: {{\$a}}",
+  "addon.privatefiles.couldnotloadfiles":
+      "The list of files could not be loaded.",
   "addon.privatefiles.emptyfilelist": "There are no files to show.",
-  "addon.privatefiles.erroruploadnotworking": "Unfortunately it is currently not possible to upload files to your site.",
+  "addon.privatefiles.erroruploadnotworking":
+      "Unfortunately it is currently not possible to upload files to your site.",
   "addon.privatefiles.files": "Files",
   "addon.privatefiles.privatefiles": "Private files",
   "addon.privatefiles.sitefiles": "Site files",
-  "addon.qtype_essay.maxwordlimitboundary": "The word limit for this question is {{$a.limit}} words and you are attempting to submit {{$a.count}} words. Please shorten your response and try again.",
-  "addon.qtype_essay.minwordlimitboundary": "This question requires a response of at least {{$a.limit}} words and you are attempting to submit {{$a.count}} words. Please expand your response and try again.",
+  "addon.qtype_essay.maxwordlimitboundary":
+      "The word limit for this question is {{\$a.limit}} words and you are attempting to submit {{\$a.count}} words. Please shorten your response and try again.",
+  "addon.qtype_essay.minwordlimitboundary":
+      "This question requires a response of at least {{\$a.limit}} words and you are attempting to submit {{\$a.count}} words. Please expand your response and try again.",
   "addon.storagemanager.deletecourse": "Offload all course data",
   "addon.storagemanager.deletecourses": "Offload all courses data",
   "addon.storagemanager.deletedatafrom": "Offload data from {{name}}",
-  "addon.storagemanager.info": "Files stored on your device make the app work faster and enable the app to be used offline. You can safely offload files if you need to free up storage space.",
+  "addon.storagemanager.info":
+      "Files stored on your device make the app work faster and enable the app to be used offline. You can safely offload files if you need to free up storage space.",
   "addon.storagemanager.managestorage": "Manage storage",
   "addon.storagemanager.storageused": "File storage used:",
   "assets.countries.AD": "Andorra",
@@ -1329,35 +1585,50 @@
   "assets.mimetypes.application/pdf": "PDF document",
   "assets.mimetypes.application/vnd.moodle.backup": "Moodle backup",
   "assets.mimetypes.application/vnd.ms-excel": "Excel spreadsheet",
-  "assets.mimetypes.application/vnd.ms-excel.sheet.macroEnabled.12": "Excel 2007 macro-enabled workbook",
+  "assets.mimetypes.application/vnd.ms-excel.sheet.macroEnabled.12":
+      "Excel 2007 macro-enabled workbook",
   "assets.mimetypes.application/vnd.ms-powerpoint": "Powerpoint presentation",
-  "assets.mimetypes.application/vnd.oasis.opendocument.spreadsheet": "OpenDocument Spreadsheet",
-  "assets.mimetypes.application/vnd.oasis.opendocument.spreadsheet-template": "OpenDocument Spreadsheet template",
-  "assets.mimetypes.application/vnd.oasis.opendocument.text": "OpenDocument Text document",
-  "assets.mimetypes.application/vnd.oasis.opendocument.text-template": "OpenDocument Text template",
-  "assets.mimetypes.application/vnd.oasis.opendocument.text-web": "OpenDocument Web page template",
-  "assets.mimetypes.application/vnd.openxmlformats-officedocument.presentationml.presentation": "Powerpoint 2007 presentation",
-  "assets.mimetypes.application/vnd.openxmlformats-officedocument.presentationml.slideshow": "Powerpoint 2007 slideshow",
-  "assets.mimetypes.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "Excel 2007 spreadsheet",
-  "assets.mimetypes.application/vnd.openxmlformats-officedocument.spreadsheetml.template": "Excel 2007 template",
-  "assets.mimetypes.application/vnd.openxmlformats-officedocument.wordprocessingml.document": "Word 2007 document",
-  "assets.mimetypes.application/x-iwork-keynote-sffkey": "iWork Keynote presentation",
-  "assets.mimetypes.application/x-iwork-numbers-sffnumbers": "iWork Numbers spreadsheet",
+  "assets.mimetypes.application/vnd.oasis.opendocument.spreadsheet":
+      "OpenDocument Spreadsheet",
+  "assets.mimetypes.application/vnd.oasis.opendocument.spreadsheet-template":
+      "OpenDocument Spreadsheet template",
+  "assets.mimetypes.application/vnd.oasis.opendocument.text":
+      "OpenDocument Text document",
+  "assets.mimetypes.application/vnd.oasis.opendocument.text-template":
+      "OpenDocument Text template",
+  "assets.mimetypes.application/vnd.oasis.opendocument.text-web":
+      "OpenDocument Web page template",
+  "assets.mimetypes.application/vnd.openxmlformats-officedocument.presentationml.presentation":
+      "Powerpoint 2007 presentation",
+  "assets.mimetypes.application/vnd.openxmlformats-officedocument.presentationml.slideshow":
+      "Powerpoint 2007 slideshow",
+  "assets.mimetypes.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+      "Excel 2007 spreadsheet",
+  "assets.mimetypes.application/vnd.openxmlformats-officedocument.spreadsheetml.template":
+      "Excel 2007 template",
+  "assets.mimetypes.application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+      "Word 2007 document",
+  "assets.mimetypes.application/x-iwork-keynote-sffkey":
+      "iWork Keynote presentation",
+  "assets.mimetypes.application/x-iwork-numbers-sffnumbers":
+      "iWork Numbers spreadsheet",
   "assets.mimetypes.application/x-iwork-pages-sffpages": "iWork Pages document",
   "assets.mimetypes.application/x-javascript": "JavaScript source",
   "assets.mimetypes.application/x-mspublisher": "Publisher document",
   "assets.mimetypes.application/x-shockwave-flash": "Flash animation",
   "assets.mimetypes.application/xhtml_xml": "XHTML document",
-  "assets.mimetypes.archive": "Archive ({{$a.EXT}})",
-  "assets.mimetypes.audio": "Audio file ({{$a.EXT}})",
-  "assets.mimetypes.default": "{{$a.mimetype}}",
+  "assets.mimetypes.archive": "Archive ({{\$a.EXT}})",
+  "assets.mimetypes.audio": "Audio file ({{\$a.EXT}})",
+  "assets.mimetypes.default": "{{\$a.mimetype}}",
   "assets.mimetypes.document/unknown": "File",
   "assets.mimetypes.group:archive": "Archive files",
   "assets.mimetypes.group:audio": "Audio files",
   "assets.mimetypes.group:document": "Document files",
-  "assets.mimetypes.group:html_audio": "Audio files natively supported by browsers",
+  "assets.mimetypes.group:html_audio":
+      "Audio files natively supported by browsers",
   "assets.mimetypes.group:html_track": "HTML track files",
-  "assets.mimetypes.group:html_video": "Video files natively supported by browsers",
+  "assets.mimetypes.group:html_video":
+      "Video files natively supported by browsers",
   "assets.mimetypes.group:image": "Image files",
   "assets.mimetypes.group:presentation": "Presentation files",
   "assets.mimetypes.group:sourcecode": "Source code",
@@ -1367,7 +1638,7 @@
   "assets.mimetypes.group:web_file": "Web files",
   "assets.mimetypes.group:web_image": "Image files used on the web",
   "assets.mimetypes.group:web_video": "Video files used on the web",
-  "assets.mimetypes.image": "Image ({{$a.MIMETYPE2}})",
+  "assets.mimetypes.image": "Image ({{\$a.MIMETYPE2}})",
   "assets.mimetypes.image/vnd.microsoft.icon": "Windows icon",
   "assets.mimetypes.text/css": "Cascading Style-Sheet",
   "assets.mimetypes.text/csv": "Comma-separated values",
@@ -1375,11 +1646,11 @@
   "assets.mimetypes.text/plain": "Text file",
   "assets.mimetypes.text/rtf": "RTF document",
   "assets.mimetypes.text/vtt": "Web Video Text Track",
-  "assets.mimetypes.video": "Video file ({{$a.EXT}})",
+  "assets.mimetypes.video": "Video file ({{\$a.EXT}})",
   "core.accounts": "Accounts",
   "core.add": "Add",
   "core.agelocationverification": "Age and location verification",
-  "core.ago": "{{$a}} ago",
+  "core.ago": "{{\$a}} ago",
   "core.all": "All",
   "core.allgroups": "All groups",
   "core.allparticipants": "All participants",
@@ -1392,10 +1663,14 @@
   "core.cancel": "Cancel",
   "core.cannotconnect": "Cannot connect",
   "core.cannotconnecttrouble": "We're having trouble connecting to your site.",
-  "core.cannotconnectverify": "<strong>Please check the address is correct.</strong>",
-  "core.cannotdownloadfiles": "File downloading is disabled. Please contact your site administrator.",
-  "core.cannotopeninapp": "This file may not work as expected on this device. Would you like to open it anyway?",
-  "core.cannotopeninappdownload": "This file may not work as expected on this device. Would you like to download it anyway?",
+  "core.cannotconnectverify":
+      "<strong>Please check the address is correct.</strong>",
+  "core.cannotdownloadfiles":
+      "File downloading is disabled. Please contact your site administrator.",
+  "core.cannotopeninapp":
+      "This file may not work as expected on this device. Would you like to open it anyway?",
+  "core.cannotopeninappdownload":
+      "This file may not work as expected on this device. Would you like to download it anyway?",
   "core.captureaudio": "Record audio",
   "core.capturedimage": "Taken picture.",
   "core.captureimage": "Take picture",
@@ -1404,7 +1679,7 @@
   "core.choose": "Choose",
   "core.choosedots": "Choose...",
   "core.clearsearch": "Clear search",
-  "core.clearstoreddata": "Clear storage {{$a}}",
+  "core.clearstoreddata": "Clear storage {{\$a}}",
   "core.clicktohideshow": "Click to expand or collapse",
   "core.clicktoseefull": "Click to see full contents.",
   "core.close": "Close",
@@ -1412,95 +1687,141 @@
   "core.comments": "Comments",
   "core.comments.addcomment": "Add a comment...",
   "core.comments.comments": "Comments",
-  "core.comments.commentscount": "Comments ({{$a}})",
+  "core.comments.commentscount": "Comments ({{\$a}})",
   "core.comments.commentsnotworking": "Comments cannot be retrieved",
-  "core.comments.deletecommentbyon": "Delete comment posted by {{$a.user}} on {{$a.time}}",
+  "core.comments.deletecommentbyon":
+      "Delete comment posted by {{\$a.user}} on {{\$a.time}}",
   "core.comments.eventcommentcreated": "Comment created",
   "core.comments.eventcommentdeleted": "Comment deleted",
   "core.comments.nocomments": "No comments",
   "core.comments.savecomment": "Save comment",
   "core.comments.warningcommentsnotsent": "Couldn't sync comments. {{error}}",
-  "core.commentscount": "Comments ({{$a}})",
-  "core.completion-alt-auto-fail": "Completed: {{$a}} (did not achieve pass grade)",
-  "core.completion-alt-auto-n": "Not completed: {{$a}}",
-  "core.completion-alt-auto-n-override": "Not completed: {{$a.modname}} (set by {{$a.overrideuser}})",
-  "core.completion-alt-auto-pass": "Completed: {{$a}} (achieved pass grade)",
-  "core.completion-alt-auto-y": "Completed: {{$a}}",
-  "core.completion-alt-auto-y-override": "Completed: {{$a.modname}} (set by {{$a.overrideuser}})",
-  "core.completion-alt-manual-n": "Not completed: {{$a}}. Select to mark as complete.",
-  "core.completion-alt-manual-n-override": "Not completed: {{$a.modname}} (set by {{$a.overrideuser}}). Select to mark as complete.",
-  "core.completion-alt-manual-y": "Completed: {{$a}}. Select to mark as not complete.",
-  "core.completion-alt-manual-y-override": "Completed: {{$a.modname}} (set by {{$a.overrideuser}}). Select to mark as not complete.",
-  "core.confirmcanceledit": "Are you sure you want to leave this page? All changes will be lost.",
+  "core.commentscount": "Comments ({{\$a}})",
+  "core.completion-alt-auto-fail":
+      "Completed: {{\$a}} (did not achieve pass grade)",
+  "core.completion-alt-auto-n": "Not completed: {{\$a}}",
+  "core.completion-alt-auto-n-override":
+      "Not completed: {{\$a.modname}} (set by {{\$a.overrideuser}})",
+  "core.completion-alt-auto-pass": "Completed: {{\$a}} (achieved pass grade)",
+  "core.completion-alt-auto-y": "Completed: {{\$a}}",
+  "core.completion-alt-auto-y-override":
+      "Completed: {{\$a.modname}} (set by {{\$a.overrideuser}})",
+  "core.completion-alt-manual-n":
+      "Not completed: {{\$a}}. Select to mark as complete.",
+  "core.completion-alt-manual-n-override":
+      "Not completed: {{\$a.modname}} (set by {{\$a.overrideuser}}). Select to mark as complete.",
+  "core.completion-alt-manual-y":
+      "Completed: {{\$a}}. Select to mark as not complete.",
+  "core.completion-alt-manual-y-override":
+      "Completed: {{\$a.modname}} (set by {{\$a.overrideuser}}). Select to mark as not complete.",
+  "core.confirmcanceledit":
+      "Are you sure you want to leave this page? All changes will be lost.",
   "core.confirmdeletefile": "Are you sure you want to delete this file?",
   "core.confirmgotabroot": "Are you sure you want to go back to {{name}}?",
-  "core.confirmgotabrootdefault": "Are you sure you want to go to the initial page of the current tab?",
-  "core.confirmleaveunknownchanges": "Are you sure you want to leave this page? If you have unsaved changes they will be lost.",
+  "core.confirmgotabrootdefault":
+      "Are you sure you want to go to the initial page of the current tab?",
+  "core.confirmleaveunknownchanges":
+      "Are you sure you want to leave this page? If you have unsaved changes they will be lost.",
   "core.confirmloss": "Are you sure? All changes will be lost.",
   "core.confirmopeninbrowser": "Do you want to open it in a web browser?",
-  "core.considereddigitalminor": "You are too young to create an account on this site.",
+  "core.considereddigitalminor":
+      "You are too young to create an account on this site.",
   "core.content": "Content",
   "core.contenteditingsynced": "The content you are editing has been synced.",
   "core.contentlinks.chooseaccount": "Choose account",
-  "core.contentlinks.chooseaccounttoopenlink": "Choose an account to open the link with.",
-  "core.contentlinks.confirmurlothersite": "This link belongs to another site. Do you want to open it?",
-  "core.contentlinks.errornoactions": "Couldn't find an action to perform with this link.",
-  "core.contentlinks.errornosites": "Couldn't find any site to handle this link.",
-  "core.contentlinks.errorredirectothersite": "The redirect URL cannot point to a different site.",
+  "core.contentlinks.chooseaccounttoopenlink":
+      "Choose an account to open the link with.",
+  "core.contentlinks.confirmurlothersite":
+      "This link belongs to another site. Do you want to open it?",
+  "core.contentlinks.errornoactions":
+      "Couldn't find an action to perform with this link.",
+  "core.contentlinks.errornosites":
+      "Couldn't find any site to handle this link.",
+  "core.contentlinks.errorredirectothersite":
+      "The redirect URL cannot point to a different site.",
   "core.continue": "Continue",
   "core.copiedtoclipboard": "Text copied to clipboard",
   "core.copytoclipboard": "Copy to clipboard",
   "core.course": "Course",
-  "core.course.activitydisabled": "Your organisation has disabled this activity in the mobile app.",
-  "core.course.activitynotyetviewableremoteaddon": "Your organisation installed a plugin that is not yet supported.",
-  "core.course.activitynotyetviewablesiteupgradeneeded": "Your organisation's Moodle installation needs to be updated.",
+  "core.course.activitydisabled":
+      "Your organisation has disabled this activity in the mobile app.",
+  "core.course.activitynotyetviewableremoteaddon":
+      "Your organisation installed a plugin that is not yet supported.",
+  "core.course.activitynotyetviewablesiteupgradeneeded":
+      "Your organisation's Moodle installation needs to be updated.",
   "core.course.allsections": "All sections",
   "core.course.aria:sectionprogress": "Section progress:",
-  "core.course.askadmintosupport": "Contact the site administrator and tell them you want to use this activity with the Moodle Mobile app.",
-  "core.course.availablespace": " You currently have about {{available}} free space.",
-  "core.course.cannotdeletewhiledownloading": "Files cannot be deleted while the activity is being downloaded. Please wait for the download to finish.",
+  "core.course.askadmintosupport":
+      "Contact the site administrator and tell them you want to use this activity with the Moodle Mobile app.",
+  "core.course.availablespace":
+      " You currently have about {{available}} free space.",
+  "core.course.cannotdeletewhiledownloading":
+      "Files cannot be deleted while the activity is being downloaded. Please wait for the download to finish.",
   "core.course.completion_automatic:done": "Done:",
   "core.course.completion_automatic:failed": "Failed:",
   "core.course.completion_automatic:todo": "To do:",
-  "core.course.completion_manual:aria:done": "{{$a}} is marked as done. Press to undo.",
-  "core.course.completion_manual:aria:markdone": "Mark {{$a}} as done",
+  "core.course.completion_manual:aria:done":
+      "{{\$a}} is marked as done. Press to undo.",
+  "core.course.completion_manual:aria:markdone": "Mark {{\$a}} as done",
   "core.course.completion_manual:done": "Done",
   "core.course.completion_manual:markdone": "Mark as done",
-  "core.course.completion_setby:auto:done": "Done: {{$a.condition}} (set by {{$a.setby}})",
-  "core.course.completion_setby:auto:todo": "To do: {{$a.condition}} (set by {{$a.setby}})",
-  "core.course.completion_setby:manual:done": "{{$a.activityname}} is marked by {{$a.setby}} as done. Press to undo.",
-  "core.course.completion_setby:manual:markdone": "{{$a.activityname}} is marked by {{$a.setby}} as not done. Press to mark as done.",
-  "core.course.completionrequirements": "Completion requirements for {{$a}}",
-  "core.course.confirmdeletemodulefiles": "Are you sure you want to delete these files?",
-  "core.course.confirmdeletestoreddata": "Are you sure you want to delete the stored data?",
-  "core.course.confirmdownload": "You are about to download {{size}}.{{availableSpace}} Are you sure you want to continue?",
-  "core.course.confirmdownloadunknownsize": "It was not possible to calculate the size of the download.{{availableSpace}} Are you sure you want to continue?",
-  "core.course.confirmdownloadzerosize": "You are about to start downloading.{{availableSpace}} Are you sure you want to continue?",
-  "core.course.confirmlimiteddownload": "You are not currently connected to Wi-Fi. ",
-  "core.course.confirmpartialdownloadsize": "You are about to download <strong>at least</strong> {{size}}.{{availableSpace}} Are you sure you want to continue?",
+  "core.course.completion_setby:auto:done":
+      "Done: {{\$a.condition}} (set by {{\$a.setby}})",
+  "core.course.completion_setby:auto:todo":
+      "To do: {{\$a.condition}} (set by {{\$a.setby}})",
+  "core.course.completion_setby:manual:done":
+      "{{\$a.activityname}} is marked by {{\$a.setby}} as done. Press to undo.",
+  "core.course.completion_setby:manual:markdone":
+      "{{\$a.activityname}} is marked by {{\$a.setby}} as not done. Press to mark as done.",
+  "core.course.completionrequirements": "Completion requirements for {{\$a}}",
+  "core.course.confirmdeletemodulefiles":
+      "Are you sure you want to delete these files?",
+  "core.course.confirmdeletestoreddata":
+      "Are you sure you want to delete the stored data?",
+  "core.course.confirmdownload":
+      "You are about to download {{size}}.{{availableSpace}} Are you sure you want to continue?",
+  "core.course.confirmdownloadunknownsize":
+      "It was not possible to calculate the size of the download.{{availableSpace}} Are you sure you want to continue?",
+  "core.course.confirmdownloadzerosize":
+      "You are about to start downloading.{{availableSpace}} Are you sure you want to continue?",
+  "core.course.confirmlimiteddownload":
+      "You are not currently connected to Wi-Fi. ",
+  "core.course.confirmpartialdownloadsize":
+      "You are about to download <strong>at least</strong> {{size}}.{{availableSpace}} Are you sure you want to continue?",
   "core.course.contents": "Contents",
-  "core.course.couldnotloadsectioncontent": "Could not load the section content. Please try again later.",
-  "core.course.couldnotloadsections": "Could not load the sections. Please try again later.",
+  "core.course.couldnotloadsectioncontent":
+      "Could not load the section content. Please try again later.",
+  "core.course.couldnotloadsections":
+      "Could not load the sections. Please try again later.",
   "core.course.coursesummary": "Course summary",
   "core.course.downloadcourse": "Download course",
-  "core.course.downloadcoursesprogressdescription": "Downloading courses: downloaded {{count}} out of {{total}}.",
-  "core.course.downloadsectionprogressdescription": "Downloading section: downloaded {{count}} out of {{total}}.",
+  "core.course.downloadcoursesprogressdescription":
+      "Downloading courses: downloaded {{count}} out of {{total}}.",
+  "core.course.downloadsectionprogressdescription":
+      "Downloading section: downloaded {{count}} out of {{total}}.",
   "core.course.errordownloadingcourse": "Error downloading course.",
   "core.course.errordownloadingsection": "Error downloading section.",
   "core.course.errorgetmodule": "Error getting activity data.",
   "core.course.hiddenfromstudents": "Hidden from students",
   "core.course.hiddenoncoursepage": "Available but not shown on course page",
-  "core.course.insufficientavailablequota": "Your device could not allocate space to save this download. It may be reserving space for app and system updates. Please clear some storage space first.",
-  "core.course.insufficientavailablespace": "You are trying to download {{size}}. This will leave your device with insufficient space to operate normally. Please clear some storage space first.",
-  "core.course.manualcompletionnotsynced": "Manual completion not synchronised.",
+  "core.course.insufficientavailablequota":
+      "Your device could not allocate space to save this download. It may be reserving space for app and system updates. Please clear some storage space first.",
+  "core.course.insufficientavailablespace":
+      "You are trying to download {{size}}. This will leave your device with insufficient space to operate normally. Please clear some storage space first.",
+  "core.course.manualcompletionnotsynced":
+      "Manual completion not synchronised.",
   "core.course.nocontentavailable": "No content available at the moment.",
-  "core.course.overriddennotice": "Your final grade from this activity was manually adjusted.",
+  "core.course.overriddennotice":
+      "Your final grade from this activity was manually adjusted.",
   "core.course.refreshcourse": "Refresh course",
   "core.course.section": "Section",
   "core.course.sections": "Sections",
-  "core.course.useactivityonbrowser": "You can still use it using your device's web browser.",
-  "core.course.warningmanualcompletionmodified": "The manual completion of an activity was modified on the site.",
-  "core.course.warningofflinemanualcompletiondeleted": "Some offline manual completion of course '{{name}}' has been deleted. {{error}}",
+  "core.course.useactivityonbrowser":
+      "You can still use it using your device's web browser.",
+  "core.course.warningmanualcompletionmodified":
+      "The manual completion of an activity was modified on the site.",
+  "core.course.warningofflinemanualcompletiondeleted":
+      "Some offline manual completion of course '{{name}}' has been deleted. {{error}}",
   "core.coursedetails": "Course details",
   "core.coursenogroups": "You are not a member of any group of this course.",
   "core.courses.addtofavourites": "Star this course",
@@ -1510,15 +1831,19 @@
   "core.courses.aria:courseprogress": "Course progress:",
   "core.courses.aria:favourite": "Course is starred",
   "core.courses.availablecourses": "Available courses",
-  "core.courses.cannotretrievemorecategories": "Categories deeper than level {{$a}} cannot be retrieved.",
+  "core.courses.cannotretrievemorecategories":
+      "Categories deeper than level {{\$a}} cannot be retrieved.",
   "core.courses.categories": "Course categories",
-  "core.courses.confirmselfenrol": "Are you sure you want to enrol yourself in this course?",
+  "core.courses.confirmselfenrol":
+      "Are you sure you want to enrol yourself in this course?",
   "core.courses.courses": "Courses",
   "core.courses.downloadcourses": "Download courses",
   "core.courses.enrolme": "Enrol me",
-  "core.courses.errorloadcategories": "An error occurred while loading categories.",
+  "core.courses.errorloadcategories":
+      "An error occurred while loading categories.",
   "core.courses.errorloadcourses": "An error occurred while loading courses.",
-  "core.courses.errorloadplugins": "The plugins required by this course could not be loaded correctly. Please reload the app to try again.",
+  "core.courses.errorloadplugins":
+      "The plugins required by this course could not be loaded correctly. Please reload the app to try again.",
   "core.courses.errorsearching": "An error occurred while searching.",
   "core.courses.errorselfenrol": "An error occurred while self enrolling.",
   "core.courses.favourite": "Starred course",
@@ -1540,19 +1865,21 @@
   "core.courses.removefromfavourites": "Unstar this course",
   "core.courses.search": "Search",
   "core.courses.searchcourses": "Search courses",
-  "core.courses.searchcoursesadvice": "You can use the search courses button to find courses to access as a  guest or enrol yourself in courses that allow it.",
+  "core.courses.searchcoursesadvice":
+      "You can use the search courses button to find courses to access as a  guest or enrol yourself in courses that allow it.",
   "core.courses.selfenrolment": "Self enrolment",
   "core.courses.sendpaymentbutton": "Send payment via PayPal",
   "core.courses.show": "Restore to view",
-  "core.courses.therearecourses": "There are {{$a}} courses",
-  "core.courses.totalcoursesearchresults": "Total courses: {{$a}}",
+  "core.courses.therearecourses": "There are {{\$a}} courses",
+  "core.courses.totalcoursesearchresults": "Total courses: {{\$a}}",
   "core.currentdevice": "Current device",
-  "core.datastoredoffline": "Data stored in the device because it couldn't be sent. It will be sent automatically later.",
+  "core.datastoredoffline":
+      "Data stored in the device because it couldn't be sent. It will be sent automatically later.",
   "core.date": "Date",
   "core.day": "day",
   "core.days": "days",
   "core.decsep": ".",
-  "core.defaultvalue": "Default ({{$a}})",
+  "core.defaultvalue": "Default ({{\$a}})",
   "core.delete": "Delete",
   "core.deletedoffline": "Deleted offline",
   "core.deleteduser": "Deleted user",
@@ -1587,63 +1914,85 @@
   "core.editor.orderedlist": "Ordered list",
   "core.editor.p": "Paragraph",
   "core.editor.strike": "Strike through",
-  "core.editor.textrecovered": "A draft version of this text was automatically restored.",
+  "core.editor.textrecovered":
+      "A draft version of this text was automatically restored.",
   "core.editor.toggle": "Toggle editor",
   "core.editor.underline": "Underline",
   "core.editor.unorderedlist": "Unordered list",
-  "core.emptysplit": "This page will appear blank if the left panel is empty or is loading.",
+  "core.emptysplit":
+      "This page will appear blank if the left panel is empty or is loading.",
   "core.error": "Error",
-  "core.errorchangecompletion": "An error occurred while changing the completion status. Please try again.",
+  "core.errorchangecompletion":
+      "An error occurred while changing the completion status. Please try again.",
   "core.errordeletefile": "Error deleting the file. Please try again.",
   "core.errordownloading": "Error downloading file.",
-  "core.errordownloadingsomefiles": "Error downloading files. Some files might be missing.",
+  "core.errordownloadingsomefiles":
+      "Error downloading files. Some files might be missing.",
   "core.errorfileexistssamename": "A file with this name already exists.",
-  "core.errorinvalidform": "The form contains invalid data. Please check that all required fields are filled in and that the data is valid.",
-  "core.errorinvalidresponse": "Invalid response received. Please contact your site administrator if the error persists.",
+  "core.errorinvalidform":
+      "The form contains invalid data. Please check that all required fields are filled in and that the data is valid.",
+  "core.errorinvalidresponse":
+      "Invalid response received. Please contact your site administrator if the error persists.",
   "core.errorloadingcontent": "Error loading content.",
-  "core.errorofflinedisabled": "Offline browsing is disabled on your site. You need to be connected to the internet to use the app.",
-  "core.erroropenfiledownloading": "Error opening file: you need to wait for the download to complete.",
-  "core.erroropenfilenoapp": "Error opening file: no app found to open this type of file.",
-  "core.erroropenfilenoextension": "Error opening file: the file doesn't have an extension.",
-  "core.erroropenpopup": "This activity is trying to open a popup. This is not supported in the app.",
+  "core.errorofflinedisabled":
+      "Offline browsing is disabled on your site. You need to be connected to the internet to use the app.",
+  "core.erroropenfiledownloading":
+      "Error opening file: you need to wait for the download to complete.",
+  "core.erroropenfilenoapp":
+      "Error opening file: no app found to open this type of file.",
+  "core.erroropenfilenoextension":
+      "Error opening file: the file doesn't have an extension.",
+  "core.erroropenpopup":
+      "This activity is trying to open a popup. This is not supported in the app.",
   "core.errorrenamefile": "Error renaming file. Please try again.",
-  "core.errorsomedatanotdownloaded": "If you downloaded this activity, please notice that some data isn't downloaded during the download process for performance and data usage reasons.",
+  "core.errorsomedatanotdownloaded":
+      "If you downloaded this activity, please notice that some data isn't downloaded during the download process for performance and data usage reasons.",
   "core.errorsync": "An error occurred while synchronising. Please try again.",
-  "core.errorsyncblocked": "This {{$a}} cannot be synchronised right now because of an ongoing process. Please try again later. If the problem persists, try restarting the app.",
-  "core.errorurlschemeinvalidscheme": "This URL is meant to be used in another app: {{$a}}.",
-  "core.errorurlschemeinvalidsite": "This site URL cannot be opened in this app.",
+  "core.errorsyncblocked":
+      "This {{\$a}} cannot be synchronised right now because of an ongoing process. Please try again later. If the problem persists, try restarting the app.",
+  "core.errorurlschemeinvalidscheme":
+      "This URL is meant to be used in another app: {{\$a}}.",
+  "core.errorurlschemeinvalidsite":
+      "This site URL cannot be opened in this app.",
   "core.expand": "Expand",
-  "core.explanationdigitalminor": "This information is required to determine if your age is over the digital age of consent. This is the age when an individual can consent to terms and conditions and their data being legally stored and processed.",
+  "core.explanationdigitalminor":
+      "This information is required to determine if your age is over the digital age of consent. This is the age when an individual can consent to terms and conditions and their data being legally stored and processed.",
   "core.favourites": "Starred",
   "core.filename": "Filename",
-  "core.filenameexist": "File name already exists: {{$a}}",
+  "core.filenameexist": "File name already exists: {{\$a}}",
   "core.filenotfound": "File not found, sorry.",
   "core.fileuploader.addfiletext": "Add file",
   "core.fileuploader.audio": "Audio",
   "core.fileuploader.camera": "Camera",
-  "core.fileuploader.confirmuploadfile": "You are about to upload {{size}}. Are you sure you want to continue?",
-  "core.fileuploader.confirmuploadunknownsize": "It was not possible to calculate the size of the upload. Are you sure you want to continue?",
+  "core.fileuploader.confirmuploadfile":
+      "You are about to upload {{size}}. Are you sure you want to continue?",
+  "core.fileuploader.confirmuploadunknownsize":
+      "It was not possible to calculate the size of the upload. Are you sure you want to continue?",
   "core.fileuploader.errorcapturingaudio": "Error capturing audio.",
   "core.fileuploader.errorcapturingimage": "Error capturing image.",
   "core.fileuploader.errorcapturingvideo": "Error capturing video.",
   "core.fileuploader.errorgettingimagealbum": "Error getting image from album.",
-  "core.fileuploader.errormustbeonlinetoupload": "You have to be online to upload files.",
-  "core.fileuploader.errornoapp": "You don't have an app installed to perform this action.",
+  "core.fileuploader.errormustbeonlinetoupload":
+      "You have to be online to upload files.",
+  "core.fileuploader.errornoapp":
+      "You don't have an app installed to perform this action.",
   "core.fileuploader.errorreadingfile": "Error reading file.",
-  "core.fileuploader.errorwhileuploading": "An error occurred during the file upload.",
+  "core.fileuploader.errorwhileuploading":
+      "An error occurred during the file upload.",
   "core.fileuploader.file": "File",
   "core.fileuploader.filesofthesetypes": "Accepted file types:",
   "core.fileuploader.fileuploaded": "The file was successfully uploaded.",
-  "core.fileuploader.invalidfiletype": "{{$a}} filetype cannot be accepted.",
-  "core.fileuploader.maxbytesfile": "The file {{$a.file}} is too large. The maximum size you can upload is {{$a.size}}.",
+  "core.fileuploader.invalidfiletype": "{{\$a}} filetype cannot be accepted.",
+  "core.fileuploader.maxbytesfile":
+      "The file {{\$a.file}} is too large. The maximum size you can upload is {{\$a.size}}.",
   "core.fileuploader.more": "More",
   "core.fileuploader.photoalbums": "Photo albums",
   "core.fileuploader.readingfile": "Reading file",
-  "core.fileuploader.readingfileperc": "Reading file: {{$a}}%",
+  "core.fileuploader.readingfileperc": "Reading file: {{\$a}}%",
   "core.fileuploader.selectafile": "Select a file",
   "core.fileuploader.uploadafile": "Upload a file",
   "core.fileuploader.uploading": "Uploading",
-  "core.fileuploader.uploadingperc": "Uploading: {{$a}}%",
+  "core.fileuploader.uploadingperc": "Uploading: {{\$a}}%",
   "core.fileuploader.video": "Video",
   "core.filter": "Filter",
   "core.folder": "Folder",
@@ -1674,18 +2023,22 @@
   "core.group": "Group",
   "core.groupsseparate": "Separate groups",
   "core.groupsvisible": "Visible groups",
-  "core.h5p.additionallicenseinfo": "Any additional information about the licence",
+  "core.h5p.additionallicenseinfo":
+      "Any additional information about the licence",
   "core.h5p.author": "Author",
   "core.h5p.authorcomments": "Author comments",
-  "core.h5p.authorcommentsdescription": "Comments for the editor of the content. (This text will not be published as a part of the copyright info.)",
+  "core.h5p.authorcommentsdescription":
+      "Comments for the editor of the content. (This text will not be published as a part of the copyright info.)",
   "core.h5p.authorname": "Author's name",
   "core.h5p.authorrole": "Author's role",
   "core.h5p.by": "by",
   "core.h5p.cancellabel": "Cancel",
   "core.h5p.ccattribution": "Attribution (CC BY)",
   "core.h5p.ccattributionnc": "Attribution-NonCommercial (CC BY-NC)",
-  "core.h5p.ccattributionncnd": "Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)",
-  "core.h5p.ccattributionncsa": "Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)",
+  "core.h5p.ccattributionncnd":
+      "Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)",
+  "core.h5p.ccattributionncsa":
+      "Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)",
   "core.h5p.ccattributionnd": "Attribution-NoDerivs (CC BY-ND)",
   "core.h5p.ccattributionsa": "Attribution-ShareAlike (CC BY-SA)",
   "core.h5p.ccpdd": "Public Domain Dedication (CC0)",
@@ -1694,10 +2047,12 @@
   "core.h5p.changelog": "Changelog",
   "core.h5p.changeplaceholder": "Photo cropped, text changed, etc.",
   "core.h5p.close": "Close",
-  "core.h5p.confirmdialogbody": "Please confirm that you wish to proceed. This action cannot be undone.",
+  "core.h5p.confirmdialogbody":
+      "Please confirm that you wish to proceed. This action cannot be undone.",
   "core.h5p.confirmdialogheader": "Confirm action",
   "core.h5p.confirmlabel": "Confirm",
-  "core.h5p.connectionLost": "Connection lost. Results will be stored and sent when the connection is reestablished.",
+  "core.h5p.connectionLost":
+      "Connection lost. Results will be stored and sent when the connection is reestablished.",
   "core.h5p.connectionReestablished": "Connection reestablished.",
   "core.h5p.contentCopied": "Content is copied to the clipboard",
   "core.h5p.contentchanged": "This content has changed since you last used it.",
@@ -1714,13 +2069,15 @@
   "core.h5p.editor": "Editor",
   "core.h5p.embed": "Embed",
   "core.h5p.embedtitle": "View the embed code for this content.",
-  "core.h5p.errorgetemail": "Error obtaining the user email. Please check your connection and try again.",
+  "core.h5p.errorgetemail":
+      "Error obtaining the user email. Please check your connection and try again.",
   "core.h5p.fullscreen": "Fullscreen",
   "core.h5p.gpl": "General Public License v3",
   "core.h5p.h5ptitle": "Visit h5p.org to check out more content.",
   "core.h5p.hideadvanced": "Hide advanced",
   "core.h5p.license": "Licence",
-  "core.h5p.licenseCC010": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+  "core.h5p.licenseCC010":
+      "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
   "core.h5p.licenseCC010U": "CC0 1.0 Universal",
   "core.h5p.licenseCC10": "1.0 Generic",
   "core.h5p.licenseCC20": "2.0 Generic",
@@ -1734,19 +2091,23 @@
   "core.h5p.licensee": "Licensee",
   "core.h5p.licenseextras": "Licence extras",
   "core.h5p.licenseversion": "Licence version",
-  "core.h5p.nocopyright": "No copyright information available for this content.",
-  "core.h5p.offlineDialogBody": "We were unable to send information about your completion of this task. Please check your internet connection.",
+  "core.h5p.nocopyright":
+      "No copyright information available for this content.",
+  "core.h5p.offlineDialogBody":
+      "We were unable to send information about your completion of this task. Please check your internet connection.",
   "core.h5p.offlineDialogHeader": "Your connection to the server was lost",
   "core.h5p.offlineDialogRetryButtonLabel": "Retry now",
   "core.h5p.offlineDialogRetryMessage": "Retrying in :num....",
   "core.h5p.offlineSuccessfulSubmit": "Successfully submitted results.",
-  "core.h5p.offlinedisabled": "The site doesn't allow downloading H5P packages.",
+  "core.h5p.offlinedisabled":
+      "The site doesn't allow downloading H5P packages.",
   "core.h5p.originator": "Originator",
   "core.h5p.pd": "Public Domain",
   "core.h5p.pddl": "Public Domain Dedication and Licence",
   "core.h5p.pdm": "Public Domain Mark (PDM)",
   "core.h5p.play": "Play H5P",
-  "core.h5p.resizescript": "Include this script on your website if you want dynamic sizing of the embedded content:",
+  "core.h5p.resizescript":
+      "Include this script on your website if you want dynamic sizing of the embedded content:",
   "core.h5p.resubmitScores": "Attempting to submit stored results.",
   "core.h5p.reuse": "Reuse",
   "core.h5p.reuseContent": "Reuse content",
@@ -1765,7 +2126,7 @@
   "core.h5p.years": "Year(s)",
   "core.h5p.yearsfrom": "Years (from)",
   "core.h5p.yearsto": "Years (to)",
-  "core.hasdatatosync": "This {{$a}} has offline data to be synchronised.",
+  "core.hasdatatosync": "This {{\$a}} has offline data to be synchronised.",
   "core.help": "Help",
   "core.hide": "Hide",
   "core.hideadvanced": "Hide advanced",
@@ -1777,7 +2138,8 @@
   "core.imageviewer": "Image viewer",
   "core.info": "Information",
   "core.invalidformdata": "Incorrect form data",
-  "core.ioscookieshelp": "Embedded content might require cookies to work. Please go to the app's iOS settings, enable 'Allow Cross-Website Tracking' and try again.",
+  "core.ioscookieshelp":
+      "Embedded content might require cookies to work. Please go to the app's iOS settings, enable 'Allow Cross-Website Tracking' and try again.",
   "core.labelsep": ":",
   "core.lastaccess": "Last access",
   "core.lastdownloaded": "Last downloaded",
@@ -1794,69 +2156,104 @@
   "core.login.cancel": "Cancel",
   "core.login.changepassword": "Change password",
   "core.login.changepasswordbutton": "Open the change password page",
-  "core.login.changepasswordhelp": "If you have problems changing your password, please contact your site administrator. \"Site Administrators\" are the people who manages the Moodle at your school/university/company or learning organisation. If you don't know how to contact them, please contact your teachers/trainers.",
-  "core.login.changepasswordinstructions": "You cannot change your password in the app. Please click the following button to open the site in a web browser to change your password. Take into account you need to close the browser after changing the password as you will not be redirected to the app.",
-  "core.login.changepasswordlogoutinstructions": "If you prefer to change site or log out, please click the following button:",
-  "core.login.changepasswordreconnectinstructions": "Click the following button to reconnect to the site. (Take into account that if you didn't change your password successfully, you would return to the previous screen).",
-  "core.login.confirmdeletesite": "Are you sure you want to logout the app {{sitename}}?",
-  "core.login.confirmdeleteaccount" : "Are you sure you want to delete the account ?",
+  "core.login.changepasswordhelp":
+      "If you have problems changing your password, please contact your site administrator. \"Site Administrators\" are the people who manages the Moodle at your school/university/company or learning organisation. If you don't know how to contact them, please contact your teachers/trainers.",
+  "core.login.changepasswordinstructions":
+      "You cannot change your password in the app. Please click the following button to open the site in a web browser to change your password. Take into account you need to close the browser after changing the password as you will not be redirected to the app.",
+  "core.login.changepasswordlogoutinstructions":
+      "If you prefer to change site or log out, please click the following button:",
+  "core.login.changepasswordreconnectinstructions":
+      "Click the following button to reconnect to the site. (Take into account that if you didn't change your password successfully, you would return to the previous screen).",
+  "core.login.confirmdeletesite":
+      "Are you sure you want to logout the app {{sitename}}?",
+  "core.login.confirmdeleteaccount":
+      "Are you sure you want to delete the account ?",
   "core.login.connect": "Connect!",
   "core.login.connecttomoodle": "Connect to Moodle",
-  "core.login.connecttomoodleapp": "You are trying to connect to a regular Moodle site. Please download the official Moodle app to access this site.",
-  "core.login.connecttoworkplaceapp": "You are trying to connect to a Moodle Workplace site. Please download the Moodle Workplace app to access this site.",
-  "core.login.contactyouradministrator": "Contact your site administrator for further help.",
-  "core.login.contactyouradministratorissue": "Please ask your site administrator to check the following issue: {{$a}}",
+  "core.login.connecttomoodleapp":
+      "You are trying to connect to a regular Moodle site. Please download the official Moodle app to access this site.",
+  "core.login.connecttoworkplaceapp":
+      "You are trying to connect to a Moodle Workplace site. Please download the Moodle Workplace app to access this site.",
+  "core.login.contactyouradministrator":
+      "Contact your site administrator for further help.",
+  "core.login.contactyouradministratorissue":
+      "Please ask your site administrator to check the following issue: {{\$a}}",
   "core.login.createaccount": "Create my new account",
   "core.login.createuserandpass": "Choose your username and password",
-  "core.login.credentialsdescription": "Please provide your username and password to log in.",
-  "core.login.emailconfirmsent": "<p>An email should have been sent to your address at <b>{{$a}}</b></p>\n   <p>It contains easy instructions to complete your registration.</p>\n   <p>If you continue to have difficulty, contact the site administrator.</p>",
-  "core.login.emailconfirmsentnoemail": "<p>An email should have been sent to your address.</p><p>It contains easy instructions to complete your registration.</p><p>If you continue to have difficulty, contact the site administrator.</p>",
+  "core.login.credentialsdescription":
+      "Please provide your username and password to log in.",
+  "core.login.emailconfirmsent":
+      "<p>An email should have been sent to your address at <b>{{\$a}}</b></p>\n   <p>It contains easy instructions to complete your registration.</p>\n   <p>If you continue to have difficulty, contact the site administrator.</p>",
+  "core.login.emailconfirmsentnoemail":
+      "<p>An email should have been sent to your address.</p><p>It contains easy instructions to complete your registration.</p><p>If you continue to have difficulty, contact the site administrator.</p>",
   "core.login.emailconfirmsentsuccess": "Confirmation email sent successfully",
   "core.login.emailnotmatch": "Emails do not match",
-  "core.login.erroraccesscontrolalloworigin": "The cross-origin call you're trying to perform has been rejected. Please check https://docs.moodle.org/dev/Moodle_Mobile_development_using_Chrome_or_Chromium",
-  "core.login.errordeletesite": "An error occurred while deleting this site. Please try again.",
-  "core.login.errorexampleurl": "The URL https://campus.example.edu is only an example URL, it's not a real site. <strong>Please use the URL of your school or organization's site.</strong>",
+  "core.login.erroraccesscontrolalloworigin":
+      "The cross-origin call you're trying to perform has been rejected. Please check https://docs.moodle.org/dev/Moodle_Mobile_development_using_Chrome_or_Chromium",
+  "core.login.errordeletesite":
+      "An error occurred while deleting this site. Please try again.",
+  "core.login.errorexampleurl":
+      "The URL https://campus.example.edu is only an example URL, it's not a real site. <strong>Please use the URL of your school or organization's site.</strong>",
   "core.login.errorqrnoscheme": "This URL isn't a valid login URL.",
-  "core.login.errorupdatesite": "An error occurred while updating the site's token.",
-  "core.login.faqcannotconnectanswer": "Please, contact your site administrator.",
-  "core.login.faqcannotconnectquestion": "I typed my site address correctly but I still can't connect.",
-  "core.login.faqcannotfindmysiteanswer": "Have you typed the name correctly? It's also possible that your site is not included in our public sites directory. If you still can't find it, please enter your site address instead.",
+  "core.login.errorupdatesite":
+      "An error occurred while updating the site's token.",
+  "core.login.faqcannotconnectanswer":
+      "Please, contact your site administrator.",
+  "core.login.faqcannotconnectquestion":
+      "I typed my site address correctly but I still can't connect.",
+  "core.login.faqcannotfindmysiteanswer":
+      "Have you typed the name correctly? It's also possible that your site is not included in our public sites directory. If you still can't find it, please enter your site address instead.",
   "core.login.faqcannotfindmysitequestion": "I can't find my site.",
-  "core.login.faqsetupsiteanswer": "Visit {{$link}} to check out the different options you have to create your own Moodle site.",
+  "core.login.faqsetupsiteanswer":
+      "Visit {{\$link}} to check out the different options you have to create your own Moodle site.",
   "core.login.faqsetupsitelinktitle": "Get started.",
   "core.login.faqsetupsitequestion": "I want to set up my own Moodle site.",
-  "core.login.faqtestappanswer": "To test the app in a Moodle Demo Site, type \"teacher\" or \"student\" in the \"Your site\" field and click the \"Connect to your site\" button.",
-  "core.login.faqtestappquestion": "I just want to test the app, what can I do?",
-  "core.login.faqwhatisurlanswer": "<p>Every organisation has their own unique address or URL for their Moodle site. To find the address:</p><ol><li>Open a web browser and go to your Moodle site login page.</li><li>At the top of the page, in the address bar, you will see the URL of your Moodle site e.g. \"campus.example.edu\".<br>{{$image}}</li><li>Copy the address (do not copy the /login and what comes after), paste it into the Moodle app then click \"Connect to your site\"</li><li>Now you can log in to your site using your username and password.</li></ol>",
-  "core.login.faqwhatisurlquestion": "What is my site address? How can I find my site URL?",
+  "core.login.faqtestappanswer":
+      "To test the app in a Moodle Demo Site, type \"teacher\" or \"student\" in the \"Your site\" field and click the \"Connect to your site\" button.",
+  "core.login.faqtestappquestion":
+      "I just want to test the app, what can I do?",
+  "core.login.faqwhatisurlanswer":
+      "<p>Every organisation has their own unique address or URL for their Moodle site. To find the address:</p><ol><li>Open a web browser and go to your Moodle site login page.</li><li>At the top of the page, in the address bar, you will see the URL of your Moodle site e.g. \"campus.example.edu\".<br>{{\$image}}</li><li>Copy the address (do not copy the /login and what comes after), paste it into the Moodle app then click \"Connect to your site\"</li><li>Now you can log in to your site using your username and password.</li></ol>",
+  "core.login.faqwhatisurlquestion":
+      "What is my site address? How can I find my site URL?",
   "core.login.faqwhereisqrcode": "Where can I find the QR code?",
-  "core.login.faqwhereisqrcodeanswer": "<p>If your organisation has enabled it, you will find a QR code on the web site at the bottom of your user profile page.</p>{{$image}}",
+  "core.login.faqwhereisqrcodeanswer":
+      "<p>If your organisation has enabled it, you will find a QR code on the web site at the bottom of your user profile page.</p>{{\$image}}",
   "core.login.findyoursite": "Find your site",
   "core.login.firsttime": "Is this your first time here?",
-  "core.login.forcepasswordchangenotice": "You must change your password to proceed.",
+  "core.login.forcepasswordchangenotice":
+      "You must change your password to proceed.",
   "core.login.forgotten": "Forget your username or password?",
   "core.login.help": "Help",
-  "core.login.helpmelogin": "<p>There are many thousands of Moodle sites around the world. This app can only connect to Moodle sites that have specifically enabled Mobile app access.</p><p>If you can't connect to your Moodle site then you need to contact your site administrator and ask them to read <a href=\"http://docs.moodle.org/en/Mobile_app\" target=\"_blank\">http://docs.moodle.org/en/Mobile_app</a></p><p>To test the app in a Moodle demo site type <i>teacher</i> or <i>student</i> in the <i>Site address</i> field and click the <b>Connect button</b>.</p>",
+  "core.login.helpmelogin":
+      "<p>There are many thousands of Moodle sites around the world. This app can only connect to Moodle sites that have specifically enabled Mobile app access.</p><p>If you can't connect to your Moodle site then you need to contact your site administrator and ask them to read <a href=\"http://docs.moodle.org/en/Mobile_app\" target=\"_blank\">http://docs.moodle.org/en/Mobile_app</a></p><p>To test the app in a Moodle demo site type <i>teacher</i> or <i>student</i> in the <i>Site address</i> field and click the <b>Connect button</b>.</p>",
   "core.login.instructions": "Instructions",
-  "core.login.invalidaccount": "Please check your login details or ask your site administrator to check the site configuration.",
+  "core.login.invalidaccount":
+      "Please check your login details or ask your site administrator to check the site configuration.",
   "core.login.invaliddate": "Invalid date",
   "core.login.invalidemail": "Invalid email address",
-  "core.login.invalidmoodleversion": "<p>Invalid Moodle site version. The Moodle app only supports Moodle systems {{$a}} onwards.</p>\n<p>You can contact your site administrators and ask them to update their Moodle system.</p>\n<p>\"Site Administrators\" are the people who manages the Moodle at your school/university/company or learning organisation. If you don't know how to contact them, please contact your teachers/trainers.</p>",
+  "core.login.invalidmoodleversion":
+      "<p>Invalid Moodle site version. The Moodle app only supports Moodle systems {{\$a}} onwards.</p>\n<p>You can contact your site administrators and ask them to update their Moodle system.</p>\n<p>\"Site Administrators\" are the people who manages the Moodle at your school/university/company or learning organisation. If you don't know how to contact them, please contact your teachers/trainers.</p>",
   "core.login.invalidsite": "The site URL is invalid.",
   "core.login.invalidtime": "Invalid time",
   "core.login.invalidurl": "Invalid URL specified",
-  "core.login.invalidvaluemax": "The maximum value is {{$a}}",
-  "core.login.invalidvaluemin": "The minimum value is {{$a}}",
-  "core.login.localmobileunexpectedresponse": "Moodle Mobile Additional Features check returned an unexpected response. You will be authenticated using the standard mobile service.",
-  "core.login.loggedoutssodescription": "You have to authenticate again. You need to log in to the site in a browser window.",
+  "core.login.invalidvaluemax": "The maximum value is {{\$a}}",
+  "core.login.invalidvaluemin": "The minimum value is {{\$a}}",
+  "core.login.localmobileunexpectedresponse":
+      "Moodle Mobile Additional Features check returned an unexpected response. You will be authenticated using the standard mobile service.",
+  "core.login.loggedoutssodescription":
+      "You have to authenticate again. You need to log in to the site in a browser window.",
   "core.login.login": "Log in",
   "core.login.loginbutton": "Log in",
-  "core.login.logininsiterequired": "You need to log in to the site in a browser window.",
-  "core.login.loginsteps": "For full access to this site, you first need to create an account.",
+  "core.login.logininsiterequired":
+      "You need to log in to the site in a browser window.",
+  "core.login.loginsteps":
+      "For full access to this site, you first need to create an account.",
   "core.login.missingemail": "Missing email address",
   "core.login.missingfirstname": "Missing given name",
   "core.login.missinglastname": "Missing surname",
-  "core.login.mobileservicesnotenabled": "Mobile access is not enabled on your site. Please contact your site administrator if you think it should be enabled.",
+  "core.login.mobileservicesnotenabled":
+      "Mobile access is not enabled on your site. Please contact your site administrator if you think it should be enabled.",
   "core.login.mustconfirm": "You need to confirm your account",
   "core.login.newaccount": "New account",
   "core.login.notloggedin": "You need to be logged in.",
@@ -1868,40 +2265,50 @@
   "core.login.onboardingimaneducator": "I'm an educator",
   "core.login.onboardingineedasite": "I need a Moodle site",
   "core.login.onboardingprovidefeedback": "Provide timely feedback",
-  "core.login.onboardingtoconnect": "To connect to the Moodle App you'll need a Moodle site",
+  "core.login.onboardingtoconnect":
+      "To connect to the Moodle App you'll need a Moodle site",
   "core.login.onboardingwelcome": "Welcome to the Moodle App!",
   "core.login.or": "OR",
   "core.login.password": "Password",
   "core.login.passwordforgotten": "Forgot password",
-  "core.login.passwordforgotteninstructions2": "To reset your password, submit your username or your email address below. If we can find you in the database, an email will be sent to your email address, with instructions how to get access again.",
+  "core.login.passwordforgotteninstructions2":
+      "To reset your password, submit your username or your email address below. If we can find you in the database, an email will be sent to your email address, with instructions how to get access again.",
   "core.login.passwordrequired": "Password required",
   "core.login.policyaccept": "I understand and agree",
-  "core.login.policyagree": "You must agree to this policy to continue using this site.  Do you agree?",
+  "core.login.policyagree":
+      "You must agree to this policy to continue using this site.  Do you agree?",
   "core.login.policyagreement": "Site policy agreement",
   "core.login.policyagreementclick": "Link to site policy agreement",
   "core.login.potentialidps": "Log in using your account on:",
   "core.login.profileinvaliddata": "Invalid value",
   "core.login.recaptchachallengeimage": "reCAPTCHA challenge image",
-  "core.login.recaptchaexpired": "Verification expired. Answer the security question again.",
+  "core.login.recaptchaexpired":
+      "Verification expired. Answer the security question again.",
   "core.login.recaptchaincorrect": "The security question answer is incorrect.",
   "core.login.reconnect": "Reconnect",
-  "core.login.reconnectdescription": "Your authentication token is invalid or has expired. You have to reconnect to the site.",
-  "core.login.reconnectssodescription": "Your authentication token is invalid or has expired. You have to reconnect to the site. You need to log in to the site in a browser window.",
+  "core.login.reconnectdescription":
+      "Your authentication token is invalid or has expired. You have to reconnect to the site.",
+  "core.login.reconnectssodescription":
+      "Your authentication token is invalid or has expired. You have to reconnect to the site. You need to log in to the site in a browser window.",
   "core.login.resendemail": "Resend email",
   "core.login.searchby": "Search by:",
   "core.login.security_question": "Security question",
   "core.login.selectacountry": "Select a country",
   "core.login.selectsite": "Please select your site:",
-  "core.login.signupplugindisabled": "{{$a}} is not enabled.",
-  "core.login.signuprequiredfieldnotsupported": "The signup form contains a required custom field that isn't supported in the app. Please create your account using a web browser.",
+  "core.login.signupplugindisabled": "{{\$a}} is not enabled.",
+  "core.login.signuprequiredfieldnotsupported":
+      "The signup form contains a required custom field that isn't supported in the app. Please create your account using a web browser.",
   "core.login.siteaddress": "Your site",
   "core.login.siteaddressplaceholder": "https://campus.example.edu",
-  "core.login.sitebadgedescription": "There are {{count}} unread notifications.",
-  "core.login.sitehasredirect": "Your site contains at least one HTTP redirect. The app cannot follow redirects, this could be the issue that's preventing the app from connecting to your site.",
+  "core.login.sitebadgedescription":
+      "There are {{count}} unread notifications.",
+  "core.login.sitehasredirect":
+      "Your site contains at least one HTTP redirect. The app cannot follow redirects, this could be the issue that's preventing the app from connecting to your site.",
   "core.login.siteinmaintenance": "Your site is in maintenance mode",
   "core.login.sitepolicynotagreederror": "Site policy not agreed.",
   "core.login.siteurl": "Site URL",
-  "core.login.siteurlrequired": "Site URL required i.e <i>http://www.yourmoodlesite.org</i>",
+  "core.login.siteurlrequired":
+      "Site URL required i.e <i>http://www.yourmoodlesite.org</i>",
   "core.login.startsignup": "Create new account",
   "core.login.stillcantconnect": "Still can't connect?",
   "core.login.supplyinfo": "More details",
@@ -1909,11 +2316,15 @@
   "core.login.usernameoremail": "Enter either username or email address",
   "core.login.usernamerequired": "Username required",
   "core.login.usernotaddederror": "User not added - error",
-  "core.login.visitchangepassword": "Do you want to visit the site to change the password?",
-  "core.login.webservicesnotenabled": "Your host site may not have enabled Web services. Please contact your administrator for help.",
-  "core.login.youcanstillconnectwithcredentials": "You can still connect to the site by entering your username and password.",
+  "core.login.visitchangepassword":
+      "Do you want to visit the site to change the password?",
+  "core.login.webservicesnotenabled":
+      "Your host site may not have enabled Web services. Please contact your administrator for help.",
+  "core.login.youcanstillconnectwithcredentials":
+      "You can still connect to the site by entering your username and password.",
   "core.login.yourenteredsite": "Connect to your site",
-  "core.lostconnection": "Your authentication token is invalid or has expired. You will have to reconnect to the site.",
+  "core.lostconnection":
+      "Your authentication token is invalid or has expired. You will have to reconnect to the site.",
   "core.mainmenu.changesite": "Change site",
   "core.mainmenu.help": "Help",
   "core.mainmenu.home": "Home",
@@ -1921,8 +2332,9 @@
   "core.mainmenu.website": "Website",
   "core.mainmenu.resources": "Resources",
   "core.mainmenu.faq": "FAQs",
-  "core.maxfilesize": "Maximum size for new files: {{$a}}",
-  "core.maxsizeandattachments": "Maximum file size: {{$a.size}}, maximum number of files: {{$a.attachments}}",
+  "core.maxfilesize": "Maximum size for new files: {{\$a}}",
+  "core.maxsizeandattachments":
+      "Maximum file size: {{\$a.size}}, maximum number of files: {{\$a.attachments}}",
   "core.min": "min",
   "core.mins": "mins",
   "core.misc": "Miscellaneous",
@@ -1958,8 +2370,10 @@
   "core.mygroups": "My groups",
   "core.name": "Name",
   "core.needhelp": "Need help?",
-  "core.networkerroriframemsg": "This content is not available offline. Please connect to the internet and try again.",
-  "core.networkerrormsg": "There was a problem connecting to the site. Please check your connection and try again.",
+  "core.networkerroriframemsg":
+      "This content is not available offline. Please connect to the internet and try again.",
+  "core.networkerrormsg":
+      "There was a problem connecting to the site. Please check your connection and try again.",
   "core.never": "Never",
   "core.next": "Next",
   "core.no": "No",
@@ -1967,37 +2381,43 @@
   "core.nograde": "No grade",
   "core.none": "None",
   "core.nooptionavailable": "No option available",
-  "core.nopasswordchangeforced": "You cannot proceed without changing your password.",
-  "core.nopermissionerror": "Sorry, but you do not currently have permissions to do that",
-  "core.nopermissions": "Sorry, but you do not currently have permissions to do that ({{$a}}).",
+  "core.nopasswordchangeforced":
+      "You cannot proceed without changing your password.",
+  "core.nopermissionerror":
+      "Sorry, but you do not currently have permissions to do that",
+  "core.nopermissions":
+      "Sorry, but you do not currently have permissions to do that ({{\$a}}).",
   "core.noresults": "No results",
   "core.noselection": "No selection",
   "core.notapplicable": "n/a",
   "core.notavailable": "Not available",
-  "core.notenrolledprofile": "This profile is not available because this user is not enrolled in this course.",
+  "core.notenrolledprofile":
+      "This profile is not available because this user is not enrolled in this course.",
   "core.notice": "Notice",
-  "core.notingroup": "Sorry, but you need to be part of a group to see this page.",
+  "core.notingroup":
+      "Sorry, but you need to be part of a group to see this page.",
   "core.notsent": "Not sent",
   "core.now": "now",
-  "core.nummore": "{{$a}} more",
-  "core.numwords": "{{$a}} words",
+  "core.nummore": "{{\$a}} more",
+  "core.numwords": "{{\$a}} words",
   "core.offline": "Offline",
   "core.ok": "OK",
   "core.online": "Online",
   "core.openfile": "Open file",
   "core.openfullimage": "Click here to display the full size image",
   "core.openinbrowser": "Open in browser",
-  "core.openmodinbrowser": "Open {{$a}} in browser",
+  "core.openmodinbrowser": "Open {{\$a}} in browser",
   "core.opensecurityquestion": "Open security question",
   "core.opensettings": "Open settings",
   "core.openwith": "Open with...",
   "core.othergroups": "Other groups",
-  "core.pagea": "Page {{$a}}",
+  "core.pagea": "Page {{\$a}}",
   "core.parentlanguage": "",
-  "core.paymentinstant": "Use the button below to pay and be enrolled within minutes!",
-  "core.percentagenumber": "{{$a}}%",
+  "core.paymentinstant":
+      "Use the button below to pay and be enrolled within minutes!",
+  "core.percentagenumber": "{{\$a}}%",
   "core.phone": "Phone",
-  "core.pictureof": "Picture of {{$a}}",
+  "core.pictureof": "Picture of {{\$a}}",
   "core.play": "Play",
   "core.previous": "Previous",
   "core.proceed": "Proceed",
@@ -2009,9 +2429,12 @@
   "core.question.certainty": "Certainty",
   "core.question.complete": "Complete",
   "core.question.correct": "Correct",
-  "core.question.errorattachmentsnotsupportedinsite": "Your site doesn't support attaching files to answers yet.",
-  "core.question.errorembeddedfilesnotsupportedinsite": "Your site doesn't support editing embedded files yet.",
-  "core.question.errorquestionnotsupported": "This question type is not supported by the app: {{$a}}.",
+  "core.question.errorattachmentsnotsupportedinsite":
+      "Your site doesn't support attaching files to answers yet.",
+  "core.question.errorembeddedfilesnotsupportedinsite":
+      "Your site doesn't support editing embedded files yet.",
+  "core.question.errorquestionnotsupported":
+      "This question type is not supported by the app: {{\$a}}.",
   "core.question.feedback": "Feedback",
   "core.question.howtodraganddrop": "Tap to select then tap to drop.",
   "core.question.incorrect": "Incorrect",
@@ -2020,10 +2443,11 @@
   "core.question.notanswered": "Not answered",
   "core.question.notyetanswered": "Not yet answered",
   "core.question.partiallycorrect": "Partially correct",
-  "core.question.questionmessage": "Question {{$a}}: {{$b}}",
-  "core.question.questionno": "Question {{$a}}",
+  "core.question.questionmessage": "Question {{\$a}}: {{\$b}}",
+  "core.question.questionno": "Question {{\$a}}",
   "core.question.requiresgrading": "Requires grading",
-  "core.quotausage": "You have currently used {{$a.used}} of your {{$a.total}} limit.",
+  "core.quotausage":
+      "You have currently used {{\$a.used}} of your {{\$a.total}} limit.",
   "core.rating.aggregateavg": "Average of ratings",
   "core.rating.aggregatecount": "Count of ratings",
   "core.rating.aggregatemax": "Maximum rating",
@@ -2035,9 +2459,10 @@
   "core.redirectingtosite": "You will be redirected to the site.",
   "core.refresh": "Refresh",
   "core.remove": "Remove",
-  "core.removefiles": "Remove files {{$a}}",
+  "core.removefiles": "Remove files {{\$a}}",
   "core.required": "Required",
-  "core.requireduserdatamissing": "This user lacks some required profile data. Please enter the data in your site and try again.<br>{{$a}}",
+  "core.requireduserdatamissing":
+      "This user lacks some required profile data. Please enter the data in your site and try again.<br>{{\$a}}",
   "core.resourcedisplayopen": "Open",
   "core.resources": "Resources",
   "core.restore": "Restore",
@@ -2063,14 +2488,17 @@
   "core.settings.about": "About",
   "core.settings.appsettings": "App settings",
   "core.settings.appversion": "App version",
-  "core.settings.cannotsyncloggedout": "This site cannot be synchronised because you've logged out. Please try again when you're logged in the site again.",
+  "core.settings.cannotsyncloggedout":
+      "This site cannot be synchronised because you've logged out. Please try again when you're logged in the site again.",
   "core.settings.cannotsyncoffline": "Cannot synchronise offline.",
-  "core.settings.cannotsyncwithoutwifi": "Cannot synchronise because the current settings only allow to synchronise when connected to Wi-Fi. Please connect to a Wi-Fi network.",
+  "core.settings.cannotsyncwithoutwifi":
+      "Cannot synchronise because the current settings only allow to synchronise when connected to Wi-Fi. Please connect to a Wi-Fi network.",
   "core.settings.colorscheme": "Color Scheme",
   "core.settings.colorscheme-dark": "Dark",
   "core.settings.colorscheme-light": "Light",
   "core.settings.colorscheme-system": "System default",
-  "core.settings.colorscheme-system-notice": "System default mode will depend on your device support.",
+  "core.settings.colorscheme-system-notice":
+      "System default mode will depend on your device support.",
   "core.settings.compilationinfo": "Compilation info",
   "core.settings.copyinfo": "Copy device info on the clipboard",
   "core.settings.cordovadevicemodel": "Cordova device model",
@@ -2080,8 +2508,10 @@
   "core.settings.cordovaversion": "Cordova version",
   "core.settings.currentlanguage": "Current language",
   "core.settings.debugdisplay": "Display debug messages",
-  "core.settings.debugdisplaydescription": "If enabled, error modals will display more data about the error if possible.",
-  "core.settings.deletesitefiles": "Are you sure that you want to delete the downloaded files and cached data from the site '{{sitename}}'? You won't be able to use the app in offline mode.",
+  "core.settings.debugdisplaydescription":
+      "If enabled, error modals will display more data about the error if possible.",
+  "core.settings.deletesitefiles":
+      "Are you sure that you want to delete the downloaded files and cached data from the site '{{sitename}}'? You won't be able to use the app in offline mode.",
   "core.settings.deletesitefilestitle": "Delete site files",
   "core.settings.deviceinfo": "Device info",
   "core.settings.deviceos": "Device OS",
@@ -2090,22 +2520,27 @@
   "core.settings.displayformat": "Display format",
   "core.settings.enabledownloadsection": "Enable download sections",
   "core.settings.enablefirebaseanalytics": "Enable Firebase analytics",
-  "core.settings.enablefirebaseanalyticsdescription": "If enabled, the app will collect anonymous data usage.",
+  "core.settings.enablefirebaseanalyticsdescription":
+      "If enabled, the app will collect anonymous data usage.",
   "core.settings.enablerichtexteditor": "Enable text editor",
-  "core.settings.enablerichtexteditordescription": "If enabled, a text editor will be available when entering content.",
+  "core.settings.enablerichtexteditordescription":
+      "If enabled, a text editor will be available when entering content.",
   "core.settings.enablesyncwifi": "Allow sync only when on Wi-Fi",
-  "core.settings.entriesincache": "{{$a}} entries in cache",
+  "core.settings.entriesincache": "{{\$a}} entries in cache",
   "core.settings.errordeletesitefiles": "Error deleting site files.",
-  "core.settings.errorsyncsite": "Error synchronising site data. Please check your Internet connection and try again.",
+  "core.settings.errorsyncsite":
+      "Error synchronising site data. Please check your Internet connection and try again.",
   "core.settings.estimatedfreespace": "Estimated free space",
   "core.settings.filesystemroot": "File system root",
   "core.settings.fontsize": "Text size",
   "core.settings.fontsizecharacter": "A",
-  "core.settings.forcedsetting": "This setting has been forced by your site configuration.",
+  "core.settings.forcedsetting":
+      "This setting has been forced by your site configuration.",
   "core.settings.general": "General",
   "core.settings.helpusimprove": "Help us improve this app",
   "core.settings.ioscookies": "Cross-Website Tracking",
-  "core.settings.ioscookiesdescription": "Embedded content from the site might require cross-site cookies to work. To enable it, please go to the app's iOS settings and enable 'Allow Cross-Website Tracking'.",
+  "core.settings.ioscookiesdescription":
+      "Embedded content from the site might require cross-site cookies to work. To enable it, please go to the app's iOS settings and enable 'Allow Cross-Website Tracking'.",
   "core.settings.language": "Language",
   "core.settings.license": "Licence",
   "core.settings.localnotifavailable": "Local notifications available",
@@ -2118,7 +2553,7 @@
   "core.settings.networkstatus": "Internet connection status",
   "core.settings.opensourcelicenses": "Open Source Licences",
   "core.settings.preferences": "Preferences",
-  "core.settings.delete_account" : "Delete Account",
+  "core.settings.delete_account": "Delete Account",
   "core.settings.privacypolicy": "Privacy policy",
   "core.settings.publisher": "Publisher",
   "core.settings.pushid": "Push notifications ID",
@@ -2129,22 +2564,30 @@
   "core.settings.siteinfo": "Site info",
   "core.settings.sites": "Sites",
   "core.settings.spaceusage": "Space usage",
-  "core.settings.spaceusagehelp": "Deleting the stored information of the site will remove all the site offline data. This information allows you to use the app when offline. ",
+  "core.settings.spaceusagehelp":
+      "Deleting the stored information of the site will remove all the site offline data. This information allows you to use the app when offline. ",
   "core.settings.synchronization": "Synchronisation",
   "core.settings.synchronizenow": "Synchronise now",
-  "core.settings.synchronizenowhelp": "Synchronising a site will send pending changes and all offline activity stored in the device and will synchronise some data like messages and notifications.",
+  "core.settings.synchronizenowhelp":
+      "Synchronising a site will send pending changes and all offline activity stored in the device and will synchronise some data like messages and notifications.",
   "core.settings.syncsettings": "Synchronisation settings",
   "core.settings.total": "Total",
   "core.settings.wificonnection": "Wi-Fi connection",
-  "core.sharedfiles.chooseaccountstorefile": "Choose an account to store the file in.",
-  "core.sharedfiles.chooseactionrepeatedfile": "A file with this name already exists. Do you want to replace the existing file or rename it to \"{{$a}}\"?",
-  "core.sharedfiles.errorreceivefilenosites": "There are no sites stored. Please add a site before sharing a file with the app.",
-  "core.sharedfiles.nosharedfiles": "There are no shared files stored on this site.",
-  "core.sharedfiles.nosharedfilestoupload": "You have no files to upload here. If you want to upload a file from another app, locate the file and click the 'Open in' button.",
+  "core.sharedfiles.chooseaccountstorefile":
+      "Choose an account to store the file in.",
+  "core.sharedfiles.chooseactionrepeatedfile":
+      "A file with this name already exists. Do you want to replace the existing file or rename it to \"{{\$a}}\"?",
+  "core.sharedfiles.errorreceivefilenosites":
+      "There are no sites stored. Please add a site before sharing a file with the app.",
+  "core.sharedfiles.nosharedfiles":
+      "There are no shared files stored on this site.",
+  "core.sharedfiles.nosharedfilestoupload":
+      "You have no files to upload here. If you want to upload a file from another app, locate the file and click the 'Open in' button.",
   "core.sharedfiles.rename": "Rename",
   "core.sharedfiles.replace": "Replace",
   "core.sharedfiles.sharedfiles": "Shared files",
-  "core.sharedfiles.successstorefile": "File successfully stored. Select the file to upload to your private files or use in an activity.",
+  "core.sharedfiles.successstorefile":
+      "File successfully stored. Select the file to upload to your private files or use in an activity.",
   "core.show": "Show",
   "core.showadvanced": "Show advanced",
   "core.showless": "Show less...",
@@ -2152,7 +2595,8 @@
   "core.site": "Site",
   "core.sitehome.sitehome": "Site home",
   "core.sitehome.sitenews": "Site announcements",
-  "core.sitemaintenance": "The site is undergoing maintenance and is currently not available",
+  "core.sitemaintenance":
+      "The site is undergoing maintenance and is currently not available",
   "core.sizeb": "bytes",
   "core.sizegb": "GB",
   "core.sizekb": "KB",
@@ -2183,13 +2627,14 @@
   "core.success": "Success",
   "core.tablet": "Tablet",
   "core.tag.defautltagcoll": "Default collection",
-  "core.tag.errorareanotsupported": "This tag area is not supported by the app.",
+  "core.tag.errorareanotsupported":
+      "This tag area is not supported by the app.",
   "core.tag.inalltagcoll": "Everywhere",
-  "core.tag.itemstaggedwith": "{{$a.tagarea}} tagged with \"{{$a.tag}}\"",
-  "core.tag.noresultsfor": "No results for \"{{$a}}\"",
-  "core.tag.notagsfound": "No tags matching \"{{$a}}\" found",
+  "core.tag.itemstaggedwith": "{{\$a.tagarea}} tagged with \"{{\$a.tag}}\"",
+  "core.tag.noresultsfor": "No results for \"{{\$a}}\"",
+  "core.tag.notagsfound": "No tags matching \"{{\$a}}\" found",
   "core.tag.searchtags": "Search tags",
-  "core.tag.showingfirsttags": "Showing {{$a}} most popular tags",
+  "core.tag.showingfirsttags": "Showing {{\$a}} most popular tags",
   "core.tag.tag": "Tag",
   "core.tag.tagarea_course": "Courses",
   "core.tag.tagarea_course_modules": "Activities and resources",
@@ -2197,9 +2642,10 @@
   "core.tag.tagarea_user": "User interests",
   "core.tag.tagareabadgedescription": "There are {{count}} items.",
   "core.tag.tags": "Tags",
-  "core.tag.warningareasnotsupported": "Some of the tag areas are not displayed because they are not supported by the app.",
+  "core.tag.warningareasnotsupported":
+      "Some of the tag areas are not displayed because they are not supported by the app.",
   "core.teachers": "Teachers",
-  "core.thereisdatatosync": "There are offline {{$a}} to be synchronised.",
+  "core.thereisdatatosync": "There are offline {{\$a}} to be synchronised.",
   "core.thisdirection": "ltr",
   "core.time": "Time",
   "core.timesup": "Time is up!",
@@ -2208,14 +2654,17 @@
   "core.tryagain": "Try again",
   "core.twoparagraphs": "{{p1}}<br><br>{{p2}}",
   "core.uhoh": "Uh oh!",
-  "core.unexpectederror": "Unexpected error. Please close and reopen the application then try again.",
-  "core.unicodenotsupported": "Some emojis are not supported on this site. Such characters will be removed when the message is sent.",
-  "core.unicodenotsupportedcleanerror": "Empty text was found when cleaning Unicode chars.",
+  "core.unexpectederror":
+      "Unexpected error. Please close and reopen the application then try again.",
+  "core.unicodenotsupported":
+      "Some emojis are not supported on this site. Such characters will be removed when the message is sent.",
+  "core.unicodenotsupportedcleanerror":
+      "Empty text was found when cleaning Unicode chars.",
   "core.unknown": "Unknown",
   "core.unlimited": "Unlimited",
   "core.unzipping": "Unzipping",
   "core.updaterequired": "App update required",
-  "core.updaterequireddesc": "Please update your app to version {{$a}}",
+  "core.updaterequireddesc": "Please update your app to version {{\$a}}",
   "core.upgraderunning": "Site is being upgraded, please retry later.",
   "core.user": "User",
   "core.user.address": "Address",
@@ -2225,7 +2674,8 @@
   "core.user.country": "Country",
   "core.user.description": "Description",
   "core.user.details": "Details",
-  "core.user.detailsnotavailable": "The details of this user are not available to you.",
+  "core.user.detailsnotavailable":
+      "The details of this user are not available to you.",
   "core.user.editingteacher": "Teacher",
   "core.user.email": "Email address",
   "core.user.emailagain": "Email (again)",
@@ -2255,10 +2705,12 @@
   "core.vieweditor": "View editor",
   "core.viewembeddedcontent": "View embedded content",
   "core.viewprofile": "View profile",
-  "core.warningofflinedatadeleted": "Offline data from {{component}} '{{name}}' has been deleted. {{error}}",
+  "core.warningofflinedatadeleted":
+      "Offline data from {{component}} '{{name}}' has been deleted. {{error}}",
   "core.whatisyourage": "What is your age?",
   "core.wheredoyoulive": "In which country do you live?",
-  "core.whoissiteadmin": "\"Site Administrators\" are the people who manage the Moodle at your school/university/company or learning organisation. If you don't know how to contact them, please contact your teachers/trainers.",
+  "core.whoissiteadmin":
+      "\"Site Administrators\" are the people who manage the Moodle at your school/university/company or learning organisation. If you don't know how to contact them, please contact your teachers/trainers.",
   "core.whoops": "Oops!",
   "core.whyisthishappening": "Why is this happening?",
   "core.whyisthisrequired": "Why is this required?",
@@ -2273,7 +2725,8 @@
   "core.user.age": "Age",
   "core.user.department": "Category",
   "core.user.physicallychallenged": "Physically Challenged",
-  "core.user.accessedelearninginpast": "Have you ever accessed any eLearning course in the past",
+  "core.user.accessedelearninginpast":
+      "Have you ever accessed any eLearning course in the past",
   "core.user.asha": "ASHA",
   "core.user.aww": "AWW",
   "core.user.anw": "ANW",
@@ -2313,7 +2766,8 @@
   "core.user.westbengal": "West Bengal",
   "core.user.andamanandnicobarislands": "Andaman and Nicobar Islands",
   "core.user.chandigarh": "Chandigarh",
-  "core.user.dadranagarhavelianddamandiu": "Dadra & Nagar Haveli and Daman & Diu",
+  "core.user.dadranagarhavelianddamandiu":
+      "Dadra & Nagar Haveli and Daman & Diu",
   "core.user.delhi": "Delhi",
   "core.user.jammukashmir": "Jammu and Kashmir",
   "core.user.ladakh": "Ladakh",
@@ -2333,37 +2787,56 @@
   "core.login.designation": "Designation",
   "core.login.otp": "OTP",
   "core.login.username.textmessage": "*Please enter username in lower case",
-  "core.login.password.textmessage": "*The password must have at least 4 characters",
-  "core.login.learnercategory.textmessage": "*Please choose a suitable category from the drop-down menu. This will help us to take you through the relevant course material.​",
-  "core.signup.btnbelow.message" : "*Please ensure that the added information is correct as it would be displayed on the course certificate.",
-  "core.signup.btnbelow.disclaimer" : "Note : We will use the information you provide here to create your unique id. This id will then be used to track your progress in the course.",
-  "core.login.invalidlogin" : "Invalid login, please try again",
-  "core.login.nonbinary" : "Non-Binary",
-  "core.login.prefernot" : "Prefer not to say",
-  "core.login.requiredmsg" : "There are required fields in this form marked *" ,
-  "core.lc.academia" : "Academia",
-  "core.lc.statefda" : "State FDA/FSSAI",
-  "core.lc.industry" : "Industry",
-  "core.lc.others" : "Others",
-  "core.lc.isselected" : " is selected",
-  "core.login.loginwithotp" : "Login with OTP",
-  "core.mandatory" : "Mandatory",
-  "core.course.heading" : "Note : Please complete all the modules marked as mandatory to get the course certificate.",
-  "core.unsupported.message" : "Click on the button to open in a browser window and then login to generate the certificate",
-  "core.pullrefresh.message" : "Go to dashboard and refresh the page to change the course content as per selected language",
-  "core.slider.first" : "Enter the correct details at the time of registration. This is important to track your progress.",
-  "core.slider.second" : "Take the training course divided into multiple chapters supported by text and audio-visuals. Please read the content thoroughly.",
-  "core.slider.third" : "Take the quiz/assessment at the end of each chapter.",
-  "core.slider.fourth" : "Download your online certificate on successful completion of the course. Congratulations!",
-  "core.instructions.first" : "The training course is available in 5 languages. Learner must select and complete the course in ONE language. In case, learner changes the language in between the course, she/he will have to start the course from beginning. ",
-  "core.instructions.second" : "The course is customized for 4 learner categories i.e., Industry, State FDA, Academia and, Others. Learner should select the correct category at the time of registration.  Once selected, it cannot be modified at a later stage. ",
-  "core.instructions.third" : "Learner has unlimited number of attempts to complete the quiz/assessment and a minimum of 80% should be scored to obtain certificate.",
-  "core.instructions.fourth" : "Downloadable resource material is available in the form of pdf and videos for further learning.",
-  "core.instructions.fifth" : "Please ensure that you read the content thoroughly before taking the assessments.",
-  "core.instructions.sixth" : "You have unlimited number of attempts to clear mandatory assessments and you should score 70% marks to qualify them.",
-  "core.instructions.seventh" : "You will receive a participation certificate after each 'Optional' chapter attempted.",
-  "core.instructions.eight" : "Course certificate will ONLY be generated after 100% completion is marked under 1 language.",
-  "core.auth.steps" : "Steps",
-  "core.auth.instructions" : "Instructions",
-  "core.courses.kindlyrefreshpage": "Kindly refresh the page on available courses"
-}
+  "core.login.password.textmessage":
+      "*The password must have at least 4 characters",
+  "core.login.learnercategory.textmessage":
+      "*Please choose a suitable category from the drop-down menu. This will help us to take you through the relevant course material.​",
+  "core.signup.btnbelow.message":
+      "*Please ensure that the added information is correct as it would be displayed on the course certificate.",
+  "core.signup.btnbelow.disclaimer":
+      "Note : We will use the information you provide here to create your unique id. This id will then be used to track your progress in the course.",
+  "core.login.invalidlogin": "Invalid login, please try again",
+  "core.login.nonbinary": "Non-Binary",
+  "core.login.prefernot": "Prefer not to say",
+  "core.login.requiredmsg": "There are required fields in this form marked *",
+  "core.lc.academia": "Academia",
+  "core.lc.statefda": "State FDA/FSSAI",
+  "core.lc.industry": "Industry",
+  "core.lc.others": "Others",
+  "core.lc.isselected": " is selected",
+  "core.login.loginwithotp": "Login with OTP",
+  "core.mandatory": "Mandatory",
+  "core.course.heading":
+      "Note : Please complete all the modules marked as mandatory to get the course certificate.",
+  "core.unsupported.message":
+      "Click on the button to open in a browser window and then login to generate the certificate",
+  "core.pullrefresh.message":
+      "Go to dashboard and refresh the page to change the course content as per selected language",
+  "core.slider.first":
+      "Enter the correct details at the time of registration. This is important to track your progress.",
+  "core.slider.second":
+      "Take the training course divided into multiple chapters supported by text and audio-visuals. Please read the content thoroughly.",
+  "core.slider.third": "Take the quiz/assessment at the end of each chapter.",
+  "core.slider.fourth":
+      "Download your online certificate on successful completion of the course. Congratulations!",
+  "core.instructions.first":
+      "The training course is available in 5 languages. Learner must select and complete the course in ONE language. In case, learner changes the language in between the course, she/he will have to start the course from beginning. ",
+  "core.instructions.second":
+      "The course is customized for 4 learner categories i.e., Industry, State FDA, Academia and, Others. Learner should select the correct category at the time of registration.  Once selected, it cannot be modified at a later stage. ",
+  "core.instructions.third":
+      "Learner has unlimited number of attempts to complete the quiz/assessment and a minimum of 80% should be scored to obtain certificate.",
+  "core.instructions.fourth":
+      "Downloadable resource material is available in the form of pdf and videos for further learning.",
+  "core.instructions.fifth":
+      "Please ensure that you read the content thoroughly before taking the assessments.",
+  "core.instructions.sixth":
+      "You have unlimited number of attempts to clear mandatory assessments and you should score 70% marks to qualify them.",
+  "core.instructions.seventh":
+      "You will receive a participation certificate after each 'Optional' chapter attempted.",
+  "core.instructions.eight":
+      "Course certificate will ONLY be generated after 100% completion is marked under 1 language.",
+  "core.auth.steps": "Steps",
+  "core.auth.instructions": "Instructions",
+  "core.courses.kindlyrefreshpage":
+      "Kindly refresh the page on available courses"
+};

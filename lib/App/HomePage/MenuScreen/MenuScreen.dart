@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/HomePage/MenuScreen/Prefrences/prefrencesScreen.dart';
-import 'package:staple_food_fortification/App/Settings/Settings.dart';
+import 'package:staple_food_fortification/App/Settings/settings.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 
@@ -467,7 +467,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Settings()));
+                      MaterialPageRoute(builder: (context) => SettingScreen()));
                 },
                 child: Row(
                   children: [

@@ -1,15 +1,13 @@
+import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-import 'package:staple_food_fortification/App/Authentication/FaqsScreen/faqsScreen.dart';
 import 'package:staple_food_fortification/App/Authentication/ForgotScreen/Forgot.dart';
 import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/OtpScreen/Otp.dart';
-import 'package:staple_food_fortification/App/HomeScreen/HomeScreen.dart';
-import 'package:staple_food_fortification/App/Settings/Settings.dart';
+import 'package:staple_food_fortification/App/Settings/settings.dart';
+import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
-import 'package:staple_food_fortification/Constants/Strings.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 
 final _loginController = Get.find<LoginController>();
@@ -27,59 +25,36 @@ class _LoginScreenState extends State<LoginScreen> {
     _loginController.getData();
   }
 
-
-  // var ic = Icons.remove_red_eye_rounded;
   @override
   Widget build(BuildContext context) {
-    final String loginLogo = 'assets/svg/login_logo.svg';
-    final String infoLogo = 'assets/svg/info-circle.svg';
-    final Widget info = SvgPicture.asset(
-      infoLogo,
-      semanticsLabel: 'Acme Logo',
-      width: 15,
-      height: 15,
-      color: Colors.white,
-    );
-
-    final Widget homeLogo = SvgPicture.asset(
-      loginLogo,
-      semanticsLabel: 'Acme Logo',
-      width: 60,
-      height: 60,
-      color: SffColor.sffMainColor,
-    );
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: SffColor.sffMainColor,
-        leading: const Text(" "),
-        title: Center(
-          child: Text(
-              'title',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
+        title: Center(child: TextView("core.login.login".tr, 20.0, Colors.white, FontWeight.w700)),
         actions: [
           IconButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => const Settings()));
-              },
+              onPressed: ()=> Get.toNamed(RoutesName.settingScreen),
               icon: const Icon(Icons.settings),
               color: Colors.white),
         ],
       ),
+
       body: Obx(() {
         return Container(
           margin: const EdgeInsets.only(bottom: 25),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text('addon.calendar.confirmeventdelete'.tr.replaceAll('"{{\$a}}"', "Ok")),
                 Container(
                   margin: const EdgeInsets.only(top: 10, bottom: 10),
-                  child: homeLogo,
-                  height: 60,
+                  child: SvgPicture.asset(
+                    'assets/svg/login_logo.svg',
+                    semanticsLabel: 'Acme Logo',
+                    width: 60,
+                    height: 60,
+                    color: SffColor.sffMainColor,
+                  ),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -436,6 +411,9 @@ class _LoginScreenState extends State<LoginScreen> {
                               onPressed: () {
                                 Get.toNamed(RoutesName.faqs);
                               },
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -445,9 +423,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold)),
                                 ],
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
                           ],
