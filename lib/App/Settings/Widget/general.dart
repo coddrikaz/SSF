@@ -100,10 +100,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             color: Colors.white,
             elevation: 0,
             highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
-            onPressed: () {
-              // Navigator.of(context).push(MaterialPageRoute(
-              //     builder: (context) => Settinggs()));
-            },
+            onPressed: () => themeSheet(),
             child: Row(
               children: [
                 Row(
@@ -320,14 +317,14 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             decoration: BoxDecoration(
               color: Colors.transparent,
               borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: const Offset(0, 3), // changes position of shadow
-                ),
-              ],
+              // boxShadow: [
+              //   BoxShadow(
+              //     color: Colors.grey.withOpacity(0.5),
+              //     spreadRadius: 5,
+              //     blurRadius: 7,
+              //     offset: const Offset(0, 3), // changes position of shadow
+              //   ),
+              // ],
             ),
             margin: EdgeInsets.only(left: 20, right: 20),
             height: 100,
@@ -446,6 +443,147 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             ),
           ),
 
+        );
+      },
+    );
+  }
+  themeSheet() {
+    showModalBottomSheet<void>(
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          // color: Colors.yellow,
+          height: 260,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: const Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            margin: EdgeInsets.only(top: 0, bottom: 0, right: 20, left: 20),
+            height: 100,
+            width: 100,
+            child: Column(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 45,
+                        // color: Colors.blueAccent,
+                        width: double.maxFinite,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Color Scheme",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w900, fontSize: 18),
+                        ),
+                      ),
+
+                      Container(
+                        height: 2,
+                        color: SffColor.sffBlueColor,
+                        width: double.maxFinite,
+                      ),
+
+                      MaterialButton(
+                          height: 45,
+                          elevation: 0,
+                          onPressed: () async {
+
+                            Get.back();
+                            setState(() {});
+                          },
+                          child: TextView(
+                              "Light", 18.0, Colors.black, FontWeight.w500)),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
+                      MaterialButton(
+                        height: 45,
+                        // color: SffColor.sffBlueColor,
+                        elevation: 0,
+                        onPressed: () async {
+                          // Get.updateLocale(Locale('hi', 'IN'));
+                          // _hiveBox.put("lang", "hi");
+                          // lang="हिंदी";
+                          // context.setLocale(const Locale('hi', 'IN'));
+                          Get.back();
+                          setState(() {});
+                        },
+                        child: TextView(
+                            "Dark", 18.0, Colors.black, FontWeight.w500),
+                      ),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
+                      MaterialButton(
+                        height: 45,
+                        // color: SffColor.sffBlueColor,
+                        elevation: 0,
+                        onPressed: () {
+                          // Navigator.of(context).push(MaterialPageRoute(
+                          //     builder: (context) => HomeScreen()));
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text("System default",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 18)),
+                            SizedBox(width: 5),
+                            Icon(Icons.arrow_forward,
+                                color: Colors.white, size: 20),
+                          ],
+                        ),
+                        // shape: RoundedRectangleBorder(
+                        //   borderRadius: BorderRadius.circular(10.0),
+                        // ),
+                      ),
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
+
+                      Divider(
+                          color: Colors.black.withOpacity(0.2), height: 0.1),
+
+
+                      // Container(
+                      //   height: 10,
+                      //   color: Colors.transparent,
+                      // ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10),
+                MaterialButton(
+                  minWidth: double.infinity,
+                  height: 45,
+                  color: Colors.white,
+                  elevation: 0,
+                  onPressed: () => Get.back(),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: TextView("Cancel", 20.0, Colors.red, FontWeight.w800),
+                ),
+                SizedBox(height: 10),
+              ],
+            ),
+          ),
         );
       },
     );
