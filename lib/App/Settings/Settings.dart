@@ -73,7 +73,6 @@ class _SettingsState extends State<Settings> {
       body: Container(
       child: Column(
         children: [
-
           MaterialButton(
             height: 45,
             color: Colors.white,

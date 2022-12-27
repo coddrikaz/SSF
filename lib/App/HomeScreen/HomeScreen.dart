@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:staple_food_fortification/App/HomePage/CalenderScreen.dart';
 import 'package:staple_food_fortification/App/HomePage/DashboardScreen.dart';
 import 'package:staple_food_fortification/App/HomePage/GradesScreen.dart';
-import 'package:staple_food_fortification/App/HomePage/MenuScreen.dart';
+import 'package:staple_food_fortification/App/HomePage/MenuScreen/MenuScreen.dart';
 import 'package:staple_food_fortification/App/HomePage/MessagesScreen.dart';
 import 'package:staple_food_fortification/App/HomePage/NotificationsScreen.dart';
 import 'package:staple_food_fortification/App/HomeScreen/homeWidget.dart';

@@ -352,18 +352,18 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       ),
 
                       MaterialButton(
-                        height: 45,
-                        // color: SffColor.sffBlueColor,
-                        elevation: 0,
-                        onPressed: () async {
-                          // Get.updateLocale(Locale('en', 'US'));
-                          // _hiveBox.put("lang", "en");
-                          // lang="English";
-                          //context.setLocale(const Locale('en', 'US'));
-                          Get.back();
-                          setState(() {});
-                        },
-                        child: TextView("English", 18.0,Colors.black, FontWeight.w700)
+                          height: 45,
+                          // color: SffColor.sffBlueColor,
+                          elevation: 0,
+                          onPressed: () async {
+                            // Get.updateLocale(Locale('en', 'US'));
+                            // _hiveBox.put("lang", "en");
+                            // lang="English";
+                            //context.setLocale(const Locale('en', 'US'));
+                            Get.back();
+                            setState(() {});
+                          },
+                          child: TextView("English", 18.0,Colors.black, FontWeight.w700)
                       ),
                       Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
                       MaterialButton(
@@ -374,7 +374,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           // Get.updateLocale(Locale('hi', 'IN'));
                           // _hiveBox.put("lang", "hi");
                           // lang="हिंदी";
-                         // context.setLocale(const Locale('hi', 'IN'));
+                          // context.setLocale(const Locale('hi', 'IN'));
                           Get.back();
                           setState(() {});
                         },
@@ -437,14 +437,14 @@ class _GeneralSettingsState extends State<GeneralSettings> {
 
                       Divider(color: Colors.black.withOpacity(0.2),height: 0.1),
                       MaterialButton(
-                        height: 45,
-                        // color: SffColor.sffBlueColor,
-                        elevation: 0,
-                        onPressed: () {
-                          // Navigator.of(context).push(MaterialPageRoute(
-                          //     builder: (context) => HomeScreen()));
-                        },
-                        child: TextView("తెలుగు", 18.0,Colors.black, FontWeight.w700)
+                          height: 45,
+                          // color: SffColor.sffBlueColor,
+                          elevation: 0,
+                          onPressed: () {
+                            // Navigator.of(context).push(MaterialPageRoute(
+                            //     builder: (context) => HomeScreen()));
+                          },
+                          child: TextView("తెలుగు", 18.0,Colors.black, FontWeight.w700)
                       ),
 
                       // Container(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/HomePage/MenuScreen/Prefrences/prefrencesScreen.dart';
 import 'package:staple_food_fortification/App/Settings/Settings.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
@@ -23,6 +24,8 @@ class _MenuScreenState extends State<MenuScreen> {
     final String helpSvg = 'assets/svg/question-circle.svg';
     final String logoutSvg = 'assets/svg/sign-out-alt.svg';
     final String settingSvg = 'assets/svg/cogs.svg';
+    final String fileSvg = 'assets/svg/folder.svg';
+    final String trashSvg = 'assets/svg/trash.svg';
 
     final Widget general = SvgPicture.asset(
       generalSvg,
@@ -39,6 +42,7 @@ class _MenuScreenState extends State<MenuScreen> {
       height: 25,
       color: Colors.black,
     );
+
     final Widget globe = SvgPicture.asset(
       globeSvg,
       semanticsLabel: 'Acme Logo',
@@ -46,6 +50,7 @@ class _MenuScreenState extends State<MenuScreen> {
       height: 25,
       color: Colors.black,
     );
+
     final Widget help = SvgPicture.asset(
       helpSvg,
       semanticsLabel: 'Acme Logo',
@@ -53,6 +58,7 @@ class _MenuScreenState extends State<MenuScreen> {
       height: 25,
       color: Colors.black,
     );
+
     final Widget logout = SvgPicture.asset(
       logoutSvg,
       semanticsLabel: 'Acme Logo',
@@ -66,6 +72,22 @@ class _MenuScreenState extends State<MenuScreen> {
       semanticsLabel: 'Acme Logo',
       width: 25,
       height: 25,
+      color: Colors.black,
+    );
+
+    final Widget file = SvgPicture.asset(
+      fileSvg,
+      semanticsLabel: 'Acme Logo',
+      width: 25,
+      height: 25,
+      color: Colors.black,
+    );
+
+    final Widget delete = SvgPicture.asset(
+      trashSvg,
+      semanticsLabel: 'Acme Logo',
+      width: 22,
+      height: 22,
       color: Colors.black,
     );
 
@@ -189,7 +211,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       ],
                     ),
                     Spacer(),
-                    Icon(Icons.arrow_right),
+                    Icon(Icons.arrow_right_alt_outlined, color: Colors.grey),
                   ],
                 ),
                 // shape: RoundedRectangleBorder(
@@ -218,7 +240,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        globe,
+                        file,
                         SizedBox(width: 15),
                         Text("Resources",
                             style: TextStyle(
@@ -228,7 +250,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       ],
                     ),
                     Spacer(),
-                    Icon(Icons.arrow_right),
+                    Icon(Icons.arrow_right_alt_outlined, color: Colors.grey),
                   ],
                 ),
                 // shape: RoundedRectangleBorder(
@@ -305,7 +327,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       ],
                     ),
                     Spacer(),
-                    Icon(Icons.arrow_right),
+                    Icon(Icons.arrow_right_alt_outlined, color: Colors.grey ),
                   ],
                 ),
                 // shape: RoundedRectangleBorder(
@@ -323,8 +345,9 @@ class _MenuScreenState extends State<MenuScreen> {
                 elevation: 0,
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
                 onPressed: () {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => HomeScreen()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const PrefrencesScreen()));
+                  print("jhjhghvh");
                 },
                 child: Row(
                   children: [
@@ -372,7 +395,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        logout,
+                        delete,
                         SizedBox(width: 15),
                         Text("Delete Account",
                             style: TextStyle(
@@ -402,8 +425,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 elevation: 0.4,
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
                 onPressed: () {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => HomeScreen()));
+                  Get.toNamed(RoutesName.login);
                 },
                 child: Row(
                   children: [
@@ -475,6 +497,64 @@ class _MenuScreenState extends State<MenuScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Future<void> LogoutConfirm() async {
+    showModalBottomSheet<void>(
+      // backgroundColor: Colors.teal,
+      context: context,
+      builder: (BuildContext context) {
+        return SizedBox(
+          height: 200,
+          child: Column(
+            mainAxisAlignment:
+            MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment:
+            CrossAxisAlignment.center,
+            children: [
+              Text(
+                  "Are you sure want to logout?",
+                  style: TextStyle(
+                      fontSize: 16)),
+              Column(
+                children: [
+                  TextButton(
+                    style:
+                    TextButton.styleFrom(
+                      foregroundColor:
+                      Colors.blue,
+                    ),
+                    onPressed: () {
+                      // _home.logout();
+
+                    },
+                    child: Text("Yes",
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 14)),
+                  ),
+                  TextButton(
+                    style:
+                    TextButton.styleFrom(
+                      foregroundColor:
+                      Colors.blue,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text("No",
+                        style: TextStyle(
+                            color:
+                            Colors.blue,
+                            fontSize: 14)),
+                  ),
+                ],
+              )
+            ],
+          ),
+        );
+      },
     );
   }
 }
