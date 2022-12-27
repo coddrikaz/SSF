@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
@@ -16,6 +17,8 @@ class GeneralSettings extends StatefulWidget {
 }
 
 class _GeneralSettingsState extends State<GeneralSettings> {
+  bool isSwitchOn = false;
+  bool isSwitchTextOn = false;
 
   @override
   Widget build(BuildContext context) {
@@ -138,30 +141,31 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           ),
           Container(
             margin: EdgeInsets.only(left: 15),
+
             child: Row(
               children: [
                 Container(
+                  //color: Colors.grey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        alignment: Alignment.topLeft,
-                        margin: EdgeInsets.only(top: 10),
                         child: Text(
                           "Enable Text Editor",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
+                              fontWeight: FontWeight.bold, fontSize: 17),
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.only(bottom: 5),
+                        width: Get.width * 0.8,
+                        margin: EdgeInsets.only(bottom: 12),
+                        //  padding: EdgeInsets.only(right: 20),
                         child: Text(
                           Strings.EnableTextEditor,
                           style: TextStyle(
                               fontSize: 16,
-                              color: SffColor.sffblackLightColor,
+                              color: SffColor.sffblackLigtColor,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -169,12 +173,25 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   ),
                 ),
                 Container(
-                  color: Colors.red,
-                  width: 50,
-                  height: 50,
-                )
+                  width: Get.width * 0.15,
+                  height: Get.height * 0.07,
+                  child: FlutterSwitch(
+                    inactiveColor: SffColor.sffgeyCoor,
+                    value: isSwitchTextOn,
+                    onToggle: (value) {
+                      setState(() {
+                        isSwitchTextOn = value;
+                      });
+                    },
+                  ),
+                ),
               ],
             ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 15),
+            color: Colors.grey.withOpacity(0.4),
+            height: 1,
           ),
           Container(
             margin: EdgeInsets.only(left: 15),
@@ -239,30 +256,31 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           ),
           Container(
             margin: EdgeInsets.only(left: 15),
+
             child: Row(
               children: [
                 Container(
+                  //color: Colors.grey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        alignment: Alignment.topLeft,
-                        margin: EdgeInsets.only(top: 10),
                         child: Text(
                           "Enable Text Editor",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
+                              fontWeight: FontWeight.bold, fontSize: 17),
                         ),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.only(bottom: 5),
+                        width: Get.width * 0.8,
+                        margin: EdgeInsets.only(bottom: 12),
+                        //  padding: EdgeInsets.only(right: 20),
                         child: Text(
                           Strings.EnableTextEditor,
                           style: TextStyle(
                               fontSize: 16,
-                              color: SffColor.sffblackLightColor,
+                              color: SffColor.sffblackLigtColor,
                               fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -270,10 +288,18 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   ),
                 ),
                 Container(
-                  color: Colors.red,
-                  width: 50,
-                  height: 50,
-                )
+                  width: Get.width * 0.15,
+                  height: Get.height * 0.07,
+                  child: FlutterSwitch(
+                    inactiveColor: SffColor.sffgeyCoor,
+                    value: isSwitchOn,
+                    onToggle: (value) {
+                      setState(() {
+                        isSwitchOn = value;
+                      });
+                    },
+                  ),
+                ),
               ],
             ),
           ),
