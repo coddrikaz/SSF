@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
@@ -32,7 +33,7 @@ class RegistrationController extends GetxController {
       if (response.statusCode == 200) {
         for(Map<String,dynamic> obj in response.data){
           if(obj['status']=='200'){
-            Get.to(() => sendOtp());
+            Get.to(() => sendOtp(), arguments: phoneController.text);
 
             SmartDialog.dismiss();
             await Future.delayed(const Duration(seconds: 1));

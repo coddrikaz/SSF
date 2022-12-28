@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/Authentication/ClientRegistration/clientRegController.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
+
+
+final _clientRegController = Get.find<clientRegController>();
 
 class ClientRegScreen extends StatefulWidget {
   const ClientRegScreen({Key? key}) : super(key: key);
@@ -789,7 +794,10 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
                           MaterialButton(
                             height: 45,
                             color: SffColor.sffBlueColor,
-                            onPressed: () {},
+                            onPressed: ()
+                            async {
+                              await _clientRegController.getclientReg();
+                            },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,

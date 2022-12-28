@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/OtpScreen/sendOtp.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
-import 'package:staple_food_fortification/Routes/route_names.dart';
-
-import 'registration_controller.dart';
 
 final _regController = Get.find<RegistrationController>();
 
@@ -34,12 +32,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold)),
-        actions: [
-          IconButton(onPressed: (){
-            Get.toNamed(RoutesName.clientRegScreen);
-
-          }, icon: Icon(Icons.connected_tv_sharp))
-        ],
+        // actions: [
+        //   IconButton(onPressed: (){
+        //     SmartDialog.show(builder: )
+        //   }, icon: Icon(Icons.connected_tv_sharp))
+        // ],
       ),
       body: Container(
         margin: EdgeInsets.only(bottom: 25),

@@ -19,6 +19,15 @@ class sendOtp extends StatefulWidget {
 
 class _sendOtpState extends State<sendOtp> {
   final otpController = TextEditingController();
+  var phoneNum;
+
+  @override
+  void initState() {
+    super.initState();
+    if (Get.arguments != null) {
+      phoneNum = Get.arguments;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -113,18 +122,19 @@ class _sendOtpState extends State<sendOtp> {
       SmartDialog.showLoading(backDismiss: false, clickMaskDismiss: false);
       var response = await Dio().post(RestUrl.otpVerification,
           data: json.encode({
-            "mobile": "7351880296",
+            "mobile": phoneNum,
             "otp": otpController.text,
           }));
 
       debugPrint("LLLLLLLLLLLLL ${response.toString()}");
+      debugPrint("uuuuuuuuuuu ${phoneNum.toString()}");
       //   var result = response.data;
       //   debugPrint("ooooooootpppppp ${result.toString()}");
 
       if (response.statusCode == 200) {
         for (Map<String, dynamic> obj in response.data) {
           if (obj['status'] == '200') {
-            Get.toNamed(RoutesName.clientRegScreen);
+            Get.toNamed(RoutesName.clientRegScreen, arguments: phoneNum);
 
             SmartDialog.dismiss();
             await Future.delayed(const Duration(seconds: 1));
