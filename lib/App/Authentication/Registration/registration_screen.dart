@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
+import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
+import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
+import 'package:staple_food_fortification/App/Authentication/Registration/sendOtp.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
+
+import 'registration_controller.dart';
+
+final _regController = Get.find<RegistrationController>();
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -26,6 +34,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold)),
+        actions: [
+          IconButton(onPressed: (){
+            Get.toNamed(RoutesName.clientRegScreen);
+
+          }, icon: Icon(Icons.connected_tv_sharp))
+        ],
       ),
       body: Container(
         margin: EdgeInsets.only(bottom: 25),
@@ -89,7 +103,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                         children: [
                                           Container(
                                             child: TextFormField(
-                                                // controller: userInput,
+                                                controller: _regController.usernameController,
                                                 cursorColor: Colors.blue,
                                                 style: TextStyle(
                                                   // fontSize: 24,
@@ -174,7 +188,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                         children: [
                                           Container(
                                             child: TextFormField(
-                                                // controller: userInput,
+                                                controller: _regController.passwordController,
                                                 cursorColor: Colors.blue,
                                                 style: TextStyle(
                                                   // fontSize: 24,
@@ -278,7 +292,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                         children: [
                                           Container(
                                             child: TextFormField(
-                                                // controller: userInput,
+                                                controller: _regController.emailController,
                                                 cursorColor: Colors.blue,
                                                 style: TextStyle(
                                                   // fontSize: 24,
@@ -363,7 +377,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                         children: [
                                           Container(
                                             child: TextFormField(
-                                                // controller: userInput,
+                                                controller: _regController.verifyEmailController,
                                                 cursorColor: Colors.blue,
                                                 style: TextStyle(
                                                   // fontSize: 24,
@@ -448,7 +462,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                         children: [
                                           Container(
                                             child: TextFormField(
-                                                // controller: userInput,
+                                                controller: _regController.phoneController,
                                                 cursorColor: Colors.blue,
                                                 style: TextStyle(
                                                   // fontSize: 24,
@@ -500,8 +514,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           MaterialButton(
                             height: 45,
                             color: SffColor.sffBlueColor,
-                            onPressed: () {
-                              Get.toNamed(RoutesName.clientRegScreen);
+                            onPressed: ()
+                            async {
+                              await _regController.getReg();
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,

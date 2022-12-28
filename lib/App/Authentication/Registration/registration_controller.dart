@@ -1,33 +1,51 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:staple_food_fortification/Constants/rest_api.dart';
+import 'package:get/get.dart' hide Response;
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:staple_food_fortification/App/Authentication/Registration/sendOtp.dart';
+import 'package:staple_food_fortification/Constants/rest_api.dart';
 
+class RegistrationController extends GetxController {
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
+  final emailController = TextEditingController();
+  final verifyEmailController = TextEditingController();
+  final phoneController = TextEditingController();
 
-class RegistrationController extends GetxController{
-
-  Future<void> getLogin() async {
+  Future<void> getReg() async {
     bool result = await InternetConnectionChecker().hasConnection;
-    if(result){
+    if (result) {
       SmartDialog.showLoading(backDismiss: false, clickMaskDismiss: false);
-      var response = await Dio().post(RestUrl.signUp, data: json.encode({"mobile": "8763937244","otp": "12345"}));
+      var response = await Dio().post(RestUrl.sendOtp,
+          data: json.encode({
+            "username": usernameController.text,
+            "password": passwordController.text,
+            "email": emailController.text,
+            "email2": verifyEmailController.text,
+            "phone": phoneController.text
+          }));
 
       debugPrint(response.toString());
 
       if (response.statusCode == 200) {
-        debugPrint("\n------After Login Response------\n");
-        if(response.data["message"]=="Success"){
-          var result = response.data;
-          debugPrint(result.toString());
+        for(Map<String,dynamic> obj in response.data){
+          if(obj['status']=='200'){
+            Get.to(() => sendOtp());
 
+            SmartDialog.dismiss();
+            await Future.delayed(const Duration(seconds: 1));
+            SmartDialog.showToast("Otp Sent Successfully");
+          }
+          else{
+            SmartDialog.dismiss();
+            await Future.delayed(const Duration(seconds: 1));
+            SmartDialog.showToast(obj['message']);
+          }
 
-          SmartDialog.dismiss();
-          await Future.delayed(const Duration(seconds: 1));
-          SmartDialog.showToast("Login Successfully");
         }
+
       }
       else{
         SmartDialog.showToast("Please enter correct username and password");

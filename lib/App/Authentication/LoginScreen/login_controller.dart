@@ -41,7 +41,6 @@ class LoginController extends GetxController {
              var result = response.data;
              debugPrint(result.toString());
 
-
              SmartDialog.dismiss();
              await Future.delayed(const Duration(seconds: 1));
              SmartDialog.showToast("Login Successfully");
