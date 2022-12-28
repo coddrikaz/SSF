@@ -85,7 +85,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                     // color: Colors.green,
                                     child: Row(
                                       children: [
-                                        Text("Username"),
+                                        Text("core.login.username".tr),
                                         Text(
                                           "*",
                                           style: TextStyle(color: Colors.red),
@@ -170,7 +170,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                     // color: Colors.green,
                                     child: Row(
                                       children: [
-                                        Text("Password"),
+                                        Text("core.login.password".tr,),
                                         Text(
                                           "*",
                                           style: TextStyle(color: Colors.red),
@@ -247,7 +247,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                     fontWeight: FontWeight.w500),
                               ),
                               Text(
-                                "The Password must have 5 character",
+                                "core.user.character".tr,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 12,
@@ -274,7 +274,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                     // color: Colors.green,
                                     child: Row(
                                       children: [
-                                        Text("Email address"),
+                                        Text("core.user.email".tr),
                                         Text(
                                           "*",
                                           style: TextStyle(color: Colors.red),
@@ -359,7 +359,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                     // color: Colors.green,
                                     child: Row(
                                       children: [
-                                        Text("Verify email"),
+                                        Text("core.user.emailverify".tr),
                                         Text(
                                           "*",
                                           style: TextStyle(color: Colors.red),
@@ -444,7 +444,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                     // color: Colors.green,
                                     child: Row(
                                       children: [
-                                        Text("Phone"),
+                                        Text("core.user.phone1".tr),
                                         Text(
                                           "*",
                                           style: TextStyle(color: Colors.red),
@@ -522,7 +522,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("Submit",
+                                Text("core.submit".tr,
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,

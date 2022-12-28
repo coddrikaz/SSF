@@ -12,7 +12,10 @@ Map<String, String> mTelugu = {
   "addon.badges.dateawarded": "జారీ చేసిన తేదీ",
   "addon.badges.expired": "గడువు ముగిసింది",
   "addon.badges.expirydate": "గడువు తీరు తేదీ",
+  "core.user.character": "పాస్‌వర్డ్ తప్పనిసరిగా 5 అక్షరాలను కలిగి ఉండాలి",
   "core.settings.ioscookies": "క్రాస్-వెబ్‌సైట్ ట్రాకింగ్",
+  "core.user.emailverify": "ఇమెయిల్ నిర్ధారించండి",
+  "core.user.phone1": "ఫోన్",
   "addon.badges.imageauthoremail": "చిత్ర రచయిత ఇమెయిల్",
   "addon.badges.imageauthorname": "చిత్ర రచయిత పేరు",
   "addon.badges.imageauthorurl": "చిత్ర రచయిత యొక్క URL",
@@ -2734,6 +2737,7 @@ Map<String, String> mTelugu = {
   "core.login.designation": "హోదా",
   "core.login.otp": "ఓటిపి",
   "addon.privatefiles.files": "ఫైళ్లు",
+  "core.account": "ఖాతా లేదా?",
   "core.login.username.textmessage":
       "*దయచేసి వినియోగదారు పేరును చిన్న అక్షరంలో నమోదు చేయండి",
   "core.login.password.textmessage":

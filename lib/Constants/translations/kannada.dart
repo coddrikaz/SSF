@@ -17,7 +17,11 @@ Map<String, String> mKannada = {
   "core.settings.ioscookiesdescription": "ಸೈಟ್‌ನಿಂದ ಎಂಬೆಡೆಡ್ ವಿಷಯವು ಕಾರ್ಯನಿರ್ವಹಿಸಲು ಕ್ರಾಸ್-ಸೈಟ್ ಕುಕೀಗಳ ಅಗತ್ಯವಿರಬಹುದು. ಇದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು, ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್‌ನ iOS ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಹೋಗಿ ಮತ್ತು 'ಕ್ರಾಸ್-ವೆಬ್‌ಸೈಟ್ ಟ್ರ್ಯಾಕಿಂಗ್ ಅನ್ನು ಅನುಮತಿಸಿ' ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
 
   "addon.badges.issuancedetails": "ಬ್ಯಾಡ್ಜ್ ಮುಕ್ತಾಯ",
+  "core.user.character": "ಪಾಸ್ವರ್ಡ್ 5 ಅಕ್ಷರಗಳನ್ನು ಹೊಂದಿರಬೇಕು",
   "addon.badges.issuerdetails": "ವಿತರಕರ ವಿವರಗಳು",
+  "core.user.emailverify": "ಇಮೇಲ್ ಪರಿಶೀಲಿಸಿ",
+  "core.user.phone1": "ದೂರವಾಣಿ",
+  "core.account": "ಖಾತೆಯನ್ನು ಹೊಂದಿಲ್ಲವೇ?",
   "core.settings.ioscookies": "ಕ್ರಾಸ್-ವೆಬ್‌ಸೈಟ್ ಟ್ರ್ಯಾಕಿಂಗ್",
   "addon.badges.issueremail": "ಇಮೇಲ್",
   "addon.badges.issuername": "ವಿತರಕರ ಹೆಸರು",

@@ -153,7 +153,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
 
                 onPressed: () {
-                  openBrowserTab();
+
                   // Navigator.of(context).push(MaterialPageRoute(
                   //     builder: (context) => HomeScreen()));
                 },
@@ -194,7 +194,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 elevation: 0,
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
                 onPressed: () {
-                  openBrowserTabs();
+                  openBrowserTab();
                   // Navigator.of(context).push(MaterialPageRoute(
                   //     builder: (context) => HomeScreen()));
                 },
@@ -236,6 +236,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 onPressed: () {
                   // Navigator.of(context).push(MaterialPageRoute(
                   //     builder: (context) => HomeScreen()));
+                  openBrowserTabes();
                 },
                 child: Row(
                   children: [
@@ -314,6 +315,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 onPressed: () {
                   // Navigator.of(context).push(MaterialPageRoute(
                   //     builder: (context) => HomeScreen()));
+                  openBrowserTab();
                 },
                 child: Row(
                   children: [
@@ -503,13 +505,14 @@ class _MenuScreenState extends State<MenuScreen> {
       ),
     );
   }
-  openBrowserTab() async {
-    await FlutterWebBrowser.openWebPage(url: "https://www.indev.com/#services");
+  openBrowserTabes() async {
+    await FlutterWebBrowser.openWebPage(url: "https://staplefoodfortification.org/login/index.php");
   }
-  openBrowserTabs() async {
+  /*openBrowserTabs() async {
     await FlutterWebBrowser.openWebPage(url: "https://www.indevconsultancy.com");
-  }openBrowserTabes() async {
-    await FlutterWebBrowser.openWebPage(url: "https://www.canon-europe.com/apps");
+  }*/
+  openBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(url: "https://staplefoodfortification.org");
   }
   Future<void> logoutConfirm() async {
     showModalBottomSheet<void>(

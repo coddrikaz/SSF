@@ -271,9 +271,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       const SizedBox(height: 15),
-                      const Center(
+                      Center(
                         child: Text(
-                          "Dont have an account?",
+                          "core.account".tr,
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 14,
