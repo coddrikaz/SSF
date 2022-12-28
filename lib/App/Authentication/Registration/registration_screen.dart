@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/Registration/registration_controller.dart';
-import 'package:staple_food_fortification/App/Authentication/Registration/sendOtp.dart';
+import 'package:staple_food_fortification/App/Authentication/OtpScreen/sendOtp.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 

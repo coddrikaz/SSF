@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
@@ -371,23 +372,28 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
                                   width: 2.0,
                                   style: BorderStyle.solid),
                             ),
-                            child: Row(
-                              children: [
-                                Text("Prefix"),
-                                Text(
-                                  "*",
-                                  style: TextStyle(color: Colors.red),
-                                ),
+                            child: GestureDetector(
+                              onTap: () {
+                                Dailog();
+                              },
+                              child: Row(
+                                children: [
+                                  Text("Prefix"),
+                                  const Text(
+                                    "*",
+                                    style: TextStyle(color: Colors.red),
+                                  ),
 
-                                Spacer(),
-                                Text("Mr."),
-                                IconButton(
-                                    onPressed: () {
+                                  Spacer(),
+                                  Text("Mr."),
+                                  IconButton(
+                                      onPressed: () {
 
-                                    },
-                                    icon: Icon(Icons.arrow_drop_down))
-                                // Icon(Icons.arrow_drop_down),
-                              ],
+                                      },
+                                      icon: Icon(Icons.arrow_drop_down))
+                                  // Icon(Icons.arrow_drop_down),
+                                ],
+                              ),
                             ),
                           ),
 
@@ -814,6 +820,20 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
       ),
     );
   }
+
+  void Dailog(){
+    Get.defaultDialog(
+        title: "Success",
+        content: Text("Your request has been submitted successfully"),
+        textCancel: "Ok",
+        cancelTextColor: Colors.white,
+        buttonColor: SffColor.sffBlueColor,
+        radius: 10,
+        onConfirm: () {
+          Get.back();
+        });
+  }
+
 
   void showExitPopup() {
     showDialog(

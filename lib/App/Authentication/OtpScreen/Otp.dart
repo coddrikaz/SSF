@@ -1,5 +1,12 @@
+import 'dart:convert';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:get/get.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
+import 'package:staple_food_fortification/Constants/rest_api.dart';
 
 class Otp extends StatefulWidget {
   const Otp({Key? key}) : super(key: key);
@@ -9,6 +16,8 @@ class Otp extends StatefulWidget {
 }
 
 class _OtpState extends State<Otp> {
+  final usernameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +25,7 @@ class _OtpState extends State<Otp> {
         backgroundColor: SffColor.sffMainColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () => Get.back(),
         ),
         title: Text("Gain India - Stapble Food Fortification",
             style: TextStyle(
@@ -37,7 +46,7 @@ class _OtpState extends State<Otp> {
               style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold)),
             ),
             TextFormField(
-              // controller: userInput,
+              controller: usernameController,
                 cursorColor: Colors.blue,
                 style: TextStyle(
                   // fontSize: 24,
@@ -74,9 +83,8 @@ class _OtpState extends State<Otp> {
             MaterialButton(
               height: 45,
               color: SffColor.sffBlueColor,
-              onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => HomeScreen()));
+              onPressed: () async {
+               await getReg();
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -99,5 +107,39 @@ class _OtpState extends State<Otp> {
         ),
       ),
     );
+  }
+
+  Future<void> getReg() async {
+    bool result = await InternetConnectionChecker().hasConnection;
+    if (result) {
+      SmartDialog.showLoading(backDismiss: false, clickMaskDismiss: false);
+      var response = await Dio().post(RestUrl.otpLogin, data: json.encode({"mobile": usernameController.text}));
+
+      debugPrint(response.toString());
+
+      if (response.statusCode == 200) {
+        for(Map<String,dynamic> obj in response.data){
+          if(obj['status']=='200'){
+            SmartDialog.dismiss();
+            await Future.delayed(const Duration(seconds: 1));
+            SmartDialog.showToast("Otp Sent Successfully");
+          }
+          else{
+            SmartDialog.dismiss();
+            await Future.delayed(const Duration(seconds: 1));
+            SmartDialog.showToast(obj['message']);
+          }
+
+        }
+
+      }
+      else{
+        SmartDialog.showToast("Please enter correct username and password");
+        SmartDialog.dismiss();
+      }
+    } else{
+      SmartDialog.showToast("Please check Internet connection");
+      SmartDialog.dismiss();
+    }
   }
 }

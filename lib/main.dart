@@ -1,14 +1,12 @@
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive/hive.dart';
+import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:staple_food_fortification/Commons/language.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:staple_food_fortification/Commons/theme.dart';
-import 'package:staple_food_fortification/Constants/SffColor.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:staple_food_fortification/Commons/language.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
-import 'package:staple_food_fortification/Constants/translations/english.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 import 'package:staple_food_fortification/Routes/route_pages.dart';
 
@@ -20,16 +18,22 @@ Future<void> main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       minTextAdapt: true,
       builder: (context, child) {
         return GetMaterialApp(
-          smartManagement: SmartManagement.keepFactory, // Bindings factory reinitialized
+          smartManagement: SmartManagement.keepFactory,
+          // Bindings factory reinitialized
           debugShowCheckedModeBanner: false,
           locale: Get.deviceLocale,
           translations: LanguageTranslations(),

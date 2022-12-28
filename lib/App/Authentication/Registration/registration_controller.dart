@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart' hide Response;
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:staple_food_fortification/App/Authentication/Registration/sendOtp.dart';
+import 'package:staple_food_fortification/App/Authentication/OtpScreen/sendOtp.dart';
 import 'package:staple_food_fortification/Constants/rest_api.dart';
 
 class RegistrationController extends GetxController {
@@ -38,7 +38,7 @@ class RegistrationController extends GetxController {
             await Future.delayed(const Duration(seconds: 1));
             SmartDialog.showToast("Otp Sent Successfully");
           }
-          else{
+            else{
             SmartDialog.dismiss();
             await Future.delayed(const Duration(seconds: 1));
             SmartDialog.showToast(obj['message']);
