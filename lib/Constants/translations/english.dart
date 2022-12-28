@@ -1990,7 +1990,7 @@ Map<String, String> mEnglish = {
 "core.openinbrowser": "Open in browser",
 "core.openmodinbrowser": "Open {{\$a}} in browser",
 "core.opensecurityquestion": "Open security question",
-"core.opensettings": "Open settings",
+  "core.opensettings": "Open settings",
 "core.openwith": "Open with...",
 "core.othergroups": "Other groups",
 "core.pagea": "Page {{\$a}}",

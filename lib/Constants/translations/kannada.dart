@@ -14,8 +14,11 @@ Map<String, String> mKannada = {
   "addon.badges.imageauthorname": "ಚಿತ್ರದ ಲೇಖಕರ ಹೆಸರು",
   "addon.badges.imageauthorurl": "ಚಿತ್ರದ ಲೇಖಕರ URL",
   "addon.badges.imagecaption": "ಚಿತ್ರದ ಶೀರ್ಷಿಕೆ",
+  "core.settings.ioscookiesdescription": "ಸೈಟ್‌ನಿಂದ ಎಂಬೆಡೆಡ್ ವಿಷಯವು ಕಾರ್ಯನಿರ್ವಹಿಸಲು ಕ್ರಾಸ್-ಸೈಟ್ ಕುಕೀಗಳ ಅಗತ್ಯವಿರಬಹುದು. ಇದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು, ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್‌ನ iOS ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಹೋಗಿ ಮತ್ತು 'ಕ್ರಾಸ್-ವೆಬ್‌ಸೈಟ್ ಟ್ರ್ಯಾಕಿಂಗ್ ಅನ್ನು ಅನುಮತಿಸಿ' ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+
   "addon.badges.issuancedetails": "ಬ್ಯಾಡ್ಜ್ ಮುಕ್ತಾಯ",
   "addon.badges.issuerdetails": "ವಿತರಕರ ವಿವರಗಳು",
+  "core.settings.ioscookies": "ಕ್ರಾಸ್-ವೆಬ್‌ಸೈಟ್ ಟ್ರ್ಯಾಕಿಂಗ್",
   "addon.badges.issueremail": "ಇಮೇಲ್",
   "addon.badges.issuername": "ವಿತರಕರ ಹೆಸರು",
   "addon.badges.issuerurl": "ವಿತರಕರ URL",

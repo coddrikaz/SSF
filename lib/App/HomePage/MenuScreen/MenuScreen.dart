@@ -153,6 +153,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
 
                 onPressed: () {
+                  openBrowserTab();
                   // Navigator.of(context).push(MaterialPageRoute(
                   //     builder: (context) => HomeScreen()));
                 },
@@ -164,16 +165,11 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         qrCode,
                         SizedBox(width: 15),
-                        GestureDetector(
-                          onTap: (){
-                            openBrowserTab();
-                          },
-                          child: Text("Sacn QR Code",
+                        Text("Sacn QR Code",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20)),
-                        ),
                       ],
                     ),
                     Spacer(),
@@ -198,6 +194,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 elevation: 0,
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
                 onPressed: () {
+                  openBrowserTabs();
                   // Navigator.of(context).push(MaterialPageRoute(
                   //     builder: (context) => HomeScreen()));
                 },
@@ -275,6 +272,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
                 elevation: 0,
                 onPressed: () {
+                 //s openBrowserTabes();
                   Get.toNamed(RoutesName.faqs);
                 },
                 child: Row(
@@ -506,9 +504,13 @@ class _MenuScreenState extends State<MenuScreen> {
     );
   }
   openBrowserTab() async {
-    await FlutterWebBrowser.openWebPage(url: "https://www.google.com/search?q=indev+consultancy&oq=inde&aqs=chrome.0.35i39i355j46i39i175i199j69i57j69i60l5.22359j0j9&sourceid=chrome&ie=UTF-8");
+    await FlutterWebBrowser.openWebPage(url: "https://www.indev.com/#services");
   }
-
+  openBrowserTabs() async {
+    await FlutterWebBrowser.openWebPage(url: "https://www.indevconsultancy.com");
+  }openBrowserTabes() async {
+    await FlutterWebBrowser.openWebPage(url: "https://www.canon-europe.com/apps");
+  }
   Future<void> logoutConfirm() async {
     showModalBottomSheet<void>(
       // backgroundColor: Colors.teal,

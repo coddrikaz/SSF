@@ -16,4 +16,3 @@ class RestUrl {
 
   static String resendOtp = "$baseUrl/api/resend-otp.php";
 }
-x

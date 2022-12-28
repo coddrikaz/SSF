@@ -71,28 +71,25 @@ class _GeneralSettingsState extends State<GeneralSettings> {
           Container(
             padding: EdgeInsets.only(left: 15),
             height: 90,
+            //width:90,
             child: Row(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "core.settings.fontsize".tr,
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ),
-                  ],
+                Container(
+                  width: Get.width * 0.39,
+                  child:Text(
+                    "core.settings.fontsize".tr,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
                 ),
-                Spacer(),
                 CupertinoPageScaffold(
                     child: Container(
-                        alignment: Alignment.center,
+                        alignment: Alignment.centerRight,
                         //  padding: EdgeInsets.all(8),
                         child: CupertinoSegmentedControl(
-                            padding: EdgeInsets.all(3),
+                            //padding: EdgeInsets.all(2),
                             borderColor: Colors.grey,
                             selectedColor: Colors.grey,
                             pressedColor: Colors.grey.withOpacity(0.2),
@@ -100,17 +97,17 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                             children: {
                               0: Container(
                                 alignment: Alignment.center,
-                                width: 80,
+                                width: 60,
                                 child: Text('A'),
                               ),
                               1: Container(
                                 alignment: Alignment.center,
-                                width: 80,
+                                width: 60,
                                 child: Text('A'),
                               ),
                               3: Container(
                                 alignment: Alignment.center,
-                                width: 80,
+                                width: 60,
                                 child: Text('A'),
                               ),
                             },
@@ -191,7 +188,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         margin: EdgeInsets.only(bottom: 12),
                         //  padding: EdgeInsets.only(right: 20),
                         child: Text(
-                          Strings.EnableTextEditor,
+                          "core.settings.enablerichtexteditordescription".tr,
                           style: TextStyle(
                               fontSize: 16,
                               color: SffColor.sffblackLigtColor,
@@ -242,7 +239,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                 Container(
                   margin: EdgeInsets.only(bottom: 5),
                   child: Text(
-                    Strings.crossWebsiteTracking,
+                   "core.settings.ioscookiesdescription".tr,
                     style: TextStyle(
                         color: SffColor.sffblackLightColor,
                         fontWeight: FontWeight.w500),
@@ -304,7 +301,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         margin: EdgeInsets.only(bottom: 12),
                         //  padding: EdgeInsets.only(right: 20),
                         child: Text(
-                          Strings.DisplaydebugMessage,
+                         "core.settings.debugdisplaydescription".tr,
                           style: TextStyle(
                               fontSize: 16,
                               color: SffColor.sffblackLigtColor,
