@@ -423,8 +423,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                           Get.back();
                           setState(() {});
                         },
-                        child: TextView(
-                            "தமிழ்", 18.0, Colors.black, FontWeight.w500),
+                        child: TextView("தமிழ்", 18.0, Colors.black, FontWeight.w500),
                       ),
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),

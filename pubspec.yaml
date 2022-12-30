@@ -12,6 +12,7 @@ dependencies:
 
   get: ^4.6.5
   dio: ^4.0.6
+  sqflite: ^2.2.0+3
   hive:
   hive_flutter:
   cupertino_icons: ^1.0.5

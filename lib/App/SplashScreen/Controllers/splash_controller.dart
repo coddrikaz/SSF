@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Response;
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:staple_food_fortification/Commons/databasehelper.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
 import 'package:staple_food_fortification/Constants/rest_api.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
@@ -10,7 +11,10 @@ final _hiveBox = Hive.box(kDefaultHiveBox);
 
 class SplashController extends GetxController {
 
+  DatabaseHelper databaseHelper = DatabaseHelper();
+
   Future<void> check() async {
+    await couruse_download();
     if(_hiveBox.get("init_download")!=1){
       await dataDownloadFaq();
       await dataDownloadStep();
@@ -91,6 +95,30 @@ class SplashController extends GetxController {
           _hiveBox.put("FAQ_question", QNA_question);
           _hiveBox.put("FAQ_answer", QNA_answer);
         }
+      }
+    } catch (e) {}
+  }
+
+  Future<void> couruse_download() async {
+    Map<String, dynamic> formMap = {
+      "wstoken": "d9599eebafb7cf8e7c4af0940f2e4b68",
+      "wsfunction": "local_filter_course_get_courses_section_by_lang",
+      "moodlewsrestformat": "json",
+      "lang": "en",
+    };
+    try {
+      Response response = await Dio().post(RestUrl.mUrl, data: formMap, options: Options(
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      ));
+
+
+      if (response.statusCode == 200) {
+
+        var mData = response.data;
+        print("obj $mData");
+        await databaseHelper.truncateTable("Course_Selection");
+        await databaseHelper.saveMasterTable(mData, "Course_Selection");
+
       }
     } catch (e) {}
   }
