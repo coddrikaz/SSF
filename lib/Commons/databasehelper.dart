@@ -3,6 +3,7 @@ import 'dart:io' as io;
 import 'package:path/path.dart' as dbPath;
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:staple_food_fortification/Model/coursercorePojo.dart';
 import 'package:staple_food_fortification/Model/courseselectionPojo.dart';
 
 
@@ -20,12 +21,12 @@ class DatabaseHelper {
     if (_db != null) return _db;
     io.Directory documentDirectory = await getApplicationDocumentsDirectory();
     String path = dbPath.join(documentDirectory.path, _dbName);
-    return _db = await openDatabase(path,
-        version: _dbVersion, onCreate: _onDatabaseCreate);
+    return _db = await openDatabase(path, version: _dbVersion, onCreate: _onDatabaseCreate);
   }
 
   FutureOr<void> _onDatabaseCreate(Database db, int version) async {
     await db.execute(CourseSelectionPojo.createTable);
+    await db.execute(CourseCorePojo.createTable);
   }
 
   Future<int> truncateTable(String tableName) async {

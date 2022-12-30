@@ -15,6 +15,7 @@ class SplashController extends GetxController {
 
   Future<void> check() async {
     await couruse_download();
+    await couruse_core();
     if(_hiveBox.get("init_download")!=1){
       await dataDownloadFaq();
       await dataDownloadStep();
@@ -118,6 +119,30 @@ class SplashController extends GetxController {
         print("obj $mData");
         await databaseHelper.truncateTable("Course_Selection");
         await databaseHelper.saveMasterTable(mData, "Course_Selection");
+
+      }
+    } catch (e) {}
+  }
+
+  Future<void> couruse_core() async {
+    Map<String, dynamic> formMap = {
+      "wstoken": "d9599eebafb7cf8e7c4af0940f2e4b68",
+      "wsfunction": "core_course_get_contents",
+      "moodlewsrestformat": "json",
+      "courseid": "3",
+    };
+    try {
+      Response response = await Dio().post(RestUrl.mUrl, data: formMap, options: Options(
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      ));
+
+
+      if (response.statusCode == 200) {
+
+        var mData = response.data;
+        print("obj $mData");
+        await databaseHelper.truncateTable("Course_Core");
+        await databaseHelper.saveMasterTable(mData, "Course_Core");
 
       }
     } catch (e) {}
