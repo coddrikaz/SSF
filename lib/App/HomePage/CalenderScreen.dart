@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
 class CalenderScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _CalenderScreenState extends State<CalenderScreen> {
         backgroundColor: SffColor.sffMainColor,
         title: Center(
           child: Text(
-            "Calender events",
+            "addon.calendar.calendarevent".tr,
             style: TextStyle(color: Colors.white),
           ),
         ),

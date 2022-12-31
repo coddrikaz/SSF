@@ -2738,6 +2738,18 @@ Map<String, String> mTelugu = {
   "core.login.otp": "ఓటిపి",
   "addon.privatefiles.files": "ఫైళ్లు",
   "core.account": "ఖాతా లేదా?",
+  "core.user.qrcode": "qr కోడ్‌ని స్కాన్ చేయండిं",
+  "core.user.website": "వెబ్సైట్",
+  "core.are_you_sure_want_to_logout?":"మీరు ఖచ్చితంగా లాగ్ అవుట్ చేయాలనుకుంటున్నారా?",
+  "core.user.resource": "వనరులు",
+  "core.Events": "క్యాలెండర్ ఈవెంట్‌లు",
+  "core.Food": "ప్రధాన ఆహార పటిష్టత",
+  "addon.blog.gain": "Global Alliance for Improved Nutrition (GAIN)",
+  "addon. Fortification": "ఎడిబుల్ ఆయిల్ ఫోర్టిఫికేషన్",
+  "addon. by": "ద్వారా",
+  "addon.Training": "శిక్షణా కోర్సు",
+  "core.prefrences": "ప్రాధాన్యతలు",
+  "core.stable": "ప్రధాన ఆహార పటిష్టత",
   "core.login.username.textmessage":
       "*దయచేసి వినియోగదారు పేరును చిన్న అక్షరంలో నమోదు చేయండి",
   "core.login.password.textmessage":

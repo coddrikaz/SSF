@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
 class GradesScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _GradesScreenState extends State<GradesScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: SffColor.sffMainColor,
-        title: Center(child: Text("Grades", style: TextStyle(color: Colors.white),)),
+        title: Center(child: Text("core.grades.grades".tr, style: TextStyle(color: Colors.white),)),
     
       ),
 

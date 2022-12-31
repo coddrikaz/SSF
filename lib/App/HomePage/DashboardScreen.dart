@@ -29,7 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       appBar: AppBar(
        leading : Icon(Icons.arrow_back, color: SffColor.sffMainColor),
         backgroundColor: SffColor.sffMainColor,
-        title: Center(child: Text("Staple Food Fortification", style: TextStyle(color: Colors.white),)),
+        title: Center(child: Text("core.Food".tr, style: TextStyle(color: Colors.white),)),
         actions: [
           IconButton(
               onPressed: () {
@@ -67,11 +67,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             ),
                           ),
                           SizedBox(height: 10),
-                          Text("Training Course on", style: TextStyle()),
+                          Text("addon.Training".tr, style: TextStyle()),
                           SizedBox(height: 5),
-                          Text("Edible Oil Fortification", style: TextStyle(fontSize: 22 , color: SffColor.sffMainColor, fontWeight: FontWeight.bold)),
+                          Text("addon.Fortification".tr, style: TextStyle(fontSize: 22 , color: SffColor.sffMainColor, fontWeight: FontWeight.bold)),
                           SizedBox(height: 5),
-                          Text("by", style: TextStyle()),
+                          Text("addon.by".tr, style: TextStyle()),
                           SizedBox(height: 5),
                           Text("Global Alliance for Improved Nutrition (GAIN)", style: TextStyle(fontSize: 18 , fontWeight: FontWeight.bold)),
                           SizedBox(height: 15),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
 class MessagesScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
       appBar: AppBar(
         leading : Icon(Icons.arrow_back, color: SffColor.sffMainColor),
         backgroundColor: SffColor.sffMainColor,
-        title: Center(child: Text("Messages", style: TextStyle(color: Colors.white),)),
+        title: Center(child: Text("addon.messages.message".tr, style: TextStyle(color: Colors.white),)),
         actions: [
 
           IconButton(

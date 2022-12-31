@@ -21,11 +21,13 @@ class _sendOtpState extends State<sendOtp> {
   final otpController = TextEditingController();
   var phoneNum;
 
+
   @override
   void initState() {
     super.initState();
     if (Get.arguments != null) {
       phoneNum = Get.arguments;
+
     }
   }
 
@@ -128,6 +130,48 @@ class _sendOtpState extends State<sendOtp> {
 
       debugPrint("LLLLLLLLLLLLL ${response.toString()}");
       debugPrint("uuuuuuuuuuu ${phoneNum.toString()}");
+      //   var result = response.data;
+      //   debugPrint("ooooooootpppppp ${result.toString()}");
+
+      if (response.statusCode == 200) {
+        for (Map<String, dynamic> obj in response.data) {
+          if (obj['status'] == '200') {
+            Get.toNamed(RoutesName.clientRegScreen, arguments: phoneNum);
+
+            SmartDialog.dismiss();
+            await Future.delayed(const Duration(seconds: 1));
+            SmartDialog.showToast(obj['message']);
+          } else {
+            SmartDialog.dismiss();
+            await Future.delayed(const Duration(seconds: 1));
+            SmartDialog.showToast(obj['message']);
+          }
+        }
+        SmartDialog.dismiss();
+        SmartDialog.showToast("Pleaseghdtdgfdghftjfvgh");
+      } else {
+        SmartDialog.showToast("incorrect otp");
+        SmartDialog.dismiss();
+      }
+    } else {
+      SmartDialog.showToast("Please check Internet connection");
+      SmartDialog.dismiss();
+    }
+  }
+
+
+  Future<void> getOtps() async {
+    bool result = await InternetConnectionChecker().hasConnection;
+    if (result) {
+      SmartDialog.showLoading(backDismiss: false, clickMaskDismiss: false);
+      var response = await Dio().post(RestUrl.otpVerification,
+          data: json.encode({
+            "mobile": phoneNum,
+            "otp": otpController.text,
+          }));
+
+      debugPrint("LLLLLLLLLLLLL ${response.toString()}");
+      debugPrint("xxxxxxxxxxx ${phoneNum.toString()}");
       //   var result = response.data;
       //   debugPrint("ooooooootpppppp ${result.toString()}");
 

@@ -96,7 +96,7 @@ class _MenuScreenState extends State<MenuScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: SffColor.sffMainColor,
-        title: Center(child: Text("Staple Food Fortification", style: TextStyle(color: Colors.white),)),
+        title: Center(child: Text("core.stable".tr, style: TextStyle(color: Colors.white),)),
 
       ),
 
@@ -165,7 +165,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         qrCode,
                         SizedBox(width: 15),
-                        Text("Sacn QR Code",
+                        Text("core.user.qrcode".tr,
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -206,7 +206,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         globe,
                         SizedBox(width: 15),
-                        Text("Website",
+                        Text("core.user.website".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -246,7 +246,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         file,
                         SizedBox(width: 15),
-                        Text("Resources",
+                        Text("core.user.resource".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -284,7 +284,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         general,
                         SizedBox(width: 15),
-                        Text("FAQs",
+                        Text("core.mainmenu.faq".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -325,7 +325,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         help,
                         SizedBox(width: 15),
-                        Text("Help",
+                        Text("core.help".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -363,7 +363,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         general,
                         SizedBox(width: 15),
-                        Text("Prefrences",
+                        Text("core.prefrences".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -403,7 +403,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         delete,
                         SizedBox(width: 15),
-                        Text("Delete Account",
+                        Text("core.settings.delete_account".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -441,7 +441,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         logout,
                         SizedBox(width: 15),
-                        Text("Log out",
+                        Text("core.mainmenu.logout".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -483,7 +483,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       children: [
                         setting,
                         SizedBox(width: 15),
-                        Text("App settings",
+                        Text("core.settings.appsettings".tr,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -528,7 +528,7 @@ class _MenuScreenState extends State<MenuScreen> {
             CrossAxisAlignment.center,
             children: [
               Text(
-                  "Are you sure want to logout?",
+                  "core.are_you_sure_want_to_logout?".tr,
                   style: TextStyle(
                       fontSize: 16)),
               Column(
@@ -542,7 +542,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     onPressed: () {
                       Get.toNamed(RoutesName.login);
                     },
-                    child: Text("Yes",
+                    child: Text("core.yes".tr,
                         style: TextStyle(
                             color: Colors.red,
                             fontSize: 14)),
@@ -556,7 +556,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: Text("No",
+                    child: Text("core.no".tr,
                         style: TextStyle(
                             color:
                             Colors.blue,

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:staple_food_fortification/App/Authentication/OtpScreen/sendOtp.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/rest_api.dart';
 
@@ -38,7 +39,6 @@ class _OtpState extends State<Otp> {
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         child: Column(
           children: [
-
             Container(
               margin: EdgeInsets.only(bottom: 10),
               alignment: Alignment.topLeft,
@@ -122,6 +122,7 @@ class _OtpState extends State<Otp> {
           if(obj['status']=='200'){
             SmartDialog.dismiss();
             await Future.delayed(const Duration(seconds: 1));
+            Get.to(() => sendOtp(), arguments: usernameController.text);
             SmartDialog.showToast("Otp Sent Successfully");
           }
           else{

@@ -98,17 +98,17 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                               0: Container(
                                 alignment: Alignment.center,
                                 width: 60,
-                                child: Text('A'),
+                                child: Text('A',style:TextStyle(fontSize: 12)),
                               ),
                               1: Container(
                                 alignment: Alignment.center,
                                 width: 60,
-                                child: Text('A'),
+                                child: Text('A',style:TextStyle(fontSize: 14),),
                               ),
                               3: Container(
                                 alignment: Alignment.center,
                                 width: 60,
-                                child: Text('A'),
+                                child: Text('A',style: TextStyle(fontSize: 18),),
                               ),
                             },
                             onValueChanged: (val) {

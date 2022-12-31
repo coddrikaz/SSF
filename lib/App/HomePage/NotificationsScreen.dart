@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
 class NotificationsScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: SffColor.sffMainColor,
-        title: Center(child: Text("Notifications", style: TextStyle(color: Colors.white),)),
+        title: Center(child: Text("addon.notifications.notifications".tr, style: TextStyle(color: Colors.white),)),
       ),
 
       body: Container(
