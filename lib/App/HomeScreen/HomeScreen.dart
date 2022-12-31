@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:staple_food_fortification/App/HomePage/CalenderScreen.dart';
 import 'package:staple_food_fortification/App/HomePage/DashboardScreen.dart';
 import 'package:staple_food_fortification/App/HomePage/GradesScreen.dart';
@@ -8,8 +10,9 @@ import 'package:staple_food_fortification/App/HomePage/MenuScreen/MenuScreen.dar
 import 'package:staple_food_fortification/App/HomePage/MessagesScreen.dart';
 import 'package:staple_food_fortification/App/HomePage/NotificationsScreen.dart';
 import 'package:staple_food_fortification/App/HomeScreen/homeWidget.dart';
+import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
-
+import 'package:staple_food_fortification/Constants/Strings.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,6 +22,24 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  List<String> mandatory_Steps=[
+    "Staple Food Fortification: Government Regulations",
+    "Packaging and Labelling Regulations",
+    "FSSAI Endorsement Process for the Fortified Foods: FoSCoS",
+    "Premix Handling, Storage and Distribution",
+    "Process of Edible Oil Fortification",
+    "Quality Assurance and Quality Control for Fortified Edible Oil"
+
+  ];
+
+  List<String> optional_Steps=[
+    "Need and Importance of Staple Food Fortification",
+    "Myths and Frequently Asked Questions",
+    "Good Manufacturing Practices and Good Hygiene Practices",
+    "Sampling and Testing",
+    "Role of FFRC, FSSAI, and State FDA in Staple Food Fortification"
+  ];
 
   int pageIndex = 0;
 
@@ -46,63 +67,91 @@ class _HomeScreenState extends State<HomeScreen> {
   void showExitPopup() {
     showDialog(
       context: context,
-      builder: (context) =>
-          AlertDialog(
-
-            title: Container(
-              height: 500,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 15),
-                      color: SffColor.sffBlueColor,
-                      child: Text(
-                          "kjoig rieoh uhukyuyyuuyfytfu hjfjhvkgugaukaghjfkyfulf",
-                          style: TextStyle(
-                              fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold)),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                      width: double.maxFinite,
-                      child: Text("Mandatory",
-                          style: TextStyle(
-                              fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-                      width: double.maxFinite,
-                      child: Text(
-                          "Are you sure want to logouts  hjfjhvkgng b  hdgjhghdfd bafhdgkfdkuf  hdgkfdlifgleig hfjhdhfgyusdkdufyufu uyf uyfyudtfyudtsfuysdgfkgdsluhds liuhfi dgfuysgd stftd tysvcghftcyfc f sftsdfksfsgfksjf fyugsyfgysagftsagh ffsgyfgtysfyf fweagfuykcfbugeavigcauyegcaeygua eyufbgeygfcbayuegavuybegyuaegbayegyau yaebcuyagbeugyey vfygbauegacabwegbabugbuvygweugvwecabeyvcayuevwygeyvbuyeguy egbuxwyxagfeuygcbfuyage fuygbfeubfua uyegubbefgnkawfnixluhebiwnfxe fwegbxufgueybwfxuwegbfnxibfnxniafng fuyaewxgfyeawbuyfgugaukaghjfkyfulf",
-                          style: TextStyle(
-                              fontSize: 16)),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                      width: double.maxFinite,
-                      child: Text("Mandatory",
-                          style: TextStyle(
-                              fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
-                    ),
-
-
-                    Container(
-                      padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-                      width: double.maxFinite,
-                      child: Text(
-                          "Are you sure want to logouts  hjfjhvkgng b  hdgjhghdfd bafhdgkfdkuf  hdgkfdlifgleig hfjhdhfgyusdkdufyufu uyf uyfyudtfyudtsfuysdgfkgdsluhds liuhfi dgfuysgd stftd tysvcghftcyfc f sftsdfksfsgfksjf fyugsyfgysagftsagh ffsgyfgtysfyf fweagfuykcfbugeavigcauyegcaeygua eyufbgeygfcbayuegavuybegyuaegbayegyau yaebcuyagbeugyey vfygbauegacabwegbabugbuvygweugvwecabeyvcayuevwygeyvbuyeguy egbuxwyxagfeuygcbfuyage fuygbfeubfua uyegubbefgnkawfnixluhebiwnfxe fwegbxufgueybwfxuwegbfnxibfnxniafng fuyaewxgfyeawbuyfgugaukaghjfkyfulf",
-                          style: TextStyle(
-                              fontSize: 16)),
-                    ),
-                  ],
-                ),
-              ),
+      builder: (context) => AlertDialog(
+        contentPadding: EdgeInsets.zero,
+        content:  Container(
+            width: 300,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
             ),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    // color: Colors.blueAccent,
+                    width: double.maxFinite,
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(15),
+                    // height: 200,
+                    child: Text(Strings.popupHeader,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold)),
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(3),
+                    ),
+                  ),
 
-          ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    alignment: Alignment.topLeft,
+                    child: Text("Mandatory",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold)),
+                  ),
+
+                  Container(
+                    height: 200,
+                    width: 300,
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    alignment: Alignment.topLeft,
+                    child: ListViewl(mandatory_Steps, mandatory_Steps.length),
+                  ),
+
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                        vertical: 5, horizontal: 15),
+                    alignment: Alignment.topLeft,
+                    child: Text("Optional",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold)),
+                  ),
+
+                  Container(
+                    height: 200,
+                    width: 300,
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    alignment: Alignment.topLeft,
+                    child: ListViewl(optional_Steps, optional_Steps.length),
+                  ),
+                  Divider(
+                      color: Colors.black.withOpacity(0.2), height: 0.1),
+
+                  Container(
+                    width: double.infinity,
+                    child: MaterialButton(
+                      height: 45,
+                      // color: SffColor.sffBlueColor,
+                      elevation: 0,
+                      onPressed: () async {
+                        Get.back();
+                        setState(() {});
+                      },
+                      child: TextView(
+                          "Close", 18.0, Colors.red, FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+            )
+        ),
+      ),
     );
   }
 

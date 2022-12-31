@@ -7,7 +7,7 @@ class CourseSelectionPojo {
 
   factory CourseSelectionPojo.fromMap(Map<String, dynamic> json) => CourseSelectionPojo(
       id : json['id']??"" ,
-      name : json['name']??"",
+      name : json['name']??"All sections",
       section : json['section']??"",
       summary : json['summary']??"",
       sequence : json['sequence']??"" ,

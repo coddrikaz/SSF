@@ -89,7 +89,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         alignment: Alignment.centerRight,
                         //  padding: EdgeInsets.all(8),
                         child: CupertinoSegmentedControl(
-                            //padding: EdgeInsets.all(2),
+                          //padding: EdgeInsets.all(2),
                             borderColor: Colors.grey,
                             selectedColor: Colors.grey,
                             pressedColor: Colors.grey.withOpacity(0.2),
@@ -178,7 +178,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Container(
                         margin: EdgeInsets.only(top: 10),
                         child: Text(
-                            "core.settings.enablerichtexteditor".tr,
+                          "core.settings.enablerichtexteditor".tr,
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 17),
                         ),
@@ -239,7 +239,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                 Container(
                   margin: EdgeInsets.only(bottom: 5),
                   child: Text(
-                   "core.settings.ioscookiesdescription".tr,
+                    "core.settings.ioscookiesdescription".tr,
                     style: TextStyle(
                         color: SffColor.sffblackLightColor,
                         fontWeight: FontWeight.w500),
@@ -301,7 +301,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         margin: EdgeInsets.only(bottom: 12),
                         //  padding: EdgeInsets.only(right: 20),
                         child: Text(
-                         "core.settings.debugdisplaydescription".tr,
+                          "core.settings.debugdisplaydescription".tr,
                           style: TextStyle(
                               fontSize: 16,
                               color: SffColor.sffblackLigtColor,
@@ -368,7 +368,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                         spreadRadius: 5,
                         blurRadius: 7,
                         offset:
-                            const Offset(0, 3), // changes position of shadow
+                        const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
@@ -385,6 +385,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
+                          minWidth: double.infinity,
                           height: 45,
                           // color: SffColor.sffBlueColor,
                           elevation: 0,
@@ -399,6 +400,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
+                        minWidth: double.infinity,
                         height: 45,
                         // color: SffColor.sffBlueColor,
                         elevation: 0,
@@ -414,6 +416,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
+                        minWidth: double.infinity,
                         height: 45,
                         // color: SffColor.sffBlueColor,
                         elevation: 0,
@@ -428,6 +431,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
+                        minWidth: double.infinity,
                         height: 45,
                         // color: SffColor.sffBlueColor,
                         elevation: 0,
@@ -443,6 +447,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
+                          minWidth: double.infinity,
                           height: 45,
                           // color: SffColor.sffBlueColor,
                           elevation: 0,
@@ -527,6 +532,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       ),
 
                       MaterialButton(
+                          minWidth: double.infinity,
                           height: 45,
                           elevation: 0,
                           onPressed: () async {
@@ -543,6 +549,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
+                        minWidth: double.infinity,
                         height: 45,
                         // color: SffColor.sffBlueColor,
                         elevation: 0,
@@ -560,6 +567,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                       Divider(
                           color: Colors.black.withOpacity(0.2), height: 0.1),
                       MaterialButton(
+                        minWidth: double.infinity,
                         height: 45,
                         // color: SffColor.sffBlueColor,
                         elevation: 0,

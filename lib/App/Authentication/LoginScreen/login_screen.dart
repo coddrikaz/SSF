@@ -5,9 +5,10 @@ import 'package:flutter_html/style.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/ForgotScreen/Forgot.dart';
 import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_controller.dart';
-import 'package:staple_food_fortification/App/Authentication/OtpScreen/Otp.dart';
+import 'package:staple_food_fortification/App/Authentication/OtpScreen/loginWithOTP/Otp.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
+import 'package:staple_food_fortification/Constants/Strings.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 
 final _loginController = Get.find<LoginController>();
@@ -42,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
         actions: [
           IconButton(
               onPressed: () => Get.toNamed(RoutesName.settingScreen),
-              icon: const Icon(Icons.settings, color: Colors.white,))
+              icon: const Icon(Icons.settings, color: Colors.white,)),
         ],
       ),
 
@@ -174,6 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             }
                             setState(() {});
                           },
+                          cursorColor: Colors.blue,
                           decoration: InputDecoration(
                             focusColor: Colors.blue,
                             fillColor: Colors.grey,
@@ -182,6 +184,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: Colors.grey,
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),
                             ),
                           ),
                         ),
@@ -197,6 +205,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             }
                             setState(() {});
                           },
+                          cursorColor: Colors.blue,
+
                           controller: _loginController.passwordController,
                           decoration:  InputDecoration(
                             // focusColor: Colors.blue,
@@ -211,15 +221,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.w400,
                             ),
 
-                            //create lable
-                            // labelText: 'Email/Mobile',
-                            // //lable style
-                            // labelStyle: TextStyle(
-                            //   color: Colors.grey,
-                            //   fontSize: 16,
-                            //   fontFamily: "verdana_regular",
-                            //   fontWeight: FontWeight.w400,
-                            // ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),
+                            ),
                           ),
                         ),
                       ),

@@ -37,7 +37,7 @@ class Strings {
       "The duration of this course will depend upon the category chosen by the learner. It will vary from 7 minutes to 26 minutes.";
 
   static const String learn =
-      """ 1. Need and importance of staple food fortification
+  """ 1. Need and importance of staple food fortification
 2. Myths and frequently asked questions
 3. Staple food fortification: government regulations
 4. Packaging and labelling regulations
@@ -50,7 +50,7 @@ class Strings {
 11. Role of FFRC, FSSAI, and State FDA in staple food fortification""";
 
   static const String courseA =
-      """Shareable specialization and course certificates
+  """Shareable specialization and course certificates
 Self-paced learning option
 Course videos & voice-overs
 Graded quizzes with feedback
@@ -66,7 +66,25 @@ Any other interested personnel""";
 
   static const String courseAppBar = "Training Course on Edible Oil Fortification by Global Alliance for Improved Nutrition (GAIN)";
   static String crossWebsiteTracking = "core.settings.ioscookiesdescription".tr;
-  static String EnableTextEditor = "core.settings.enablerichtexteditordescription".tr;
-  static String DisplaydebugMessage = "core.settings.debugdisplaydescription".tr;
+  static String EnableTextEditor = "core.settings.enablerichtexteditordescription"
+      .tr;
+  static String DisplaydebugMessage = "core.settings.debugdisplaydescription"
+      .tr;
+
+  static String popupHeader = "All modules mentioned under the ‘Mandatory’ section need to be completed to get the course completion certificate.";
+  static String mandatory = """Staple Food Fortification: Government Regulations
+Packaging and Labelling Regulations
+FSSAI Endorsement Process for the Fortified Foods: FoSCoS
+Premix Handling, Storage and Distribution
+Process of Edible Oil Fortification
+Quality Assurance and Quality Control for Fortified Edible Oil""";
+
+  static String optional = """Need and Importance of Staple Food Fortification
+Myths and Frequently Asked Questions
+Good Manufacturing Practices and Good Hygiene Practices
+Sampling and Testing
+Role of FFRC, FSSAI, and State FDA in Staple Food Fortification""";
+
+  static String bullet = "\u2022 ";
 
 }

@@ -14,5 +14,5 @@ class RestUrl {
 
   static String resendOtp = "$baseUrl/api/resend-otp.php";
 
-  static String otpLogin = "$baseUrl/api/otp.php";
+  static String otpLogin = "$baseUrl/api/login_otp.php";
 }
