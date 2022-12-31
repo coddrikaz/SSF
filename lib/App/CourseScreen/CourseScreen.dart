@@ -258,12 +258,14 @@ class _CourseScreenState extends State<CourseScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    child: Text(item.name,
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15)),
+                    child: Flexible(
+                      child: Text(item.name,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15)),
+                    ),
                   ),
                   Container(
                     child: Text(
