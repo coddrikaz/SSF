@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
           navigatorObservers: [FlutterSmartDialog.observer],
           builder: FlutterSmartDialog.init(),
           getPages: AppRoutes.getRoutes(),
-          initialRoute: RoutesName.course,
+          initialRoute: RoutesName.splash,
         );
       },
     );

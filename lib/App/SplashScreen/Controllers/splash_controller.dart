@@ -29,11 +29,13 @@ class SplashController extends GetxController {
   }
 
   Future<void> check() async {
-    await couruse_download();
-    await couruse_core();
+
+
     if(_hiveBox.get("init_download")!=1){
       await dataDownloadFaq();
       await dataDownloadStep();
+      await couruse_download();
+      await couruse_core();
     }
 
     String? def_lang=_hiveBox.get("lang");
@@ -51,8 +53,17 @@ class SplashController extends GetxController {
       Get.updateLocale(Locale('en', 'US'));
     }
 
-    await Future.delayed(Duration(seconds: 2));
-    Get.offAllNamed(RoutesName.login);
+    bool isLoggedIn = _hiveBox.get("isLoggedIn")??false;
+
+    await Future.delayed(const Duration(seconds: 3));
+    if (isLoggedIn) {
+      Get.offAllNamed(RoutesName.homeScreen);
+    } else {
+      Get.offAllNamed(RoutesName.login);
+    }
+
+    // await Future.delayed(Duration(seconds: 2));
+    // Get.offAllNamed(RoutesName.login);
   }
 
   Future<void> dataDownloadStep() async {
@@ -81,7 +92,7 @@ class SplashController extends GetxController {
             _hiveBox.put("Steps", mlist_Steps);
             _hiveBox.put("Instructions", mlist_Instructions);
             _hiveBox.put("init_download", 1);
-            print(_hiveBox.get("init_download"));
+           // print(_hiveBox.get("init_download"));
           }
       }
     } catch (e) {}
@@ -141,7 +152,7 @@ class SplashController extends GetxController {
 
   Future<void> couruse_core() async {
     Map<String, dynamic> formMap = {
-      "wstoken": "d9599eebafb7cf8e7c4af0940f2e4b68",
+      "wstoken": "1ee714161ac036aa433737a79cd8933b",
       "wsfunction": "core_course_get_contents",
       "moodlewsrestformat": "json",
       "courseid": "3",
@@ -155,10 +166,15 @@ class SplashController extends GetxController {
       if (response.statusCode == 200) {
 
         var mData = response.data;
-        print("obj $mData");
-        await databaseHelper.truncateTable("Course_Core");
-        await databaseHelper.saveMasterTable(mData, "Course_Core");
+        print("12345y7u8o $mData");
 
+        _hiveBox.put("Course_Core", mData);
+        //print(_hiveBox.get("Course_Core"));
+        //
+        // print("obj mData");
+        //
+        // await databaseHelper.truncateTable("Course_Core");
+        // await databaseHelper.saveMasterTable(mData, "Course_Core");
       }
     } catch (e) {}
   }

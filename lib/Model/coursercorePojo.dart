@@ -1,27 +1,27 @@
 class CourseCorePojo {
 
-  String id;
+  int id;
   String name;
-  String visible;
+  int visible;
   String summary;
-  String summaryformat;
-  String section;
-  String hiddenbynumsections;
-  String uservisible;
-  String modules;
+  int summaryformat;
+  int section;
+  int hiddenbynumsections;
+  bool uservisible;
+  List<dynamic> modules;
 
   CourseCorePojo({required this.id, required this.name, required this.visible, required this.summary, required this.summaryformat, required this.section, required this.hiddenbynumsections, required this.uservisible, required this.modules});
 
   factory CourseCorePojo.fromMap(Map<String, dynamic> json) => CourseCorePojo(
-    id : json['id']??"" ,
+    id : json['id']??0 ,
     name : json['name']??"",
-    visible : json['visible']??"",
+    visible : json['visible']??0,
     summary : json['summary']??"",
-    summaryformat : json['summaryformat']??"",
-    section : json['section']??"",
-    hiddenbynumsections : json['hiddenbynumsections']??"",
-    uservisible : json['uservisible']??"",
-    modules : json['modules']??"",
+    summaryformat : json['summaryformat']??0,
+    section : json['section']??0,
+    hiddenbynumsections : json['hiddenbynumsections']??0,
+    uservisible : json['uservisible']??false,
+    modules : json['modules']??[],
   );
 
 

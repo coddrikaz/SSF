@@ -5,6 +5,7 @@ import 'package:staple_food_fortification/App/CourseScreen/webViewStack.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
+import 'package:staple_food_fortification/Model/coursercorePojo.dart';
 import 'package:staple_food_fortification/Model/courseselectionPojo.dart';
 
 final _courseController = Get.find<CourseController>();
@@ -17,8 +18,8 @@ class CourseScreen extends StatefulWidget {
 }
 
 class _CourseScreenState extends State<CourseScreen> {
-
-  late String url = "https://file-examples.com/storage/fe8a7837bf63ad8783d6a5d/2017/04/file_example_MP4_480_1_5MG.mp4";
+  late String url =
+      "https://file-examples.com/storage/fe8a7837bf63ad8783d6a5d/2017/04/file_example_MP4_480_1_5MG.mp4";
 
   @override
   void initState() {
@@ -171,16 +172,17 @@ class _CourseScreenState extends State<CourseScreen> {
             ],
           ),
         ),
-        Container(
-          // color: Colors.red,
-          height: 500,
-          width: 400,
-          // padding: EdgeInsets.symmetric(horizontal: 15),
-          child: ListView.builder(
-              itemCount: 10,
-              itemBuilder: (BuildContext context, int index) {
-                return courseContent();
-              }),
+        Expanded(
+          child: Obx(
+            () {
+              return ListView.builder(
+                itemCount: _courseController.mCoreList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return courseContent(_courseController.mCoreList[index]);
+                },
+              );
+            },
+          ),
         ),
       ],
     );
@@ -208,36 +210,22 @@ class _CourseScreenState extends State<CourseScreen> {
     );
   }
 
-  Widget courseContent() {
-    // String name = item.name.trim();
-    // bool mVisible = true;
-    // if(name==""){
-    //   name="All sections";
-    //   mVisible=false;
-    // }
+  Widget courseContent(CourseCorePojo item) {
     return Container(
-      // padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
-
+      color: SffColor.sffbackgroundColor,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            color: SffColor.sffgeyColor,
-            width: double.infinity,
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+          Padding(
+            padding: const  EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("Stple Food Fortification: Government Regulations",
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 18)),
+                TextView(item.name, 15.0, Colors.black, FontWeight.w400),
                 Container(
-                  child: Text(
-                    "Mandatory",
-                    style: TextStyle(fontWeight: FontWeight.w900),
-                  ),
+                  child:   TextView("Mandatory", 15.0, Colors.black, FontWeight.w700),
                   margin: EdgeInsets.symmetric(vertical: 2),
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
@@ -252,7 +240,6 @@ class _CourseScreenState extends State<CourseScreen> {
               ],
             ),
           ),
-
           Container(
             margin: EdgeInsets.all(10),
             height: 200,
@@ -267,15 +254,41 @@ class _CourseScreenState extends State<CourseScreen> {
             ),
 
             child: WebViewStack(url),
+          ),
 
+        ],
+      ),
+    );
+  }
+
+  Widget courseCon(CourseCorePojo item) {
+    return Container(
+      // padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
+
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            height: 200,
+            // color: Colors.red,
+            decoration: BoxDecoration(
+              border: Border.all(
+                  color: SffColor.sffgeyColor,
+                  width: 1.0,
+                  style: BorderStyle.solid),
+              borderRadius: BorderRadius.circular(20),
+              color: SffColor.sffgeyColor,
+            ),
+
+            child: WebViewStack(url),
           ),
           Container(
             padding: EdgeInsets.symmetric(vertical: 10),
             child: Row(
               children: [
                 Container(
-                  height: 60,
-                  alignment: Alignment.topLeft,
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   // color: Colors.blue,
                   child: Icon(
@@ -283,65 +296,56 @@ class _CourseScreenState extends State<CourseScreen> {
                     color: Colors.orange,
                   ),
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Stple Food Fortification: Goveions",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 15),
-                    Row(
-                      children: [
-                        Container(
-                          child: Text(
-                            "To do : View",
-                            style: TextStyle(fontWeight: FontWeight.w900),
-                          ),
-                          margin: EdgeInsets.symmetric(vertical: 2),
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: SffColor.sffgeyColor,
-                                width: 1.0,
-                                style: BorderStyle.solid),
-                            borderRadius: BorderRadius.circular(20),
-                            color: SffColor.sffgeyColor,
-                          ),
-                        ),
-                        SizedBox(width: 5),
-                        Container(
-                          child: Text(
-                            "To do: Complete the activity",
-                            style: TextStyle(fontWeight: FontWeight.w900),
-                          ),
-                          margin: EdgeInsets.symmetric(vertical: 2),
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: SffColor.sffgeyColor,
-                                width: 1.0,
-                                style: BorderStyle.solid),
-                            borderRadius: BorderRadius.circular(20),
-                            color: SffColor.sffgeyColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                Flexible(child: TextView(item.name, 18.0, Colors.black, FontWeight.w500)),
+
               ],
             ),
+          ),
+
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+
+              SizedBox(height: 15),
+              Row(
+                children: [
+                  Container(
+                    child: Text(
+                      "To do : View",
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 2),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: SffColor.sffgeyColor,
+                          width: 1.0,
+                          style: BorderStyle.solid),
+                      borderRadius: BorderRadius.circular(20),
+                      color: SffColor.sffgeyColor,
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Container(
+                    child: Text(
+                      "To do: Complete the activity",
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 2),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: SffColor.sffgeyColor,
+                          width: 1.0,
+                          style: BorderStyle.solid),
+                      borderRadius: BorderRadius.circular(20),
+                      color: SffColor.sffgeyColor,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
           Container(
             margin: EdgeInsets.only(left: 10),
