@@ -235,7 +235,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         minWidth: double.infinity,
                         height: 45,
                         color: colosd,
-                        onPressed: () async => await _loginController.getLogin(),
+                        onPressed: () async {
+                          await _loginController.getLogin();
+                        },
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
