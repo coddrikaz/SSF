@@ -42,7 +42,6 @@ class _CourseScreenState extends State<CourseScreen> {
               icon: Icon(Icons.more_vert, color: Colors.white))
         ],
       ),
-
       body: Column(
         children: [
           DefaultTabController(
@@ -81,6 +80,12 @@ class _CourseScreenState extends State<CourseScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget mGrades() {
+    return Container(
+      color: Colors.blue,
     );
   }
 
@@ -172,118 +177,70 @@ class _CourseScreenState extends State<CourseScreen> {
       builder: (context) => AlertDialog(
         contentPadding: EdgeInsets.zero,
         content: Container(
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Container(
-                    // color: Colors.blueAccent,
-                    width: double.maxFinite,
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(15),
-                    // height: 200,
-                    child: Row(
-                      children: [
-                        Icon(Icons.close, color: SffColor.sffMainColor),
-                        Spacer(),
-                        Text("Sections",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w900)),
-                        Spacer(),
-                        GestureDetector(
-                          onTap: ()=> Get.back(),
-                          child: Icon(Icons.close, color: Colors.white),
-                        )
-                      ],
-                    ),
-                    decoration: BoxDecoration(
-                      color: SffColor.sffMainColor,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                  ),
-                  Divider(color: Colors.black.withOpacity(0.2), height: 0.1),
-                  Obx(() {
-                    return Container(
-                      height: 400,
-                      width: 300,
-                      // padding: EdgeInsets.symmetric(horizontal: 15),
-                      alignment: Alignment.topLeft,
-                      child: ListView.builder(
-                          itemCount: _courseController.list_data.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            return Containlist(
-                                _courseController.list_data[index]);
-                          }),
-                    );
-                  }),
-                ],
-              ),
-            )),
+          height: 400,
+          width: 400,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: ListView.builder(
+              itemCount: _courseController.list_data.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Containlist(
+                    _courseController.list_data[index]);
+              }),
+        ),
       ),
     );
   }
 
-  Widget mGrades() {
-    return Container(
-      color: Colors.blue,
-    );
-  }
-
   Widget Containlist(CourseSelectionPojo item) {
+    String name = item.name.trim();
+    bool mVisible = true;
+    if(name==""){
+      name="All sections";
+      mVisible=false;
+    }
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        MaterialButton(
-          minWidth: double.infinity,
-          height: 45,
-          // color: SffColor.sffBlueColor,
-          elevation: 0,
-          onPressed: () async {
-            Get.back();
-            setState(() {});
-          },
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(Icons.tab_sharp),
-              SizedBox(width: 15),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    child: Text(item.name,
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15)),
-                  ),
-                  Container(
-                    child: Text(
-                      "Mandatory",
-                      style: TextStyle(fontWeight: FontWeight.w900),
-                    ),
-                    margin: EdgeInsets.symmetric(vertical: 2),
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: SffColor.sffYelowColor,
-                          width: 1.0,
-                          style: BorderStyle.solid),
-                      borderRadius: BorderRadius.circular(20),
-                      color: SffColor.sffYelowColor,
-                    ),
-                  )
-                ],
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(Icons.tab_sharp),
+            SizedBox(width: 15),
+            Flexible(
+              child: Text(name,
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15)),
+            ),
+          ],
+        ),
+        Visibility(
+          visible:mVisible,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 32.0),
+            child: Container(
+              child: Text(
+                "Mandatory",
+                style: TextStyle(fontWeight: FontWeight.w900),
               ),
-            ],
+              margin: EdgeInsets.symmetric(vertical: 2),
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                border: Border.all(
+                    color: SffColor.sffYelowColor,
+                    width: 1.0,
+                    style: BorderStyle.solid),
+                borderRadius: BorderRadius.circular(20),
+                color: SffColor.sffYelowColor,
+              ),
+            ),
           ),
         ),
         Divider(color: Colors.black.withOpacity(0.2), height: 0.1),
