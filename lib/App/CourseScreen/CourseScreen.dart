@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/CourseScreen/courseController.dart';
+import 'package:staple_food_fortification/App/CourseScreen/webViewStack.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
@@ -16,6 +17,9 @@ class CourseScreen extends StatefulWidget {
 }
 
 class _CourseScreenState extends State<CourseScreen> {
+
+  late String url = "https://file-examples.com/storage/fe8a7837bf63ad8783d6a5d/2017/04/file_example_MP4_480_1_5MG.mp4";
+
   @override
   void initState() {
     super.initState();
@@ -151,7 +155,7 @@ class _CourseScreenState extends State<CourseScreen> {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                 child: const Text(
                     "Note: Please complete all the modules marked as mandatory to get the course certificate.",
                     style: TextStyle(
@@ -166,7 +170,18 @@ class _CourseScreenState extends State<CourseScreen> {
               SizedBox(height: 15),
             ],
           ),
-        )
+        ),
+        Container(
+          // color: Colors.red,
+          height: 500,
+          width: 400,
+          // padding: EdgeInsets.symmetric(horizontal: 15),
+          child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index) {
+                return courseContent();
+              }),
+        ),
       ],
     );
   }
@@ -186,10 +201,245 @@ class _CourseScreenState extends State<CourseScreen> {
           child: ListView.builder(
               itemCount: _courseController.list_data.length,
               itemBuilder: (BuildContext context, int index) {
-                return Containlist(
-                    _courseController.list_data[index]);
+                return Containlist(_courseController.list_data[index]);
               }),
         ),
+      ),
+    );
+  }
+
+  Widget courseContent() {
+    // String name = item.name.trim();
+    // bool mVisible = true;
+    // if(name==""){
+    //   name="All sections";
+    //   mVisible=false;
+    // }
+    return Container(
+      // padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
+
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            color: SffColor.sffgeyColor,
+            width: double.infinity,
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Stple Food Fortification: Government Regulations",
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 18)),
+                Container(
+                  child: Text(
+                    "Mandatory",
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: 2),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: SffColor.sffYelowColor,
+                        width: 1.0,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(20),
+                    color: SffColor.sffYelowColor,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.all(10),
+            height: 200,
+            // color: Colors.red,
+            decoration: BoxDecoration(
+              border: Border.all(
+                  color: SffColor.sffgeyColor,
+                  width: 1.0,
+                  style: BorderStyle.solid),
+              borderRadius: BorderRadius.circular(20),
+              color: SffColor.sffgeyColor,
+            ),
+
+            child: WebViewStack(url),
+
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              children: [
+                Container(
+                  height: 60,
+                  alignment: Alignment.topLeft,
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  // color: Colors.blue,
+                  child: Icon(
+                    Icons.book,
+                    color: Colors.orange,
+                  ),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Stple Food Fortification: Goveions",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500, fontSize: 18),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 15),
+                    Row(
+                      children: [
+                        Container(
+                          child: Text(
+                            "To do : View",
+                            style: TextStyle(fontWeight: FontWeight.w900),
+                          ),
+                          margin: EdgeInsets.symmetric(vertical: 2),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: SffColor.sffgeyColor,
+                                width: 1.0,
+                                style: BorderStyle.solid),
+                            borderRadius: BorderRadius.circular(20),
+                            color: SffColor.sffgeyColor,
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Container(
+                          child: Text(
+                            "To do: Complete the activity",
+                            style: TextStyle(fontWeight: FontWeight.w900),
+                          ),
+                          margin: EdgeInsets.symmetric(vertical: 2),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: SffColor.sffgeyColor,
+                                width: 1.0,
+                                style: BorderStyle.solid),
+                            borderRadius: BorderRadius.circular(20),
+                            color: SffColor.sffgeyColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 10),
+            height: 0.3,
+            color: Colors.grey,
+          ),
+          // Divider(color: Colors.black, height: 0.3),
+          Container(
+            color: SffColor.sffbackgroundColor,
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              children: [
+                Container(
+                  height: 60,
+                  alignment: Alignment.topLeft,
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  // color: Colors.blue,
+                  child: Icon(Icons.file_copy_rounded),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Staple Food Fortification: Government",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                    ),
+                    Container(
+                      child: Text(
+                        "To do : View",
+                        style: TextStyle(fontWeight: FontWeight.w900),
+                      ),
+                      margin: EdgeInsets.symmetric(vertical: 2),
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: SffColor.sffgeyColor,
+                            width: 1.0,
+                            style: BorderStyle.solid),
+                        borderRadius: BorderRadius.circular(20),
+                        color: SffColor.sffgeyColor,
+                      ),
+                    ),
+                    Text(
+                      "Food Fortification: Govei",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                    ),
+                    SizedBox(height: 15),
+                    Row(
+                      children: [
+                        Container(
+                          child: Text(
+                            "To do : Recive grade",
+                            style: TextStyle(fontWeight: FontWeight.w900),
+                          ),
+                          margin: EdgeInsets.symmetric(vertical: 2),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: SffColor.sffgeyColor,
+                                width: 1.0,
+                                style: BorderStyle.solid),
+                            borderRadius: BorderRadius.circular(20),
+                            color: SffColor.sffgeyColor,
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Container(
+                          child: Text(
+                            "To do: Recive a pass grade",
+                            style: TextStyle(fontWeight: FontWeight.w900),
+                          ),
+                          margin: EdgeInsets.symmetric(vertical: 2),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: SffColor.sffgeyColor,
+                                width: 1.0,
+                                style: BorderStyle.solid),
+                            borderRadius: BorderRadius.circular(20),
+                            color: SffColor.sffgeyColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 10),
+            height: 0.3,
+            color: Colors.grey,
+          ),
+        ],
       ),
     );
   }
@@ -197,54 +447,58 @@ class _CourseScreenState extends State<CourseScreen> {
   Widget Containlist(CourseSelectionPojo item) {
     String name = item.name.trim();
     bool mVisible = true;
-    if(name==""){
-      name="All sections";
-      mVisible=false;
+    if (name == "") {
+      name = "All sections";
+      mVisible = false;
     }
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(Icons.tab_sharp),
-            SizedBox(width: 15),
-            Flexible(
-              child: Text(name,
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15)),
-            ),
-          ],
-        ),
-        Visibility(
-          visible:mVisible,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 32.0),
-            child: Container(
-              child: Text(
-                "Mandatory",
-                style: TextStyle(fontWeight: FontWeight.w900),
+    return Container(
+      padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.tab_sharp),
+              SizedBox(width: 15),
+              Flexible(
+                child: Text(name,
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15)),
               ),
-              margin: EdgeInsets.symmetric(vertical: 2),
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              decoration: BoxDecoration(
-                border: Border.all(
-                    color: SffColor.sffYelowColor,
-                    width: 1.0,
-                    style: BorderStyle.solid),
-                borderRadius: BorderRadius.circular(20),
-                color: SffColor.sffYelowColor,
+            ],
+          ),
+          Visibility(
+            visible: mVisible,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 32.0),
+              child: Container(
+                child: Text(
+                  "Mandatory",
+                  style: TextStyle(fontWeight: FontWeight.w900),
+                ),
+                margin: EdgeInsets.symmetric(vertical: 2),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                      color: SffColor.sffYelowColor,
+                      width: 1.0,
+                      style: BorderStyle.solid),
+                  borderRadius: BorderRadius.circular(20),
+                  color: SffColor.sffYelowColor,
+                ),
               ),
             ),
           ),
-        ),
-        Divider(color: Colors.black.withOpacity(0.2), height: 0.1),
-      ],
+          SizedBox(height: 10),
+          Divider(color: Colors.black.withOpacity(0.2), height: 0.1),
+        ],
+      ),
     );
   }
 }

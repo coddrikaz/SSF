@@ -79,28 +79,38 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           SizedBox(height: 10),
                           Text(Strings.aboutCourse, style: TextStyle()),
                           SizedBox(height: 15),
-                          Text("Duration:", style: TextStyle(fontSize: 18 , fontWeight: FontWeight.bold)),
-                          SizedBox(height: 5),
-                          Text(Strings.duration, style: TextStyle()),
-                          SizedBox(height: 15),
-                          Text("What you will learn:", style: TextStyle(fontSize: 18 , fontWeight: FontWeight.bold)),
-                          SizedBox(height: 10),
-                          Text(Strings.learn, style: TextStyle()),
-                          SizedBox(height: 15),
-                          Text("Course Attractions:", style: TextStyle(fontSize: 18 , fontWeight: FontWeight.bold)),
-                          SizedBox(height: 10),
-                          Text(Strings.courseA, style: TextStyle()),
-                          SizedBox(height: 15),
-                          Text("Target Audience:", style: TextStyle(fontSize: 18 , fontWeight: FontWeight.bold)),
-                          SizedBox(height: 10),
-                          Text(Strings.targetA, style: TextStyle()),
-
-                          SizedBox(height: 30),
-
-                          ElevatedButton(onPressed: (){
-                            Get.toNamed(RoutesName.course);
-                          },
-                              style: ButtonStyle(
+                        Text("Duration:",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 5),
+                        Text(Strings.duration, style: TextStyle()),
+                        SizedBox(height: 15),
+                        Text("What you will learn:",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 10),
+                        Text(Strings.learn, style: TextStyle()),
+                        SizedBox(height: 15),
+                        Text("Course Attractions:",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 10),
+                        Container(
+                          alignment: Alignment.topLeft,
+                          child: Text(Strings.courseA, style: TextStyle()),
+                        ),
+                        SizedBox(height: 15),
+                        Text("Target Audience:",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 10),
+                        Text(Strings.targetA, style: TextStyle()),
+                        SizedBox(height: 30),
+                        ElevatedButton(
+                            onPressed: () {
+                              Get.toNamed(RoutesName.course);
+                            },
+                            style: ButtonStyle(
                                   foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                                   backgroundColor: MaterialStateProperty.all<Color>( SffColor.sffMainColor),
                                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(

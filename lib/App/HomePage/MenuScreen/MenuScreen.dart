@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_web_browser/flutter_web_browser.dart';
 import 'package:get/get.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:staple_food_fortification/App/HomePage/MenuScreen/Prefrences/prefrencesScreen.dart';
 import 'package:staple_food_fortification/App/Settings/settings.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
+import 'package:staple_food_fortification/Constants/Strings.dart';
 import 'package:staple_food_fortification/Routes/route_names.dart';
 
 
@@ -14,8 +16,11 @@ class MenuScreen extends StatefulWidget {
   @override
   State<MenuScreen> createState() => _MenuScreenState();
 }
+final _hiveBox = Hive.box(kDefaultHiveBox);
 
 class _MenuScreenState extends State<MenuScreen> {
+
+  bool isLoggedIn = true;
   @override
   Widget build(BuildContext context) {
 
@@ -541,6 +546,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     ),
                     onPressed: () {
                       Get.toNamed(RoutesName.login);
+                      // _hiveBox.put("isLoggedIn", false);
                     },
                     child: Text("core.yes".tr,
                         style: TextStyle(

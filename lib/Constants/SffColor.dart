@@ -12,4 +12,6 @@ class SffColor {
   static const sffblackLightColor = Color(0xFF1F1F1F);
   static const sffblackLigtColor = Color(0xFF414040);
   static const sffYelowColor = Color(0xFFFFC400);
+  static const sffbackgroundColor = Color(0xFFFCF9F9);
+
 }

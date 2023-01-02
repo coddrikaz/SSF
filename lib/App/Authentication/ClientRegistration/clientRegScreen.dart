@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/ClientRegistration/clientRegController.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
@@ -379,7 +377,7 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
                             ),
                             child: GestureDetector(
                               onTap: () {
-                                Dailog();
+                                showPrefixPopup();
                               },
                               child: Row(
                                 children: [
@@ -829,17 +827,63 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
     );
   }
 
+  void showPrefixPopup() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        contentPadding: EdgeInsets.zero,
+        content: Container(
+          height: 400,
+          width: 400,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Containlist("hkb"),
+        ),
+      ),
+    );
+  }
+
+  Widget Containlist(String item) {
+    return Container(
+      padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
+      child:  Column(
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            color: SffColor.sffBlueColor,
+            child: Text(
+                "Prefiix *",
+                style: TextStyle(
+                    fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold)),
+          ),
+
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+            width: double.maxFinite,
+            child: Text("Mandatory",
+                style: TextStyle(
+                    fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
+          ),
+
+        ],
+      ),
+    );
+  }
+
   void Dailog(){
     Get.defaultDialog(
-        title: "Success",
-        content: Text("Your request has been submitted successfully"),
-        textCancel: "Ok",
-        cancelTextColor: Colors.white,
-        buttonColor: SffColor.sffBlueColor,
-        radius: 10,
-        onConfirm: () {
-          Get.back();
-        });
+      // title: "Success",
+      content: Text("Your request has been submitted successfully"),
+      textCancel: "Ok",
+      cancelTextColor: Colors.white,
+      buttonColor: SffColor.sffBlueColor,
+      radius: 10,
+      // onConfirm: () {
+      //   Get.back();
+      // },
+    );
   }
 
 

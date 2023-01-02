@@ -50,19 +50,19 @@ class Strings {
 11. Role of FFRC, FSSAI, and State FDA in staple food fortification""";
 
   static const String courseA =
-  """Shareable specialization and course certificates
-Self-paced learning option
-Course videos & voice-overs
-Graded quizzes with feedback
-Instructive hands-on practical video sessions
-Online training with easy accessibility on all devices, including smartphones
-Explore new career avenues with certificate course as a value addition to the resume
-Competitive job opportunities with potentials for higher remuneration""";
+  """\u2022 Shareable specialization and course certificates  
+\u2022 Self-paced learning option
+\u2022 Course videos & voice-overs
+\u2022 Graded quizzes with feedback
+\u2022 Instructive hands-on practical video sessions
+\u2022 Online training with easy accessibility on all devices, including smartphones
+\u2022 Explore new career avenues with certificate course as a value addition to the resume
+\u2022 Competitive job opportunities with potentials for higher remuneration""";
 
-  static const String targetA = """Edible oil industry professionals​
-Officials from State Food and Drug Administration (FDA)/Food Safety and Standards Authority of India​ (FSSAI)
-Students and faculty from various food technology & food and nutrition institutes​
-Any other interested personnel""";
+  static const String targetA = """\u2022 Edible oil industry professionals​
+\u2022 Officials from State Food and Drug Administration (FDA)/Food Safety and Standards Authority of India​ (FSSAI)
+\u2022 Students and faculty from various food technology & food and nutrition institutes​
+\u2022 Any other interested personnel""";
 
   static const String courseAppBar = "Training Course on Edible Oil Fortification by Global Alliance for Improved Nutrition (GAIN)";
   static String crossWebsiteTracking = "core.settings.ioscookiesdescription".tr;

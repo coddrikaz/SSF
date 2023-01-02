@@ -68,7 +68,7 @@ class _FaqsScreenState extends State<FaqsScreen> {
                 width: 30,
                 color: SffColor.sffMainColor,
                 child: Text(
-                  "$index",
+                  "${index+1}",
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ),
@@ -83,6 +83,8 @@ class _FaqsScreenState extends State<FaqsScreen> {
                   setState(() {});
                 },
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Visibility(
                         visible: show == false,

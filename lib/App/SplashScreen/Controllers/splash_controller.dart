@@ -13,12 +13,12 @@ class SplashController extends GetxController {
 
   DatabaseHelper databaseHelper = DatabaseHelper();
 
-  bool isLoggedIn = false;
+  // late bool isLoggedIn;
 
   void checkLogin() async {
     // bool isLoggedIn = await SharedPrefHelper.getIsLoginValue();
 
-    isLoggedIn = _hiveBox.get("isLoggedIn");
+    bool isLoggedIn = _hiveBox.get("isLoggedIn");
 
     await Future.delayed(const Duration(seconds: 3));
     if (isLoggedIn) {

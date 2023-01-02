@@ -41,9 +41,12 @@ class LoginController extends GetxController {
              var result = response.data;
              debugPrint(result.toString());
 
+             // _hiveBox.put("isLoggedIn", true);
+
              SmartDialog.dismiss();
              await Future.delayed(const Duration(seconds: 1));
              SmartDialog.showToast("Login Successfully");
+
              Get.offAllNamed(RoutesName.homeScreen);
            }
          }
