@@ -1,3 +1,5 @@
+
+import 'package:balanced_text/balanced_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/CourseScreen/courseController.dart';
@@ -210,12 +212,14 @@ class _CourseScreenState extends State<CourseScreen> {
     );
   }
 
+
   Widget courseContent(CourseCorePojo item) {
     return Container(
-      color: SffColor.sffbackgroundColor,
+      // padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
+
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const  EdgeInsets.symmetric(horizontal: 15, vertical: 5),
@@ -241,50 +245,6 @@ class _CourseScreenState extends State<CourseScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(10),
-            height: 200,
-            // color: Colors.red,
-            decoration: BoxDecoration(
-              border: Border.all(
-                  color: SffColor.sffgeyColor,
-                  width: 1.0,
-                  style: BorderStyle.solid),
-              borderRadius: BorderRadius.circular(20),
-              color: SffColor.sffgeyColor,
-            ),
-
-            child: WebViewStack(url),
-          ),
-
-        ],
-      ),
-    );
-  }
-
-  Widget courseCon(CourseCorePojo item) {
-    return Container(
-      // padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
-
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            margin: EdgeInsets.all(10),
-            height: 200,
-            // color: Colors.red,
-            decoration: BoxDecoration(
-              border: Border.all(
-                  color: SffColor.sffgeyColor,
-                  width: 1.0,
-                  style: BorderStyle.solid),
-              borderRadius: BorderRadius.circular(20),
-              color: SffColor.sffgeyColor,
-            ),
-
-            child: WebViewStack(url),
-          ),
-          Container(
             padding: EdgeInsets.symmetric(vertical: 10),
             child: Row(
               children: [
@@ -296,61 +256,66 @@ class _CourseScreenState extends State<CourseScreen> {
                     color: Colors.orange,
                   ),
                 ),
-                Flexible(child: TextView(item.name, 18.0, Colors.black, FontWeight.w500)),
+                Flexible(child: TextView(item.name, 16.0, Colors.black, FontWeight.w400)),
 
               ],
             ),
           ),
-
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-
-              SizedBox(height: 15),
-              Row(
-                children: [
-                  Container(
-                    child: Text(
-                      "To do : View",
-                      style: TextStyle(fontWeight: FontWeight.w900),
-                    ),
-                    margin: EdgeInsets.symmetric(vertical: 2),
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: SffColor.sffgeyColor,
-                          width: 1.0,
-                          style: BorderStyle.solid),
-                      borderRadius: BorderRadius.circular(20),
-                      color: SffColor.sffgeyColor,
-                    ),
+          Padding(
+            padding: const  EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+            child: Row(
+              children: [
+                Container(
+                  child: Text(
+                    "To do : View",
+                    style: TextStyle(fontWeight: FontWeight.w900),
                   ),
-                  SizedBox(width: 5),
-                  Container(
-                    child: Text(
-                      "To do: Complete the activity",
-                      style: TextStyle(fontWeight: FontWeight.w900),
-                    ),
-                    margin: EdgeInsets.symmetric(vertical: 2),
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: SffColor.sffgeyColor,
-                          width: 1.0,
-                          style: BorderStyle.solid),
-                      borderRadius: BorderRadius.circular(20),
-                      color: SffColor.sffgeyColor,
-                    ),
+                  margin: EdgeInsets.symmetric(vertical: 2),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: SffColor.sffgeyColor,
+                        width: 1.0,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(20),
+                    color: SffColor.sffgeyColor,
                   ),
-                ],
-              ),
-            ],
+                ),
+                SizedBox(width: 5),
+                Container(
+                  child: Text(
+                    "To do: Complete the activity",
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: 2),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: SffColor.sffgeyColor,
+                        width: 1.0,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(20),
+                    color: SffColor.sffgeyColor,
+                  ),
+                ),
+              ],
+            ),
           ),
           Container(
             margin: EdgeInsets.only(left: 10),
             height: 0.3,
             color: Colors.grey,
+          ),
+
+          Container(
+            color: SffColor.sffbackgroundColor,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal:42,vertical: 7),
+              child: Text(
+                "Quiz : ${item.name}",
+                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15),
+              ),
+            ),
           ),
           // Divider(color: Colors.black, height: 0.3),
           Container(
@@ -369,15 +334,10 @@ class _CourseScreenState extends State<CourseScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Staple Food Fortification: Government",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
                     Container(
                       child: Text(
-                        "To do : View",
-                        style: TextStyle(fontWeight: FontWeight.w900),
+                        "Restricted",
+                        style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                       margin: EdgeInsets.symmetric(vertical: 2),
                       padding: EdgeInsets.symmetric(horizontal: 10),
@@ -387,7 +347,7 @@ class _CourseScreenState extends State<CourseScreen> {
                             width: 1.0,
                             style: BorderStyle.solid),
                         borderRadius: BorderRadius.circular(20),
-                        color: SffColor.sffgeyColor,
+                        color: Colors.blueAccent,
                       ),
                     ),
                     Text(
