@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:staple_food_fortification/App/CourseScreen/CourseView/view.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
@@ -23,9 +24,7 @@ class _CourseViewState extends State<CourseView> {
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Get.back(),
         ),
-        title: Center(
-            child: TextView(
-                Strings.courseAppBar, 18.0, Colors.white, FontWeight.w700)),
+        title: Center(child: TextView(Strings.courseAppBar, 18.0, Colors.white, FontWeight.w700)),
         actions: [
           IconButton(
               onPressed: () {},
@@ -227,6 +226,8 @@ class _CourseViewState extends State<CourseView> {
                                 onPressed: () {
                                   // Navigator.of(context).push(MaterialPageRoute(
                                   //     builder: (context) => HomeScreen()));
+
+                                  Get.to(() => ViewVideo());
                                 },
                                 child: Container(
                                   // width: double.infinity,

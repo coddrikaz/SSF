@@ -2,6 +2,7 @@
 import 'package:balanced_text/balanced_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:staple_food_fortification/App/CourseScreen/CourseView/courseView.dart';
 import 'package:staple_food_fortification/App/CourseScreen/courseController.dart';
 import 'package:staple_food_fortification/App/CourseScreen/webViewStack.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
@@ -217,193 +218,198 @@ class _CourseScreenState extends State<CourseScreen> {
     return Container(
       // padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
 
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const  EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                TextView(item.name, 15.0, Colors.black, FontWeight.w400),
-                Container(
-                  child:   TextView("Mandatory", 15.0, Colors.black, FontWeight.w700),
-                  margin: EdgeInsets.symmetric(vertical: 2),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: SffColor.sffYelowColor,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(20),
-                    color: SffColor.sffYelowColor,
+      child: GestureDetector(
+        onTap: () {
+          Get.to(() => CourseView());
+        },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const  EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  TextView(item.name, 15.0, Colors.black, FontWeight.w400),
+                  Container(
+                    child:   TextView("Mandatory", 15.0, Colors.black, FontWeight.w700),
+                    margin: EdgeInsets.symmetric(vertical: 2),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: SffColor.sffYelowColor,
+                          width: 1.0,
+                          style: BorderStyle.solid),
+                      borderRadius: BorderRadius.circular(20),
+                      color: SffColor.sffYelowColor,
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 10),
-            child: Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  // color: Colors.blue,
-                  child: Icon(
-                    Icons.book,
-                    color: Colors.orange,
-                  ),
-                ),
-                Flexible(child: TextView(item.name, 16.0, Colors.black, FontWeight.w400)),
-
-              ],
-            ),
-          ),
-          Padding(
-            padding: const  EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-            child: Row(
-              children: [
-                Container(
-                  child: Text(
-                    "To do : View",
-                    style: TextStyle(fontWeight: FontWeight.w900),
-                  ),
-                  margin: EdgeInsets.symmetric(vertical: 2),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: SffColor.sffgeyColor,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(20),
-                    color: SffColor.sffgeyColor,
-                  ),
-                ),
-                SizedBox(width: 5),
-                Container(
-                  child: Text(
-                    "To do: Complete the activity",
-                    style: TextStyle(fontWeight: FontWeight.w900),
-                  ),
-                  margin: EdgeInsets.symmetric(vertical: 2),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: SffColor.sffgeyColor,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(20),
-                    color: SffColor.sffgeyColor,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 10),
-            height: 0.3,
-            color: Colors.grey,
-          ),
-
-          Container(
-            color: SffColor.sffbackgroundColor,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal:42,vertical: 7),
-              child: Text(
-                "Quiz : ${item.name}",
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15),
+                ],
               ),
             ),
-          ),
-          // Divider(color: Colors.black, height: 0.3),
-          Container(
-            color: SffColor.sffbackgroundColor,
-            padding: EdgeInsets.symmetric(vertical: 10),
-            child: Row(
-              children: [
-                Container(
-                  height: 60,
-                  alignment: Alignment.topLeft,
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  // color: Colors.blue,
-                  child: Icon(Icons.file_copy_rounded),
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      child: Text(
-                        "Restricted",
-                        style: TextStyle(fontWeight: FontWeight.w700),
-                      ),
-                      margin: EdgeInsets.symmetric(vertical: 2),
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                            color: SffColor.sffgeyColor,
-                            width: 1.0,
-                            style: BorderStyle.solid),
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.blueAccent,
-                      ),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    // color: Colors.blue,
+                    child: Icon(
+                      Icons.book,
+                      color: Colors.orange,
                     ),
-                    Text(
-                      "Food Fortification: Govei",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    SizedBox(height: 15),
-                    Row(
-                      children: [
-                        Container(
-                          child: Text(
-                            "To do : Recive grade",
-                            style: TextStyle(fontWeight: FontWeight.w900),
-                          ),
-                          margin: EdgeInsets.symmetric(vertical: 2),
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: SffColor.sffgeyColor,
-                                width: 1.0,
-                                style: BorderStyle.solid),
-                            borderRadius: BorderRadius.circular(20),
-                            color: SffColor.sffgeyColor,
-                          ),
-                        ),
-                        SizedBox(width: 5),
-                        Container(
-                          child: Text(
-                            "To do: Recive a pass grade",
-                            style: TextStyle(fontWeight: FontWeight.w900),
-                          ),
-                          margin: EdgeInsets.symmetric(vertical: 2),
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: SffColor.sffgeyColor,
-                                width: 1.0,
-                                style: BorderStyle.solid),
-                            borderRadius: BorderRadius.circular(20),
-                            color: SffColor.sffgeyColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+                  ),
+                  Flexible(child: TextView(item.name, 16.0, Colors.black, FontWeight.w400)),
+
+                ],
+              ),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 10),
-            height: 0.3,
-            color: Colors.grey,
-          ),
-        ],
+            Padding(
+              padding: const  EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              child: Row(
+                children: [
+                  Container(
+                    child: Text(
+                      "To do : View",
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 2),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: SffColor.sffgeyColor,
+                          width: 1.0,
+                          style: BorderStyle.solid),
+                      borderRadius: BorderRadius.circular(20),
+                      color: SffColor.sffgeyColor,
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Container(
+                    child: Text(
+                      "To do: Complete the activity",
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 2),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: SffColor.sffgeyColor,
+                          width: 1.0,
+                          style: BorderStyle.solid),
+                      borderRadius: BorderRadius.circular(20),
+                      color: SffColor.sffgeyColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 10),
+              height: 0.3,
+              color: Colors.grey,
+            ),
+
+            Container(
+              color: SffColor.sffbackgroundColor,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal:42,vertical: 7),
+                child: Text(
+                  "Quiz : ${item.name}",
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15),
+                ),
+              ),
+            ),
+            // Divider(color: Colors.black, height: 0.3),
+            Container(
+              color: SffColor.sffbackgroundColor,
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 60,
+                    alignment: Alignment.topLeft,
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    // color: Colors.blue,
+                    child: Icon(Icons.file_copy_rounded),
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        child: Text(
+                          "Restricted",
+                          style: TextStyle(fontWeight: FontWeight.w700),
+                        ),
+                        margin: EdgeInsets.symmetric(vertical: 2),
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: SffColor.sffgeyColor,
+                              width: 1.0,
+                              style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                      Text(
+                        "Food Fortification: Govei",
+                        style:
+                            TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                      ),
+                      SizedBox(height: 15),
+                      Row(
+                        children: [
+                          Container(
+                            child: Text(
+                              "To do : Recive grade",
+                              style: TextStyle(fontWeight: FontWeight.w900),
+                            ),
+                            margin: EdgeInsets.symmetric(vertical: 2),
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: SffColor.sffgeyColor,
+                                  width: 1.0,
+                                  style: BorderStyle.solid),
+                              borderRadius: BorderRadius.circular(20),
+                              color: SffColor.sffgeyColor,
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          Container(
+                            child: Text(
+                              "To do: Recive a pass grade",
+                              style: TextStyle(fontWeight: FontWeight.w900),
+                            ),
+                            margin: EdgeInsets.symmetric(vertical: 2),
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: SffColor.sffgeyColor,
+                                  width: 1.0,
+                                  style: BorderStyle.solid),
+                              borderRadius: BorderRadius.circular(20),
+                              color: SffColor.sffgeyColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 10),
+              height: 0.3,
+              color: Colors.grey,
+            ),
+          ],
+        ),
       ),
     );
   }

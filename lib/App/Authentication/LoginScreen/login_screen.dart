@@ -46,9 +46,9 @@ class _LoginScreenState extends State<LoginScreen> {
               onPressed: () => Get.toNamed(RoutesName.settingScreen),
               icon: const Icon(Icons.settings, color: Colors.white,)),
 
-          IconButton(
-              onPressed: () => Get.to(()=> CourseView()),
-              icon: const Icon(Icons.accessibility_new_sharp, color: Colors.white,)),
+          // IconButton(
+          //     onPressed: () => Get.to(()=> CourseView()),
+          //     icon: const Icon(Icons.accessibility_new_sharp, color: Colors.white,)),
         ],
       ),
 

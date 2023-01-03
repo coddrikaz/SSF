@@ -25,6 +25,7 @@ dependencies:
   custom_sliding_segmented_control: ^1.7.3
   flutter_web_browser: ^0.17.1
   webview_flutter: ^3.0.2
+  balanced_text: ^0.0.3
 
 dev_dependencies:
   flutter_test:
