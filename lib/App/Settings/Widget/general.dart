@@ -344,14 +344,6 @@ class _GeneralSettingsState extends State<GeneralSettings> {
             decoration: BoxDecoration(
               color: Colors.transparent,
               borderRadius: BorderRadius.circular(12),
-              // boxShadow: [
-              //   BoxShadow(
-              //     color: Colors.grey.withOpacity(0.5),
-              //     spreadRadius: 5,
-              //     blurRadius: 7,
-              //     offset: const Offset(0, 3), // changes position of shadow
-              //   ),
-              // ],
             ),
             margin: EdgeInsets.only(left: 20, right: 20),
             height: 100,

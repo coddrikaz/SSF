@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/ClientRegistration/clientRegController.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 
-
 final _clientRegController = Get.find<clientRegController>();
 
 class ClientRegScreen extends StatefulWidget {
@@ -375,28 +374,23 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
                                   width: 2.0,
                                   style: BorderStyle.solid),
                             ),
-                            child: GestureDetector(
-                              onTap: () {
-                                showPrefixPopup();
-                              },
-                              child: Row(
-                                children: [
-                                  Text("Prefix"),
-                                  const Text(
-                                    "*",
-                                    style: TextStyle(color: Colors.red),
-                                  ),
+                            child: Row(
+                              children: [
+                                Text("Prefix"),
+                                const Text(
+                                  "*",
+                                  style: TextStyle(color: Colors.red),
+                                ),
 
-                                  Spacer(),
-                                  Text("Mr."),
-                                  IconButton(
-                                      onPressed: () {
-
-                                      },
-                                      icon: Icon(Icons.arrow_drop_down))
-                                  // Icon(Icons.arrow_drop_down),
-                                ],
-                              ),
+                                Spacer(),
+                                Text("Mr."),
+                                IconButton(
+                                    onPressed: () {
+                                      showPopup();
+                                    },
+                                    icon: Icon(Icons.arrow_drop_down))
+                                // Icon(Icons.arrow_drop_down),
+                              ],
                             ),
                           ),
 
@@ -421,7 +415,14 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
                                 ),
                                 Spacer(),
                                 Text("Male"),
-                                Icon(Icons.arrow_drop_down),
+                                IconButton(
+                                    onPressed: () {
+                                      showAgePopup();
+                                    },
+                                    icon: Icon(Icons.arrow_drop_down)
+                                    // Icon(Icons.arrow_drop_down),
+
+                                    ),
                               ],
                             ),
                           ),
@@ -792,8 +793,7 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
                           MaterialButton(
                             height: 45,
                             color: SffColor.sffBlueColor,
-                            onPressed: ()
-                            async {
+                            onPressed: () async {
                               await _clientRegController.getclientReg();
                             },
                             child: Row(
@@ -827,13 +827,13 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
     );
   }
 
-  void showPrefixPopup() {
+  void showPopup() {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         contentPadding: EdgeInsets.zero,
         content: Container(
-          height: 400,
+          height: 320,
           width: 400,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -848,31 +848,321 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
   Widget Containlist(String item) {
     return Container(
       padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
-      child:  Column(
-        children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            color: SffColor.sffBlueColor,
-            child: Text(
-                "Prefiix *",
-                style: TextStyle(
-                    fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold)),
-          ),
-
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-            width: double.maxFinite,
-            child: Text("Mandatory",
-                style: TextStyle(
-                    fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
-          ),
-
-        ],
+      child: Expanded(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              // color: SffColor.sffBlueColor,
+              child: Text("Prefiix *",
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold)),
+            ),
+            Divider(color: Colors.black.withOpacity(0.2), height: 0.1),
+            MaterialButton(
+              height: 45,
+              color: Colors.white,
+              minWidth: double.infinity,
+              highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+              elevation: 0,
+              onPressed: () {
+                setState(() {
+                  //setState(() {});
+                });
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => HomeScreen()));
+              },
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: Text("Prof.",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18)),
+              ),
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(10.0),
+              // ),
+            ),
+            MaterialButton(
+              height: 45,
+              color: Colors.white,
+              minWidth: double.infinity,
+              highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+              elevation: 0,
+              onPressed: () {
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => HomeScreen()));
+              },
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: Text("Dr.",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18)),
+              ),
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(10.0),
+              // ),
+            ),
+            MaterialButton(
+              height: 45,
+              color: Colors.white,
+              minWidth: double.infinity,
+              highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+              elevation: 0,
+              onPressed: () {
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => HomeScreen()));
+              },
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: Text("Mr.",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18)),
+              ),
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(10.0),
+              // ),
+            ),
+            MaterialButton(
+              height: 45,
+              color: Colors.white,
+              minWidth: double.infinity,
+              highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+              elevation: 0,
+              onPressed: () {
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => HomeScreen()));
+              },
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: Text("Mrs.",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18)),
+              ),
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(10.0),
+              // ),
+            ),
+            MaterialButton(
+              height: 45,
+              color: Colors.white,
+              minWidth: double.infinity,
+              highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+              elevation: 0,
+              onPressed: () {
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => HomeScreen()));
+              },
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: Text("Ms.",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18)),
+              ),
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(10.0),
+              // ),
+            ),
+          ],
+        ),
       ),
     );
   }
 
-  void Dailog(){
+  void showAgePopup() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        contentPadding: EdgeInsets.zero,
+        content: Container(
+          height: 320,
+          width: 400,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Container(
+            padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    // padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                    color: SffColor.sffBlueColor,
+                    child: Text("Age *",
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold)),
+                  ),
+                  Divider(color: Colors.black.withOpacity(0.2), height: 0.1),
+                  MaterialButton(
+                    height: 45,
+                    color: Colors.white,
+                    minWidth: double.infinity,
+                    highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                    elevation: 0,
+                    onPressed: () {
+                      setState(() {
+                        //setState(() {});
+                      });
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => HomeScreen()));
+                    },
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("less then 18 years.",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18)),
+                    ),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10.0),
+                    // ),
+                  ),
+                  MaterialButton(
+                    height: 45,
+                    color: Colors.white,
+                    minWidth: double.infinity,
+                    highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                    elevation: 0,
+                    onPressed: () {
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => HomeScreen()));
+                    },
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("18-25",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18)),
+                    ),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10.0),
+                    // ),
+                  ),
+                  MaterialButton(
+                    height: 45,
+                    color: Colors.white,
+                    minWidth: double.infinity,
+                    highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                    elevation: 0,
+                    onPressed: () {
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => HomeScreen()));
+                    },
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("26-35.",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18)),
+                    ),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10.0),
+                    // ),
+                  ),
+                  MaterialButton(
+                    height: 45,
+                    color: Colors.white,
+                    minWidth: double.infinity,
+                    highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                    elevation: 0,
+                    onPressed: () {
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => HomeScreen()));
+                    },
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("36-45",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18)),
+                    ),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10.0),
+                    // ),
+                  ),
+                  MaterialButton(
+                    height: 45,
+                    color: Colors.white,
+                    minWidth: double.infinity,
+                    highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                    elevation: 0,
+                    onPressed: () {
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => HomeScreen()));
+                    },
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("46-55",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18)),
+                    ),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10.0),
+                    // ),
+                  ),
+                  MaterialButton(
+                    height: 45,
+                    color: Colors.white,
+                    minWidth: double.infinity,
+                    highlightColor: SffColor.sffBlueColor.withOpacity(0.2),
+                    elevation: 0,
+                    onPressed: () {
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => HomeScreen()));
+                    },
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text("55+",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18)),
+                    ),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10.0),
+                    // ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  void Dailog() {
     Get.defaultDialog(
       // title: "Success",
       content: Text("Your request has been submitted successfully"),
@@ -883,70 +1173,6 @@ class _ClientRegScreenState extends State<ClientRegScreen> {
       // onConfirm: () {
       //   Get.back();
       // },
-    );
-  }
-
-
-  void showExitPopup() {
-    showDialog(
-      context: context,
-      builder: (context) =>
-          AlertDialog(
-
-            title: Container(
-              height: 500,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 15),
-                      color: SffColor.sffBlueColor,
-                      child: Text(
-                          "Prefiix *",
-                          style: TextStyle(
-                              fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold)),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                      width: double.maxFinite,
-                      child: Text("Mandatory",
-                          style: TextStyle(
-                              fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-                      width: double.maxFinite,
-                      child: Text(
-                          "Are you sure want to logouts  hjfjhvkgng b  hdgjhghdfd bafhdgkfdkuf  hdgkfdlifgleig hfjhdhfgyusdkdufyufu uyf uyfyudtfyudtsfuysdgfkgdsluhds liuhfi dgfuysgd stftd tysvcghftcyfc f sftsdfksfsgfksjf fyugsyfgysagftsagh ffsgyfgtysfyf fweagfuykcfbugeavigcauyegcaeygua eyufbgeygfcbayuegavuybegyuaegbayegyau yaebcuyagbeugyey vfygbauegacabwegbabugbuvygweugvwecabeyvcayuevwygeyvbuyeguy egbuxwyxagfeuygcbfuyage fuygbfeubfua uyegubbefgnkawfnixluhebiwnfxe fwegbxufgueybwfxuwegbfnxibfnxniafng fuyaewxgfyeawbuyfgugaukaghjfkyfulf",
-                          style: TextStyle(
-                              fontSize: 16)),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                      width: double.maxFinite,
-                      child: Text("Mandatory",
-                          style: TextStyle(
-                              fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold)),
-                    ),
-
-
-                    Container(
-                      padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-                      width: double.maxFinite,
-                      child: Text(
-                          "Are you sure want to logouts  hjfjhvkgng b  hdgjhghdfd bafhdgkfdkuf  hdgkfdlifgleig hfjhdhfgyusdkdufyufu uyf uyfyudtfyudtsfuysdgfkgdsluhds liuhfi dgfuysgd stftd tysvcghftcyfc f sftsdfksfsgfksjf fyugsyfgysagftsagh ffsgyfgtysfyf fweagfuykcfbugeavigcauyegcaeygua eyufbgeygfcbayuegavuybegyuaegbayegyau yaebcuyagbeugyey vfygbauegacabwegbabugbuvygweugvwecabeyvcayuevwygeyvbuyeguy egbuxwyxagfeuygcbfuyage fuygbfeubfua uyegubbefgnkawfnixluhebiwnfxe fwegbxufgueybwfxuwegbfnxibfnxniafng fuyaewxgfyeawbuyfgugaukaghjfkyfulf",
-                          style: TextStyle(
-                              fontSize: 16)),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-
-          ),
     );
   }
 }

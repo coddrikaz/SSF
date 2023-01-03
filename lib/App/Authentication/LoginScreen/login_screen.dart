@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/Authentication/ForgotScreen/Forgot.dart';
 import 'package:staple_food_fortification/App/Authentication/LoginScreen/login_controller.dart';
 import 'package:staple_food_fortification/App/Authentication/OtpScreen/loginWithOTP/Otp.dart';
+import 'package:staple_food_fortification/App/CourseScreen/CourseView/courseView.dart';
 import 'package:staple_food_fortification/Commons/widgetview.dart';
 import 'package:staple_food_fortification/Constants/SffColor.dart';
 import 'package:staple_food_fortification/Constants/Strings.dart';
@@ -44,6 +45,10 @@ class _LoginScreenState extends State<LoginScreen> {
           IconButton(
               onPressed: () => Get.toNamed(RoutesName.settingScreen),
               icon: const Icon(Icons.settings, color: Colors.white,)),
+
+          IconButton(
+              onPressed: () => Get.to(()=> CourseView()),
+              icon: const Icon(Icons.accessibility_new_sharp, color: Colors.white,)),
         ],
       ),
 
