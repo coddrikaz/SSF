@@ -124,12 +124,12 @@ class _CourseViewState extends State<CourseView> {
                           children: [
                             Text(
                               "Number of attempts allow",
-                              style: TextStyle(fontWeight: FontWeight.w900),
+                              style: TextStyle(fontWeight: FontWeight.w700, color: SffColor.sffblackLigtColor),
                             ),
                             Spacer(),
                             Text(
                               "Unlimited",
-                              style: TextStyle(fontWeight: FontWeight.w900),
+                              style: TextStyle(fontWeight: FontWeight.w700, color: SffColor.sffblackLigtColor),
                             ),
                           ],
                         )),
@@ -140,12 +140,12 @@ class _CourseViewState extends State<CourseView> {
                           children: [
                             Text(
                               "Number of attempts you have made",
-                              style: TextStyle(fontWeight: FontWeight.w900),
+                              style: TextStyle(fontWeight: FontWeight.w700, color: SffColor.sffblackLigtColor),
                             ),
                             Spacer(),
                             Text(
                               "0",
-                              style: TextStyle(fontWeight: FontWeight.w900),
+                              style: TextStyle(fontWeight: FontWeight.w700, color: SffColor.sffblackLigtColor),
                             ),
                           ],
                         )),
@@ -157,12 +157,12 @@ class _CourseViewState extends State<CourseView> {
                           children: [
                             Text(
                               "Last syncronisation",
-                              style: TextStyle(fontWeight: FontWeight.w900),
+                              style: TextStyle(fontWeight: FontWeight.w700, color: SffColor.sffblackLigtColor),
                             ),
                             SizedBox(height: 3),
                             Text(
                               "Tuesday, 3 January 2023, 11:31AM",
-                              style: TextStyle(fontWeight: FontWeight.w900),
+                              style: TextStyle(fontWeight: FontWeight.w700, color: SffColor.sffblackLigtColor),
                             ),
                           ],
                         )),
@@ -180,7 +180,7 @@ class _CourseViewState extends State<CourseView> {
                     Container(
                       child: Text(
                         "This SCROM package is not downloaded. It will be automatically download when you open it.",
-                        style: TextStyle(fontWeight: FontWeight.w900, color: SffColor.sffblackLigtColor),
+                        style: TextStyle(fontWeight: FontWeight.w700, color: SffColor.sffblackLigtColor),
                       ),
                       margin: EdgeInsets.symmetric(vertical: 10),
                     ),
@@ -197,10 +197,10 @@ class _CourseViewState extends State<CourseView> {
                                   children: [
                                     Text(
                                       "Preview",
-                                      style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
+                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.blue),
                                     ),
                                     SizedBox(width: 3),
-                                    Icon(Icons.search)
+                                    Icon(Icons.search, size: 20,)
                                   ],
                                 ),
                                   style: ButtonStyle(
@@ -235,11 +235,11 @@ class _CourseViewState extends State<CourseView> {
                                     children: [
                                       Text(
                                         "Enter",
-                                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 16),
                                       ),
                                       SizedBox(width: 3),
 
-                                      Icon(Icons.arrow_forward, color: Colors.white)
+                                      Icon(Icons.arrow_forward, color: Colors.white,size: 20)
                                     ],
                                   ),
                                 ),
