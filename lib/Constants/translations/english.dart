@@ -1,3 +1,5 @@
+import 'package:staple_food_fortification/Constants/Strings.dart';
+
 Map<String, String> mEnglish = {
   "type": "English",
   "addon.badges.alignment": "Alignment",
@@ -92,8 +94,27 @@ Map<String, String> mEnglish = {
   "addon.calendar.calendar": "Calendar",
   "addon.calendar.calendarevent": "Calendar event",
   "addon.Training": "Training Course on",
-  "addon. Fortification": "Training Course on",
-  "addon. by": "by",
+  "addon.global": "Global Alliance for Improved Nutrition (GAIN)",
+  "addon.about": "About the course:",
+  "addon.aboutCourse": "${Strings.aboutCourse}",
+  "addon.desc": "Course Description:",
+  "addon.courseDesc": "${Strings.decc}",
+
+  "addon.duration": "Duration:",
+  "addon.courseDuration": "${Strings.duration}",
+  "addon.learn": "What you will learn:",
+  "addon.whatLearn": "${Strings.learn}",
+  "addon.attraction": "Course Attractions:",
+  "addon.courseAttraction": "${Strings.courseA}",
+  "addon.target": "Target Audience:",
+  "addon.targetA": "${Strings.targetA}",
+  "addon.enterCourse": "Enter this Course",
+  "addon.knowMore": "To know more about GAIN click ",
+  "addon.knowClick": "here",
+  "addon.availableC": "Available Courses",
+
+  "addon.Fortification": "Edible Oil Fortification",
+  "addon.by": "by",
   "addon.calendar.calendarevents": "Calendar events",
   "addon.calendar.calendarreminders": "Calendar reminders",
   "addon.calendar.categoryevents": "Category events",

@@ -202,7 +202,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   width: Get.width * 0.15,
                   height: Get.height * 0.07,
                   child: FlutterSwitch(
-                    inactiveColor: SffColor.sffgeyCoor,
+                    inactiveColor: SffColor.sffgreyColor,
                     value: isSwitchTextOn,
                     onToggle: (value) {
                       setState(() {
@@ -315,7 +315,7 @@ class _GeneralSettingsState extends State<GeneralSettings> {
                   width: Get.width * 0.15,
                   height: Get.height * 0.07,
                   child: FlutterSwitch(
-                    inactiveColor: SffColor.sffgeyCoor,
+                    inactiveColor: SffColor.sffgreyColor,
                     value: isSwitchOn,
                     onToggle: (value) {
                       setState(() {

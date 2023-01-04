@@ -7,7 +7,7 @@ class SffColor {
   static const sffBlueDimColor = Color(0xFF5799D2);
   static const sffDrakBlueColor = Color(0xFF1D4EF5);
   static const sffgeyColor = Color(0xFFEFEBEB);
-  static const sffgeyCoor = Color(0xFFDCD8D8);
+  static const sffgreyColor = Color(0xFFF1F1F1);
   static const sffLineColor = Color(0xFFE7E4E4);
   static const sffblackLightColor = Color(0xFF1F1F1F);
   static const sffblackLigtColor = Color(0xFF707070);

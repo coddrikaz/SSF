@@ -33,11 +33,13 @@ class Strings {
   static const String aboutCourse =
       "Multiple micronutrient deficiencies are widespread in India, and continue to be significant public health problems, which adversely impact the health and productivity of all the population groups. Vitamin A deficiency (VAD) is one of the major public health problems in many low-and-middle-income countries (LMICs), including India. As per the National Nutrition Monitoring Bureau (NNMB) 2006 survey, 62% of under five children in India have low serum retinol levels. Prevalence of vitamin D deficiency is also quite high in the country. COVID-19 has further aggravated the situation of micronutrient malnutrition in the country. Considering edible oil is consumed across population (irrespective of age, geography and Socio-economic status), fortification of edible oils with vitamin A and D is a cost effective strategy to address micronutrient malnutrition. Food Safety and Standards Authority of India (FSSAI) gazetted Food Safety and Standards (Fortification of Foods) Regulations, 2018 for five staples, including edible oil in 2018. However, at present, ensuring availability of fortified edible oil compliant to national standards is a challenge in the country. Therefore, it is critical for both- businesses and FDA officials to have comprehensive knowledge about the fortification to supply quality assured fortified edible oil and to facilitate businesses to help fortify their products, respectively. This course will also be a value addition to technical professionals from other sectors directly or indirectly engaged with edible oil fortification.";
 
+  static const String decc = "Course on Edible Oil Fortification is customised for different categories of target audience i.e., Industry, State Food and Drug Administration (FDA)/Food Safety and Standards Authority of India (FSSAI), Academia and Others. Each category of target audience should complete a predefined set of modules to fulfil the course requirements. These modules are divided into mandatory and optional category.​";
+
   static const String duration =
       "The duration of this course will depend upon the category chosen by the learner. It will vary from 7 minutes to 26 minutes.";
 
   static const String learn =
-  """ 1. Need and importance of staple food fortification
+  """1. Need and importance of staple food fortification
 2. Myths and frequently asked questions
 3. Staple food fortification: government regulations
 4. Packaging and labelling regulations
@@ -50,19 +52,19 @@ class Strings {
 11. Role of FFRC, FSSAI, and State FDA in staple food fortification""";
 
   static const String courseA =
-  """\u2022 Shareable specialization and course certificates  
-\u2022 Self-paced learning option
-\u2022 Course videos & voice-overs
-\u2022 Graded quizzes with feedback
-\u2022 Instructive hands-on practical video sessions
-\u2022 Online training with easy accessibility on all devices, including smartphones
-\u2022 Explore new career avenues with certificate course as a value addition to the resume
-\u2022 Competitive job opportunities with potentials for higher remuneration""";
+  """1. Shareable specialization and course certificates  
+2. Self-paced learning option
+3. Course videos & voice-overs
+4. Graded quizzes with feedback
+5. Instructive hands-on practical video sessions
+6. Online training with easy accessibility on all devices, including smartphones
+7. Explore new career avenues with certificate course as a value addition to the resume
+8. Competitive job opportunities with potentials for higher remuneration""";
 
-  static const String targetA = """\u2022 Edible oil industry professionals​
-\u2022 Officials from State Food and Drug Administration (FDA)/Food Safety and Standards Authority of India​ (FSSAI)
-\u2022 Students and faculty from various food technology & food and nutrition institutes​
-\u2022 Any other interested personnel""";
+  static const String targetA = """1. Edible oil industry professionals​
+2. Officials from State Food and Drug Administration (FDA)/Food Safety and Standards Authority of India​ (FSSAI)
+3. Students and faculty from various food technology & food and nutrition institutes​
+4. Any other interested personnel""";
 
   static const String courseAppBar = "Training Course on Edible Oil Fortification by Global Alliance for Improved Nutrition (GAIN)";
   static String crossWebsiteTracking = "core.settings.ioscookiesdescription".tr;

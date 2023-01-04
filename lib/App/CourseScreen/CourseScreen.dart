@@ -1,5 +1,3 @@
-
-import 'package:balanced_text/balanced_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:staple_food_fortification/App/CourseScreen/CourseView/courseView.dart';
@@ -176,12 +174,27 @@ class _CourseScreenState extends State<CourseScreen> {
           ),
         ),
         Expanded(
-          child: Obx(
-            () {
-              return ListView.builder(
-                itemCount: _courseController.mCoreList.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return courseContent(_courseController.mCoreList[index]);
+          child: RefreshIndicator(
+            color: Colors.white,
+            backgroundColor: SffColor.sffMainColor,
+            child: Obx(
+              () {
+                return ListView.builder(
+                  itemCount: _courseController.mCoreList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return courseContent(_courseController.mCoreList[index]);
+                  },
+                );
+              },
+            ),
+            onRefresh: () {
+              return Future.delayed(
+                Duration(seconds: 1),
+                    () {
+                  setState(() {});
+                  SnackBar(
+                    content: const Text('Page Refreshed'),
+                  );
                 },
               );
             },
